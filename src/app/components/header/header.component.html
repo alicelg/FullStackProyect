@@ -12,9 +12,8 @@
 
                     <div class="col-md-2 text-center">
                         <div ngbDropdown class="d-inline-block">
-                            <button class="btn" id="dropdownBasic1"
-                                ngbDropdownToggle>{{'HEADER.BLOG' | translate}}</button>
-                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                            <button class="btn" id="blog" ngbDropdownToggle>{{'HEADER.BLOG' | translate}}</button>
+                            <div ngbDropdownMenu aria-labelledby="blog">
                                 <button ngbDropdownItem>{{'HEADER.GENERAL' | translate}}</button>
                                 <button ngbDropdownItem>{{'HEADER.HABLANDO' | translate}}</button>
                                 <button ngbDropdownItem>{{'HEADER.ESTOTAMBIEN' | translate}}</button>
@@ -24,9 +23,8 @@
 
                     <div class="col-md-2 text-center">
                         <div ngbDropdown class="d-inline-block">
-                            <button class="btn" id="dropdownBasic1"
-                                ngbDropdownToggle>{{'HEADER.TEST' | translate}}</button>
-                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                            <button class="btn" id="test" ngbDropdownToggle>{{'HEADER.TEST' | translate}}</button>
+                            <div ngbDropdownMenu aria-labelledby="test">
                                 <button ngbDropdownItem>{{'HEADER.POLITICAL-TEST' | translate}}</button>
                                 <button ngbDropdownItem>{{'HEADER.WORLD-TEST' | translate}}</button>
                             </div>
@@ -43,12 +41,19 @@
 
                     <div class="col-md-1 text-center">
                         <div ngbDropdown class="d-inline-block">
-                            <button class="btn" id="dropdownBasic1"
-                                ngbDropdownToggle>{{ translateService.currentLang == 'es-ES' ? 'ES': 'EN' }}</button>
-
-                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                                <button ngbDropdownItem (click)="changeLanguage('es-ES')">ES</button>
-                                <button ngbDropdownItem (click)="changeLanguage('en-GB')">EN</button>
+                            <button class="btn" id="language" ngbDropdownToggle>
+                                <img class="icon-flag"
+                                    [src]="translateService.currentLang == 'es-ES' ? '../../../assets/icons/espana.png': '../../../assets/icons/reino-unido.png'">
+                            </button>
+                            <div ngbDropdownMenu aria-labelledby="language">
+                                <button ngbDropdownItem (click)="changeLanguage('es-ES')">
+                                    <img class="icon-flag" src="../../../assets/icons/espana.png" alt="español">
+                                    {{'HEADER.COUNTRIES.SPANISH' | translate}}
+                                </button>
+                                <button ngbDropdownItem (click)="changeLanguage('en-GB')">
+                                    <img class="icon-flag" src="../../../assets/icons/reino-unido.png" alt="inglés">
+                                    {{'HEADER.COUNTRIES.ENGLISH' |translate}}
+                                </button>
                             </div>
                         </div>
                     </div>

@@ -9,6 +9,10 @@
         "WORLD-TEST": "World Test",
         "POLITICAL-TEST": "Political Test",
         "CONCEPTS": "Concepts",
-        "USER": "User"
+        "USER": "User",
+        "COUNTRIES": {
+            "SPANISH": "Spanish",
+            "ENGLISH": "English"
+        }
     }
 }

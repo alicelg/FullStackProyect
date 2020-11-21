@@ -16,6 +16,11 @@
     display: initial;
 }
 
+.btn {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 @media (min-width: 1500px) {
     .container {
         max-width: 1400px;
