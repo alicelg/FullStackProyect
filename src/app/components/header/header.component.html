@@ -1,64 +1,98 @@
-<div class="backgroud-header">
-    <div class="container">
-        <div class="row mt-3">
-            <div class="col-md-3">
-                logo
-            </div>
-            <div class="col-md-9">
-                <div class="row">
-                    <div class="col-md-2">
-                        <button class="btn">{{'HEADER.MAP' | translate}}</button>
-                    </div>
-
-                    <div class="col-md-2 text-center">
-                        <div ngbDropdown class="d-inline-block">
-                            <button class="btn" id="blog" ngbDropdownToggle>{{'HEADER.BLOG' | translate}}</button>
-                            <div ngbDropdownMenu aria-labelledby="blog">
-                                <button ngbDropdownItem>{{'HEADER.GENERAL' | translate}}</button>
-                                <button ngbDropdownItem>{{'HEADER.HABLANDO' | translate}}</button>
-                                <button ngbDropdownItem>{{'HEADER.ESTOTAMBIEN' | translate}}</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2 text-center">
-                        <div ngbDropdown class="d-inline-block">
-                            <button class="btn" id="test" ngbDropdownToggle>{{'HEADER.TEST' | translate}}</button>
-                            <div ngbDropdownMenu aria-labelledby="test">
-                                <button ngbDropdownItem>{{'HEADER.POLITICAL-TEST' | translate}}</button>
-                                <button ngbDropdownItem>{{'HEADER.WORLD-TEST' | translate}}</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 text-center">
-                        <button class="btn">{{'HEADER.CONCEPTS' | translate}}</button>
-                    </div>
-
-                    <div class="col-md-2 text-center">
-                        <button class="btn">{{'HEADER.USER' | translate}}</button>
-                    </div>
-
-                    <div class="col-md-1 text-center">
-                        <div ngbDropdown class="d-inline-block">
-                            <button class="btn" id="language" ngbDropdownToggle>
-                                <img class="icon-flag"
-                                    [src]="translateService.currentLang == 'es-ES' ? '../../../assets/icons/espana.png': '../../../assets/icons/reino-unido.png'">
-                            </button>
-                            <div ngbDropdownMenu aria-labelledby="language">
-                                <button ngbDropdownItem (click)="changeLanguage('es-ES')">
-                                    <img class="icon-flag" src="../../../assets/icons/espana.png" alt="español">
-                                    {{'HEADER.COUNTRIES.SPANISH' | translate}}
-                                </button>
-                                <button ngbDropdownItem (click)="changeLanguage('en-GB')">
-                                    <img class="icon-flag" src="../../../assets/icons/reino-unido.png" alt="inglés">
-                                    {{'HEADER.COUNTRIES.ENGLISH' |translate}}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container justify-content-between">
+        <button class="btn navbar-brand desktop" routerLink="">
+            <img class='logo' src="../../../assets/images/McDonalds-Logo.png" alt="">
+        </button>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- logo centrado para mobile -->
+        <button class="btn navbar-brand mobile" routerLink="">logo</button>
+        <!-- traductor para mobile -->
+        <div class="mobile">
+            <button class="btn d-inline" *ngIf="userLogged">d</button>
+            <div class=" nav-item dropdown d-inline">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                    <img class="icon-flag"
+                        [src]="translateService.currentLang == 'es-ES' ? '../../../assets/icons/espana.png': '../../../assets/icons/reino-unido.png'">
+                </button>
+                <div class="dropdown-menu" style="min-width: unset">
+                    <button class="btn dropdown-item" (click)="changeLanguage('es-ES')">
+                        <img class="icon-flag" src="../../../assets/icons/espana.png" alt="español">
+                    </button>
+                    <button class="btn dropdown-item" (click)="changeLanguage('en-GB')">
+                        <img class="icon-flag" src="../../../assets/icons/reino-unido.png" alt="inglés">
+                    </button>
                 </div>
             </div>
         </div>
+
+        <!-- navegador principal -->
+        <div class="collapse navbar-collapse" id="main-nav">
+            <div class="navbar-nav w-100">
+
+                <div class="nav-item active">
+                    <button class="nav-link btn" routerLink="mapa">{{'HEADER.MAP' | translate}}</button>
+                </div>
+
+                <div class="nav-item active">
+                    <button class="nav-link btn" routerLink="conceptos">{{'HEADER.CONCEPTS' | translate}}</button>
+                </div>
+
+                <div class="nav-item dropdown active">
+                    <button class="nav-link dropdown-toggle btn" id="blog" data-toggle="dropdown">
+                        {{'HEADER.BLOG' | translate}}
+                    </button>
+                    <div class="dropdown-menu">
+                        <button class="btn dropdown-item"
+                            routerLink="blog/general">{{'HEADER.GENERAL' | translate}}</button>
+                        <button class="btn dropdown-item"
+                            routerLink="blog/hablando-de-politica">{{'HEADER.HABLANDO' | translate}}</button>
+                        <a class="btn dropdown-item" href="https://estotambienespolitica.com/"
+                            target="_blank">{{'HEADER.ESTOTAMBIEN' | translate}}</a>
+                    </div>
+                </div>
+
+                <div class="nav-item dropdown active">
+                    <button class=" btn nav-link dropdown-toggle" routerLink="tests" id="test" data-toggle="dropdown">
+                        {{'HEADER.TEST' | translate}}
+                    </button>
+                    <div class="dropdown-menu">
+                        <button class="btn dropdown-item"
+                            routerLink="test/1">{{'HEADER.POLITICAL-TEST' | translate}}</button>
+                        <button class="btn dropdown-item"
+                            routerLink="test/2">{{'HEADER.WORLD-TEST' | translate}}</button>
+                    </div>
+                </div>
+
+                <div class="nav-item active ml-md-auto" *ngIf="!userLogged">
+                    <button class="btn nav-link" routerLink="login">{{'HEADER.LOGIN' | translate}}</button>
+                </div>
+                <div class="nav-item active" *ngIf="!userLogged">
+                    <button class="btn nav-link" routerLink="signup">{{'HEADER.SIGNUP' | translate}}</button>
+                </div>
+                <div class="nav-item active ml-md-auto desktop" *ngIf="userLogged">
+                    <button class="btn nav-link" routerLink="usuario">Nombre Usuario</button>
+                </div>
+                <!-- selector de idiomas desktop -->
+                <div class="nav-item dropdown desktop">
+                    <button class="btn nav-link dropdown-toggle" routerLink="" id="test" data-toggle="dropdown">
+                        <img class="icon-flag"
+                            [src]="translateService.currentLang == 'es-ES' ? '../../../assets/icons/espana.png': '../../../assets/icons/reino-unido.png'">
+                    </button>
+                    <div class="dropdown-menu">
+                        <button class="btn dropdown-item" (click)="changeLanguage('es-ES')">
+                            <img class="icon-flag" src="../../../assets/icons/espana.png" alt="español">
+                            {{'HEADER.COUNTRIES.SPANISH' | translate}}</button>
+                        <button class="btn dropdown-item" (click)="changeLanguage('en-GB')">
+                            <img class="icon-flag" src="../../../assets/icons/reino-unido.png" alt="inglés">
+                            {{'HEADER.COUNTRIES.ENGLISH' |translate}}
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
     </div>
-</div>
+</nav>

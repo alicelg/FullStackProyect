@@ -9,7 +9,8 @@
         "WORLD-TEST": "Test Mundo",
         "POLITICAL-TEST": "Test Político",
         "CONCEPTS": "Conceptos",
-        "USER": "Usuario",
+        "LOGIN": "Inicia Sesión",
+        "SIGNUP": "Regístrate",
         "COUNTRIES": {
             "SPANISH": "Español",
             "ENGLISH": "Inglés"

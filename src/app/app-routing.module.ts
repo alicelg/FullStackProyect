@@ -29,6 +29,7 @@ const routes: Routes = [
   { path: 'test/:id', component: TestComponent },
   { path: 'test/:id/resultado', component: ResultComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'signup', component: LoginComponent },
   { path: 'usuario/:id', component: UserComponent },
   { path: 'nosotros', component: CreatorComponent },
   { path: '**', component: ErrorComponent },
