@@ -10,7 +10,13 @@
         <button class="btn navbar-brand mobile" routerLink="">logo</button>
         <!-- traductor para mobile -->
         <div class="mobile">
-            <button class="btn d-inline" *ngIf="userLogged">d</button>
+            <button class="btn d-inline text-light p-0" *ngIf="userLogged">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+            </button>
             <div class=" nav-item dropdown d-inline">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
                     <img class="icon-flag"
@@ -32,18 +38,19 @@
             <div class="navbar-nav w-100">
 
                 <div class="nav-item active">
-                    <button class="nav-link btn" routerLink="mapa">{{'HEADER.MAP' | translate}}</button>
+                    <button class="nav-link btn mx-auto" routerLink="mapa">{{'HEADER.MAP' | translate}}</button>
                 </div>
 
                 <div class="nav-item active">
-                    <button class="nav-link btn" routerLink="conceptos">{{'HEADER.CONCEPTS' | translate}}</button>
+                    <button class="nav-link btn mx-auto"
+                        routerLink="conceptos">{{'HEADER.CONCEPTS' | translate}}</button>
                 </div>
 
                 <div class="nav-item dropdown active">
-                    <button class="nav-link dropdown-toggle btn" id="blog" data-toggle="dropdown">
+                    <button class="nav-link dropdown-toggle btn mx-auto" id="blog" data-toggle="dropdown">
                         {{'HEADER.BLOG' | translate}}
                     </button>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu text-center">
                         <button class="btn dropdown-item"
                             routerLink="blog/general">{{'HEADER.GENERAL' | translate}}</button>
                         <button class="btn dropdown-item"
@@ -54,10 +61,11 @@
                 </div>
 
                 <div class="nav-item dropdown active">
-                    <button class=" btn nav-link dropdown-toggle" routerLink="tests" id="test" data-toggle="dropdown">
+                    <button class=" btn nav-link dropdown-toggle mx-auto" routerLink="tests" id="test"
+                        data-toggle="dropdown">
                         {{'HEADER.TEST' | translate}}
                     </button>
-                    <div class="dropdown-menu">
+                    <div class="dropdown-menu text-center">
                         <button class="btn dropdown-item"
                             routerLink="test/1">{{'HEADER.POLITICAL-TEST' | translate}}</button>
                         <button class="btn dropdown-item"

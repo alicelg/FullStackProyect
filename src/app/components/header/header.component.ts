@@ -8,7 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
 
-  userLogged: boolean;
+  userLogged: boolean = true;
 
   constructor(
     public translateService: TranslateService
