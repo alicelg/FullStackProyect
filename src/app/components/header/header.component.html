@@ -7,43 +7,48 @@
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-2">
-                        <button class="btn">Mapa</button>
+                        <button class="btn">{{'HEADER.MAP' | translate}}</button>
                     </div>
 
                     <div class="col-md-2 text-center">
                         <div ngbDropdown class="d-inline-block">
-                            <button class="btn" id="dropdownBasic1" ngbDropdownToggle>Blog</button>
+                            <button class="btn" id="dropdownBasic1"
+                                ngbDropdownToggle>{{'HEADER.BLOG' | translate}}</button>
                             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                                <button ngbDropdownItem>General</button>
-                                <button ngbDropdownItem>Hablando de política</button>
-                                <button ngbDropdownItem>Esto también es política</button>
+                                <button ngbDropdownItem>{{'HEADER.GENERAL' | translate}}</button>
+                                <button ngbDropdownItem>{{'HEADER.HABLANDO' | translate}}</button>
+                                <button ngbDropdownItem>{{'HEADER.ESTOTAMBIEN' | translate}}</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-2 text-center">
                         <div ngbDropdown class="d-inline-block">
-                            <button class="btn" id="dropdownBasic1" ngbDropdownToggle>Test</button>
+                            <button class="btn" id="dropdownBasic1"
+                                ngbDropdownToggle>{{'HEADER.TEST' | translate}}</button>
                             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                                <button ngbDropdownItem>Test Mundo</button>
-                                <button ngbDropdownItem>Test Político</button>
+                                <button ngbDropdownItem>{{'HEADER.POLITICAL-TEST' | translate}}</button>
+                                <button ngbDropdownItem>{{'HEADER.WORLD-TEST' | translate}}</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-3 text-center">
-                        <button class="btn">Conceptos</button>
+                        <button class="btn">{{'HEADER.CONCEPTS' | translate}}</button>
                     </div>
 
                     <div class="col-md-2 text-center">
-                        <button class="btn">Usuario</button>
+                        <button class="btn">{{'HEADER.USER' | translate}}</button>
                     </div>
 
                     <div class="col-md-1 text-center">
                         <div ngbDropdown class="d-inline-block">
-                            <button class="btn" id="dropdownBasic1" ngbDropdownToggle>ES</button>
+                            <button class="btn" id="dropdownBasic1"
+                                ngbDropdownToggle>{{ translateService.currentLang == 'es-ES' ? 'ES': 'EN' }}</button>
+
                             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                                <button ngbDropdownItem>EN</button>
+                                <button ngbDropdownItem (click)="changeLanguage('es-ES')">ES</button>
+                                <button ngbDropdownItem (click)="changeLanguage('en-GB')">EN</button>
                             </div>
                         </div>
                     </div>

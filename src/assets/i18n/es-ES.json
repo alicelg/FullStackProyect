@@ -1,5 +1,14 @@
 {
     "HEADER": {
-        "TEST": "prueba"
+        "MAP": "Mapa",
+        "BLOG": "Blog",
+        "GENERAL": "General",
+        "HABLANDO": "Hablando de Política",
+        "ESTOTAMBIEN": "Esto también es Política",
+        "TEST": "Test",
+        "WORLD-TEST": "Test Mundo",
+        "POLITICAL-TEST": "Test Político",
+        "CONCEPTS": "Conceptos",
+        "USER": "Usuario"
     }
 }
