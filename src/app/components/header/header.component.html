@@ -1,17 +1,52 @@
 <div class="backgroud-header">
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
+        <div class="row mt-3">
+            <div class="col-md-3">
                 logo
             </div>
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <div class="row">
-                    <div class="col-md-2">col1</div>
-                    <div class="col-md-2">col1</div>
-                    <div class="col-md-2">col1</div>
-                    <div class="col-md-2">col1</div>
-                    <div class="col-md-2">col1</div>
-                    <div class="col-md-2">col1</div>
+                    <div class="col-md-2">
+                        <button class="btn">Mapa</button>
+                    </div>
+
+                    <div class="col-md-2 text-center">
+                        <div ngbDropdown class="d-inline-block">
+                            <button class="btn" id="dropdownBasic1" ngbDropdownToggle>Blog</button>
+                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                <button ngbDropdownItem>General</button>
+                                <button ngbDropdownItem>Hablando de política</button>
+                                <button ngbDropdownItem>Esto también es política</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 text-center">
+                        <div ngbDropdown class="d-inline-block">
+                            <button class="btn" id="dropdownBasic1" ngbDropdownToggle>Test</button>
+                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                <button ngbDropdownItem>Test Mundo</button>
+                                <button ngbDropdownItem>Test Político</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 text-center">
+                        <button class="btn">Conceptos</button>
+                    </div>
+
+                    <div class="col-md-2 text-center">
+                        <button class="btn">Usuario</button>
+                    </div>
+
+                    <div class="col-md-1 text-center">
+                        <div ngbDropdown class="d-inline-block">
+                            <button class="btn" id="dropdownBasic1" ngbDropdownToggle>ES</button>
+                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                <button ngbDropdownItem>EN</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
