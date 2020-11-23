@@ -3,6 +3,20 @@
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
 
+/* paleta de colores */
+$primaryBgColor: white;
+$secondaryBgColor: black;
+$tertiaryBgColor: teal;
+$quaternaryBgColor: green;
+
+$primaryTextColor: black;
+$secondaryTextColor: white;
+$tertiaryTextColor: white;
+$quaternaryTextColor: white;
+
+* {
+    color: $primaryTextColor;
+}
 .row {
     margin-right: 0;
     margin-left: 0;
@@ -21,13 +35,33 @@
     box-shadow: none !important;
 }
 
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.mt-6 {
+    margin-top: 4rem;
+}
+
+.vertical-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.position-right {
+    position: absolute;
+    right: 0;
+}
+
 @media (min-width: 1500px) {
     .container {
         max-width: 1400px;
     }
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 575px) {
     .mobile {
         display: initial;
     }

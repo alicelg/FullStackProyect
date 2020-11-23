@@ -15,5 +15,8 @@
             "SPANISH": "Español",
             "ENGLISH": "Inglés"
         }
+    },
+    "COMMON": {
+        "SEARCH": "¿Qué estas buscando?"
     }
 }

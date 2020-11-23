@@ -1,0 +1,102 @@
+@import "../../../styles.scss";
+.hero {
+    position: relative;
+    background-color: $primaryTextColor;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* background-color: $primaryBgColor;
+        opacity: 0.5; */
+        z-index: 1;
+    }
+}
+
+.searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 1px solid $tertiaryBgColor;
+    padding: 10px;
+}
+
+.search_input {
+    color: $primaryTextColor;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color: transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    padding: 0;
+}
+
+.searchbar:hover {
+    background-color: $primaryBgColor;
+
+    .search_input {
+        padding: 0 10px;
+        width: 450px;
+        transition: width 0.4s linear;
+    }
+
+    .search_icon {
+        background: $primaryBgColor;
+    }
+}
+
+.search_icon {
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    svg {
+        fill: $tertiaryBgColor;
+    }
+}
+
+.container-opinion {
+    margin-left: 200px;
+    margin-right: 200px;
+    border: 1px solid $secondaryBgColor;
+}
+
+@media (max-width: 575px) {
+    .searchbar:hover > .search_input {
+        width: 250px;
+    }
+}
