@@ -2,6 +2,7 @@
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/scss/font-awesome";
 
 /* paleta de colores */
 $primaryBgColor: white;
@@ -44,6 +45,10 @@ $quaternaryTextColor: white;
     margin-top: 4rem;
 }
 
+.mt-7 {
+    margin-top: 7rem;
+}
+
 .vertical-center {
     position: absolute;
     top: 50%;
@@ -53,6 +58,10 @@ $quaternaryTextColor: white;
 .position-right {
     position: absolute;
     right: 0;
+}
+
+hr {
+    width: 500px;
 }
 
 @media (min-width: 1500px) {
