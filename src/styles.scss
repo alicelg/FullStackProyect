@@ -8,7 +8,7 @@
 $primaryBgColor: white;
 $secondaryBgColor: black;
 $tertiaryBgColor: teal;
-$quaternaryBgColor: green;
+$quaternaryBgColor: lightgrey;
 
 $primaryTextColor: black;
 $secondaryTextColor: white;
@@ -60,8 +60,15 @@ $quaternaryTextColor: white;
     right: 0;
 }
 
+h2,
+h3 {
+    color: $tertiaryBgColor;
+}
+
 hr {
     width: 500px;
+    border-top: 0.5px solid $tertiaryBgColor;
+    opacity: 0.5;
 }
 
 @media (min-width: 1500px) {
