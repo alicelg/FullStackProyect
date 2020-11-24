@@ -2,12 +2,13 @@
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/scss/font-awesome";
 
 /* paleta de colores */
 $primaryBgColor: white;
 $secondaryBgColor: black;
 $tertiaryBgColor: teal;
-$quaternaryBgColor: green;
+$quaternaryBgColor: lightgrey;
 
 $primaryTextColor: black;
 $secondaryTextColor: white;
@@ -44,6 +45,10 @@ $quaternaryTextColor: white;
     margin-top: 4rem;
 }
 
+.mt-7 {
+    margin-top: 7rem;
+}
+
 .vertical-center {
     position: absolute;
     top: 50%;
@@ -53,6 +58,17 @@ $quaternaryTextColor: white;
 .position-right {
     position: absolute;
     right: 0;
+}
+
+h2,
+h3 {
+    color: $tertiaryBgColor;
+}
+
+hr {
+    width: 500px;
+    border-top: 0.5px solid $tertiaryBgColor;
+    opacity: 0.5;
 }
 
 @media (min-width: 1500px) {

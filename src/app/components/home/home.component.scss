@@ -1,4 +1,6 @@
 @import "../../../styles.scss";
+
+/* Estilos de hero */
 .hero {
     position: relative;
     background-color: $primaryTextColor;
@@ -89,14 +91,86 @@
     }
 }
 
-.container-opinion {
-    margin-left: 200px;
-    margin-right: 200px;
-    border: 1px solid $secondaryBgColor;
-}
-
 @media (max-width: 575px) {
     .searchbar:hover > .search_input {
         width: 250px;
+    }
+}
+
+/* Estilos de blog */
+/* FontAwesome for working BootSnippet :> */
+
+#blog {
+    background: $quaternaryBgColor;
+
+    .btn-primary {
+        background-color: $tertiaryBgColor;
+        border-color: $tertiaryBgColor;
+    }
+
+    .btn-primary i {
+        color: $secondaryTextColor;
+    }
+
+    .section-title {
+        text-align: center;
+        color: $tertiaryBgColor;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+    .card {
+        border: none;
+        background: $primaryBgColor;
+    }
+
+    .image-flip:hover .backside,
+    .image-flip.hover .backside {
+        transform: rotateY(0deg);
+        border-radius: 0.25rem;
+    }
+
+    .image-flip:hover .frontside,
+    .image-flip.hover .frontside {
+        transform: rotateY(180deg);
+    }
+
+    .mainflip {
+        transition: 1s;
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .frontside {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 30px;
+    }
+
+    .backside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $secondaryBgColor;
+        transform: rotateY(-180deg);
+        box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+    }
+
+    .frontside,
+    .backside {
+        backface-visibility: hidden;
+        transition: 1s;
+        transform-style: preserve-3d;
+    }
+
+    .frontside .card,
+    .backside .card {
+        min-height: 312px;
+    }
+
+    .frontside .card .card-body img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
     }
 }
