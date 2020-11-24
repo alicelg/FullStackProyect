@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'blog/hablando-de-politica', component: BlogComponent },
   { path: 'blog/hablando-de-politica/:id', component: PostComponent },
   { path: 'blog/new', component: FormComponent },
-  { path: 'test', component: TestsComponent },
+  { path: 'tests', component: TestsComponent },
   { path: 'test/:id', component: TestComponent },
   { path: 'test/:id/resultado', component: ResultComponent },
   { path: 'login', component: LoginComponent },
