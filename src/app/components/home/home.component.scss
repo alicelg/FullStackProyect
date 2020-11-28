@@ -47,12 +47,12 @@
     height: 60px;
     background-color: transparent;
     border-radius: 30px;
-    border: 1px solid $tertiaryBgColor;
+    border: 1px solid $quaternaryBgColor;
     padding: 10px;
 }
 
 .search_input {
-    color: $primaryTextColor;
+    color: $quaternaryBgColor;
     border: 0;
     outline: 0;
     background: none;
@@ -87,7 +87,7 @@
     border-radius: 50%;
     text-decoration: none;
     svg {
-        fill: $tertiaryBgColor;
+        fill: $quaternaryBgColor;
     }
 }
 
@@ -101,15 +101,15 @@
 /* FontAwesome for working BootSnippet :> */
 
 #blog {
-    background: $quaternaryBgColor;
+    background: $secondaryBgColor;
 
     .btn-primary {
-        background-color: $tertiaryBgColor;
+        background-color: $quaternaryBgColor;
         border-color: $tertiaryBgColor;
     }
 
     .btn-primary i {
-        color: $secondaryTextColor;
+        color: $primaryBgColor;
     }
 
     .section-title {
@@ -173,4 +173,8 @@
         height: 120px;
         border-radius: 50%;
     }
+}
+
+.container-color {
+    background-color: $secondaryBgColor;
 }
