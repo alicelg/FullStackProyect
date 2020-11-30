@@ -1,1 +1,86 @@
-<p>login works!</p>
+<div class="container-fluid pt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="owl">
+        <div class="hand"></div>
+        <div class="hand hand-r"></div>
+        <div class="arms">
+          <div class="arm"></div>
+          <div class="arm arm-r"></div>
+        </div>
+      </div>
+
+
+      <!-- <div class="form">
+      <div class="control">
+        <label for="email" class="fa fa-envelope"></label>
+        <input id="email" placeholder="Email" type="email">
+    </div>
+    <div class="control">
+      <label for="password" class="fa fa-asterisk"></label>
+      <input id="password" placeholder="Password" type="password" (focus)="passwordFocus()" (focusout)="passwordFocusout()">
+    </div>
+    </div>
+  </div> -->
+
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label for="username">{{'LOGIN.USERNAME' | translate }}</label>
+          <input id="username" type="email" formControlName="email" class="form-control"
+            [ngClass]="{ 'not-valid': loginForm.get('email').touched && !loginForm.get('email').valid }" />
+          <!-- <div *ngIf="loginForm.get('email').touched && !loginForm.get('email').valid" class="alert alert-danger">
+            <p *ngIf="loginForm.get('email').errors.required">{{ 'FORM.VALIDATION.REQUIRED' | translate }}</p>
+            <p *ngIf="loginForm.get('email').errors.incorrectMailFormat">{{ 'FORM.VALIDATION.EMAILFORMAT' | translate }}
+            </p>
+          </div> -->
+        </div>
+
+
+        <div class="form-group">
+          <label for="password">{{'LOGIN.PASSWORD' | translate }}</label>
+          <div class="input-group">
+            <input id="password" type="password" formControlName="password" class="form-control"
+              [ngClass]="{ 'not-valid': loginForm.get('password').touched && !loginForm.get('password').valid }"
+              (focus)="passwordFocus()" (focusout)="passwordFocusout()" />
+            <div class="input-group-append">
+              <span class="input-group-text"
+                [ngClass]="{ 'not-valid': loginForm.get('password').touched && !loginForm.get('password').valid }">
+                <span data-field="password" id="eyePassword" class="eye_open" (click)="showPassword($event)">ojo</span>
+              </span>
+            </div>
+            <!-- <div *ngIf="loginForm.get('pass').touched && !loginForm.get('pass').valid" class="alert alert-danger-eye">
+              <p *ngIf="loginForm.get('pass').errors.required">{{ 'FORM.VALIDATION.REQUIRED' | translate }}</p>
+            </div> -->
+          </div>
+        </div>
+
+        <div class="form-row">
+          <a id="forgotPassword" (click)="passwordForgotten()">
+            {{'LOGIN.PASSWORDFORGOTTEN' | translate }}
+          </a>
+        </div>
+        <div class="form-row">
+          <a id="signup" (click)="showSignUp()">
+            {{'LOGIN.PASSWORDFORGOTTEN' | translate }}
+          </a>
+        </div>
+
+
+
+
+
+        <button id="login-button" type="submit">
+          {{'LOGIN.LOGIN' | translate }}
+        </button>
+
+      </form>
+
+
+
+
+      <div class="col-md-6">
+        <h2>Ventajas</h2>
+      </div>
+    </div>
+  </div>

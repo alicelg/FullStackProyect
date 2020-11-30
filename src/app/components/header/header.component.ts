@@ -8,19 +8,18 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
 
-  userLogged: boolean = true;
+  userLogged = false;
 
   constructor(
     public translateService: TranslateService
   ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  changeLanguage(lang) {
+  changeLanguage(lang: string): void {
     this.translateService.setDefaultLang(lang);
     this.translateService.use(lang);
-    localStorage.setItem('language', lang)
+    localStorage.setItem('language', lang);
   }
 
 }
