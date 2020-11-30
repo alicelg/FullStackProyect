@@ -5,15 +5,15 @@
 @import "~font-awesome/scss/font-awesome";
 
 /* paleta de colores */
-$primaryBgColor: white;
-$secondaryBgColor: black;
-$tertiaryBgColor: teal;
-$quaternaryBgColor: lightgrey;
+$primaryBgColor: #ffff;
+$secondaryBgColor: #b1afaf;
+$tertiaryBgColor: black;
+$quaternaryBgColor: #3f050a;
 
 $primaryTextColor: black;
-$secondaryTextColor: white;
-$tertiaryTextColor: white;
-$quaternaryTextColor: white;
+$secondaryTextColor: #0000;
+$tertiaryTextColor: #3f050a;
+$quaternaryTextColor: #b1afaf;
 
 * {
     color: $primaryTextColor;
@@ -49,6 +49,14 @@ $quaternaryTextColor: white;
     margin-top: 7rem;
 }
 
+.pb-6 {
+    padding-bottom: 4rem;
+}
+
+.pt-6 {
+    padding-top: 4rem;
+}
+
 .vertical-center {
     position: absolute;
     top: 50%;
@@ -61,8 +69,9 @@ $quaternaryTextColor: white;
 }
 
 h2,
-h3 {
-    color: $tertiaryBgColor;
+h3,
+h5 {
+    color: $tertiaryTextColor;
 }
 
 hr {
@@ -84,5 +93,13 @@ hr {
 
     .desktop {
         display: none;
+    }
+
+    hr {
+        width: 200px;
+    }
+
+    h3 {
+        font-size: 1.5rem;
     }
 }
