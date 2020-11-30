@@ -80,6 +80,10 @@ hr {
     opacity: 0.5;
 }
 
+.not-valid {
+  border-color: #f24747;
+}
+
 @media (min-width: 1500px) {
     .container {
         max-width: 1400px;
