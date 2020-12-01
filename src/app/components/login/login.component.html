@@ -29,25 +29,25 @@
           <label for="username">{{'LOGIN.USERNAME' | translate }}</label>
           <input id="username" type="email" formControlName="email" class="form-control"
             [ngClass]="{ 'not-valid': loginForm.get('email').touched && !loginForm.get('email').valid }" />
-          <!-- <div *ngIf="loginForm.get('email').touched && !loginForm.get('email').valid" class="alert alert-danger">
+          <div *ngIf="loginForm.get('email').touched && !loginForm.get('email').valid" class="alert alert-danger">
             <p *ngIf="loginForm.get('email').errors.required">{{ 'FORM.VALIDATION.REQUIRED' | translate }}</p>
             <p *ngIf="loginForm.get('email').errors.incorrectMailFormat">{{ 'FORM.VALIDATION.EMAILFORMAT' | translate }}
             </p>
-          </div> -->
+          </div>
         </div>
 
 
         <div class="form-group">
           <label for="password">{{'LOGIN.PASSWORD' | translate }}</label>
-          <div class="input-group">
+          <div class="input-group" (clickOutside)="passwordFocusout()">
             <input id="password" type="password" formControlName="password" class="form-control"
               [ngClass]="{ 'not-valid': loginForm.get('password').touched && !loginForm.get('password').valid }"
-              (focus)="passwordFocus()" (focusout)="passwordFocusout()" />
+              (focus)="passwordFocus()" />
             <div class="input-group-append">
-              <span class="input-group-text"
+              <div class="input-group-text"
                 [ngClass]="{ 'not-valid': loginForm.get('password').touched && !loginForm.get('password').valid }">
-                <span data-field="password" id="eyePassword" class="eye_open" (click)="showPassword($event)">ojo</span>
-              </span>
+                <div data-field="password" id="eyePassword" class="eye_open" (click)="showPassword($event)"></div>
+              </div>
             </div>
             <!-- <div *ngIf="loginForm.get('pass').touched && !loginForm.get('pass').valid" class="alert alert-danger-eye">
               <p *ngIf="loginForm.get('pass').errors.required">{{ 'FORM.VALIDATION.REQUIRED' | translate }}</p>
@@ -78,9 +78,9 @@
 
 
 
-
-      <div class="col-md-6">
-        <h2>Ventajas</h2>
-      </div>
+    </div>
+    <div class="col-md-6">
+      <h2>Ventajas</h2>
     </div>
   </div>
+</div>

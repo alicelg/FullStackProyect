@@ -90,3 +90,23 @@
 	font-size: 14px;
 }
 
+.eye_closed {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-image: url(../../../assets/icons/eye_closed.png);
+  background-size: contain;
+  cursor: pointer;
+}
+
+.eye_open {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../../../assets/icons/eye_open.png);
+  cursor: pointer;
+}
+

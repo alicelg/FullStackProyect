@@ -29,6 +29,18 @@ export class LoginComponent implements OnInit {
     this.rightHand = document.querySelector('.hand-r');
   }
 
+  onSubmit(): void {
+    if (this.loginForm.valid) {
+
+    } else {
+      // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
+      Object.keys(this.loginForm.controls).forEach(field => {
+        const control = this.loginForm.get(field);
+        control.markAsTouched({ onlySelf: true });
+      });
+    }
+  }
+
   passwordFocus(): void {
     this.leftArm.classList.add('password');
     this.leftHand.classList.add('password');
@@ -43,7 +55,6 @@ export class LoginComponent implements OnInit {
     this.rightHand.classList.remove('password');
   }
 
-  onSubmit(): void { }
 
   showPassword(event): void {
 
@@ -56,15 +67,28 @@ export class LoginComponent implements OnInit {
 
     if (passwordInput.getAttribute('type') === 'password') {
       passwordInput.setAttribute('type', 'text');
+
+      this.leftArm.classList.remove('password');
+      this.leftHand.classList.remove('password');
       this.rightArm.classList.add('password');
       this.rightHand.classList.add('password');
+
       eye.classList.add('eye_closed');
+      eye.classList.remove('eye_open');
+
 
     } else {
       passwordInput.setAttribute('type', 'password');
+
       this.leftArm.classList.add('password');
       this.leftHand.classList.add('password');
+      this.rightArm.classList.add('password');
+      this.rightHand.classList.add('password');
+
+
       eye.classList.add('eye_open');
+      eye.classList.remove('eye_closed');
+
     }
 
   }
