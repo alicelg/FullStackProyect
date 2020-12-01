@@ -47,6 +47,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ClickOutside } from './helpers/clickOutside.directive';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     TestsComponent,
     TestComponent,
     ResultComponent,
-    RankingComponent
+    RankingComponent,
+    ClickOutside,
+
   ],
   imports: [
     BrowserModule,
