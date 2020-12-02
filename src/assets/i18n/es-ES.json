@@ -43,5 +43,12 @@
     "PASSWORDFORGOTTEN": "¿Has olvidado tu contraseña?",
     "SIGNUP": "¿No tienes cuenta? Regístrate",
     "LOGIN": "Iniciar Sesión"
+  },
+  "FORM":{
+    "VALIDATION":{
+      "REQUIRED": "campo requerido",
+      "EMAILFORMAT": "Introduce un mail válido"
+    }
   }
+
 }

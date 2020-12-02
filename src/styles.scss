@@ -13,7 +13,7 @@ $quaternaryBgColor: #3f050a;
 $primaryTextColor: black;
 $secondaryTextColor: #0000;
 $tertiaryTextColor: #3f050a;
-$quaternaryTextColor: #b1afaf;
+$quaternaryTextColor: #ffff;
 
 * {
     color: $primaryTextColor;
@@ -86,6 +86,11 @@ hr {
 
 a{
   cursor: pointer;
+  color: $tertiaryTextColor;
+}
+
+a:hover{
+  text-decoration: underline !important;
 }
 
 @media (min-width: 1500px) {

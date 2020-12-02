@@ -1,13 +1,21 @@
 
-.owl {
+@import "../../../styles.scss";
+
+.login-form{
+  background-color: $secondaryBgColor;
+  border-radius: 5px;
+}
+
+.avatar {
 	margin: auto;
 	width: 211px;
 	height: 108px;
 	background-image: url("https://dash.readme.io/img/owl-login.png");
-	position: relative;
+  position: relative;
+  bottom: -10px;
 }
 
-.owl .hand {
+.avatar .hand {
 	width: 34px;
 	height: 34px;
 	border-radius: 40px;
@@ -19,19 +27,19 @@
 	transition: 0.3s ease-out;
 }
 
-.owl .hand.password {
+.avatar .hand.password {
 	transform: translateX(42px) translateY(-15px) scale(0.7);
 }
 
-.owl .hand.hand-r {
+.avatar .hand.hand-r {
 	left: 170px;
 }
 
-.owl .hand.hand-r.password {
+.avatar .hand.hand-r.password {
 	transform: translateX(-42px) translateY(-15px) scale(0.7);
 }
 
-.owl .arms {
+.avatar .arms {
 	position: absolute;
 	top: 58px;
 	height: 41px;
@@ -39,7 +47,7 @@
 	overflow: hidden;
 }
 
-.owl .arms .arm {
+.avatar .arms .arm {
 	width: 40px;
 	height: 65px;
 	background-image: url("https://dash.readme.io/img/owl-login-arm.png");
@@ -49,46 +57,46 @@
 	transition: 0.3s ease-out;
 }
 
-.owl .arms .arm.password {
+.avatar .arms .arm.password {
 	transform: translateX(40px) translateY(-40px);
 }
 
-.owl .arms .arm.arm-r {
+.avatar .arms .arm.arm-r {
 	left: 158px;
 	transform: scaleX(-1);
 }
 
-.owl .arms .arm.arm-r.password {
+.avatar .arms .arm.arm-r.password {
 	transform: translateX(-40px) translateY(-40px) scaleX(-1);
 }
 
-.form {
-	margin: auto;
-	margin-top: -9px;
-	padding: 30px;
-	background-color: #fff;
-	width: 175px;
-}
+// .form {
+// 	margin: auto;
+// 	margin-top: -9px;
+// 	padding: 30px;
+// 	background-color: #fff;
+// 	width: 175px;
+// }
 
-.form .control {
-	margin-bottom: 10px;
-	position: relative;
-}
+// .form .control {
+// 	margin-bottom: 10px;
+// 	position: relative;
+// }
 
-.form .control label {
-	position: absolute;
-	font-size: 16px;
-	top: 11px;
-	left: 9px;
-	color: rgba(0,0,0,0.3);
-}
+// .form .control label {
+// 	position: absolute;
+// 	font-size: 16px;
+// 	top: 11px;
+// 	left: 9px;
+// 	color: rgba(0,0,0,0.3);
+// }
 
-.form .control input {
-	padding: 9px 6px 9px 30px;
-	border-radius: 4px;
-	border: 1px solid #ccc;
-	font-size: 14px;
-}
+// .form .control input {
+// 	padding: 9px 6px 9px 30px;
+// 	border-radius: 4px;
+// 	border: 1px solid #ccc;
+// 	font-size: 14px;
+// }
 
 .eye_closed {
   display: inline-block;
@@ -109,4 +117,12 @@
   background-image: url(../../../assets/icons/eye_open.png);
   cursor: pointer;
 }
+
+.loginButton{
+  width: 100%;
+  background-color: $quaternaryBgColor;
+  color: $quaternaryTextColor;
+}
+
+
 
