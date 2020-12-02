@@ -38,11 +38,31 @@
         "ESTO-TAMBIEN-TEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias"
     },
     "LOGIN": {
-      "USERNAME": "Usuario",
-      "PASSWORD": "Contraseña",
-      "PASSWORDFORGOTTEN": "¿Has olvidado tu contraseña?",
-      "SIGNUP": "¿No tienes cuenta? Regístrate",
-      "LOGIN": "Iniciar Sesión"
-
+        "USERNAME": "Username",
+        "PASSWORD": "Password",
+        "PASSWORDFORGOTTEN": "Forgot password?",
+        "SIGNUP": "Don't have an account? Sign up",
+        "LOGIN": "Login in "
+    },
+    "FORM": {
+        "VALIDATION": {
+            "REQUIRED": "The field is required",
+            "EMAILFORMAT": "Enter a valid email"
+        }
+    },
+    "BENEFITS": {
+        "BENEFITS-TITLE": "Benefits",
+        "FAVORITECONCEPTS": "Choose your favorite concepts.",
+        "TEXT-FAVORITECONCEPTS": "Save the concepts that you like, need and / or work on. Just one click away.",
+        "COMMENTS": "Comment on our Blog",
+        "TEXT-COMMENTS": "Your opinion is important and what better way to do it in the various posts on our blog.",
+        "PUBLISH": "Publish",
+        "TEXT-PUBLISH": "A space for your ideas to reach more users. No idea is left out.",
+        "HAVEFUN": "Have fun",
+        "TEXT-HAVEFUN": "Challenge your knowledge and participate in our tests. Place yourself among the best.",
+        "READ": "Read",
+        "TEXT-READ": "Be the first to read other users' posts.",
+        "BUY": "Buy",
+        "TEXT-BUY": "Original products with our logo. Coming soon."
     }
 }

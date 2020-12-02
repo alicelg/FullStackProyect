@@ -44,11 +44,25 @@
     "SIGNUP": "¿No tienes cuenta? Regístrate",
     "LOGIN": "Iniciar Sesión"
   },
-  "FORM":{
-    "VALIDATION":{
-      "REQUIRED": "campo requerido",
-      "EMAILFORMAT": "Introduce un mail válido"
+  "FORM": {
+    "VALIDATION": {
+      "REQUIRED": "El campo es requerido",
+      "EMAILFORMAT": "Introduce un email válido"
     }
+  },
+  "BENEFITS": {
+    "BENEFITS-TITLE": "Ventajas",
+    "FAVORITECONCEPTS": "Elige tus conceptos favoritos",
+    "TEXT-FAVORITECONCEPTS": "Guarda los conceptos que te gustas, necesitas y/o trabajas. A tan solo un click.",
+    "COMMENTS": "Comenta en nuestro Blog",
+    "TEXT-COMMENTS": "Tu opinión es importante y que mejor que hacerla en los diversos posts de nuestro blog.",
+    "PUBLISH": "Publica",
+    "TEXT-PUBLISH": "Un espacio para que tus ideas lleguen a más usuarios. Ninguna idea se queda por fuera.",
+    "HAVEFUN": "Diviertete",
+    "TEXT-HAVEFUN": "Reta a tus conocimientos y participa en nuestros tests. Ubicate entre los mejores.",
+    "READ": "Lee",
+    "TEXT-READ": "Se el primero en leer las publicaciones de otros usuarios.",
+    "BUY": "Compra",
+    "TEXT-BUY": "Productos originales con nuestro logo. Próximamente."
   }
-
 }
