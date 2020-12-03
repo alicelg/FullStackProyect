@@ -3,7 +3,7 @@
 /* Estilos de hero */
 .hero {
     position: relative;
-    background-color: $primaryTextColor;
+    background-color: $primaryBgColor;
     height: 75vh;
     min-height: 25rem;
     width: 100%;
@@ -47,12 +47,12 @@
     height: 60px;
     background-color: transparent;
     border-radius: 30px;
-    border: 1px solid $quaternaryBgColor;
+    border: 1px solid $tertiaryBgColor;
     padding: 10px;
 }
 
 .search_input {
-    color: $quaternaryBgColor;
+    color: $tertiaryTextColor;
     border: 0;
     outline: 0;
     background: none;
@@ -64,7 +64,7 @@
 }
 
 .searchbar:hover {
-    background-color: $primaryBgColor;
+    background-color: $secondaryBgColor;
 
     .search_input {
         padding: 0 10px;
@@ -87,7 +87,7 @@
     border-radius: 50%;
     text-decoration: none;
     svg {
-        fill: $quaternaryBgColor;
+        fill: $tertiaryBgColor;
     }
 }
 
@@ -104,8 +104,8 @@
     background: $secondaryBgColor;
 
     .btn-primary {
-        background-color: $quaternaryBgColor;
-        border-color: $tertiaryBgColor;
+        background-color: $tertiaryBgColor;
+        border: none;
     }
 
     .btn-primary i {

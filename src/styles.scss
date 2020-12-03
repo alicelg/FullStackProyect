@@ -6,13 +6,14 @@
 
 /* paleta de colores */
 $primaryBgColor: white;
-$secondaryBgColor: black;
-$tertiaryBgColor: teal;
+$secondaryBgColor: rgb(230, 228, 228);
+$tertiaryBgColor: rgb(77, 7, 7);
+
 $quaternaryBgColor: lightgrey;
 
-$primaryTextColor: black;
-$secondaryTextColor: white;
-$tertiaryTextColor: white;
+$primaryTextColor: #901b22;
+$secondaryTextColor: rgb(77, 7, 7);
+$tertiaryTextColor: black;
 $quaternaryTextColor: white;
 
 * {
@@ -49,6 +50,14 @@ $quaternaryTextColor: white;
     margin-top: 7rem;
 }
 
+.pt-6 {
+    padding-top: 5rem;
+}
+
+.pb-6 {
+    padding-bottom: 5rem;
+}
+
 .vertical-center {
     position: absolute;
     top: 50%;
@@ -60,15 +69,23 @@ $quaternaryTextColor: white;
     right: 0;
 }
 
+h1,
 h2,
-h3 {
-    color: $tertiaryBgColor;
+h3,
+h4,
+h5,
+h6 {
+    color: $secondaryTextColor;
 }
 
 hr {
     width: 500px;
     border-top: 0.5px solid $tertiaryBgColor;
     opacity: 0.5;
+}
+
+p {
+    color: $tertiaryTextColor;
 }
 
 @media (min-width: 1500px) {
