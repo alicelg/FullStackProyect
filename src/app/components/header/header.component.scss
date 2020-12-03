@@ -1,12 +1,20 @@
+@import "../../../styles.scss";
+
 .icon-flag {
     width: 20px;
 }
 
-.navbar-collapse {
-    /*     flex-grow: unset;
- */
+.logo {
+    width: 250px;
 }
 
-.logo {
-    width: 100px;
+.bg-dark {
+    background-color: $primaryBgColor !important;
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+    color: $primaryTextColor;
 }
