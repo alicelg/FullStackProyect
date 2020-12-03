@@ -31,11 +31,14 @@
         "ABOUT-US": "What do they say about us?",
         "READ-US": "Read us ",
         "GENERAL-BLOG": "General blog",
-        "GENERAL-BLOG-TEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
+        "GENERAL-BLOG-TEXT": "Share your ideas. Post on our blog. We have the categories of politics, history, economy and culture. Which one would you like to participate in?",
         "HABLANDO-POLITICA": "Hablando de política",
-        "HABLANDO-POLITICA-TEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
-        "ESTO-TAMBIEN": "Esto también es pólitica",
-        "ESTO-TAMBIEN-TEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias"
+        "HABLANDO-POLITICA-TEXT": "States are constantly changing and I'll talk about it in just five key points. If you want to know much more, continue with our quick reading.",
+        "ESTO-TAMBIEN": "Esto también es política",
+        "ESTO-TAMBIEN-TEXT": "Read and listen. The podcast that talks about politics in your own language (spanish). Analyzing the most current issues from objectivity and trying to understand the why of things, moving away from technicalities.",
+        "GO-GENERAL-BLOG-TEXT": "Go to Blog",
+        "GO-HABLANDO-POLITICA": "Go to Hablando de política",
+        "GO-ESTO-TAMBIEN": "Go to Esto también es política"
     },
     "FOOTER": {
         "PRINCIPALTEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, nostrum! Nulla consectetur ipsum ipsa et voluptate quaerat animi dignissimos dicta impedit in aspernatur quidem odit quo recusandae vel, nemo fugit?",

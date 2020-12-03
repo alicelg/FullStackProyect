@@ -31,11 +31,14 @@
         "ABOUT-US": "¿Qué dicen de nosotros?",
         "READ-US": "Leénos",
         "GENERAL-BLOG": "Blog general",
-        "GENERAL-BLOG-TEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
+        "GENERAL-BLOG-TEXT": "Comparte tus ideas. Publica en nuestro blog. Contamos con las categorías de política, historia, economía y cultura. ¿En cuál te gustaría participar?",
         "HABLANDO-POLITICA": "Hablando de política",
-        "HABLANDO-POLITICA-TEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
-        "ESTO-TAMBIEN": "Esto también es pólitica",
-        "ESTO-TAMBIEN-TEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias"
+        "HABLANDO-POLITICA-TEXT": "Los Estados se encuentran en constante cambio y yo te lo cuento en tan solo cinco puntos claves. Si quieres saber mucho más continúa con nuestra lectura rápida.",
+        "ESTO-TAMBIEN": "Esto también es política",
+        "ESTO-TAMBIEN-TEXT": "Lee y escucha. El podcast que habla sobre política en tu mismo idioma. Analizando los asuntos de más actualidad desde la objetividad e intentando comprender el por qué de las cosas, alejándose de los tecnicismos.",
+        "GO-GENERAL-BLOG-TEXT": "Ir al Blog",
+        "GO-HABLANDO-POLITICA": "Ir a Hablando de política",
+        "GO-ESTO-TAMBIEN": "Ir a Esto también es política"
     },
     "FOOTER": {
         "PRINCIPALTEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, nostrum! Nulla consectetur ipsum ipsa et voluptate quaerat animi dignissimos dicta impedit in aspernatur quidem odit quo recusandae vel, nemo fugit?",
