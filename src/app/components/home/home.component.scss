@@ -178,3 +178,31 @@
 .container-color {
     background-color: $secondaryBgColor;
 }
+
+.imagen-globo {
+    padding-top: 10px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.btn {
+    background-color: $tertiaryBgColor;
+    color: $quaternaryTextColor;
+}
+
+.centrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.size {
+    width: 30px;
+    margin: 0 auto;
+}
+
+.color-opinion {
+    background-color: $tertiaryBgColor;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
