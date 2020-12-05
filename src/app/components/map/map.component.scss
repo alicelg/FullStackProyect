@@ -3,13 +3,13 @@
 .box {
   border-radius: 5px;
   transition: all 0.5s ease-out;
-  height: 500px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   .box-text{
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
 
@@ -32,6 +32,16 @@ a i{
 }
 
 .image-flag{
-  width: 40%;
+  width: 30%;
   margin: 0 auto;
 }
+
+@media (max-width: 575px) {
+  .box {
+    .box-text{
+      font-size: 0.8rem;
+    }
+  }
+}
+
+

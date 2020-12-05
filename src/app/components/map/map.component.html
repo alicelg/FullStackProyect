@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<div class="container-color pt-5 pb-6">
+<div class="container-color pt-5 pb-6" *ngIf="countrySelected">
   <div class="container">
     <h3 class="mb-1 text-center"> Paises seleccionados </h3>
     <hr class="mb-5">
@@ -17,27 +17,58 @@
             <div class="box py-4 px-2">
               <img class="image-flag" src="../../../assets/icons/espana.png">
               <div class="box-text">
-                <h4 class="text-center mb-4">España</h4>
+                <h5 class="text-center mb-4">España</h5>
                 <div class="row">
-                  <div class="col-3">
+                  <div class="col-md-3 col-4 px-0">
                     <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
                   </div>
-                  <div class="col-9 mb-3"> Pedro Sanchez
+                  <div class="col-md-9 col-8 mb-3 px-0"> Pedro Sanchez
                   </div>
-                  <div class="col-3 mb-3">
+                  <div class="col-md-3 col-4 px-0">
                     <fa-icon [icon]="['fas', 'landmark']"></fa-icon>
                   </div>
-                  <div class="col-9 mb-3"> Democracia Parlamentaria
+                  <div class="col-md-9 col-8 mb-3 px-0"> Democracia Parlamentaria
                   </div>
-                  <div class="col-3 mb-3">
+                  <div class="col-md-3 col-4 px-0">
                     <fa-icon [icon]="['fas', 'language']"></fa-icon>
                   </div>
-                  <div class="col-9 mb-3"> Euro
+                  <div class="col-md-9 col-8 mb-3 px-0"> Euro
                   </div>
-                  <div class="col-3 mb-3">
+                  <div class="col-md-3 col-4 px-0">
                     <fa-icon [icon]="['fas', 'money-bill']"></fa-icon>
                   </div>
-                  <div class="col-9 mb-3"> Español
+                  <div class="col-md-9 col-8 mb-3 px-0"> Español
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="box py-4 px-2">
+              <img class="image-flag" src="../../../assets/icons/espana.png">
+              <div class="box-text">
+                <h5 class="text-center mb-4">España</h5>
+                <div class="row">
+                  <div class="col-md-3 col-4 px-0">
+                    <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
+                  </div>
+                  <div class="col-md-9 col-8 mb-3 px-0"> Pedro Sanchez
+                  </div>
+                  <div class="col-md-3 col-4 px-0">
+                    <fa-icon [icon]="['fas', 'landmark']"></fa-icon>
+                  </div>
+                  <div class="col-md-9 col-8 mb-3 px-0"> Democracia Parlamentaria
+                  </div>
+                  <div class="col-md-3 col-4 px-0">
+                    <fa-icon [icon]="['fas', 'language']"></fa-icon>
+                  </div>
+                  <div class="col-md-9 col-8 mb-3 px-0"> Euro
+                  </div>
+                  <div class="col-md-3 col-4 px-0">
+                    <fa-icon [icon]="['fas', 'money-bill']"></fa-icon>
+                  </div>
+                  <div class="col-md-9 col-8 mb-3 px-0"> Español
                   </div>
                 </div>
               </div>
