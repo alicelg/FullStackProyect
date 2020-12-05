@@ -75,6 +75,17 @@
         "BUY": "Compra",
         "TEXT-BUY": "Productos originales con nuestro logo. Próximamente."
     },
+    "CONCEPT": {
+        "SELECT": "Elige tus conceptos",
+        "SELECT-TEXT": "Puedes elegir todos los conceptos que quieras tener como favoritos y/o con los que estas trabajando.",
+        "HOW-SELECT-FAVORITE": "¿Cómo puedes elegir tus conceptos favoritos?",
+        "HOW-SELECT-FAVORITE-TEXT-ONE": "1. Sí eres usuario solamente con un click en el ♥️ , que se encuentra a la parte superior derecha de cada concepto, se te agregarán en tu perfil.",
+        "HOW-SELECT-FAVORITE-TEXT-TWO": "2. Sí aún no eres parte de WatchYourPolitics ve a Regístrate y empieza a guardar tus conceptos favoritos.",
+        "HOW-DELETE-FAVORITE": "¿Cómo puedo quitar un concepto de mis favoritos?",
+        "HOW-DELETE-FAVORITE-TEXT": "Es muy simple, vuelve a darle click al ♥️ y el concepto dejará de aparecer en tu lista de favoritos.",
+        "HOW-MANY-FAVORITE": "¿Cuántos conceptos puedo elegir para tener en mi lista de favoritos?",
+        "HOW-MANY-FAVORITE-TEXT": "No tenemos un límite, tu puedes elegir todos los conceptos que quieras."
+    },
     "FOOTER": {
         "PRINCIPALTEXT": "Conoce la posición política de los países y conceptos políticos.",
         "OUR": "Nosotros",

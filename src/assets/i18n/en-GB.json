@@ -75,6 +75,17 @@
         "BUY": "Buy",
         "TEXT-BUY": "Original products with our logo. Coming soon."
     },
+    "CONCEPT": {
+        "SELECT": "Choose your concepts",
+        "SELECT-TEXT": "You can choose all the concepts that you want to have as favorites and / or with which you are working.",
+        "HOW-SELECT-FAVORITE": "How can you choose your favorite concepts?",
+        "HOW-SELECT-FAVORITE-TEXT-ONE": "1. If you are a user, with just one click on the ♥ ️, which is located at the top right of each concept, they will be added to your profile.",
+        "HOW-SELECT-FAVORITE-TEXT-TWO": "2. If you are not part of WatchYourPolitics yet, go to Register and start saving your favorite concepts.",
+        "HOW-DELETE-FAVORITE": "How can I remove a concept from my favorites?",
+        "HOW-DELETE-FAVORITE-TEXT": "It's very simple, click again on ♥ ️ and the concept will no longer appear in your favorites list.",
+        "HOW-MANY-FAVORITE": "How many concepts can I choose to have on my favorites list?",
+        "HOW-MANY-FAVORITE-TEXT": "We don't have a limit, you can choose all the concepts you want."
+    },
     "FOOTER": {
         "PRINCIPALTEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, nostrum! Nulla consectetur ipsum ipsa et voluptate quaerat animi dignissimos dicta impedit in aspernatur quidem odit quo recusandae vel, nemo fugit?",
         "OUR": "About us",
