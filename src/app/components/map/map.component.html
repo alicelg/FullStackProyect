@@ -1,1 +1,36 @@
-<p>map works!</p>
+<div class="container">
+  <h3 class="mb-1 text-center"> Mapa Mundial </h3>
+  <hr class="mb-5">
+  <div class="row">
+    <div class="btn" (click)="selectCountry()">Pais seleccionado</div>
+  </div>
+</div>
+
+<div class="container-color pt-5 pb-6">
+  <div class="container">
+    <h3 class="mb-1 text-center"> Paises seleccionados </h3>
+    <hr class="mb-5">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <div class="box py-4 px-2">
+              <img class="image-flag" src="../../../assets/icons/espana.png">
+              <div class="box-text">
+                <h4 class="text-center">España</h4>
+                <fa-icon [icon]="['far', 'user']"></fa-icon>
+
+
+                <p> Pedro Sanchez</p>
+                <p>Democracia Parlamentaria</p>
+                <p>Español</p>
+                <p>Euro</p>
+              </div>
+              <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
