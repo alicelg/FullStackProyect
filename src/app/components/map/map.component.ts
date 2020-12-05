@@ -14,8 +14,8 @@ export class MapComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectCountry():void {
-    this.countrySelected = "España";
+  selectCountry(): void {
+    this.countrySelected = 'España';
   }
 
 }
