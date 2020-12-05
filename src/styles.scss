@@ -5,15 +5,16 @@
 @import "~font-awesome/scss/font-awesome";
 
 /* paleta de colores */
-$primaryBgColor: #ffff;
-$secondaryBgColor: #b1afaf;
-$tertiaryBgColor: black;
-$quaternaryBgColor: #3f050a;
+$primaryBgColor: white;
+$secondaryBgColor: rgb(230, 228, 228);
+$tertiaryBgColor: rgb(77, 7, 7);
 
-$primaryTextColor: black;
-$secondaryTextColor: #0000;
-$tertiaryTextColor: #3f050a;
-$quaternaryTextColor: #ffff;
+$quaternaryBgColor: lightgrey;
+
+$primaryTextColor: #901b22;
+$secondaryTextColor: rgb(77, 7, 7);
+$tertiaryTextColor: black;
+$quaternaryTextColor: white;
 
 * {
     color: $primaryTextColor;
@@ -49,12 +50,12 @@ $quaternaryTextColor: #ffff;
     margin-top: 7rem;
 }
 
-.pb-6 {
-    padding-bottom: 4rem;
+.pt-6 {
+    padding-top: 5rem;
 }
 
-.pt-6 {
-    padding-top: 4rem;
+.pb-6 {
+    padding-bottom: 5rem;
 }
 
 .vertical-center {
@@ -68,10 +69,13 @@ $quaternaryTextColor: #ffff;
     right: 0;
 }
 
+h1,
 h2,
 h3,
-h5 {
-    color: $tertiaryTextColor;
+h4,
+h5,
+h6 {
+    color: $secondaryTextColor;
 }
 
 hr {
@@ -91,6 +95,10 @@ a{
 
 a:hover{
   text-decoration: underline !important;
+}
+
+p {
+    color: $tertiaryTextColor;
 }
 
 @media (min-width: 1500px) {
