@@ -78,11 +78,12 @@
         "TEXT-BUY": "Productos originales con nuestro logo. Próximamente."
     },
     "FOOTER": {
-        "PRINCIPALTEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, nostrum! Nulla consectetur ipsum ipsa et voluptate quaerat animi dignissimos dicta impedit in aspernatur quidem odit quo recusandae vel, nemo fugit?",
+        "PRINCIPALTEXT": "Conoce la posición política de los países y conceptos políticos.",
         "OUR": "Nosotros",
         "LEGAL": "Legal",
-        "TEXTLEGAL1": "Lorem ipsum dolor sit",
-        "TEXTLEGAL2": "Lorem ipsum dolor sit",
-        "TEXTLEGAL3": "Lorem ipsum dolor sit"
+        "TEXTLEGAL1": "Aviso de privacidad",
+        "TEXTLEGAL2": "Área legal",
+        "TEXTLEGAL3": "Cookies",
+        "DISCOVER": "Visita"
     }
 }
