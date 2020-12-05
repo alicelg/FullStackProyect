@@ -6,8 +6,11 @@ i {
     color: $secondaryTextColor;
 }
 
-h5,
+h4 {
+    font-weight: 700;
+}
 h6 {
+    font-weight: 400;
     cursor: pointer;
 }
 
