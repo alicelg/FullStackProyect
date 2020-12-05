@@ -49,6 +49,12 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ClickOutside } from './helpers/clickOutside.directive';
 
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -78,6 +84,7 @@ import { ClickOutside } from './helpers/clickOutside.directive';
     NgbModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -91,4 +98,8 @@ import { ClickOutside } from './helpers/clickOutside.directive';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas, far);
+    }
+ }

@@ -3,10 +3,14 @@
 .box {
   border-radius: 5px;
   transition: all 0.5s ease-out;
-  height: 400px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  .box-text{
+    font-size: 1.1rem;
+  }
 }
 
 .box:hover {
