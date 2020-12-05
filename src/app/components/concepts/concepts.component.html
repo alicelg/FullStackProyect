@@ -1,116 +1,61 @@
 <h3 class="mb-1 text-center mt-5"> {{'HEADER.CONCEPTS' | translate}} </h3>
-<hr class="mb-5">
+<hr class="mb-3">
 
+<div class="container mb-7 mt-3">
 
-<div class="container mb-5 mt-5">
+    <div class="row">
+        <div class="offset-4 col-md-4 mt-5 mb-5 offset-4 desktop">
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="col-12 mt-4 mb-4 mobile">
+            <input type="text" class="form-control">
+        </div>
+    </div>
 
     <div class="row">
 
 
         <div class="col-md-3 desktop">
-            <h4>Lista de conceptos</h4>
-            <ul>
-                <li>Estado</li>
-                <li>Estado</li>
-                <li>Estado</li>
-                <li>Estado</li>
-                <li>Estado</li>
-                <li>Estado</li>
-                <li>Estado</li>
-                <li>Estado</li>
-                <li>Estado</li>
-                <li>Estado</li>
-                <li>Estado</li>
-                <li>Estado</li>
-                <li>Estado</li>
-            </ul>
+            <h6> {{'CONCEPT.SELECT' | translate}} </h6>
+
+            <p> {{'CONCEPT.SELECT-TEXT' | translate}}</p>
+
+            <h6 class="mt-5">{{'CONCEPT.HOW-SELECT-FAVORITE' | translate}}</h6>
+
+            <p>{{'CONCEPT.HOW-SELECT-FAVORITE-TEXT-ONE' | translate}} </p>
+            <p>{{'CONCEPT.HOW-SELECT-FAVORITE-TEXT-TWO' | translate}}</p>
+
+            <h6 class="mt-5">{{'CONCEPT.HOW-DELETE-FAVORITE' | translate}}</h6>
+
+            <p>{{'CONCEPT.HOW-DELETE-FAVORITE-TEXT' | translate}}</p>
+
+            <h6 class="mt-5">{{'CONCEPT.HOW-MANY-FAVORITE' | translate}}</h6>
+
+            <p>{{'CONCEPT.HOW-MANY-FAVORITE-TEXT' | translate}}</p>
 
         </div>
 
 
 
-        <div class="col-md-9">
+        <div class="col-md-9 col-12">
 
             <div class="row">
 
-                <div class="card m-2" style="width: 50rem;">
-                    <div class="card-body">
+                <div *ngFor="let concept of concepts">
 
-                        <div class="d-flex justify-content-between">
-                            <h5 class="card-title">Estado</h5>
-                            <fa-icon [icon]="['far', 'heart']"></fa-icon>
+                    <div class="card m-2" style="max-width: 50rem;">
+                        <div class="card-body">
 
-
+                            <div class="d-flex justify-content-between">
+                                <h5 class="card-title">{{concept.title}}</h5>
+                                <fa-icon class="size-icon" [icon]="['far', 'heart']"></fa-icon>
+                            </div>
+                            <p class="card-text">{{concept.text}}</p>
                         </div>
-                        <p class="card-text">El concepto de Estado difiere según los autores,​ pero algunos de ellos
-                            definen
-                            el
-                            Estado como el conjunto de instituciones que poseen la autoridad y potestad para establecer
-                            las
-                            normas que regulan una sociedad, teniendo soberanía interna y externa sobre un territorio
-                            determinado.</p>
                     </div>
                 </div>
-
-                <div class="card m-2" style="width: 50rem;">
-                    <div class="card-body">
-
-                        <div class="d-flex justify-content-between">
-                            <h5 class="card-title">Estado</h5>
-                            <fa-icon [icon]="['far', 'heart']"></fa-icon>
-                        </div>
-                        <p class="card-text">El concepto de Estado difiere según los autores,​ pero algunos de ellos
-                            definen
-                            el
-                            Estado como el conjunto de instituciones que poseen la autoridad y potestad para establecer
-                            las
-                            normas que regulan una sociedad, teniendo soberanía interna y externa sobre un territorio
-                            determinado.</p>
-                    </div>
-                </div>
-
-                <div class="card m-2" style="width: 50rem;">
-                    <div class="card-body">
-
-                        <div class="d-flex justify-content-between">
-                            <h5 class="card-title">Estado</h5>
-                            <fa-icon [icon]="['far', 'heart']"></fa-icon>
-                        </div>
-                        <p class="card-text">El concepto de Estado difiere según los autores,​ pero algunos de ellos
-                            definen
-                            el
-                            Estado como el conjunto de instituciones que poseen la autoridad y potestad para establecer
-                            las
-                            normas que regulan una sociedad, teniendo soberanía interna y externa sobre un territorio
-                            determinado.</p>
-                    </div>
-                </div>
-
-                <div class="card m-2" style="width: 50rem;">
-                    <div class="card-body">
-
-                        <div class="d-flex justify-content-between">
-                            <h5 class="card-title">Estado</h5>
-                            <fa-icon [icon]="['far', 'heart']"></fa-icon>
-                        </div>
-                        <p class="card-text">El concepto de Estado difiere según los autores,​ pero algunos de ellos
-                            definen
-                            el
-                            Estado como el conjunto de instituciones que poseen la autoridad y potestad para establecer
-                            las
-                            normas que regulan una sociedad, teniendo soberanía interna y externa sobre un territorio
-                            determinado.</p>
-                    </div>
-                </div>
-
-
-
-
             </div>
         </div>
-
-
     </div>
-
-
 </div>
