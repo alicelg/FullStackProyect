@@ -4,6 +4,8 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~font-awesome/scss/font-awesome";
 @import "~animate.css/animate.css";
+@import "~hover.css/scss/hover";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
 
 /* paleta de colores */
@@ -20,7 +22,8 @@ $quaternaryTextColor: white;
 
 * {
     color: $primaryTextColor;
-}
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;}
 .row {
     margin-right: 0;
     margin-left: 0;
@@ -78,6 +81,7 @@ h4,
 h5,
 h6 {
     color: $secondaryTextColor;
+    font-weight: 900;
 }
 
 hr {
