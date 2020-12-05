@@ -27,3 +27,13 @@ img {
 p {
     color: $secondaryTextColor;
 }
+
+@media (max-width: 575px) {
+    h4 {
+        font-size: 1.3rem;
+    }
+
+    h6 {
+        font-size: 0.9rem;
+    }
+}
