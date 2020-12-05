@@ -1,0 +1,29 @@
+@import "../../../styles.scss";
+
+i {
+    font-size: 30px !important;
+    margin-right: 20px;
+    color: $secondaryTextColor;
+}
+
+h5,
+h6 {
+    cursor: pointer;
+}
+
+.bg-footer {
+    border-top: 1px solid $secondaryTextColor;
+}
+
+a:hover {
+    text-decoration: none;
+    color: $secondaryTextColor;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    color: $secondaryTextColor;
+}
