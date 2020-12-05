@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
+  countrySelected;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  selectCountry():void {
+    this.countrySelected = "España";
   }
 
 }

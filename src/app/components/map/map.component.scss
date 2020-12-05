@@ -1,0 +1,33 @@
+@import "../../../styles.scss";
+
+.box {
+  border-radius: 5px;
+  transition: all 0.5s ease-out;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box:hover {
+  box-shadow: 0 0 6px $tertiaryBgColor;
+}
+
+.btn {
+  background-color: #4d0707;
+  color: white;
+}
+
+.size{
+  width: 30px;
+  margin: 0 auto;
+}
+
+a i{
+  color: $quaternaryTextColor;
+}
+
+.image-flag{
+  width: 40%;
+  margin: 0 auto;
+}

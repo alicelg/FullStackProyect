@@ -175,10 +175,6 @@
     }
 }
 
-.container-color {
-    background-color: $secondaryBgColor;
-}
-
 .imagen-globo {
     padding-top: 10px;
     margin: 0 auto;
@@ -199,6 +195,10 @@
 .size {
     width: 30px;
     margin: 0 auto;
+}
+
+a i{
+  color: $quaternaryTextColor;
 }
 
 .color-opinion {
