@@ -7,7 +7,6 @@
 @import "~hover.css/scss/hover";
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
-
 /* paleta de colores */
 $primaryBgColor: white;
 $secondaryBgColor: rgb(230, 228, 228);
@@ -91,17 +90,17 @@ hr {
 }
 
 .not-valid {
-  border-color: #f24747;
+    border-color: #f24747;
 }
 
-a{
-  cursor: pointer;
-  color: $tertiaryTextColor;
+a {
+    cursor: pointer;
+    color: $secondaryTextColor;
 }
 
-a:hover{
-  text-decoration: underline !important;
-}
+/* a:hover {
+    text-decoration: underline !important;
+} */
 
 p {
     color: $tertiaryTextColor;
