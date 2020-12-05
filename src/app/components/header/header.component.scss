@@ -1,7 +1,7 @@
 @import "../../../styles.scss";
 
-button{
-  font-weight: 700;
+button {
+    font-weight: 700 !important;
 }
 
 .icon-flag {
@@ -21,4 +21,8 @@ button{
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
     color: $primaryTextColor;
+}
+
+hr {
+    opacity: 0.3;
 }
