@@ -1,89 +1,88 @@
 {
-  "HEADER": {
-    "MAP": "Map",
-    "BLOG": "Blog",
-    "GENERAL": "General",
-    "HABLANDO": "Hablando de Política",
-    "ESTOTAMBIEN": "Esto también es Política",
-    "TEST": "Test",
-    "WORLD-TEST": "World Test",
-    "POLITICAL-TEST": "Political Test",
-    "CONCEPTS": "Concepts",
-    "LOGIN": "Log In",
-    "SIGNUP": "Sign Up",
-    "COUNTRIES": {
-      "SPANISH": "Spanish",
-      "ENGLISH": "English"
+    "HEADER": {
+        "MAP": "Map",
+        "BLOG": "Blog",
+        "GENERAL": "General",
+        "HABLANDO": "Hablando de Política",
+        "ESTOTAMBIEN": "Esto también es Política",
+        "TEST": "Test",
+        "WORLD-TEST": "World Test",
+        "POLITICAL-TEST": "Political Test",
+        "CONCEPTS": "Concepts",
+        "LOGIN": "Log In",
+        "SIGNUP": "Sign Up",
+        "COUNTRIES": {
+            "SPANISH": "Spanish",
+            "ENGLISH": "English"
+        }
+    },
+    "COMMON": {
+        "SEARCH": "What are you looking for?"
+    },
+    "HOME": {
+        "WHAT-IS-IT": "What is WatchYourPolitics?",
+        "PURPOSE-A": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
+        "PURPOSE-B": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
+        "MAP-DISCOVER": "Discover world politics",
+        "MAP-TEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
+        "TEST-KNOWLEDGE": "Test your knowledge",
+        "TEST-WORLD-TEXT": "Have fun trying how many flags of the world you know or can guess. The more times you do it, the better ranking and the more countries you discover.",
+        "TEST-POLITICAL-TEXT": "A test to measure your decisions. Answer and depending on your answers you will be able to discover the political tendency most akin to your profile.",
+        "RANKING": "Ranking",
+        "RANKING-TEXT": "All our users compete for the first place in our World Test, you dare to be part of our ranking. Participate, learn and have fun.",
+        "ABOUT-US": "What do they say about us?",
+        "PERSON1": "Carlos Hernandez",
+        "TEXT-PERSON1": "Practice finding concepts. The tests are interesting. It is a different and new project. What I like the most are blogs, because they are an opportunity to publish without so many filters.",
+        "PERSON2": "Paula López",
+        "TEXT-PERSON2": "It's a reference point for a quick search of any country or policy concept. I am a student of International Relations and getting some data costs a lot.",
+        "PERSON3": "Ana María Mendoza",
+        "TEXT-PERSON3": "It's a fundamental tool for research. It's interactive and different. So It's a way of organizing the concepts and consulting on the politics of the countries. I really like it and I recommend it to my internationalist friends.",
+        "SAY": "What they say about us in emojis:",
+        "READ-US": "Read us ",
+        "GENERAL-BLOG": "General blog",
+        "GENERAL-BLOG-TEXT": "Share your ideas. Post on our blog. We have the categories of politics, history, economy and culture. Which one would you like to participate in?",
+        "HABLANDO-POLITICA": "Hablando de política",
+        "HABLANDO-POLITICA-TEXT": "States are constantly changing and I'll talk about it in just five key points. If you want to know much more, continue with our quick reading.",
+        "ESTO-TAMBIEN": "Esto también es política",
+        "ESTO-TAMBIEN-TEXT": "Read and listen. The podcast that talks about politics in your own language (spanish). Analyzing the most current issues from objectivity and trying to understand the why of things, moving away from technicalities.",
+        "GO-GENERAL-BLOG-TEXT": "Go to Blog",
+        "GO-HABLANDO-POLITICA": "Go to Hablando de política",
+        "GO-ESTO-TAMBIEN": "Go to Esto también es política"
+    },
+    "LOGIN": {
+        "USERNAME": "Username",
+        "PASSWORD": "Password",
+        "PASSWORDFORGOTTEN": "Forgot password?",
+        "SIGNUP": "Don't have an account? Sign up",
+        "LOGIN": "Login in "
+    },
+    "FORM": {
+        "VALIDATION": {
+            "REQUIRED": "The field is required",
+            "EMAILFORMAT": "Enter a valid email"
+        }
+    },
+    "BENEFITS": {
+        "BENEFITS-TITLE": "Benefits",
+        "FAVORITECONCEPTS": "Choose your favorite concepts.",
+        "TEXT-FAVORITECONCEPTS": "Save the concepts that you like, need and / or work on. Just one click away.",
+        "COMMENTS": "Comment on our Blog",
+        "TEXT-COMMENTS": "Your opinion is important and what better way to do it in the various posts on our blog.",
+        "PUBLISH": "Publish",
+        "TEXT-PUBLISH": "A space for your ideas to reach more users. No idea is left out.",
+        "HAVEFUN": "Have fun",
+        "TEXT-HAVEFUN": "Challenge your knowledge and participate in our tests. Place yourself among the best.",
+        "READ": "Read",
+        "TEXT-READ": "Be the first to read other users' posts.",
+        "BUY": "Buy",
+        "TEXT-BUY": "Original products with our logo. Coming soon."
+    },
+    "FOOTER": {
+        "PRINCIPALTEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, nostrum! Nulla consectetur ipsum ipsa et voluptate quaerat animi dignissimos dicta impedit in aspernatur quidem odit quo recusandae vel, nemo fugit?",
+        "OUR": "About us",
+        "LEGAL": "Legal",
+        "TEXTLEGAL1": "Lorem ipsum dolor sit",
+        "TEXTLEGAL2": "Lorem ipsum dolor sit",
+        "TEXTLEGAL3": "Lorem ipsum dolor sit"
     }
-  },
-  "COMMON": {
-    "SEARCH": "What are you looking for?"
-  },
-  "HOME": {
-    "WHAT-IS-IT": "What is WatchYourPolitics?",
-    "PURPOSE-A": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
-    "PURPOSE-B": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
-    "MAP-DISCOVER": "Discover world politics",
-    "MAP-TEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
-    "TEST-KNOWLEDGE": "Test your knowledge",
-    "TEST-WORLD-TEXT": "Have fun trying how many flags of the world you know or can guess. The more times you do it, the better ranking and the more countries you discover.",
-    "TEST-POLITICAL-TEXT": "A test to measure your decisions. Answer and depending on your answers you will be able to discover the political tendency most akin to your profile.",
-    "RANKING": "Ranking",
-    "RANKING-TEXT": "All our users compete for the first place in our World Test, you dare to be part of our ranking. Participate, learn and have fun.",
-    "ABOUT-US": "What do they say about us?",
-    "PERSON1": "Carlos Hernandez",
-    "TEXT-PERSON1": "Practice finding concepts. The tests are interesting. It is a different and new project. What I like the most are blogs, because they are an opportunity to publish without so many filters.",
-    "PERSON2": "Paula López",
-    "TEXT-PERSON2": "It's a reference point for a quick search of any country or policy concept. I am a student of International Relations and getting some data costs a lot.",
-    "PERSON3": "Ana María Mendoza",
-    "TEXT-PERSON3": "It's a fundamental tool for research. It's interactive and different. So It's a way of organizing the concepts and consulting on the politics of the countries. I really like it and I recommend it to my internationalist friends.",
-    "SAY": "What they say about us in emojis:",
-    "READ-US": "Read us ",
-    "GENERAL-BLOG": "General blog",
-    "GENERAL-BLOG-TEXT": "Share your ideas. Post on our blog. We have the categories of politics, history, economy and culture. Which one would you like to participate in?",
-    "HABLANDO-POLITICA": "Hablando de política",
-    "HABLANDO-POLITICA-TEXT": "States are constantly changing and I'll talk about it in just five key points. If you want to know much more, continue with our quick reading.",
-    "ESTO-TAMBIEN": "Esto también es política",
-    "ESTO-TAMBIEN-TEXT": "Read and listen. The podcast that talks about politics in your own language (spanish). Analyzing the most current issues from objectivity and trying to understand the why of things, moving away from technicalities.",
-    "GO-GENERAL-BLOG-TEXT": "Go to Blog",
-    "GO-HABLANDO-POLITICA": "Go to Hablando de política",
-    "GO-ESTO-TAMBIEN": "Go to Esto también es política"
-  },
-
-  "LOGIN": {
-    "USERNAME": "Username",
-    "PASSWORD": "Password",
-    "PASSWORDFORGOTTEN": "Forgot password?",
-    "SIGNUP": "Don't have an account? Sign up",
-    "LOGIN": "Login in "
-  },
-  "FORM": {
-    "VALIDATION": {
-      "REQUIRED": "The field is required",
-      "EMAILFORMAT": "Enter a valid email"
-    }
-  },
-  "BENEFITS": {
-    "BENEFITS-TITLE": "Benefits",
-    "FAVORITECONCEPTS": "Choose your favorite concepts.",
-    "TEXT-FAVORITECONCEPTS": "Save the concepts that you like, need and / or work on. Just one click away.",
-    "COMMENTS": "Comment on our Blog",
-    "TEXT-COMMENTS": "Your opinion is important and what better way to do it in the various posts on our blog.",
-    "PUBLISH": "Publish",
-    "TEXT-PUBLISH": "A space for your ideas to reach more users. No idea is left out.",
-    "HAVEFUN": "Have fun",
-    "TEXT-HAVEFUN": "Challenge your knowledge and participate in our tests. Place yourself among the best.",
-    "READ": "Read",
-    "TEXT-READ": "Be the first to read other users' posts.",
-    "BUY": "Buy",
-    "TEXT-BUY": "Original products with our logo. Coming soon."
-  },
-  "FOOTER": {
-    "PRINCIPALTEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, nostrum! Nulla consectetur ipsum ipsa et voluptate quaerat animi dignissimos dicta impedit in aspernatur quidem odit quo recusandae vel, nemo fugit?",
-    "OUR": "About us",
-    "Legal": "Legal",
-    "TEXTLEGAL1": "Lorem ipsum dolor sit",
-    "TEXTLEGAL2": "Lorem ipsum dolor sit",
-    "TEXTLEGAL3": "Lorem ipsum dolor sit"
-  }
 }
