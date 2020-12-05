@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Concept, ConceptsService } from 'src/app/services/concepts.service';
 
 @Component({
   selector: 'app-concepts',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConceptsComponent implements OnInit {
 
-  constructor() { }
+  concepts: Concept[];
+
+  constructor(private conceptsService: ConceptsService) { }
 
   ngOnInit(): void {
+
+    this.conceptsService.getAll()
+      .then(response => {
+        this.concepts = response;
+      })
+      .catch(error => console.log(error));
+
   }
 
 }
