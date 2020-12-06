@@ -1,73 +1,154 @@
-<h3 class="mb-1 text-center mt-5"> {{'HEADER.BLOG' | translate}} </h3>
-<hr class="mb-3">
+<!-- BLOG GENERAL -->
 
-<div class="container mb-7 mt-3">
+<ng-container *ngIf="blogType.includes('general')">
+    <h3 class="mb-1 text-center mt-5"> {{'HEADER.BLOG' | translate}} </h3>
+    <hr class="mb-3">
 
-    <div class="row">
-        <div class="offset-4 col-md-4 mt-5 mb-5 offset-4 desktop">
-            <input type="text" class="form-control">
+    <div class="container mb-7 mt-3">
+
+        <div class="row">
+            <div class="offset-4 col-md-4 mt-5 mb-5 offset-4 desktop">
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="col-12 mt-4 mb-4 mobile">
+                <input type="text" class="form-control">
+            </div>
         </div>
 
-        <div class="col-12 mt-4 mb-4 mobile">
-            <input type="text" class="form-control">
-        </div>
-    </div>
+        <div class="row">
 
-    <div class="row">
+            <div class="col-md-3 text-center mb-4">
+                <h4>Categorías </h4>
+                <hr class="mb-5 line-hr">
 
-        <div class="col-md-3 text-center mb-4">
-            <h4>Categorías </h4>
-            <hr class="mb-5 line-hr">
-
-            <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 "> Todos
-            </button>
-            <button _ngcontent-mcy-c23="" value="cultura" class="d-block btn mb-3 w-100 "> Cultura
-            </button>
-            <button _ngcontent-mcy-c23="" value="politica" class="d-block btn mb-3 w-100 "> Política
-            </button>
-            <button _ngcontent-mcy-c23="" value="economia" class="d-block btn mb-3 w-100 "> Economía
-            </button>
-            <button _ngcontent-mcy-c23="" value="historia" class="d-block btn mb-3 w-100 "> Historia
-            </button>
-
-
-        </div>
-
-        <div class="col-md-9">
-
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card card-inverse">
-                        <img class="card-img-top" src="https://picsum.photos/200/150/?random">
-                        <div class="meta text-right mr-4">
-                            <p class="mb-0">Alice López</p>
-                        </div>
-                        <div class="card-block">
-                            <figure class="profile text-right">
-                                <img src="../../../assets/images/hablando.png" class="profile-avatar" alt="">
-                            </figure>
-                            <h4 class="card-title mt-1 mb-0 text-center">La política exterior de latinoamerica luego del
-                                coronavirus
-                            </h4>
-
-                            <div class="card-text text-justify">
-                                <small>Palabras claves: política, latinoamerica, coronavirus</small>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <small>Política </small>
-                            <button class="btn float-right btn-sm">{{'HOME.READ-MORE'|translate}}</button>
-                        </div>
-                    </div>
-                </div>
-
+                <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 "> Todos
+                </button>
+                <button _ngcontent-mcy-c23="" value="cultura" class="d-block btn mb-3 w-100 "> Cultura
+                </button>
+                <button _ngcontent-mcy-c23="" value="politica" class="d-block btn mb-3 w-100 "> Política
+                </button>
+                <button _ngcontent-mcy-c23="" value="economia" class="d-block btn mb-3 w-100 "> Economía
+                </button>
+                <button _ngcontent-mcy-c23="" value="historia" class="d-block btn mb-3 w-100 "> Historia
+                </button>
 
 
             </div>
 
+            <div class="col-md-9">
+
+                <div class="row">
+
+
+                    <div class="col-md-4 mb-4" *ngFor="let post of posts">
+                        <div class="card card-inverse">
+                            <img class="card-img-top" src="{{post.main_image}}">
+                            <div class="meta text-right mr-4">
+                                <p class="mb-0">Alice</p>
+                            </div>
+                            <div class="card-block">
+                                <figure class="profile text-right">
+                                    <img src="../../../assets/images/hablando.png" class="profile-avatar" alt="">
+                                </figure>
+                                <h4 class="card-title mt-1 mb-0 text-center">{{post.title}}
+                                </h4>
+
+                                <div class="card-text text-justify">
+                                    <small>{{post.keywords}}</small>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small>{{post.category}}</small>
+                                <button class="btn float-right btn-sm">{{'HOME.READ-MORE'|translate}}</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
 
         </div>
 
     </div>
+</ng-container>
 
-</div>
+
+<!-- BLOG HABLANDO DE POLÍTICA -->
+
+<ng-container *ngIf="blogType.includes('hablando')">
+    <h3 class="mb-1 text-center mt-5"> {{'HEADER.HABLANDO' | translate}} </h3>
+    <hr class="mb-3">
+
+    <div class="container mb-7 mt-3">
+
+        <div class="row">
+            <div class="offset-4 col-md-4 mt-5 mb-5 offset-4 desktop">
+                <input type="text" class="form-control">
+            </div>
+
+            <div class="col-12 mt-4 mb-4 mobile">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-3 text-center mb-4">
+                <h4>Categorías </h4>
+                <hr class="mb-5 line-hr">
+
+                <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 "> Todos
+                </button>
+                <button _ngcontent-mcy-c23="" value="cultura" class="d-block btn mb-3 w-100 "> Cultura
+                </button>
+                <button _ngcontent-mcy-c23="" value="politica" class="d-block btn mb-3 w-100 "> Política
+                </button>
+                <button _ngcontent-mcy-c23="" value="economia" class="d-block btn mb-3 w-100 "> Economía
+                </button>
+                <button _ngcontent-mcy-c23="" value="historia" class="d-block btn mb-3 w-100 "> Historia
+                </button>
+
+
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="row">
+
+
+                    <div class="col-md-4 mb-4" *ngFor="let post of posts">
+                        <div class="card card-inverse">
+                            <img class="card-img-top" src="{{post.main_image}}">
+                            <div class="meta text-right mr-4">
+                                <p class="mb-0">Alice</p>
+                            </div>
+                            <div class="card-block">
+                                <figure class="profile text-right">
+                                    <img src="../../../assets/images/hablando.png" class="profile-avatar" alt="">
+                                </figure>
+                                <h4 class="card-title mt-1 mb-0 text-center">{{post.title}}
+                                </h4>
+
+                                <div class="card-text text-justify">
+                                    <small>{{post.keywords}}</small>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <small>{{post.category}}</small>
+                                <button class="btn float-right btn-sm">{{'HOME.READ-MORE'|translate}}</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</ng-container>
