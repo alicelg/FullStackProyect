@@ -20,10 +20,10 @@ const routes: Routes = [
   { path: 'mapa', component: MapComponent },
   { path: 'mapa/pais/:id', component: CountryComponent },
   { path: 'conceptos', component: ConceptsComponent },
-  { path: 'blog/general', component: BlogComponent },
-  { path: 'blog/general/:id', component: PostComponent },
-  { path: 'blog/hablando-de-politica', component: BlogComponent },
-  { path: 'blog/hablando-de-politica/:id', component: PostComponent },
+  { path: 'blog/:type', component: BlogComponent },
+  { path: 'blog/:type/:id', component: PostComponent },
+  /* { path: 'blog/hablando-de-politica', component: BlogComponent }, */
+  /* { path: 'blog/hablando-de-politica/:id', component: PostComponent }, */
   { path: 'blog/new', component: FormComponent },
   { path: 'tests', component: TestsComponent },
   { path: 'test/:id', component: TestComponent },
