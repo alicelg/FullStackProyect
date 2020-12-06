@@ -1,5 +1,10 @@
 @import "../../../styles.scss";
 
+#map {
+  height: 500px;
+  text-align: center;
+}
+
 .box {
   border-radius: 5px;
   transition: all 0.5s ease-out;
@@ -8,7 +13,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  .box-text{
+  .box-text {
     font-size: 1rem;
   }
 }
@@ -22,26 +27,24 @@
   color: white;
 }
 
-.size{
+.size {
   width: 30px;
   margin: 0 auto;
 }
 
-a i{
+a i {
   color: $quaternaryTextColor;
 }
 
-.image-flag{
+.image-flag {
   width: 30%;
   margin: 0 auto;
 }
 
 @media (max-width: 575px) {
   .box {
-    .box-text{
+    .box-text {
       font-size: 0.8rem;
     }
   }
 }
-
-

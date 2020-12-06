@@ -8,16 +8,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap");
 
 /* paleta de colores */
-$primaryBgColor: white;
-$secondaryBgColor: rgb(230, 228, 228);
-$tertiaryBgColor: rgb(77, 7, 7);
+$primaryBgColor: #ffffff;
+$secondaryBgColor: #e6e4e4;
+$tertiaryBgColor: #4d0707;
 
 $quaternaryBgColor: lightgrey;
 
 $primaryTextColor: #901b22;
-$secondaryTextColor: rgb(77, 7, 7);
-$tertiaryTextColor: black;
-$quaternaryTextColor: white;
+$secondaryTextColor: #4d0707;
+$tertiaryTextColor: #000000;
+$quaternaryTextColor: #ffffff;
 
 * {
   color: $primaryTextColor;

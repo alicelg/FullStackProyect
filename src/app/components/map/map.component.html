@@ -1,78 +1,53 @@
 <div class="container">
   <h3 class="mb-1 text-center"> Mapa Mundial </h3>
   <hr class="mb-5">
-  <div class="row">
-    <div class="btn" (click)="selectCountry()">Pais seleccionado</div>
-  </div>
+  <div id="map" class="mb-5"></div>
 </div>
 
-<div class="container-color py-5" *ngIf="countrySelected">
+<div class="container-color py-5">
   <div class="container">
     <h3 class="mb-1 text-center"> Paises seleccionados </h3>
     <hr class="mb-md-5">
-    <div class="row">
-      <div class="col-md-4 col-6">
-        <div class="box py-4 px-2">
-          <img class="image-flag" src="../../../assets/icons/espana.png">
-          <div class="box-text">
-            <h5 class="text-center mb-4">España</h5>
-            <div class="row">
-              <div class="col-md-3 col-4 px-0">
-                <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
-              </div>
-              <div class="col-md-9 col-8 mb-3 px-0"> Pedro Sanchez
-              </div>
-              <div class="col-md-3 col-4 px-0">
-                <fa-icon [icon]="['fas', 'landmark']"></fa-icon>
-              </div>
-              <div class="col-md-9 col-8 mb-3 px-0"> Democracia Parlamentaria
-              </div>
-              <div class="col-md-3 col-4 px-0">
-                <fa-icon [icon]="['fas', 'language']"></fa-icon>
-              </div>
-              <div class="col-md-9 col-8 mb-3 px-0"> Euro
-              </div>
-              <div class="col-md-3 col-4 px-0">
-                <fa-icon [icon]="['fas', 'money-bill']"></fa-icon>
-              </div>
-              <div class="col-md-9 col-8 mb-3 px-0"> Español
-              </div>
-            </div>
-          </div>
-          <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
-        </div>
-      </div>
-      <div class="col-md-4 col-6">
-        <div class="box py-4 px-2">
-          <img class="image-flag" src="../../../assets/icons/espana.png">
-          <div class="box-text">
-            <h5 class="text-center mb-4">España</h5>
-            <div class="row">
-              <div class="col-md-3 col-4 px-0">
-                <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
-              </div>
-              <div class="col-md-9 col-8 mb-3 px-0"> Pedro Sanchez
-              </div>
-              <div class="col-md-3 col-4 px-0">
-                <fa-icon [icon]="['fas', 'landmark']"></fa-icon>
-              </div>
-              <div class="col-md-9 col-8 mb-3 px-0"> Democracia Parlamentaria
-              </div>
-              <div class="col-md-3 col-4 px-0">
-                <fa-icon [icon]="['fas', 'language']"></fa-icon>
-              </div>
-              <div class="col-md-9 col-8 mb-3 px-0"> Euro
-              </div>
-              <div class="col-md-3 col-4 px-0">
-                <fa-icon [icon]="['fas', 'money-bill']"></fa-icon>
-              </div>
-              <div class="col-md-9 col-8 mb-3 px-0"> Español
+    <ng-container *ngIf="selectedCountries.length; else elseTemplate">
+      <div class="btn" (click)="clearSelectedCountries()">Eliminar Regiones seleccionadas </div>
+      <div class="row">
+        <div class="col-md-4 col-6" *ngFor="let country of selectedCountries">
+          <div class="box py-4 px-2">
+            <img class="image-flag" src="../../../assets/icons/espana.png">
+            <div class="box-text">
+              <h5 class="text-center mb-4">{{('COUNTRIES.' + country.name) | translate}}</h5>
+              <div class="row">
+                <div class="col-md-3 col-4 px-0">
+                  <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
+                </div>
+                <div class="col-md-9 col-8 mb-3 px-0"> Pedro Sanchez
+                </div>
+                <div class="col-md-3 col-4 px-0">
+                  <fa-icon [icon]="['fas', 'landmark']"></fa-icon>
+                </div>
+                <div class="col-md-9 col-8 mb-3 px-0"> Democracia Parlamentaria
+                </div>
+                <div class="col-md-3 col-4 px-0">
+                  <fa-icon [icon]="['fas', 'language']"></fa-icon>
+                </div>
+                <div class="col-md-9 col-8 mb-3 px-0"> Euro
+                </div>
+                <div class="col-md-3 col-4 px-0">
+                  <fa-icon [icon]="['fas', 'money-bill']"></fa-icon>
+                </div>
+                <div class="col-md-9 col-8 mb-3 px-0"> Español
+                </div>
               </div>
             </div>
+            <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
           </div>
-          <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
         </div>
       </div>
-    </div>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <div class="row">
+        <div class="mx-auto">Para comenzar selecciona algún país</div>
+      </div>
+    </ng-template>
   </div>
 </div>
