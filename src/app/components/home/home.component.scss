@@ -206,3 +206,9 @@ a i{
     padding-top: 10px;
     padding-bottom: 5px;
 }
+
+hr {
+    width: 500px;
+    border-top: 0.5px solid $tertiaryBgColor;
+    opacity: 0.5;
+}

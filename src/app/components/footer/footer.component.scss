@@ -1,13 +1,20 @@
 @import "../../../styles.scss";
 
+#footer {
+    background-color: $primaryBgColor;
+}
+
 i {
     font-size: 30px !important;
     margin-right: 20px;
     color: $secondaryTextColor;
 }
 
-h5,
+h4 {
+    font-weight: 700;
+}
 h6 {
+    font-weight: 400;
     cursor: pointer;
 }
 
