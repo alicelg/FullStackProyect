@@ -1,0 +1,16 @@
+@import "../../../styles.scss";
+
+.line-hr {
+    width: 200px;
+    border-top: 0.5px solid $tertiaryBgColor;
+}
+
+.btn {
+    background-color: $tertiaryBgColor;
+    color: $quaternaryTextColor;
+}
+
+.btn:hover {
+    background-color: $quaternaryBgColor;
+    color: $quaternaryTextColor;
+}
