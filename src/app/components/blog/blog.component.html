@@ -6,6 +6,7 @@
 
     <div class="container mb-7 mt-3">
 
+        <!-- el buscador -->
         <div class="row">
             <div class="offset-4 col-md-4 mt-5 mb-5 offset-4 desktop">
                 <input type="text" class="form-control">
@@ -16,6 +17,7 @@
             </div>
         </div>
 
+        <!-- las categorias -->
         <div class="row">
 
             <div class="col-md-3 text-center mb-4">
@@ -36,6 +38,7 @@
 
             </div>
 
+            <!-- los posts -->
             <div class="col-md-9">
 
                 <div class="row">
@@ -51,11 +54,11 @@
                                 <figure class="profile text-right">
                                     <img src="../../../assets/images/hablando.png" class="profile-avatar" alt="">
                                 </figure>
-                                <h4 class="card-title mt-1 mb-0 text-center">{{post.title}}
+                                <h4 class="card-title mt-1 mb-0">{{post.title | titlecase}}
                                 </h4>
 
-                                <div class="card-text text-justify">
-                                    <small>{{post.keywords}}</small>
+                                <div class="card-text">
+                                    <small>{{post.keywords | titlecase}}</small>
                                 </div>
                             </div>
                             <div class="card-footer">
@@ -84,6 +87,7 @@
 
     <div class="container mb-7 mt-3">
 
+        <!-- el buscador  -->
         <div class="row">
             <div class="offset-4 col-md-4 mt-5 mb-5 offset-4 desktop">
                 <input type="text" class="form-control">
@@ -94,6 +98,7 @@
             </div>
         </div>
 
+        <!-- las categorias -->
         <div class="row mb-4 justify-content-center">
 
             <div class="col-md-2 col-12 text-center d-inline">
@@ -119,6 +124,8 @@
 
         </div>
 
+
+        <!-- los posts -->
         <div class="row">
 
             <div class="col-md-4">
@@ -135,14 +142,14 @@
                             <img src="../../../assets/images/hablando1.png" alt="" class="imagen-blog ml-2">
                         </div>
 
-                        <div class="col-7 text-center mt-3">
+                        <div class="col-7 mt-3">
                             <p>5 puntos claves para entender la situación política de Siria.</p>
                             <p class="desktop"> 1. ¿Cómo ha sucedido? <br> 2. ¿Qué estan haciendo? <br>3. ¿A quiénes
                                 afecta? <br>4. ¿Por
                                 qué se debe?<br> 5.
                                 ¿Quiénes son los involucrados? </p>
                             <br>
-                            <button class="btn btn-sm mt-2">{{'HOME.READ-MORE'|translate}}</button>
+                            <button class="btn btn-sm mt-2 mx-auto">{{'HOME.READ-MORE'|translate}}</button>
                         </div>
 
                     </div>
@@ -164,7 +171,7 @@
                             <img src="../../../assets/images/hablando2.png" alt="" class="imagen-blog ml-2">
                         </div>
 
-                        <div class="col-7 mt-3 text-center">
+                        <div class="col-7 mt-3">
                             <p>5 puntos claves para entender la situación de Bielorrusia.</p>
                             <p class="desktop"> 1. ¿Cómo ha sucedido? <br> 2. ¿Qué estan haciendo? <br>3. ¿A quiénes
                                 afecta? <br>4. ¿Por
@@ -193,7 +200,7 @@
                             <img src="../../../assets/images/hablando1.png" alt="" class="imagen-blog ml-2">
                         </div>
 
-                        <div class="col-7 text-center mt-3">
+                        <div class="col-7 mt-3">
                             <p>5 puntos claves para entender la situación política de Siria.</p>
                             <p class="desktop"> 1. ¿Cómo ha sucedido? <br> 2. ¿Qué estan haciendo? <br>3. ¿A quiénes
                                 afecta? <br>4. ¿Por
@@ -222,7 +229,7 @@
                             <img src="../../../assets/images/hablando2.png" alt="" class="imagen-blog ml-2">
                         </div>
 
-                        <div class="col-7 text-center mt-3">
+                        <div class="col-7 mt-3">
                             <p>5 puntos claves para entender la situación de Bielorrusia.</p>
                             <p class="desktop"> 1. ¿Cómo ha sucedido? <br> 2. ¿Qué estan haciendo? <br>3. ¿A quiénes
                                 afecta? <br>4. ¿Por
@@ -236,8 +243,6 @@
 
                 </div>
             </div>
-
-
 
 
         </div>
