@@ -1,36 +1,99 @@
-<div class="container">
+<div class="container-fluid container-md">
   <h3 class="mb-1 text-center"> Mapa Mundial </h3>
-  <hr class="mb-5">
+  <hr class="mb-4">
+  <div id="map" class="mb-4 mb-md-0"></div>
   <div class="row">
-    <div class="btn">Pais seleccionado</div>
+    <fa-icon class="size-icon mx-auto animate__animated animate__bounce animate__infinite desktop"
+      [icon]="['fas', 'sort-down']"></fa-icon>
   </div>
 </div>
 
-<div class="container-color pt-5 pb-6">
-  <div class="container">
+<div class="container-color py-4">
+  <div class="container position-relative">
+    <div class="btn position-right desktop" (click)="clearSelectedCountries()" *ngIf="selectedCountries.length">Eliminar
+      regiones seleccionadas </div>
     <h3 class="mb-1 text-center"> Paises seleccionados </h3>
-    <hr class="mb-5">
-    <div class="row">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-6">
-            <div class="box py-4 px-2">
-              <img class="image-flag" src="../../../assets/icons/espana.png">
-              <div class="box-text">
-                <h4 class="text-center">España</h4>
-                <fa-icon [icon]="['far', 'user']"></fa-icon>
-
-
-                <p> Pedro Sanchez</p>
-                <p>Democracia Parlamentaria</p>
-                <p>Español</p>
-                <p>Euro</p>
+    <hr class="mb-md-4">
+    <ng-container *ngIf="selectedCountries.length; else elseTemplate">
+      <div class="row">
+        <div class="btn mx-auto mobile mb-2" (click)="clearSelectedCountries()">Eliminar regiones seleccionadas</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-6" *ngFor="let country of selectedCountries">
+          <!-- versión descktop -->
+          <div class="box py-2 px-2 box-desktop">
+            <img class="image-flag" [src]="country.flag">
+            <div class="box-text">
+              <h5 class="text-center mb-4">{{('COUNTRIES.' + country.code) | translate}}</h5>
+              <div class="row">
+                <div class="col-md-3 col-4 px-0">
+                  <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
+                </div>
+                <div class="col-md-9 col-8 mb-3 px-0"> Pedro Sanchez
+                </div>
+                <div class="col-md-3 col-4 px-0">
+                  <fa-icon [icon]="['fas', 'landmark']"></fa-icon>
+                </div>
+                <div class="col-md-9 col-8 mb-3 px-0"> Democracia Parlamentaria
+                </div>
+                <div class="col-md-3 col-4 px-0">
+                  <fa-icon [icon]="['fas', 'language']"></fa-icon>
+                </div>
+                <div class="col-md-9 col-8 mb-3 px-0"> {{country.languages}}
+                </div>
+                <div class="col-md-3 col-4 px-0">
+                  <fa-icon [icon]="['fas', 'money-bill']"></fa-icon>
+                </div>
+                <div class="col-md-9 col-8 mb-3 px-0"> {{country.currencies}}
+                </div>
               </div>
-              <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
             </div>
+            <a class="btn btn-sm size"  [routerLink]="['/mapa/pais', country.code]"><i class="fa fa-plus"></i></a>
+          </div>
+
+          <!-- versión movil -->
+          <div class="box py-2 px-2 mb-2 box-mobile">
+            <div class="box-text">
+              <div class="row align-items-center mb-2">
+                <div class="col-9 p-0">
+                  <h6 class="m-0">{{('COUNTRIES.' + country.code) | translate}}</h6>
+                </div>
+                <div class="col-3 p-0 pl-1">
+                  <img class="image-flag" [src]="country.flag">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-4 px-0">
+                  <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
+                </div>
+                <div class="col-8 mb-2 px-0"> Pedro Sanchez
+                </div>
+                <div class="col-4 px-0">
+                  <fa-icon [icon]="['fas', 'landmark']"></fa-icon>
+                </div>
+                <div class="col-8 mb-2 px-0"> Democracia Parlamentaria
+                </div>
+                <div class="col-4 px-0">
+                  <fa-icon [icon]="['fas', 'language']"></fa-icon>
+                </div>
+                <div class="col-8 mb-2 px-0"> {{country.languages}}
+                </div>
+                <div class="col-4 px-0">
+                  <fa-icon [icon]="['fas', 'money-bill']"></fa-icon>
+                </div>
+                <div class="col-8 mb-2 px-0"> {{country.currencies}}
+                </div>
+              </div>
+            </div>
+            <a class="btn btn-sm size" [routerLink]="['/mapa/pais', country.code]"><i class="fa fa-plus"></i></a>
           </div>
         </div>
       </div>
-    </div>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <div class="row">
+        <div class="mx-auto">Para comenzar selecciona algún país</div>
+      </div>
+    </ng-template>
   </div>
 </div>
