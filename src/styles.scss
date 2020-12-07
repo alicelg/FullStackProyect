@@ -11,8 +11,9 @@
 $primaryBgColor: #ffffff;
 $secondaryBgColor: #e6e4e4;
 $tertiaryBgColor: #4d0707;
+$quaternaryBgColor: #d3d3d3;
+$quinaryBgColor: #000000;
 
-$quaternaryBgColor: lightgrey;
 
 $primaryTextColor: #901b22;
 $secondaryTextColor: #4d0707;
@@ -30,11 +31,11 @@ $quaternaryTextColor: #ffffff;
 }
 
 .mobile {
-  display: none;
+  display: none !important;
 }
 
 .desktop {
-  display: initial;
+  display: initial !important;
 }
 
 .btn {
@@ -125,11 +126,11 @@ p {
 
 @media (max-width: 575px) {
   .mobile {
-    display: initial;
+    display: initial !important;
   }
 
   .desktop {
-    display: none;
+    display: none !important;
   }
 
   hr {
@@ -137,6 +138,6 @@ p {
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 }

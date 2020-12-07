@@ -1,8 +1,30 @@
 @import "../../../styles.scss";
 
 #map {
-  height: 500px;
+  height: 60vh;
   text-align: center;
+}
+
+::ng-deep {
+  .jsvmap-zoom-btn.jsvmap-zoomin {
+    top: 10px;
+  }
+
+  .jsvmap-zoom-btn.jsvmap-zoomout {
+    top: 40px;
+  }
+
+  .jsvmap-zoom-btn {
+    background-color: $quinaryBgColor;
+    padding: 8px;
+    height: unset;
+    width: unset;
+    left: 20px;
+  }
+}
+
+.size-icon {
+  font-size: 1.3rem;
 }
 
 .box {
@@ -41,10 +63,62 @@ a i {
   margin: 0 auto;
 }
 
+.box-mobile {
+  display: none;
+}
+
+.box-desktop {
+  display: flex;
+}
+
 @media (max-width: 575px) {
+  #map {
+    height: auto;
+    width: 100%;
+    text-align: center;
+  }
+
   .box {
+    height: 250px;
     .box-text {
       font-size: 0.8rem;
+    }
+  }
+
+  .btn {
+    font-size: 0.8rem;
+  }
+
+  .box-mobile {
+    display: flex;
+  }
+
+  .box-desktop {
+    display: none;
+  }
+
+  .image-flag {
+    width: 100%;
+    margin: 0;
+  }
+
+  ::ng-deep {
+    .jsvmap-zoom-btn.jsvmap-zoomin {
+      top: unset;
+      bottom: 30px;
+    }
+
+    .jsvmap-zoom-btn.jsvmap-zoomout {
+      top: unset;
+      bottom: 5px;
+    }
+
+    .jsvmap-zoom-btn {
+      background-color: $quinaryBgColor;
+      padding: 5px;
+      height: unset;
+      width: unset;
+      left: 20px;
     }
   }
 }
