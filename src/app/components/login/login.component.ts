@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,9 @@ export class LoginComponent implements OnInit {
   leftHand: HTMLElement;
   rightHand: HTMLElement;
 
-  constructor() {
+  constructor(
+    private usersService: UsersService
+  ) {
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.email, Validators.required]),
       password: new FormControl('', [Validators.required])
@@ -31,13 +34,16 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     if (this.loginForm.valid) {
-
+      this.usersService.login(this.loginForm.value).then(res => {
+        console.log(res);
+      });
     } else {
       // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
       Object.keys(this.loginForm.controls).forEach(field => {
         const control = this.loginForm.get(field);
         control.markAsTouched({ onlySelf: true });
       });
+
     }
   }
 
