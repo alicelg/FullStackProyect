@@ -18,7 +18,7 @@ import { UserComponent } from './components/user/user.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'mapa', component: MapComponent },
-  { path: 'mapa/pais/:id', component: CountryComponent },
+  { path: 'mapa/pais/:code', component: CountryComponent },
   { path: 'conceptos', component: ConceptsComponent },
   { path: 'blog/:type', component: BlogComponent },
   { path: 'blog/:type/:id', component: PostComponent },
