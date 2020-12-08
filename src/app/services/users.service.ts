@@ -20,4 +20,8 @@ export class UsersService {
     return this.httpClient.post<any>(`${this.baseUrl}/login`, formValue).toPromise();
   }
 
+  signup(formValue): Promise<any> {
+    return this.httpClient.post<any>(`${this.baseUrl}/login`, formValue).toPromise();
+  }
+
 }

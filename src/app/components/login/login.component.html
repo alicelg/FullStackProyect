@@ -23,7 +23,7 @@
     </div>
   </div> -->
 
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="p-4 login-form">
+      <form [formGroup]="loginForm" (ngSubmit)="login()" class="p-4 login-form" *ngIf="action === 'login'">
 
         <div class="form-group">
           <label for="username">{{'LOGIN.USERNAME' | translate }}</label>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="form-row">
-          <a id="forgotPassword" (click)="passwordForgotten()">
+          <a id="forgotPassword" (click)="showPasswordForgottenModal()">
             {{'LOGIN.PASSWORDFORGOTTEN' | translate }}
           </a>
         </div>
@@ -67,6 +67,77 @@
 
         <button class="btn mt-3 loginButton" type="submit">
           {{'LOGIN.LOGIN' | translate }}
+        </button>
+      </form>
+
+      <form [formGroup]="signupForm" (ngSubmit)="signup()" class="p-4 login-form" *ngIf="action === 'signup'">
+
+        <div class="form-group">
+          <label for="nickname">Nombre de Usuario</label>
+          <input id="nickname" type="email" formControlName="nickname" class="form-control"
+            [ngClass]="{ 'not-valid': signupForm.get('nickname').touched && !signupForm.get('nickname').valid }" />
+          <div *ngIf="signupForm.get('nickname').touched && !signupForm.get('nickname').valid" class="alert alert-danger">
+            <span *ngIf="signupForm.get('nickname').errors.required">{{ 'FORM.VALIDATION.REQUIRED' | translate }}</span>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="username">Email</label>
+          <input id="username" type="email" formControlName="email" class="form-control"
+            [ngClass]="{ 'not-valid': signupForm.get('email').touched && !signupForm.get('email').valid }" />
+          <div *ngIf="signupForm.get('email').touched && !signupForm.get('email').valid" class="alert alert-danger">
+            <span *ngIf="signupForm.get('email').errors.required">{{ 'FORM.VALIDATION.REQUIRED' | translate }}</span>
+            <span *ngIf="signupForm.get('email').errors.email">{{ 'FORM.VALIDATION.EMAILFORMAT' | translate }} </span>
+          </div>
+        </div>
+
+        <div (clickOutside)="passwordFocusout()">
+
+          <div class="form-group">
+            <label for="password">{{'LOGIN.PASSWORD' | translate }}</label>
+            <div class="input-group" >
+              <input id="password" type="password" formControlName="password" class="form-control border-right-0"
+                [ngClass]="{ 'not-valid': signupForm.get('password').touched && !signupForm.get('password').valid }"
+                (focus)="passwordFocus()" />
+              <div class="input-group-append border-left-0">
+                <div class="input-group-text py-0 px-3"
+                  [ngClass]="{ 'not-valid': signupForm.get('password').touched && !signupForm.get('password').valid }">
+                  <div data-field="password" id="eyePassword" class="eye_open" (click)="showPassword($event)"></div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="signupForm.get('password').touched && !signupForm.get('password').valid" class="alert alert-danger">
+              <span *ngIf="signupForm.get('password').errors.pattern">La contraseña debe contener al menos 8 caracteres, una letra mayúscula y una minúscula</span>
+              <span *ngIf="signupForm.get('password').errors.required">{{ 'FORM.VALIDATION.REQUIRED' | translate }}</span>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="passwordConfirm">Confirma la contraseña</label>
+            <div class="input-group">
+              <input id="passwordConfirm" type="password" formControlName="passwordConfirm" class="form-control border-right-0"
+                [ngClass]="{ 'not-valid': signupForm.get('passwordConfirm').touched && !signupForm.get('passwordConfirm').valid }"
+                (focus)="passwordFocus()" />
+              <div class="input-group-append border-left-0">
+                <div class="input-group-text py-0 px-3"
+                  [ngClass]="{ 'not-valid': signupForm.get('passwordConfirm').touched && !signupForm.get('passwordConfirm').valid }">
+                  <div data-field="passwordConfirm" id="eyePasswordConfirm" class="eye_open" (click)="showPassword($event)"></div>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="signupForm.get('passwordConfirm').touched && !signupForm.get('passwordConfirm').valid" class="alert alert-danger">
+              <span *ngIf="signupForm.get('passwordConfirm').errors.notMatch">Las contraseñas no coinciden</span>
+              <span *ngIf="signupForm.get('passwordConfirm').errors.required">{{ 'FORM.VALIDATION.REQUIRED' | translate }}</span>
+            </div>
+          </div>
+        </div>
+
+
+
+        <button class="btn mt-3 loginButton" type="submit" [disabled]="!signupForm.valid">
+          Crear Cuenta
         </button>
       </form>
     </div>
@@ -156,3 +227,25 @@
     </div>
   </div>
 </div>
+
+<ng-template #content let-modal>
+  <div class="modal-header border-bottom-0 px-4 pt-3">
+    <h5 class="modal-title">¿Has olvidado tu contraseña?</h5>
+    <div id="closeModal">
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>&nbsp;
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-body px-4">
+    <p>Que pena con usted pero mala vaina mano. La cagó, aún no enviamos emails.</p>
+    <p>No joda y cree una nueva cuenta, no sea huevón.</p>
+  </div>
+
+  <div class="modal-footer justify-content-center px-4 border-top-0 pb-3">
+    <button type="button" class="btn btn-secondary"
+      (click)="modal.dismiss('cancel click')">Cancelar</button>
+    <button type="button" class="btn tertiaryBgColor quaternaryTextColor" (click)="passwordForgotten()">Resetear contraseña</button>
+  </div>
+</ng-template>

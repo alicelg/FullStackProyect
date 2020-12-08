@@ -14,11 +14,38 @@ $tertiaryBgColor: #4d0707;
 $quaternaryBgColor: #d3d3d3;
 $quinaryBgColor: #000000;
 
-
 $primaryTextColor: #901b22;
 $secondaryTextColor: #4d0707;
 $tertiaryTextColor: #000000;
 $quaternaryTextColor: #ffffff;
+
+.primaryBgColor {
+  background-color: $primaryBgColor;
+}
+.secondaryBgColor {
+  background-color: $secondaryBgColor;
+}
+.tertiaryBgColor {
+  background-color: $tertiaryBgColor;
+}
+.quaternaryBgColor {
+  background-color: $quaternaryBgColor;
+}
+.quinaryBgColor {
+  background-color: $quinaryBgColor;
+}
+.primaryTextColor {
+  color: $primaryTextColor;
+}
+.secondaryTextColor {
+  color: $secondaryTextColor;
+}
+.tertiaryTextColor {
+  color: $tertiaryTextColor;
+}
+.quaternaryTextColor {
+  color: $quaternaryTextColor;
+}
 
 * {
   color: $primaryTextColor;
@@ -38,6 +65,7 @@ $quaternaryTextColor: #ffffff;
   display: initial !important;
 }
 
+button,
 .btn {
   outline: none !important;
   box-shadow: none !important;
@@ -61,7 +89,7 @@ $quaternaryTextColor: #ffffff;
 }
 
 .mb-7 {
-    margin-bottom: 7rem;
+  margin-bottom: 7rem;
 }
 
 .pt-6 {
