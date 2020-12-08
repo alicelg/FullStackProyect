@@ -24,13 +24,18 @@ export class PostsService {
 
 
   getAllPosts(type): Promise<Post[]> {
-/*     return this.httpClient.get<Post[]>(this.baseUrl + '?type='+ type).toPromise();
- */    return this.httpClient.get<Post[]>(this.baseUrl, { params: { type: type } }).toPromise();
+    return this.httpClient.get<Post[]>(this.baseUrl, { params: { type: type } }).toPromise();
   }
 
   /*   getAllPosts2(type): Observable<Post[]> {
       return this.httpClient.get<Post[]>(this.baseUrl, { params: { type: type } });
     } */
+
+  getPostById(postId): Promise<Post> {
+
+    return this.httpClient.get<Post>(`${this.baseUrl}/${postId}`).toPromise();
+
+  }
 }
 
 

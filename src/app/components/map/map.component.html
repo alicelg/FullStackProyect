@@ -1,5 +1,5 @@
 <div class="container-fluid container-md">
-  <h3 class="mb-1 text-center"> Mapa Mundial </h3>
+  <h3 class="mb-1 text-center"> {{'MAP.WORLD-MAP' | translate}} </h3>
   <hr class="mb-4">
   <div id="map" class="mb-4 mb-md-0"></div>
   <div class="row">
@@ -10,13 +10,14 @@
 
 <div class="container-color py-4">
   <div class="container position-relative">
-    <div class="btn position-right desktop" (click)="clearSelectedCountries()" *ngIf="selectedCountries.length">Eliminar
-      regiones seleccionadas </div>
-    <h3 class="mb-1 text-center"> Paises seleccionados </h3>
+    <div class="btn position-right desktop" (click)="clearSelectedCountries()" *ngIf="selectedCountries.length">
+      {{'MAP.DELETE-SELECTED' | translate}} </div>
+    <h3 class="mb-1 text-center"> {{'MAP.SELECTED-COUNTRIES' | translate}} </h3>
     <hr class="mb-md-4">
     <ng-container *ngIf="selectedCountries.length; else elseTemplate">
       <div class="row">
-        <div class="btn mx-auto mobile mb-2" (click)="clearSelectedCountries()">Eliminar regiones seleccionadas</div>
+        <div class="btn mx-auto mobile mb-2" (click)="clearSelectedCountries()">{{'MAP.DELETE-SELECTED' | translate}}
+        </div>
       </div>
       <div class="row">
         <div class="col-md-4 col-6" *ngFor="let country of selectedCountries">
@@ -48,7 +49,7 @@
                 </div>
               </div>
             </div>
-            <a class="btn btn-sm size"  [routerLink]="['/mapa/pais', country.code]"><i class="fa fa-plus"></i></a>
+            <a class="btn btn-sm size" [routerLink]="['/mapa/pais', country.code]"><i class="fa fa-plus"></i></a>
           </div>
 
           <!-- versión movil -->
@@ -92,7 +93,7 @@
     </ng-container>
     <ng-template #elseTemplate>
       <div class="row">
-        <div class="mx-auto">Para comenzar selecciona algún país</div>
+        <div class="mx-auto">{{'MAP.START-SELECT' | translate}}</div>
       </div>
     </ng-template>
   </div>

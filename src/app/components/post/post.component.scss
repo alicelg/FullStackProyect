@@ -1,0 +1,9 @@
+@import "../../../styles.scss";
+
+.borde {
+    border: 1px solid $tertiaryBgColor;
+}
+
+.borde:hover {
+    background-color: $tertiaryBgColor;
+}
