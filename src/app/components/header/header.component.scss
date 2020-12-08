@@ -1,7 +1,9 @@
 @import "../../../styles.scss";
 
-button {
+button,
+a {
     font-weight: 700 !important;
+    color: $primaryTextColor !important;
 }
 
 .icon-flag {
@@ -10,6 +12,10 @@ button {
 
 .logo {
     width: 250px;
+}
+
+.logomobile {
+    width: 180px;
 }
 
 .bg-dark {
