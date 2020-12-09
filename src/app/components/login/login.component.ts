@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ModalDismissReasons, NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { UsersService } from 'src/app/services/users.service';
 
@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
     private usersService: UsersService,
     private modal: NgbModal,
     private activatedRoute: ActivatedRoute,
+    private router: Router,
 
   ) {
     this.loginForm = new FormGroup({
@@ -69,18 +70,22 @@ export class LoginComponent implements OnInit {
   }
 
   signup(): void {
-    alert('yop')
-    // if (this.loginForm.valid) {
-    //   this.usersService.signup(this.signupForm.value).then(res => {
-    //     this.action = 'login';
-    //   });
-    // } else {
-    //   // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
-    //   Object.keys(this.loginForm.controls).forEach(field => {
-    //     const control = this.loginForm.get(field);
-    //     control.markAsTouched({ onlySelf: true });
-    //   });
-    // }
+    if (this.signupForm.valid) {
+      const newUser = { ...this.signupForm.value };
+      delete newUser.passwordConfirm;
+      this.usersService.signup(newUser).then(res => {
+        this.router.navigate(['/login']);
+      }).catch(res => {
+        alert('Mijito, estás mal en la vida, ya tienes cuenta.');
+      }
+      );
+    } else {
+      // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
+      Object.keys(this.signupForm.controls).forEach(field => {
+        const control = this.signupForm.get(field);
+        control.markAsTouched({ onlySelf: true });
+      });
+    }
   }
 
   passwordFocus(): void {

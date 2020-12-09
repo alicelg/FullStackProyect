@@ -16,11 +16,11 @@ export class UsersService {
     this.baseUrl = 'http://localhost:3000/users';
   }
 
-  login(formValue): Promise<any> {
-    return this.httpClient.post<any>(`${this.baseUrl}/login`, formValue).toPromise();
+  signup(newUser): Promise<any> {
+    return this.httpClient.post<any>(`${this.baseUrl}/create`, newUser).toPromise();
   }
 
-  signup(formValue): Promise<any> {
+  login(formValue): Promise<any> {
     return this.httpClient.post<any>(`${this.baseUrl}/login`, formValue).toPromise();
   }
 
