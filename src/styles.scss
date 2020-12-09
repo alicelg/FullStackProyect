@@ -65,8 +65,9 @@ $quaternaryTextColor: #ffffff;
   display: initial !important;
 }
 
+.btn,
 button,
-.btn {
+h6 {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -162,7 +163,7 @@ p {
   }
 
   hr {
-    width: 200px;
+    width: 200px !important;
   }
 
   h3 {

@@ -7,7 +7,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- logo centrado para mobile -->
-        <button class="btn navbar-brand mobile" routerLink="">logo</button>
+        <button class="btn navbar-brand mobile" routerLink=""><img class='logomobile'
+                src="../../../assets/images/logo.png" alt=""></button>
         <!-- traductor para mobile -->
         <div class="mobile">
             <button class="btn d-inline text-light p-0" *ngIf="userLogged">
@@ -55,8 +56,9 @@
                             routerLink="blog/general">{{'HEADER.GENERAL' | translate}}</button>
                         <button class="btn dropdown-item"
                             routerLink="blog/hablando-de-politica">{{'HEADER.HABLANDO' | translate}}</button>
-                        <a class="btn dropdown-item" href="https://estotambienespolitica.com/"
+                        <a class="btn dropdown-item bold" href="https://estotambienespolitica.com/"
                             target="_blank">{{'HEADER.ESTOTAMBIEN' | translate}}</a>
+
                     </div>
                 </div>
 

@@ -1,0 +1,12 @@
+@import "../../../styles.scss";
+
+.btncolor {
+    background: $tertiaryBgColor;
+    color: $quaternaryTextColor;
+    border: none;
+}
+
+.btncolor:hover {
+    background: $primaryTextColor;
+    color: $quaternaryTextColor;
+}
