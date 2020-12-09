@@ -37,7 +37,9 @@ $quaternaryTextColor: #ffffff;
   display: initial !important;
 }
 
-.btn {
+.btn,
+button,
+h6 {
   outline: none !important;
   box-shadow: none !important;
 }
