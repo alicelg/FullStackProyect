@@ -15,19 +15,41 @@
 .person {
     width: 10%;
 }
-img {
+
+.avatar-user-desktop {
     width: 50%;
 }
 
+.avatar-user {
+    width: 40%;
+}
+
 h3,
-h6 {
+.text-header {
     color: white;
 }
 
 .story {
     margin: 0 auto !important;
+    width: 50%;
+}
+
+.storys {
+    width: 50%;
 }
 
 h4 {
     text-align: center;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    background-color: black;
+}
+
+@media (max-width: 575px) {
+    .storys {
+        width: 100%;
+    }
 }
