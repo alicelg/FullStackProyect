@@ -154,8 +154,6 @@ export class LoginComponent implements OnInit {
     alert('¡Malparido!, que se cree una nueva cuenta');
   }
 
-  showSignUp(): void { }
-
   showPasswordForgottenModal(): void {
     if (!this.modal.hasOpenModals()) {
       this.modalRef = this.modal.open(this.content, { ariaLabelledBy: 'password-forgotten', size: 'l', centered: true });

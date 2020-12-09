@@ -45,12 +45,12 @@
           </div>
 
           <div class="form-row">
-            <a id="forgotPassword" (click)="showPasswordForgottenModal()">
+            <a id="forgotPassword" class="primaryTextColor" (click)="showPasswordForgottenModal()">
               {{'LOGIN.PASSWORDFORGOTTEN' | translate }}
             </a>
           </div>
           <div class="form-row">
-            <a id="signup" (click)="showSignUp()">
+            <a id="signup" class="primaryTextColor" [routerLink]="['/signup']">
               {{'LOGIN.SIGNUP' | translate }}
             </a>
           </div>
