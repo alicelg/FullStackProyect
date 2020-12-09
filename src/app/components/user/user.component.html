@@ -1,28 +1,110 @@
-<div class="container">
+<div class="container-fluid colorbg">
 
-    <div class="row mt-6">
 
-        <div class="col-md-4">
-            <img src="../../../assets/images/McDonalds-Logo.png" alt="" width="300px">
+    <div class="container">
+
+        <div class="row colorbg">
+
+            <div class="col-md-4 mt-2 mb-2 text-center">
+                <img src="../../../assets/images/hablando.png" alt="" width="300px">
+            </div>
+
+            <div class="col-md-8">
+
+                <div class="row">
+                    <div class="col-md-12 mt-4 mr-2">
+                        <h3>Alice López Gómez</h3>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+
+                    <div class="col-md-4">
+
+                        <div class="d-flex">
+                            <i class="fa fa-map-pin mr-2 ml-2 text-center"></i>
+                            <h6>Colombia</h6>
+                        </div>
+
+                        <div class="d-flex">
+                            <i class="fa fa-graduation-cap mr-1 mr-2 text-center"></i>
+                            <h6>Polítologa </h6>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+
+                        <div class="d-flex">
+                            <i class="fa fa-linkedin-square mr-1 mr-2 text-center"></i>
+                            <h6>Alice López</h6>
+                        </div>
+
+
+                        <div class="d-flex">
+                            <i class="fa fa-briefcase mr-2 text-center"></i>
+                            <h6> Profesora </h6>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="d-flex">
+                            <i class="fa fa-book mr-2 text-center"></i>
+                            <h6>9</h6>
+                        </div>
+
+
+                        <div class="d-flex">
+                            <i class="fa fa-heart mr-2 text-center"></i>
+                            <h6>10</h6>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
         </div>
 
-        <div class="col-md-8">
+    </div>
 
-            <h4 class="text-center">Nombre del usuario</h4>
 
-            <h6> País: _____________ </h6>
-            <h6> Campo de estudio : _____________ </h6>
+    <div class="row color">
 
-            <h6> Linkedin: _____________ </h6>
-            <h6> Publicaciones: _____________ </h6>
+        <div class="container">
 
+            <div class="row mt-2 mb-2 text-center">
+                <div class="col-md-2">
+                    <img src="../../../assets/images/antonio2.png" alt="" (click)="showStory()">
+                </div>
+                <div class="col-md-2">
+                    <img src="../../../assets/images/antonio2.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="../../../assets/images/antonio2.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="../../../assets/images/antonio2.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="../../../assets/images/antonio2.png" alt="">
+                </div>
+                <div class="col-md-2">
+                    <img src="../../../assets/images/antonio2.png" alt="">
+                </div>
+            </div>
         </div>
 
 
     </div>
 
+</div>
+
+
+<div class="container">
+
     <div class="row mt-6">
-        <div class="col-md-8">
+        <div class="col-md-8 border rounded pt-2 pb-2">
             <h5>Conceptos ♥️ </h5>
             <p>lorem </p>
             <p>lorem </p>
@@ -41,8 +123,8 @@
     </div>
 
 
-    <div class="row mt-6">
-        <div class="col-md-8">
+    <div class="row mt-3 mb-5">
+        <div class="col-md-8 border rounded pt-2 pb-2">
             <h5>Publicaciones </h5>
             <p>lorem </p>
             <p>lorem </p>
@@ -61,3 +143,32 @@
     </div>
 
 </div>
+
+
+<!-- Esto es de la story -->
+
+<ng-template #content let-modal>
+    <div class="modal-header border-bottom-0 px-4 pt-3">
+        <div id="closeModal" class="d-flex">
+
+            <img src="../../../assets/images/hablando.png" alt="" class="person mr-3">
+            <h5 class="mt-2">Alice López</h5>
+
+
+            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>&nbsp;
+            </button>
+        </div>
+    </div>
+
+    <div class="modal-body px-4 text-center">
+        <img src="../../../assets/images/story.png" alt="" class="story">
+        <p>Mi país favorito: Colombia</p>
+
+    </div>
+
+    <div class="modal-footer justify-content-center px-4 border-top-0 pb-3">
+        <button type="button" class="btn btn-secondary">←</button>
+        <button type="button" class="btn tertiaryBgColor quaternaryTextColor">→</button>
+    </div>
+</ng-template>

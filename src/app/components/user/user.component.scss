@@ -1,0 +1,33 @@
+@import "../../../styles.scss";
+
+.colorbg {
+    background: $quinaryBgColor;
+}
+
+.color {
+    background: $tertiaryBgColor;
+}
+
+.logo {
+    width: 30%;
+}
+
+.person {
+    width: 10%;
+}
+img {
+    width: 50%;
+}
+
+h3,
+h6 {
+    color: white;
+}
+
+.story {
+    margin: 0 auto !important;
+}
+
+h4 {
+    text-align: center;
+}
