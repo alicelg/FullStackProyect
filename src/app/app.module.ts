@@ -53,6 +53,9 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 
+/* LEGAL */
+import { LegalComponent } from './components/legal/legal.component';
+
 
 
 @NgModule({
@@ -76,6 +79,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
     ResultComponent,
     RankingComponent,
     ClickOutside,
+    LegalComponent,
 
   ],
   imports: [
@@ -101,5 +105,5 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 export class AppModule {
   constructor(library: FaIconLibrary) {
     library.addIconPacks(fas, far);
-    }
- }
+  }
+}
