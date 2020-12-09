@@ -447,5 +447,22 @@
         "DATA-OPERATIONS-TEXT": "Los datos de carácter personal son registrados a través de la web y conservados en soportes electrónicos controlados y supervisados por el responsable del tratamiento. Los soportes cuentan con las medidas técnicas y organizativas necesarias que garantizan la debida confidencialidad en el tratamiento de los datos.",
         "RECIPIENTS": "Destinatarios de sus datos personales",
         "RECIPIENTS-TEXT": "Informamos a los usuarios de que sus datos personales no serán comunicados a terceros, con la salvedad de que dicha comunicación de datos esté amparada en una obligación legal o cuando para la correcta prestación del servicio o la ejecución del contrato sea necesario comunicar sus datos a otros responsables como pueden ser otras empresas del grupo, encargados del tratamiento. Para los casos en los que la comunicación de datos a terceros no esté amparada en las bases legales establecidas en el apartado anterior, la comunicación de datos a otros destinatarios sólo se realizará si el usuario ha dado su consentimiento expreso. A2, S.A. mantiene unos criterios estrictos de selección de encargados de tratamiento y se compromete contractualmente con cada uno a cumplir y hacer cumplir las obligaciones establecidas en materia de protección de datos."
+    },
+    "CREATOR": {
+        "OBJETIVE": "Objetivo",
+        "OBJETIVE-TEXT": "Ser referencia de citación, consulta e investigación en el ambito social, político e internacional.",
+        "MISSION": "Misión",
+        "MISSION-TEXT": "Organizar la información política de los Estados y de las definiciones de los conceptos políticos para hacerlos accesible para la investigación.",
+        "VISSION": "Visión",
+        "VISSION-TEXT": "Ser la web elegida de consulta y de citación por los investigadores por nuestra amplia información política y fiabilidad de los datos.",
+        "TEAM": "Equipo",
+        "TEAM-TEXT": "Contamos con un equipo heterogéneo que gracias a sus virtudes y conocimientos homogenizó para el desarollo de está web.",
+        "TEAM-NAME-1": "Alice López",
+        "TEAM-NAME-2": "Antonio Vallejo",
+        "STUDIES-A": "Polítologa e Internacionalista",
+        "STUDIES-B": "Bíologo",
+        "STUDIES-C": "FullStack Developer Web",
+        "TEAM-MESSAGE-A": "Profesional malesta 24/7 que solo regaña Antonio por el desorden.",
+        "TEAM-MESSAGE-B": "Profesional con una enorme capacidad e ilusión, proactivo y con clara orientación a resultados."
     }
 }

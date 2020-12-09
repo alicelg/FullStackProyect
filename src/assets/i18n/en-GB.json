@@ -447,5 +447,22 @@
         "DATA-OPERATIONS-TEXT": "The personal data are registered through the web and kept in electronic media controlled and supervised by the person responsible for the treatment. The supports have the necessary technical and organizational measures that guarantee due confidentiality in the treatment of the data.",
         "RECIPIENTS": "Recipients of your personal data",
         "RECIPIENTS-TEXT": "We inform users that their personal data will not be communicated to third parties, with the exception that said data communication is covered by a legal obligation or when for the correct provision of the service or the execution of the contract it is necessary to communicate their data to others. responsible such as other group companies, responsible for the treatment. For cases in which the communication of data to third parties is not covered by the legal bases established in the previous section, the communication of data to other recipients will only be carried out if the user has given their express consent. A2, S.A. maintains strict criteria for the selection of treatment managers and is contractually committed to each one to comply with and enforce the obligations established in terms of data protection."
+    },
+    "CREATOR": {
+        "OBJETIVE": "Goals",
+        "OBJETIVE-TEXT": "Being a reference for citation, consultation and research in the social, political and international sphere.",
+        "MISSION": "Mission",
+        "MISSION-TEXT": "Organize the political information of the States and the definitions of political concepts to make them accessible for research.",
+        "VISSION": "Vission",
+        "VISSION-TEXT": "To be the website chosen for consultation and citation by researchers due to our extensive political information and data reliability.",
+        "TEAM": "Team",
+        "TEAM-TEXT": "We have a heterogeneous team that, thanks to their virtues and knowledge, homogenized for the development of this website.",
+        "TEAM-NAME-1": "Alice López",
+        "TEAM-NAME-2": "Antonio Vallejo",
+        "STUDIES-A": "Political scientist and Internationalist",
+        "STUDIES-B": "Biologist",
+        "STUDIES-C": "FullStack Developer Web",
+        "TEAM-MESSAGE-A": "Annoying 24/7 professional who only scolds Antonio for the mess.",
+        "TEAM-MESSAGE-B": "Professional with enormous capacity and enthusiasm, proactive and with a clear results orientation."
     }
 }
