@@ -33,7 +33,8 @@ const routes: Routes = [
   { path: 'signup', component: LoginComponent },
   { path: 'usuario/:id', component: UserComponent },
   { path: 'nosotros', component: CreatorComponent },
-  { path: 'legal', component: LegalComponent },
+  { path: 'privacidad', component: LegalComponent },
+  { path: 'cookies', component: LegalComponent },
   { path: '**', component: ErrorComponent },
 ];
 

@@ -2,7 +2,7 @@
 
 <!-- AVISO DE PRIVACIDAD -->
 
-<div class="container">
+<div class="container" *ngIf="action === 'privacidad'">
     <h3 class="mb-1 text-center mt-5"> {{'FOOTER.TEXTLEGAL1'|translate}} </h3>
     <hr class="mb-3">
 
@@ -63,12 +63,8 @@
 </div>
 
 
-
-
-
 <!-- COOKIES -->
-
-<!-- <div class="container">
+<div class="container" *ngIf="action === 'cookies'">
     <h3 class="mb-1 text-center mt-5"> {{'LEGAL.COOKIES-POLICY'| translate}} </h3>
     <hr class="mb-3">
 
@@ -168,4 +164,4 @@
         </div>
     </div>
 
-</div> -->
+</div>
