@@ -3,65 +3,105 @@
     <!-- titulo -->
     <div class="row mt-6">
         <div class="col-12 text-center">
-            <h3>¿Quiénes somos?</h3>
+            <h3>{{'FOOTER.OUR'|translate}}</h3>
+            <hr>
         </div>
     </div>
 
-    <!-- texto -->
-    <div class="row">
-        <div class="col-12 text-center">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In expedita minima, quis quam, mollitia vel
-                laudantium neque recusandae saepe aliquid explicabo nemo iure excepturi ratione! Suscipit quos eveniet
-                asperiores sed?</p>
 
-            <br>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus accusantium earum nam tempora ab
-                tenetur reprehenderit atque veniam ex nostrum incidunt, repudiandae unde a necessitatibus explicabo
-                minus quod, animi ducimus.</p>
-
-        </div>
-
-    </div>
-
-    <!-- bloques video/meta/equipo -->
-    <div class="row mt-6">
-        <div class="col-md-4 text-center">
-            <img src="../../../assets/images/McDonalds-Logo.png" alt="" width="200px">
-        </div>
-
-        <div class="col-md-4 text-center ">
-            <h3>Nuestra Meta</h3>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque enim tempora sit odit quis pariatur
-                vero corrupti ea et totam, dolore harum dolorem libero asperiores dolorum, obcaecati illo quo quam?
-            </p>
-
-
-        </div>
+    <!-- bloques objetivo/misión/visión -->
+    <div class="row mt-5 text-center">
 
         <div class="col-md-4">
-            <h3 class="text-center">Equipo</h3>
+            <h5> {{'CREATOR.OBJETIVE'|translate}}</h5>
+            <p>{{'CREATOR.OBJETIVE-TEXT'|translate}}
+            </p>
 
+        </div>
+        <div class="col-md-4">
+            <h5>{{'CREATOR.MISSION'|translate}}</h5>
+            <p> {{'CREATOR.MISSION-TEXT'|translate}}
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h5>{{'CREATOR.VISSION'|translate}} </h5>
+            <p>{{'CREATOR.VISSION-TEXT'|translate}}
+            </p>
 
-            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            </svg>
-            <h6 class="d-inline">Alice</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquam exercitationem corporis </p>
-
-
-
-            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            </svg>
-            <h6 class="d-inline">Antonio</h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquam exercitationem corporis </p>
         </div>
 
+
+
+    </div>
+
+    <!-- TEAM -->
+    <div class="row mt-5 mb-5">
+        <div class="col-md-12 text-center">
+            <h4>{{'CREATOR.TEAM'|translate}}Equipo</h4>
+            <hr>
+
+            <p class="mb-5"> {{'CREATOR.TEAM-TEXT'|translate}} </p>
+        </div>
+
+        <!-- ALICE -->
+        <div class="col-md-6">
+
+            <h5 class="text-center"> {{'CREATOR.TEAM-NAME-1'|translate}}</h5>
+
+            <div class="row">
+
+                <div class="col-md-7">
+
+                    <div class="d-flex">
+                        <i class="fa fa-graduation-cap"></i>
+                        <p>{{'CREATOR.STUDIES-A'|translate}}</p>
+                    </div>
+
+                    <div class="d-flex">
+                        <i class="fa fa-graduation-cap"></i>
+                        <p>{{'CREATOR.STUDIES-C'|translate}}</p>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fa fa-quote-left"></i>
+                        <p>{{'CREATOR.TEAM-MESSAGE-A'|translate}}</p>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <img src="../../../assets/images/hablando1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- ANTONIO -->
+        <div class="col-md-6">
+
+            <h5 class="text-center">{{'CREATOR.TEAM-NAME-2'|translate}}</h5>
+
+            <div class="row">
+
+                <div class="col-md-5">
+                    <img src="../../../assets/images/antonio.png" alt="">
+                </div>
+
+                <div class="col-md-7">
+
+                    <div class="d-flex">
+                        <i class="fa fa-graduation-cap"></i>
+                        <p>{{'CREATOR.STUDIES-B'|translate}}</p>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fa fa-graduation-cap"></i>
+                        <p>{{'CREATOR.STUDIES-C'|translate}}</p>
+                    </div>
+                    <div class="d-flex">
+                        <i class="fa fa-quote-left"></i>
+                        <p>{{'CREATOR.TEAM-MESSAGE-B'|translate}}</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
     </div>
 </div>
