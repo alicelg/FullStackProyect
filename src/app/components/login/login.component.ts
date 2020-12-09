@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ModalDismissReasons, NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-login',
@@ -8,18 +11,41 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
+  @ViewChild('content') content;
+  modalRef: NgbModalRef;
+
   loginForm: FormGroup;
+  signupForm: FormGroup;
+
 
   leftArm: HTMLElement;
   rightArm: HTMLElement;
   leftHand: HTMLElement;
   rightHand: HTMLElement;
 
-  constructor() {
+  action: string;
+
+  constructor(
+    private usersService: UsersService,
+    private modal: NgbModal,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+
+  ) {
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.email, Validators.required]),
       password: new FormControl('', [Validators.required])
     });
+
+    this.signupForm = new FormGroup({
+      nickname: new FormControl('toni', [ Validators.required]),
+      email: new FormControl('alil@gs.es', [Validators.email, Validators.required]),
+      password: new FormControl('123456Az', [Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$')]),
+      passwordConfirm: new FormControl('123456Az', [Validators.required])
+    });
+
+
+    this.action = this.activatedRoute.snapshot.url[0].path;
   }
 
   ngOnInit(): void {
@@ -29,13 +55,34 @@ export class LoginComponent implements OnInit {
     this.rightHand = document.querySelector('.hand-r');
   }
 
-  onSubmit(): void {
+  login(): void {
     if (this.loginForm.valid) {
-
+      this.usersService.login(this.loginForm.value).then(res => {
+        localStorage.setItem('currentUser', atob(res.token.split('.')[1]));
+      });
     } else {
       // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
       Object.keys(this.loginForm.controls).forEach(field => {
         const control = this.loginForm.get(field);
+        control.markAsTouched({ onlySelf: true });
+      });
+    }
+  }
+
+  signup(): void {
+    if (this.signupForm.valid) {
+      const newUser = { ...this.signupForm.value };
+      delete newUser.passwordConfirm;
+      this.usersService.signup(newUser).then(res => {
+        this.router.navigate(['/login']);
+      }).catch(res => {
+        alert('Mijito, estás mal en la vida, ya tienes cuenta.');
+      }
+      );
+    } else {
+      // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
+      Object.keys(this.signupForm.controls).forEach(field => {
+        const control = this.signupForm.get(field);
         control.markAsTouched({ onlySelf: true });
       });
     }
@@ -53,8 +100,9 @@ export class LoginComponent implements OnInit {
     this.leftHand.classList.remove('password');
     this.rightArm.classList.remove('password');
     this.rightHand.classList.remove('password');
-  }
 
+    this.passwordCheck();
+  }
 
   showPassword(event): void {
 
@@ -64,6 +112,8 @@ export class LoginComponent implements OnInit {
 
     const passwordInput = document.getElementById(dataField);
     const eye = document.getElementById(id);
+    console.log(id);
+
 
     if (passwordInput.getAttribute('type') === 'password') {
       passwordInput.setAttribute('type', 'text');
@@ -93,8 +143,21 @@ export class LoginComponent implements OnInit {
 
   }
 
-  passwordForgotten(): void { }
+  public passwordCheck(): void {
+    if (this.signupForm.get('password').value !== this.signupForm.get('passwordConfirm').value
+      && !this.signupForm.get('password').invalid) {
+      this.signupForm.get('passwordConfirm').setErrors({ notMatch: true });
+    }
+  }
 
-  showSignUp(): void { }
+  passwordForgotten(): void {
+    alert('¡Malparido!, que se cree una nueva cuenta');
+  }
+
+  showPasswordForgottenModal(): void {
+    if (!this.modal.hasOpenModals()) {
+      this.modalRef = this.modal.open(this.content, { ariaLabelledBy: 'password-forgotten', size: 'l', centered: true });
+    }
+  }
 
 }

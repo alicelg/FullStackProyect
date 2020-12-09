@@ -19,12 +19,40 @@ $secondaryTextColor: #4d0707;
 $tertiaryTextColor: #000000;
 $quaternaryTextColor: #ffffff;
 
+.primaryBgColor {
+  background-color: $primaryBgColor;
+}
+.secondaryBgColor {
+  background-color: $secondaryBgColor;
+}
+.tertiaryBgColor {
+  background-color: $tertiaryBgColor;
+}
+.quaternaryBgColor {
+  background-color: $quaternaryBgColor;
+}
+.quinaryBgColor {
+  background-color: $quinaryBgColor;
+}
+.primaryTextColor {
+  color: $primaryTextColor;
+}
+.secondaryTextColor {
+  color: $secondaryTextColor;
+}
+.tertiaryTextColor {
+  color: $tertiaryTextColor;
+}
+.quaternaryTextColor {
+  color: $quaternaryTextColor;
+}
+
 * {
   color: $primaryTextColor;
   font-family: "Lato", sans-serif;
   font-weight: 400;
 }
-.row {
+.row, .form-row {
   margin-right: 0;
   margin-left: 0;
 }
