@@ -48,6 +48,20 @@ h4 {
     background-color: black;
 }
 
+.btn {
+    background: $tertiaryBgColor;
+    color: $quaternaryTextColor;
+}
+
+.btn:hover {
+    background: $primaryTextColor;
+    color: $quaternaryTextColor;
+}
+
+.let-modal {
+    width: 100px;
+}
+
 @media (max-width: 575px) {
     .storys {
         width: 100%;
