@@ -7,6 +7,7 @@ import { CreatorComponent } from './components/creator/creator.component';
 import { ErrorComponent } from './components/error/error.component';
 import { FormComponent } from './components/form/form.component';
 import { HomeComponent } from './components/home/home.component';
+import { LegalComponent } from './components/legal/legal.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapComponent } from './components/map/map.component';
 import { PostComponent } from './components/post/post.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'signup', component: LoginComponent },
   { path: 'usuario/:id', component: UserComponent },
   { path: 'nosotros', component: CreatorComponent },
+  { path: 'legal', component: LegalComponent },
   { path: '**', component: ErrorComponent },
 ];
 
