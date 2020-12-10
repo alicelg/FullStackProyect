@@ -15,11 +15,6 @@ export class CountriesService {
   getCountryDataByCode(code): Promise<any> {
     return this.httpClient.get<any>('https://restcountries.eu/rest/v2/alpha/' + code).toPromise();
   }
-
-  getCountryDataByCode2(code): Observable<any> {
-    return this.httpClient.get<any>('https://restcountries.eu/rest/v2/alpha/' + code);
-  }
-
 }
 
 
