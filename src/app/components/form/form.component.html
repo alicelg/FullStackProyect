@@ -12,8 +12,8 @@
     <div class="row">
 
         <div class="col-md-5 mt-4">
-            <form #formNew="ngForm" (ngSubmit)="onSubmit(formNew.value)" class="mb-5">
-
+            <form #formNew="ngForm" class="mb-5">
+                <!-- (ngSubmit)="onSubmit(formNew.value)" -->
                 <div class="form-group">
                     <label> Titulo </label>
                     <input type="text" name="title" class="form-control" ngModel>
@@ -66,7 +66,9 @@
 
             <div class="form-group mt-4">
                 <label> Text </label>
-                <input type="text" name="text" class="form-control" ngModel>
+
+
+                <quill-editor></quill-editor>
             </div>
 
         </div>

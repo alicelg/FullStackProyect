@@ -7,6 +7,11 @@
 @import "~hover.css/scss/hover";
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap");
 
+@import "~quill/dist/quill.core.css";
+@import "~quill/dist/quill.bubble.css";
+@import "~quill/dist/quill.snow.css";
+/* @import "~quill-emoji/dist/quill-emoji.css"; */
+
 /* paleta de colores */
 $primaryBgColor: #ffffff;
 $secondaryBgColor: #e6e4e4;
@@ -52,7 +57,8 @@ $quaternaryTextColor: #ffffff;
   font-family: "Lato", sans-serif;
   font-weight: 400;
 }
-.row, .form-row {
+.row,
+.form-row {
   margin-right: 0;
   margin-left: 0;
 }
