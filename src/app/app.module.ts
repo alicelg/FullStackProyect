@@ -56,8 +56,6 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 /* LEGAL */
 import { LegalComponent } from './components/legal/legal.component';
 
-import { QuillModule } from '@ngx-quill';
-
 
 
 @NgModule({
@@ -92,7 +90,6 @@ import { QuillModule } from '@ngx-quill';
     ReactiveFormsModule,
     FontAwesomeModule,
     FormsModule,
-    QuillModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
