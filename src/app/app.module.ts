@@ -46,7 +46,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 /* TRADUCTOR   */
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClickOutside } from './helpers/clickOutside.directive';
 
 import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -89,6 +89,7 @@ import { LegalComponent } from './components/legal/legal.component';
     HttpClientModule,
     ReactiveFormsModule,
     FontAwesomeModule,
+    FormsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

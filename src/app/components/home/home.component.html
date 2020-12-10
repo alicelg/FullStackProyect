@@ -13,13 +13,28 @@
         <div class="d-flex text-center h-100">
           <div class="my-auto w-100 text-white">
             <div class="d-flex justify-content-center h-100">
-              <div class="searchbar">
+              <div class="searchbar" [ngClass]="{'searchbar_dirty': searchResult}"
+                (clickOutside)="searchResult = null; searchInput.value = null">
                 <input class="search_input" type="text" #searchInput
-                  [placeholder]="translateService.instant('COMMON.SEARCH')" [ngClass]="{'class': searchInput.di}">
+                  [placeholder]="translateService.instant('COMMON.SEARCH')">
                 <a class="search_icon">
                   <fa-icon class="size-icon" [icon]="['fas', 'search']"></fa-icon>
                 </a>
-                <div class="search-results" *ngIf="searchResult">{{searchResult | json}}</div>
+                <div class="search-results" *ngIf="searchResult">
+                  <ul class="result-group">
+                    <li class="result-item" *ngFor="let post of searchResult.generalPosts"
+                      [routerLink]="['blog/general/', post.id]">{{post.title}}</li>
+                    <li class="result-item" *ngFor="let post of searchResult.hablandoPosts"
+                      [routerLink]="['blog/hablando-de-política/', post.id]">{{post.title}}</li>
+                    <li class="result-item" *ngFor="let concept of searchResult.concepts"
+                      [routerLink]="['conceptos']" [queryParams]="{searchTerm: translateService.instant(concept.title)}">{{translateService.instant(concept.title)}}</li>
+                    <li class="result-item" *ngFor="let country of searchResult.countries"
+                      [routerLink]="['mapa/pais/', country.code]">{{country.official_name}}</li>
+                    <li class="result-item"
+                      *ngIf="!searchResult.generalPosts && !searchResult.hablandoPosts && !searchResult.concepts">No se
+                      han encontrado resultados para tu búsqueda</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

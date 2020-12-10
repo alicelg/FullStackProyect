@@ -5,7 +5,7 @@
 
     <div class="row">
         <div class="offset-4 col-md-4 mt-5 mb-5 offset-4 desktop">
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" [(ngModel)]="this.searchTerm" #conceptsSearchInput>
         </div>
 
         <div class="col-12 mt-4 mb-4 mobile">
@@ -42,7 +42,8 @@
 
             <div class="row">
 
-                <div *ngFor="let concept of concepts">
+                <ng-container *ngIf="concepts; else elseTemplate">
+                  <div *ngFor="let concept of concepts">
 
                     <div class="card m-2" style="max-width: 50rem;">
                         <div class="card-body">
@@ -55,6 +56,15 @@
                         </div>
                     </div>
                 </div>
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <div class="card m-2 w-100 text-center" style="max-width: 50rem;">
+                    <div class="card-body">
+                        <p class="card-text">Lo sentimos, aún no tenemos definición para ese concepto</p>
+                    </div>
+                </div>
+                </ng-template>
+
             </div>
         </div>
     </div>

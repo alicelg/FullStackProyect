@@ -1,252 +1,229 @@
-<!-- BLOG GENERAL -->
+<h3 class="mb-1 text-center mt-5"  *ngIf="blogType.includes('general')"> {{'HEADER.BLOG' | translate}} </h3>
+<h3 class="mb-1 text-center mt-5" *ngIf="blogType.includes('hablando')"> {{'HEADER.HABLANDO' | translate}} </h3>
+<hr class="mb-3">
 
-<ng-container *ngIf="blogType.includes('general')">
-    <h3 class="mb-1 text-center mt-5"> {{'HEADER.BLOG' | translate}} </h3>
-    <hr class="mb-3">
-
-    <div class="container mb-7 mt-3">
-
-        <!-- el buscador -->
-        <div class="row">
-            <div class="offset-4 col-md-4 mt-5 mb-5 offset-4 desktop">
-                <input type="text" class="form-control">
-            </div>
-
-            <div class="col-12 mt-4 mb-4 mobile">
-                <input type="text" class="form-control">
-            </div>
-        </div>
-
-        <!-- las categorias -->
-        <div class="row">
-
-            <div class="col-md-3 text-center mb-4">
-                <h4>Categorías </h4>
-                <hr class="mb-5 line-hr">
-
-                <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 "> Todos
-                </button>
-                <button _ngcontent-mcy-c23="" value="cultura" class="d-block btn mb-3 w-100 "> Cultura
-                </button>
-                <button _ngcontent-mcy-c23="" value="politica" class="d-block btn mb-3 w-100 "> Política
-                </button>
-                <button _ngcontent-mcy-c23="" value="economia" class="d-block btn mb-3 w-100 "> Economía
-                </button>
-                <button _ngcontent-mcy-c23="" value="historia" class="d-block btn mb-3 w-100 "> Historia
-                </button>
-
-
-            </div>
-
-            <!-- los posts -->
-            <div class="col-md-9">
-
-                <div class="row">
-
-
-                    <div class="col-md-4 mb-4" *ngFor="let post of posts">
-                        <div class="card card-inverse">
-                            <img class="card-img-top" src="{{post.main_image}}">
-                            <div class="meta text-right mr-4">
-                                <p class="mb-0">Alice</p>
-                            </div>
-                            <div class="card-block">
-                                <figure class="profile text-right">
-                                    <img src="../../../assets/images/hablando.png" class="profile-avatar" alt="">
-                                </figure>
-                                <h4 class="card-title mt-1 mb-0">{{post.title | titlecase}}
-                                </h4>
-
-                                <div class="card-text">
-                                    <small>{{post.keywords | titlecase}}</small>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <small>{{post.category}}</small>
-                                <button class="btn float-right btn-sm">{{'HOME.READ-MORE'|translate}}</button>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </div>
-
+<div class="container mt-3">
+  <!-- el buscador -->
+  <div class="row">
+    <div class=" col-md-5 mt-md-5 mb-md-5 mt-4 mb-4 mx-auto">
+      <input type="text" class="form-control" [(ngModel)]="this.blogSearchTerm" #blogSearchInput>
     </div>
+  </div>
+</div>
+
+
+<!-- BLOG GENERAL -->
+<ng-container *ngIf="blogType.includes('general')">
+  <div class="container mb-7 mt-3">
+
+    <!-- las categorias -->
+    <div class="row">
+
+      <div class="col-md-3 text-center mb-4">
+        <h4>Categorías </h4>
+        <hr class="mb-5 line-hr">
+
+        <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 "> Todos
+        </button>
+        <button _ngcontent-mcy-c23="" value="cultura" class="d-block btn mb-3 w-100 "> Cultura
+        </button>
+        <button _ngcontent-mcy-c23="" value="politica" class="d-block btn mb-3 w-100 "> Política
+        </button>
+        <button _ngcontent-mcy-c23="" value="economia" class="d-block btn mb-3 w-100 "> Economía
+        </button>
+        <button _ngcontent-mcy-c23="" value="historia" class="d-block btn mb-3 w-100 "> Historia
+        </button>
+
+
+      </div>
+
+      <!-- los posts -->
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-4 mb-4" *ngFor="let post of generalPosts">
+            <div class="card card-inverse">
+              <img class="card-img-top" src="{{post.main_image}}">
+              <div class="meta text-right mr-4">
+                <p class="mb-0">Alice</p>
+              </div>
+              <div class="card-block">
+                <figure class="profile text-right">
+                  <img src="../../../assets/images/hablando.png" class="profile-avatar" alt="">
+                </figure>
+                <h4 class="card-title mt-1 mb-0">{{post.title | titlecase}}
+                </h4>
+                <div class="card-text">
+                  <small>{{post.keywords | titlecase}}</small>
+                </div>
+              </div>
+              <div class="card-footer">
+                <small>{{post.category}}</small>
+                <button class="btn float-right btn-sm">{{'HOME.READ-MORE'|translate}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </ng-container>
 
 
 <!-- BLOG HABLANDO DE POLÍTICA -->
 
 <ng-container *ngIf="blogType.includes('hablando')">
-    <h3 class="mb-1 text-center mt-5"> {{'HEADER.HABLANDO' | translate}} </h3>
-    <hr class="mb-3">
 
-    <div class="container mb-7 mt-3">
+  <div class="container mb-7 mt-3">
 
-        <!-- el buscador  -->
-        <div class="row">
-            <div class="offset-4 col-md-4 mt-5 mb-5 offset-4 desktop">
-                <input type="text" class="form-control">
-            </div>
+    <!-- las categorias -->
+    <div class="row mb-4 justify-content-center">
 
-            <div class="col-12 mt-4 mb-4 mobile">
-                <input type="text" class="form-control">
-            </div>
-        </div>
+      <div class="col-md-2 col-12 text-center d-inline">
+        <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 d-inline"> Política
+        </button>
+      </div>
 
-        <!-- las categorias -->
-        <div class="row mb-4 justify-content-center">
+      <div class="col-md-2 text-center d-inline">
+        <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 d-inline"> Cultura
+        </button>
+      </div>
 
-            <div class="col-md-2 col-12 text-center d-inline">
-                <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 d-inline"> Política
-                </button>
-            </div>
+      <div class="col-md-2 text-center d-inline">
+        <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 d-inline"> Hechos historicos
+        </button>
+      </div>
 
-            <div class="col-md-2 text-center d-inline">
-                <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 d-inline"> Cultura
-                </button>
-            </div>
+      <div class="col-md-2 text-center d-inline">
+        <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 d-inline">
+          Debes saberlo
+        </button>
+      </div>
 
-            <div class="col-md-2 text-center d-inline">
-                <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 d-inline"> Hechos historicos
-                </button>
-            </div>
-
-            <div class="col-md-2 text-center d-inline">
-                <button _ngcontent-mcy-c23="" value="todos" class="d-block btn mb-3 w-100 d-inline">
-                    Debes saberlo
-                </button>
-            </div>
-
-        </div>
-
-
-        <!-- los posts -->
-        <div class="row">
-
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="text-center mt-3">El golpe de Estado en Siria por los grupos rebeldes</h4>
-                        </div>
-                    </div>
-
-                    <div class="row mb-1">
-
-                        <div class="col-5">
-                            <img src="../../../assets/images/hablando1.png" alt="" class="imagen-blog ml-2">
-                        </div>
-
-                        <div class="col-7 mt-3">
-                            <p>5 puntos claves para entender la situación política de Siria.</p>
-                            <p class="desktop"> 1. ¿Cómo ha sucedido? <br> 2. ¿Qué estan haciendo? <br>3. ¿A quiénes
-                                afecta? <br>4. ¿Por
-                                qué se debe?<br> 5.
-                                ¿Quiénes son los involucrados? </p>
-                            <br>
-                            <button class="btn btn-sm mt-2 mx-auto">{{'HOME.READ-MORE'|translate}}</button>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="text-center mt-3">El golpe de Estado en Siria por los grupos rebeldes</h4>
-                        </div>
-                    </div>
-
-                    <div class="row mb-1">
-
-                        <div class="col-5">
-                            <img src="../../../assets/images/hablando2.png" alt="" class="imagen-blog ml-2">
-                        </div>
-
-                        <div class="col-7 mt-3">
-                            <p>5 puntos claves para entender la situación de Bielorrusia.</p>
-                            <p class="desktop"> 1. ¿Cómo ha sucedido? <br> 2. ¿Qué estan haciendo? <br>3. ¿A quiénes
-                                afecta? <br>4. ¿Por
-                                qué se debe?<br> 5.
-                                ¿Quiénes son los involucrados? </p>
-                            <br>
-                            <button class="btn btn-sm mt-2">{{'HOME.READ-MORE'|translate}}</button>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="text-center mt-3">El golpe de Estado en Siria por los grupos rebeldes</h4>
-                        </div>
-                    </div>
-
-                    <div class="row mb-1">
-
-                        <div class="col-5">
-                            <img src="../../../assets/images/hablando1.png" alt="" class="imagen-blog ml-2">
-                        </div>
-
-                        <div class="col-7 mt-3">
-                            <p>5 puntos claves para entender la situación política de Siria.</p>
-                            <p class="desktop"> 1. ¿Cómo ha sucedido? <br> 2. ¿Qué estan haciendo? <br>3. ¿A quiénes
-                                afecta? <br>4. ¿Por
-                                qué se debe?<br> 5.
-                                ¿Quiénes son los involucrados? </p>
-                            <br>
-                            <button class="btn btn-sm mt-2">{{'HOME.READ-MORE'|translate}}</button>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card mb-3">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h4 class="text-center mt-3">¿Qué sucede en Bielorrusia</h4>
-                        </div>
-                    </div>
-
-                    <div class="row mb-1">
-
-                        <div class="col-5">
-                            <img src="../../../assets/images/hablando2.png" alt="" class="imagen-blog ml-2">
-                        </div>
-
-                        <div class="col-7 mt-3">
-                            <p>5 puntos claves para entender la situación de Bielorrusia.</p>
-                            <p class="desktop"> 1. ¿Cómo ha sucedido? <br> 2. ¿Qué estan haciendo? <br>3. ¿A quiénes
-                                afecta? <br>4. ¿Por
-                                qué se debe?<br> 5.
-                                ¿Quiénes son los involucrados? </p>
-                            <br>
-                            <button class="btn btn-sm mt-2">{{'HOME.READ-MORE'|translate}}</button>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-
-        </div>
     </div>
+
+
+    <!-- los posts -->
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="text-center mt-3">El golpe de Estado en Siria por los grupos rebeldes</h4>
+            </div>
+          </div>
+
+          <div class="row mb-1">
+
+            <div class="col-5">
+              <img src="../../../assets/images/hablando1.png" alt="" class="imagen-blog ml-2">
+            </div>
+
+            <div class="col-7 mt-3">
+              <p>5 puntos claves para entender la situación política de Siria.</p>
+              <p class="desktop"> 1. ¿Cómo ha sucedido? <br> 2. ¿Qué estan haciendo? <br>3. ¿A quiénes
+                afecta? <br>4. ¿Por
+                qué se debe?<br> 5.
+                ¿Quiénes son los involucrados? </p>
+              <br>
+              <button class="btn btn-sm mt-2 mx-auto">{{'HOME.READ-MORE'|translate}}</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="text-center mt-3">El golpe de Estado en Siria por los grupos rebeldes</h4>
+            </div>
+          </div>
+
+          <div class="row mb-1">
+
+            <div class="col-5">
+              <img src="../../../assets/images/hablando2.png" alt="" class="imagen-blog ml-2">
+            </div>
+
+            <div class="col-7 mt-3">
+              <p>5 puntos claves para entender la situación de Bielorrusia.</p>
+              <p class="desktop"> 1. ¿Cómo ha sucedido? <br> 2. ¿Qué estan haciendo? <br>3. ¿A quiénes
+                afecta? <br>4. ¿Por
+                qué se debe?<br> 5.
+                ¿Quiénes son los involucrados? </p>
+              <br>
+              <button class="btn btn-sm mt-2">{{'HOME.READ-MORE'|translate}}</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="text-center mt-3">El golpe de Estado en Siria por los grupos rebeldes</h4>
+            </div>
+          </div>
+
+          <div class="row mb-1">
+
+            <div class="col-5">
+              <img src="../../../assets/images/hablando1.png" alt="" class="imagen-blog ml-2">
+            </div>
+
+            <div class="col-7 mt-3">
+              <p>5 puntos claves para entender la situación política de Siria.</p>
+              <p class="desktop"> 1. ¿Cómo ha sucedido? <br> 2. ¿Qué estan haciendo? <br>3. ¿A quiénes
+                afecta? <br>4. ¿Por
+                qué se debe?<br> 5.
+                ¿Quiénes son los involucrados? </p>
+              <br>
+              <button class="btn btn-sm mt-2">{{'HOME.READ-MORE'|translate}}</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="row">
+            <div class="col-md-12">
+              <h4 class="text-center mt-3">¿Qué sucede en Bielorrusia</h4>
+            </div>
+          </div>
+
+          <div class="row mb-1">
+
+            <div class="col-5">
+              <img src="../../../assets/images/hablando2.png" alt="" class="imagen-blog ml-2">
+            </div>
+
+            <div class="col-7 mt-3">
+              <p>5 puntos claves para entender la situación de Bielorrusia.</p>
+              <p class="desktop"> 1. ¿Cómo ha sucedido? <br> 2. ¿Qué estan haciendo? <br>3. ¿A quiénes
+                afecta? <br>4. ¿Por
+                qué se debe?<br> 5.
+                ¿Quiénes son los involucrados? </p>
+              <br>
+              <button class="btn btn-sm mt-2">{{'HOME.READ-MORE'|translate}}</button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
 
 
 
