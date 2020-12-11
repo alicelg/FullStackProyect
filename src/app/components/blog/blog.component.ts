@@ -65,9 +65,11 @@ export class BlogComponent implements OnInit, AfterViewInit {
 
     this.postsService.getPostByTypeAndCategory(blogtypeId, event.target.value).then(res => {
       this.blogType.includes('general') ? this.generalPosts = res : this.hablandoPosts = res;
+      // limpio los elementos con clase de filtro activo si es que los hay
       Array.from(document.getElementsByClassName('filter')).map(element => {
         element.classList.remove('activeFilter');
       });
+      // añado la clase de filtro activo al correspondiente
       event.target.classList.add('activeFilter');
     });
 

@@ -1,203 +1,202 @@
 <div class="container-fluid colorbg">
 
-    <!-- Cabecera usuario -->
+  <!-- Cabecera usuario -->
+  <div class="container">
+
+    <div class="row colorbg">
+
+      <div class="col-md-4 mt-3 mb-3 text-center desktop">
+        <img src="../../../assets/images/hablando.png" class="avatar-user-desktop" alt="">
+      </div>
+
+      <div class="col-md-4 mt-4 mb-2 text-center mobile">
+        <img src="../../../assets/images/hablando.png" class="avatar-user" alt="">
+      </div>
+
+      <div class="col-md-8">
+
+        <div class="row">
+          <div class="col-md-12 mt-5 mr-2 desktop">
+            <h3>Alice López Gómez</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mt-2 mobile">
+            <h3 class="text-center">Alice López Gómez</h3>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+
+          <div class="col-md-4 col-6">
+
+            <div class="d-flex">
+              <i class="fa fa-map-pin mr-2 ml-2 text-center mt-1"></i>
+              <p class="text-header">Colombia</p>
+            </div>
+
+            <div class="d-flex">
+              <i class="fa fa-graduation-cap mr-1 mr-2 text-center mt-1"></i>
+              <p class="text-header">Polítologa </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-6 ">
+
+            <div class="d-flex">
+              <i class="fa fa-linkedin-square mr-1 mr-2 text-center mt-1"></i>
+              <p class="text-header">Alice López</p>
+            </div>
+
+
+            <div class="d-flex">
+              <i class="fa fa-briefcase mr-2 text-center mt-1"></i>
+              <p class="text-header"> Profesora </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 desktop">
+
+            <div class="d-flex">
+              <i class="fa fa-book mr-2 text-center mt-1"></i>
+              <p class="text-header">9</p>
+            </div>
+
+
+            <div class="d-flex">
+              <i class="fa fa-heart mr-2 mt-1 text-center"></i>
+              <p class="text-header">10</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- stories -->
+  <div class="row color">
+
     <div class="container">
 
-        <div class="row colorbg">
-
-            <div class="col-md-4 mt-3 mb-3 text-center desktop">
-                <img src="../../../assets/images/hablando.png" class="avatar-user-desktop" alt="">
-            </div>
-
-            <div class="col-md-4 mt-4 mb-2 text-center mobile">
-                <img src="../../../assets/images/hablando.png" class="avatar-user" alt="">
-            </div>
-
-            <div class="col-md-8">
-
-                <div class="row">
-                    <div class="col-md-12 mt-5 mr-2 desktop">
-                        <h3>Alice López Gómez</h3>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12 mt-2 mobile">
-                        <h3 class="text-center">Alice López Gómez</h3>
-                    </div>
-                </div>
-
-                <div class="row mt-4">
-
-                    <div class="col-md-4 col-6">
-
-                        <div class="d-flex">
-                            <i class="fa fa-map-pin mr-2 ml-2 text-center mt-1"></i>
-                            <p class="text-header">Colombia</p>
-                        </div>
-
-                        <div class="d-flex">
-                            <i class="fa fa-graduation-cap mr-1 mr-2 text-center mt-1"></i>
-                            <p class="text-header">Polítologa </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-6 ">
-
-                        <div class="d-flex">
-                            <i class="fa fa-linkedin-square mr-1 mr-2 text-center mt-1"></i>
-                            <p class="text-header">Alice López</p>
-                        </div>
-
-
-                        <div class="d-flex">
-                            <i class="fa fa-briefcase mr-2 text-center mt-1"></i>
-                            <p class="text-header"> Profesora </p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 desktop">
-
-                        <div class="d-flex">
-                            <i class="fa fa-book mr-2 text-center mt-1"></i>
-                            <p class="text-header">9</p>
-                        </div>
-
-
-                        <div class="d-flex">
-                            <i class="fa fa-heart mr-2 mt-1 text-center"></i>
-                            <p class="text-header">10</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+      <div class="row mt-3 mb-3 text-center">
+        <div class="col-md-2 col-3">
+          <div class="instagram_avatar_border" id="story_1" (click)="showStories(1)"></div>
         </div>
-
+        <div class="col-md-2 col-3">
+          <div class="instagram_avatar_border" id="story_2" (click)="showStories(2)"></div>
+        </div>
+        <div class="col-md-2 col-3">
+          <div class="instagram_avatar_border" id="story_3" (click)="showStories(3)"></div>
+        </div>
+        <div class="col-md-2 col-3">
+          <div class="instagram_avatar_border" id="story_4" (click)="showStories(4)"></div>
+        </div>
+        <div class="col-md-2 desktop">
+          <div class="instagram_avatar_border" id="story_5" (click)="showStories(5)"></div>
+        </div>
+        <div class="col-md-2 desktop">
+          <div class="instagram_avatar_border" id="story_6" (click)="showStories(6)"></div>
+        </div>
+      </div>
     </div>
 
-    <!-- stories -->
-    <div class="row color">
-
-        <div class="container">
-
-            <div class="row mt-3 mb-3 text-center">
-                <div class="col-md-2 col-3">
-                    <img src="../../../assets/images/antonio2.png" alt="" class="storys">
-                </div>
-
-                <div class="col-md-2 col-3">
-                    <img src="../../../assets/images/antonio2.png" alt="" class="storys">
-                </div>
-                <div class="col-md-2 col-3">
-                    <img src="../../../assets/images/antonio2.png" alt="" class="storys">
-                </div>
-                <div class="col-md-2 col-3">
-                    <img src="../../../assets/images/antonio2.png" alt="" class="storys">
-                </div>
-                <div class="col-md-2 desktop">
-                    <img src="../../../assets/images/antonio2.png" alt="" class="storys">
-                </div>
-                <div class="col-md-2 desktop">
-                    <img src="../../../assets/images/antonio2.png" alt="" class="storys">
-                </div>
-            </div>
-        </div>
 
 
 
-
-    </div>
+  </div>
 
 </div>
 
 <!-- body del usuario -->
 <div class="container">
 
+  <div class="row mt-6">
+    <div class="col-md-8 border rounded pt-2 pb-2">
+      <h5 class="text-center pt-3">Conceptos favoritos</h5>
+      <hr>
 
+      <div class="row text-center pb-3">
 
-    <div class="row mt-6">
-        <div class="col-md-8 border rounded pt-2 pb-2">
-            <h5 class="text-center pt-3">Conceptos favoritos</h5>
-            <hr>
-
-            <div class="row text-center pb-3">
-
-                <div class="col-md-3 mt-2">
-                    <a href="">Política</a>
-                </div>
-
-                <div class="col-md-3 mt-2">
-                    <a href="">Política</a>
-                </div>
-
-                <div class="col-md-3 mt-2">
-                    <a href="">Política</a>
-                </div>
-
-                <div class="col-md-3 mt-2">
-                    <a href="">Política</a>
-                </div>
-
-                <div class="col-md-3 mt-2">
-                    <a href="">Política</a>
-                </div>
-
-                <div class="col-md-3 mt-2">
-                    <a href="">Política</a>
-                </div>
-
-                <div class="col-md-3 mt-2">
-                    <a href="">Política</a>
-                </div>
-
-                <div class="col-md-3 mt-2">
-                    <a href="">Política</a>
-                </div>
-            </div>
-
+        <div class="col-md-3 mt-2">
+          <a href="">Política</a>
         </div>
 
-        <div class="col-md-4">
-            <h5 class="text-center">Test</h5>
-            <p class="text-center">Disfruta, aprende y reta a tus amigos en nuestros tests.</p>
-
-            <button class="btn btn-block" routerLink="">Test Mundo</button>
-            <button class="btn btn-block" routerLink="">Test Político</button>
+        <div class="col-md-3 mt-2">
+          <a href="">Política</a>
         </div>
+
+        <div class="col-md-3 mt-2">
+          <a href="">Política</a>
+        </div>
+
+        <div class="col-md-3 mt-2">
+          <a href="">Política</a>
+        </div>
+
+        <div class="col-md-3 mt-2">
+          <a href="">Política</a>
+        </div>
+
+        <div class="col-md-3 mt-2">
+          <a href="">Política</a>
+        </div>
+
+        <div class="col-md-3 mt-2">
+          <a href="">Política</a>
+        </div>
+
+        <div class="col-md-3 mt-2">
+          <a href="">Política</a>
+        </div>
+      </div>
+
     </div>
 
+    <div class="col-md-4">
+      <button class="btn btn-block mb-3" (click)="logOut()">Me las piro vampiro</button>
 
-    <div class="row mt-5 mb-5">
+      <h5 class="text-center">Test</h5>
+      <p class="text-center">Disfruta, aprende y reta a tus amigos en nuestros tests.</p>
 
-        <div class="col-md-8 border rounded pt-2 pb-2">
-            <h5 class="text-center pt-3">Publicaciones </h5>
-            <hr>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <a>La política exterior de Colombia en 2019</a>
-
-                </div>
-            </div>
-
-        </div>
-
-        <div class="col-md-4 text-center">
-            <h5>Recuerda</h5>
-            <p> Ahora que eres usuario de WatchYourPolitics puedes elegir tus <strong routerLink="conceptos">conceptos
-                </strong> favoritos. Buscar en nuestro <strong routerLink="mapa">mapa </strong> interactivo el país más
-                grande o el más pequeño y aprender sobre su situación política. </p>
-
-            <p> Comparte tus ideas de <strong routerLink="blog/general"> política </strong>, <strong
-                    routerLink="blog/general"> cultura</strong>, <strong routerLink="blog/general"> economía </strong> o
-                <strong routerLink="blog/general"> historia </strong> en nuestro <strong routerLink="blog/general"> blog
-                </strong>. Si lo que te apetece es pasar un rato leyendo y disfrutando de
-                las ideas de otros usuarios, puedes leerlos y comentarlos. </p>
-
-
-        </div>
+      <button class="btn btn-block" routerLink="">Test Mundo</button>
+      <button class="btn btn-block" routerLink="">Test Político</button>
     </div>
+  </div>
+
+
+  <div class="row mt-5 mb-5">
+
+    <div class="col-md-8 border rounded pt-2 pb-2">
+      <h5 class="text-center pt-3">Publicaciones </h5>
+      <hr>
+
+      <div class="row">
+        <div class="col-md-6">
+          <a>La política exterior de Colombia en 2019</a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-4 text-center">
+      <h5>Recuerda</h5>
+      <p> Ahora que eres usuario de WatchYourPolitics puedes elegir tus <strong routerLink="conceptos">conceptos
+        </strong> favoritos. Buscar en nuestro <strong routerLink="mapa">mapa </strong> interactivo el país más
+        grande o el más pequeño y aprender sobre su situación política. </p>
+
+      <p> Comparte tus ideas de <strong routerLink="blog/general"> política </strong>, <strong
+          routerLink="blog/general"> cultura</strong>, <strong routerLink="blog/general"> economía </strong> o
+        <strong routerLink="blog/general"> historia </strong> en nuestro <strong routerLink="blog/general"> blog
+        </strong>. Si lo que te apetece es pasar un rato leyendo y disfrutando de
+        las ideas de otros usuarios, puedes leerlos y comentarlos. </p>
+
+
+    </div>
+  </div>
 
 </div>
 
@@ -205,27 +204,34 @@
 <!-- Esto es de la story -->
 
 <ng-template #content let-modal>
-    <div class="modal-header border-bottom-0 px-4 pt-3">
-        <div id="closeModal" class="d-flex">
+  <div class="modal-header border-bottom-0 px-4 pt-3">
+    <div id="closeModal" class="d-flex">
 
-            <img src="../../../assets/images/hablando.png" alt="" class="person mr-3">
-            <h5 class="mt-2">Alice López</h5>
+      <img src="../../../assets/images/hablando.png" alt="" class="person mr-3">
+      <h5 class="mt-2">Alice López</h5>
 
 
-            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-                <span aria-hidden="true">&times;</span>&nbsp;
-            </button>
-        </div>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>&nbsp;
+      </button>
     </div>
+  </div>
 
-    <div class="modal-body px-4 text-center">
-        <img src="../../../assets/images/story.png" alt="" class="story">
-
-
+  <div class="modal-body px-5 text-center">
+    <div class="progress">
+      <div id="theBar" class="progress-bar tertiaryBgColor" role="progressbar"
+        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%; transition: width 0.1s ease; height: 5px;">
+      </div>
     </div>
+    <img [src]="this.storyImage" alt="" class="story"  (mousedown)="stopStories()" (mouseup)="showStories(storyStep + 1)">
+  </div>
 
-    <div class="modal-footer justify-content-center px-4 border-top-0 pb-3">
-        <button type="button" class="btn btn-secondary">←</button>
-        <button type="button" class="btn tertiaryBgColor quaternaryTextColor">→</button>
-    </div>
+  <div class="modal-footer justify-content-center px-4 border-top-0 pb-3">
+    <button type="button" class="btn tertiaryBgColor quaternaryTextColor"
+      (click)="showStories(storyStep - 1)">←</button>
+      <!-- <button type="button" class="btn tertiaryBgColor quaternaryTextColor"
+      (click)="stopStories()">Parar</button> -->
+    <button type="button" class="btn tertiaryBgColor quaternaryTextColor"
+      (click)="showStories(storyStep + 1)">→</button>
+  </div>
 </ng-template>

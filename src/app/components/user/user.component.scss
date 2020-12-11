@@ -1,69 +1,93 @@
 @import "../../../styles.scss";
 
 .colorbg {
-    background: $quinaryBgColor;
+  background: $quinaryBgColor;
 }
 
 .color {
-    background: $tertiaryBgColor;
+  background: $tertiaryBgColor;
 }
 
 .logo {
-    width: 30%;
+  width: 30%;
 }
 
 .person {
-    width: 10%;
+  width: 10%;
 }
 
 .avatar-user-desktop {
-    width: 50%;
+  width: 50%;
 }
 
 .avatar-user {
-    width: 40%;
+  width: 40%;
 }
 
 h3,
 .text-header {
-    color: white;
+  color: white;
 }
 
 .story {
-    margin: 0 auto !important;
-    width: 50%;
+  margin: 0 auto !important;
+  width: 50%;
 }
 
 .storys {
-    width: 50%;
+  width: 50%;
+}
+
+.instagram_avatar_border {
+  background-image: url(../../../assets/images/instagram_avatar_border.png);
+  height: 55px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.instagram_avatar_noborder {
+  background-image: url(../../../assets/images/instagram_avatar_noborder.png);
+  height: 55px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  display: inline-block;
+  cursor: pointer;
 }
 
 h4 {
-    text-align: center;
+  text-align: center;
 }
 
 .modal-header,
 .modal-body,
 .modal-footer {
-    background-color: black;
+  background-color: black;
 }
 
 .btn {
-    background: $tertiaryBgColor;
-    color: $quaternaryTextColor;
+  background: $tertiaryBgColor;
+  color: $quaternaryTextColor;
 }
 
 .btn:hover {
-    background: $primaryTextColor;
-    color: $quaternaryTextColor;
+  background: $primaryTextColor;
+  color: $quaternaryTextColor;
 }
 
 .let-modal {
-    width: 100px;
+  width: 100px;
+}
+
+.progress {
+  height: 5px;
 }
 
 @media (max-width: 575px) {
-    .storys {
-        width: 100%;
-    }
+  .storys {
+    width: 100%;
+  }
 }

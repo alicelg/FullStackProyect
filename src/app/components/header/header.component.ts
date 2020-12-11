@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { User } from 'src/app/models/user.model';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-header',
@@ -8,18 +10,22 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
 
-  userLogged = false;
+  userLogged: User;
 
   constructor(
-    public translateService: TranslateService
+    public translateService: TranslateService,
+    public userService: UsersService,
   ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.userService.currentUser.subscribe(res => {
+      this.userLogged = res;
+    });
+  }
 
   changeLanguage(lang: string): void {
     this.translateService.setDefaultLang(lang);
     this.translateService.use(lang);
     localStorage.setItem('language', lang);
   }
-
 }
