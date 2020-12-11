@@ -15,27 +15,85 @@ import { ResultComponent } from './components/result/result.component';
 import { TestComponent } from './components/test/test.component';
 import { TestsComponent } from './components/tests/tests.component';
 import { UserComponent } from './components/user/user.component';
+import { InternalGuard } from './internal.guard';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'mapa', component: MapComponent },
-  { path: 'mapa/pais/:code', component: CountryComponent },
-  { path: 'conceptos', component: ConceptsComponent },
-  { path: 'blog/:type', component: BlogComponent },
-  { path: 'blog/:type/:id', component: PostComponent },
-  /* { path: 'blog/hablando-de-politica', component: BlogComponent }, */
-  /* { path: 'blog/hablando-de-politica/:id', component: PostComponent }, */
-  { path: 'nuevo/post', component: FormComponent },
-  { path: 'tests', component: TestsComponent },
-  { path: 'test/:id', component: TestComponent },
-  { path: 'test/:id/resultado', component: ResultComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'signup', component: LoginComponent },
-  { path: 'usuario/:id', component: UserComponent },
-  { path: 'nosotros', component: CreatorComponent },
-  { path: 'privacidad', component: LegalComponent },
-  { path: 'cookies', component: LegalComponent },
-  { path: '**', component: ErrorComponent },
+  {
+    path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'mapa',
+    component: MapComponent
+  },
+  {
+    path: 'mapa/pais/:code',
+    component: CountryComponent
+  },
+  {
+    path: 'conceptos',
+    component: ConceptsComponent
+  },
+  {
+    path: 'blog/:type',
+    component: BlogComponent
+  },
+  {
+    path: 'blog/:type/:id',
+    component: PostComponent
+  },
+  /* { path: 'blog/hablando-de-politica',
+  component: BlogComponent }, */
+  /* { path: 'blog/hablando-de-politica/:id',
+  component: PostComponent }, */
+  {
+    path: 'nuevo/post',
+    component: FormComponent,
+    canActivate: [InternalGuard]
+  },
+  {
+    path: 'tests',
+    component: TestsComponent
+  },
+  {
+    path: 'test/:id',
+    component: TestComponent,
+    canActivate: [InternalGuard]
+  },
+  {
+    path: 'test/:id/resultado',
+    component: ResultComponent,
+    canActivate: [InternalGuard]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'signup',
+    component: LoginComponent
+  },
+  {
+    path: 'usuario/:id',
+    component: UserComponent,
+    canActivate: [InternalGuard]
+  },
+  {
+    path: 'nosotros',
+    component: CreatorComponent
+  },
+  {
+    path: 'privacidad',
+    component: LegalComponent
+  },
+  {
+    path: 'cookies',
+    component: LegalComponent
+  },
+  {
+    path: '**',
+    component: ErrorComponent
+  },
 ];
 
 @NgModule({
