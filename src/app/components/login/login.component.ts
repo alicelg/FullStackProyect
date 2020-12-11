@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalDismissReasons, NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { User } from 'src/app/models/user.model';
 import { UsersService } from 'src/app/services/users.service';
 
 @Component({
@@ -38,7 +39,7 @@ export class LoginComponent implements OnInit {
     });
 
     this.signupForm = new FormGroup({
-      nickname: new FormControl('toni', [ Validators.required]),
+      nickname: new FormControl('toni', [Validators.required]),
       email: new FormControl('alil@gs.es', [Validators.email, Validators.required]),
       password: new FormControl('123456Az', [Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$')]),
       passwordConfirm: new FormControl('123456Az', [Validators.required])
@@ -58,7 +59,9 @@ export class LoginComponent implements OnInit {
   login(): void {
     if (this.loginForm.valid) {
       this.usersService.login(this.loginForm.value).then(res => {
-        localStorage.setItem('currentUser', atob(res.token.split('.')[1]));
+        const currentUser: User = JSON.parse(atob(res.token.split('.')[1]));
+        currentUser.token = res.token;
+        localStorage.setItem('currentUser', JSON.stringify(currentUser));
       });
     } else {
       // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
