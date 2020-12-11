@@ -8,8 +8,6 @@ export class JwtInterceptor implements HttpInterceptor {
   constructor() { }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log(request, '');
-
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
     if (currentUser) {
       request = request.clone({
@@ -18,7 +16,6 @@ export class JwtInterceptor implements HttpInterceptor {
         }
       });
     }
-
     return next.handle(request);
   }
 }

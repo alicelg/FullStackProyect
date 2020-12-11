@@ -67,11 +67,14 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [InternalGuard]
+
   },
   {
     path: 'signup',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [InternalGuard]
   },
   {
     path: 'usuario/:id',
