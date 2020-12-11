@@ -22,13 +22,9 @@ export class InternalGuard implements CanActivate {
     const currentUser: User = JSON.parse(localStorage.getItem('currentUser'));
     let role;
 
-    console.log(route.routeConfig.path);
     if (currentUser) {
-
       role = JSON.parse(atob(currentUser.token.split('.')[1])).userRole;
-
     }
-
 
     switch (route.routeConfig.path) {
 
