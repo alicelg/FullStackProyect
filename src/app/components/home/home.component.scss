@@ -63,7 +63,8 @@
   padding: 0;
 }
 
-.searchbar:hover, .searchbar_dirty {
+.searchbar:hover,
+.searchbar_dirty {
   background-color: $sextenaryBgColor;
 
   .search_input {
@@ -85,20 +86,28 @@
     // border: 1px solid $tertiaryBgColor;
     background-color: $sextenaryBgColor;
   }
-  .result-group{
+  .result-group {
     padding: 0;
     margin: 0;
-    .result-item{
+
+    .result-item {
       list-style: none;
       text-align: left;
       padding: 10px 0;
       cursor: pointer;
+      display: flex;
+
+      .result-type {
+        display: inline-block;
+        border: 1px solid;
+        border-radius: 5px;
+        background-color: transparent;
+        opacity: 0.9;
+        padding: 3px 5px;
+      }
     }
   }
 }
-
-
-
 
 .search_icon {
   height: 40px;

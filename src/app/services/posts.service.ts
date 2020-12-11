@@ -10,6 +10,7 @@ export interface Post {
   date: string;
   text: string;
   user_id: number;
+  summary: string;
 }
 
 @Injectable({
@@ -30,10 +31,11 @@ export class PostsService {
   }
 
   getPostById(postId): Promise<Post> {
-
     return this.httpClient.get<Post>(`${this.baseUrl}/${postId}`).toPromise();
-
   }
+
+  getPostByTypeAndCategory(type, category): Promise<any> {
+    return this.httpClient.get<Post>(`${this.baseUrl}/category/${type}/${category}`).toPromise();
+  }
+
 }
-
-

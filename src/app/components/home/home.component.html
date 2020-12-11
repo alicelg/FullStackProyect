@@ -23,13 +23,21 @@
                 <div class="search-results" *ngIf="searchResult">
                   <ul class="result-group">
                     <li class="result-item" *ngFor="let post of searchResult.generalPosts"
-                      [routerLink]="['blog/general/', post.id]">{{post.title}}</li>
+                      [routerLink]="['blog/general/', post.id]">
+                      <div class="result-type col-4 text-center">Blog General</div> <div class="col-8 font-weight-bold">{{post.title |titlecase}}</div>
+                    </li>
                     <li class="result-item" *ngFor="let post of searchResult.hablandoPosts"
-                      [routerLink]="['blog/hablando-de-política/', post.id]">{{post.title}}</li>
-                    <li class="result-item" *ngFor="let concept of searchResult.concepts"
-                      [routerLink]="['conceptos']" [queryParams]="{searchTerm: translateService.instant(concept.title)}">{{translateService.instant(concept.title)}}</li>
+                      [routerLink]="['blog/hablando-de-política/', post.id]">
+                      <div class="result-type col-4 text-center">Blog Hablando</div> <div class="col-8 font-weight-bold">{{post.title |titlecase}}</div>
+                    </li>
+                    <li class="result-item" *ngFor="let concept of searchResult.concepts" [routerLink]="['conceptos']"
+                      [queryParams]="{searchTerm: translateService.instant(concept.title)}">
+                      <div class="result-type col-4 text-center">Concepto</div> <div class="col-8 font-weight-bold"> {{translateService.instant(concept.title) |titlecase}}</div>
+                    </li>
                     <li class="result-item" *ngFor="let country of searchResult.countries"
-                      [routerLink]="['mapa/pais/', country.code]">{{country.official_name}}</li>
+                      [routerLink]="['mapa/pais/', country.code]">
+                      <div class="result-type col-4 text-center">País</div> <div class="col-8 font-weight-bold"> {{country.official_name |titlecase}}</div>
+                    </li>
                     <li class="result-item"
                       *ngIf="!searchResult.generalPosts && !searchResult.hablandoPosts && !searchResult.concepts">No se
                       han encontrado resultados para tu búsqueda</li>
