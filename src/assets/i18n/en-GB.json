@@ -27,7 +27,7 @@
         "MAP-TEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
         "TEST-KNOWLEDGE": "Test your knowledge",
         "TEST-WORLD-TEXT": "Have fun trying how many flags of the world you know or can guess. The more times you do it, the better ranking and the more countries you discover.",
-        "TEST-POLITICAL-TEXT": "A test to measure your decisions. Answer and depending on your answers you will be able to discover the political tendency most akin to your profile.",
+        "TEST-POLITICAL-TEXT": "A test to measure your decisions. Answer and depending on your answers you will be able to discover the political tendency most akin to your profile. ",
         "RANKING": "Ranking",
         "RANKING-TEXT": "All our users compete for the first place in our World Test, you dare to be part of our ranking. Participate, learn and have fun.",
         "ABOUT-US": "What do they say about us?",
@@ -464,5 +464,25 @@
         "STUDIES-C": "FullStack Developer Web",
         "TEAM-MESSAGE-A": "Annoying 24/7 professional who only scolds Antonio for the mess.",
         "TEAM-MESSAGE-B": "Professional with enormous capacity and enthusiasm, proactive and with a clear results orientation."
+    },
+    "TEST": {
+        "TEST-TEXT": "Choose your next challenge, we present two interesting options for you to have fun and learn..",
+        "RECOMMENDATIONS": "Test Recommendations",
+        "GREETING": "Hi",
+        "GREETING-CONTINUED": "this is your selected test",
+        "START-RECOMMENDATIONS": "Before starting here are some recommendations.",
+        "START": "Start",
+        "NO-WRONG-ANSWERS": "There are no wrong answers",
+        "NO-WRONG-ANSWERS-TEXT": "The test measures your knowledge and skills to find a solution, the main objective being to try to concentrate to reach the answer.",
+        "NO-TIME": "You don't need much time",
+        "NO-TIME-TEXT": "The test is usually answered in about 6 minutes. Also, keep in mind that you will not be able to edit or review the answers once you finish the test.",
+        "ANSWER-WITH-AGILITY": "Answer with agility",
+        "ANSWER-WITH-AGILITY-TEXT": "There is no time limit to answer these questions, but we recommend that you develop it in a quiet place, with a good connection and internet and that you answer quickly.",
+        "ANSWER-ALL": "Answer all the questions",
+        "ANSWER-ALL-TEXT": "You must answer all the questions. You can modify the answers on each of the screens. However, once you have passed a screen. You will not be able to go back to the previous ones.",
+        "HYPOTHETICAL-SITUATIONS": "May be hypothetical situations",
+        "HYPOTHETICAL-SITUATIONS-TEXT": "If the statement refers to a situation that you have not experienced or a behavior that you have not had the opportunity to develop, you must answer by thinking about how you would act in that hypothetical situation.",
+        "LEARN-FUN": "Learn and have fun",
+        "LEARN-FUN-TEXT": "The objective of our test is to spend a pleasant moment, while you learn or remember those previously acquired knowledge."
     }
 }
