@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import * as jsVectorMap from 'jsvectormap/dist/js/jsvectormap.js';
 import 'jsvectormap/dist/maps/world.js';
 import { CountriesService } from 'src/app/services/countries.service';
-import { CountryMap } from '../../models/countryMap.model';
-// import 'jsvectormap/dist/maps/world'
+import { Country } from '../../models/country.model';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -12,12 +12,13 @@ import { CountryMap } from '../../models/countryMap.model';
 })
 export class MapComponent implements OnInit {
 
-  selectedCountries: CountryMap[] = [];
+  selectedCountries: Country[] = [];
   map;
 
   constructor(
     private translateService: TranslateService,
-    private countriesService: CountriesService
+    private countriesService: CountriesService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -37,35 +38,17 @@ export class MapComponent implements OnInit {
         if (isSelected) {
           // si se esta seleccionando lo añadimos al array
           // obtenemos los datos completos del pais seleccionado
-          const countryMap = new CountryMap();
-          this.countriesService.getCountryFlagByCode(code).then(res => {
-            // countryMap.code = code;
-            // countryMap.name = code;
-            countryMap.flag = res.flag;
-            // countryMap.president = res.name;
-            // countryMap.languages = res.languages.map(language => language.nativeName).join(', ');
-            countryMap.currencies = res.currencies.map(currency => currency.name).join(', ');
+          let country = new Country();
 
-            this.countriesService.getCountriesDataByCode([code]).then(data => {
-              countryMap.code = code;
-              countryMap.name = data[0].official_name;
-              countryMap.leader1Title = data[0].title_leader_1;
-              countryMap.leader1Name = data[0].name_leader_1;
-              countryMap.leader2Title = data[0].title_leader_2;
-              countryMap.leader2Name = data[0].name_leader_2;
-              countryMap.goverment = data[0].goverment;
-              countryMap.languages = data[0].languages;
-              // countryMap.currencies = data[0].currencies;
-
-              // countryMap.languages = res.languages.map(language => language.nativeName).join(', ');
-              // countryMap.currencies = res.currencies.map(currency => currency.name).join(', ');
-            })
-
-            console.log(countryMap);
-
-
-            this.selectedCountries.push(countryMap);
-          });
+          this.countriesService.getCountriesDataByCode([code]).then(data => {
+            country = data[0];
+            // country.currencies = data[0].currencies;
+            this.countriesService.getCountryFlagByCode(code).then(res => {
+              country.flag = res.flag;
+              country.currencies = res.currencies.map(currency => currency.name).join(', ');
+              this.selectedCountries.push(country);
+            });
+          })
 
         } else {
           // si se esta des-seleccionando lo eliminamos del array
@@ -117,7 +100,11 @@ export class MapComponent implements OnInit {
   clearSelectedCountries(): void {
     this.selectedCountries = [];
     this.map.clearSelectedRegions();
+  }
 
+  selectCountry(country: Country): void {
+    this.countriesService.isSelected = country;
+    this.router.navigate(['/mapa/pais', country.code])
   }
 
 }
