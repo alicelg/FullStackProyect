@@ -16,12 +16,12 @@
   width: 10%;
 }
 
-.avatar-user-desktop {
-  width: 50%;
+.avatar {
+  border-radius: 50%;
 }
 
 .avatar-user {
-  width: 40%;
+  width: 50%;
 }
 
 h3,
@@ -90,4 +90,39 @@ h4 {
   .storys {
     width: 100%;
   }
+
+  .avatar-user {
+    width: 40%;
+  }
+}
+
+/* Subir imagen */
+
+.preview {
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.preview-img {
+  border-radius: 100%;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.7);
+}
+
+.browse-button {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  background: linear-gradient(180deg, transparent, black);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.browse-input {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
 }
