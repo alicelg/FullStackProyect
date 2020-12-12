@@ -22,7 +22,7 @@
       <div class="row">
         <div class="col-md-4 col-6" *ngFor="let country of selectedCountries">
           <!-- versión descktop -->
-          <div class="box py-2 px-2 box-desktop mb-2" [routerLink]="['/mapa/pais', country.code]">
+          <div class="box py-2 px-2 box-desktop mb-2" (click)="selectCountry(country)">
             <img class="image-flag mb-2" [src]="country.flag">
             <div class="box-text">
               <h5 class="text-center mb-3">{{('COUNTRIES.' + country.code) | translate}}</h5>
@@ -34,16 +34,16 @@
                       <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
                     </td>
                     <td>
-                      {{(country.leader1Title? (country.leader1Title + ': ' + country.leader1Name) : 'No disponible') | titlecase}}
+                      {{(country.title_leader_1? (country.title_leader_1 + ': ' + country. name_leader_1) : 'No disponible') | titlecase}}
                     </td>
                   </tr>
 
-                  <tr *ngIf="country.leader2Title">
+                  <tr *ngIf="country.title_leader_2">
                     <td style="width: 21%;">
                       <fa-icon [icon]="['fas', 'user']"></fa-icon>
                     </td>
                     <td>
-                      {{(country.leader2Title? (country.leader2Title + ': ' + country.leader2Name) : 'No disponible') |titlecase}}
+                      {{(country.title_leader_2? (country.title_leader_2 + ': ' + country.name_leader_2) : 'No disponible') |titlecase}}
                     </td>
                   </tr>
 
@@ -67,15 +67,13 @@
                     </td>
                     <td>{{(country.currencies? country.currencies : 'No disponible') |titlecase}}</td>
                   </tr>
-
                 </tbody>
               </table>
             </div>
-            <!-- <a class="btn btn-sm size" [routerLink]="['/mapa/pais', country.code]"><i class="fa fa-plus"></i></a> -->
           </div>
 
           <!-- versión movil -->
-          <div class="box py-2 px-2 mb-2 box-mobile">
+          <div class="box py-2 px-2 mb-2 box-mobile" (click)="selectCountry(country)">
             <div class="box-text">
               <div class="row align-items-center mb-2">
                 <div class="col-9 p-0">
@@ -108,7 +106,6 @@
                 </div>
               </div>
             </div>
-            <a class="btn btn-sm size" [routerLink]="['/mapa/pais', country.code]"><i class="fa fa-plus"></i></a>
           </div>
         </div>
       </div>
