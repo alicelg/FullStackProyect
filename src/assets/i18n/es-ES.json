@@ -464,5 +464,8 @@
         "STUDIES-C": "FullStack Developer Web",
         "TEAM-MESSAGE-A": "Profesional molesta 24/7 y que solo regaña Antonio por el desorden.",
         "TEAM-MESSAGE-B": "Profesional con una enorme capacidad e ilusión, proactivo y con clara orientación a resultados."
+    },
+    "TEST": {
+        "TEST-TEXT": "Elige tu siguiente reto, te presentamos dos opciones interesantes para que te diviertas y aprendas."
     }
 }
