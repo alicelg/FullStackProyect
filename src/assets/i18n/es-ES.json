@@ -466,6 +466,23 @@
         "TEAM-MESSAGE-B": "Profesional con una enorme capacidad e ilusión, proactivo y con clara orientación a resultados."
     },
     "TEST": {
-        "TEST-TEXT": "Elige tu siguiente reto, te presentamos dos opciones interesantes para que te diviertas y aprendas."
+        "TEST-TEXT": "Elige tu siguiente reto, te presentamos dos opciones interesantes para que te diviertas y aprendas.",
+        "RECOMMENDATIONS": "Recomendaciones del Test",
+        "GREETING": "Hola",
+        "GREETING-CONTINUED": "este es tu test de banderas",
+        "START-RECOMMENDATIONS": "Antes de empezar aquí tienes algunas recomendaciones.",
+        "START": "Comenzar",
+        "NO-WRONG-ANSWERS": "No existen respuestas incorrectas",
+        "NO-WRONG-ANSWERS-TEXT": "El test mide tus conocimientos y habilidades para dar con una solución, siendo el principal objetivo el intenta concentrarte para llegar a la respuesta.",
+        "NO-TIME": "No necesitas mucho tiempo",
+        "NO-TIME-TEXT": "El test se responde habitualmente en unos 6 minutos. Así mismo, ten en cuenta que no podrás editar, ni revisar las respuestas unas vez que finalices la prueba.",
+        "ANSWER-WITH-AGILITY": "Contesta con agilidad",
+        "ANSWER-WITH-AGILITY-TEXT": "No hay limite de tiempo para contestar estas preguntas, pero te recomendamos que la desarrolles en un lugar tranquilo, con buena conexión e internet y que constesttes con agilidad.",
+        "ANSWER-ALL": "Contesta todas las preguntas",
+        "ANSWER-ALL-TEXT": "Debes contestar a todas las preguntas. Podrás modificar las respuestas en cada una de las pantallas. Sin embargo, una vez hayas pasado una pantallas. No podrás retroceder a las anteriores.",
+        "HYPOTHETICAL-SITUATIONS": "Puede tratarse de situaciones hipotéticas",
+        "HYPOTHETICAL-SITUATIONS-TEXT": "Si la afirmación hace referencia a una situación que no hayas vivido o a un comportamiento que no hayas tenido la oportunidad de desarrollar, debes contestar pensando en cómo actuarías en esa hipotética situación.",
+        "LEARN-FUN": "Aprende y divierteté",
+        "LEARN-FUN-TEXT": "El objetivo de nuestro test es pasar un momento agradable, mientras aprendes o recuerdas aquellos conocimientos previamente adquiridos."
     }
 }
