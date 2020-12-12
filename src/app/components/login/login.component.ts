@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ModalDismissReasons, NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { User } from 'src/app/models/user.model';
 import { UsersService } from 'src/app/services/users.service';
+import { UtilsService } from 'src/app/services/utils.service';
 
 @Component({
   selector: 'app-login',
@@ -31,6 +32,7 @@ export class LoginComponent implements OnInit {
     private modal: NgbModal,
     private activatedRoute: ActivatedRoute,
     private router: Router,
+    private utilsService: UtilsService,
 
   ) {
     this.loginForm = new FormGroup({
@@ -59,7 +61,7 @@ export class LoginComponent implements OnInit {
   login(): void {
     if (this.loginForm.valid) {
       this.usersService.login(this.loginForm.value).then(res => {
-        const currentUser: User = JSON.parse(atob(res.token.split('.')[1]));
+        const currentUser: User = JSON.parse(this.utilsService.b64DecodeUnicode(res.token.split('.')[1]));
         currentUser.token = res.token;
         this.usersService.isLogged = currentUser;
         this.router.navigate(['usuario', currentUser.id]);
@@ -117,7 +119,6 @@ export class LoginComponent implements OnInit {
 
     const passwordInput = document.getElementById(dataField);
     const eye = document.getElementById(id);
-    console.log(id);
 
 
     if (passwordInput.getAttribute('type') === 'password') {
@@ -164,5 +165,7 @@ export class LoginComponent implements OnInit {
       this.modalRef = this.modal.open(this.content, { ariaLabelledBy: 'password-forgotten', size: 'l', centered: true });
     }
   }
+
+
 
 }

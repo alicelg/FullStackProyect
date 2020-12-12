@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { User } from 'src/app/models/user.model';
 import { UsersService } from 'src/app/services/users.service';
 // import { setInterval } from 'timers';
 
@@ -12,11 +13,13 @@ import { UsersService } from 'src/app/services/users.service';
 export class UserComponent implements OnInit {
 
   @ViewChild('content') content;
+
   modalRef: NgbModalRef;
   storyStep: number;
   storyImage: string;
   storiesInterval;
   progressBarInterval;
+  currentUser: User;
 
   constructor(
     private modal: NgbModal,
@@ -24,7 +27,11 @@ export class UserComponent implements OnInit {
     private router: Router,
   ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.userService.currentUser.subscribe(res => {
+      this.currentUser = res;
+    });
+  }
 
   showStories(storyStep): void {
     this.storyStep = storyStep;
@@ -36,8 +43,8 @@ export class UserComponent implements OnInit {
     targetElement.classList.remove('instagram_avatar_border');
     targetElement.classList.add('instagram_avatar_noborder');
 
-     // sustituimos la imagen de la modal según el step que corresponda
-     this.storyImage = `../../../assets/images/story${storyStep}.png`;
+    // sustituimos la imagen de la modal según el step que corresponda
+    this.storyImage = `../../../assets/images/story${storyStep}.png`;
 
     // lanzamos la modal
     if (!this.modal.hasOpenModals()) {

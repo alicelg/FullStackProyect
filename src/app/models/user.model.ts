@@ -10,4 +10,6 @@ export class User {
   nickname: string;
   role: string;
   token: string;
+  country: string;
+  linkedin: string;
 }
