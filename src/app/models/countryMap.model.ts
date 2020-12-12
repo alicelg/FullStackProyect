@@ -5,6 +5,8 @@ export class CountryMap {
   flag: string;
   leader1Title: string;
   leader1Name: string;
+  leader2Title: string;
+  leader2Name: string;
   goverment: string;
   languages: string;
   currencies: string;

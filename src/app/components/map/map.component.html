@@ -22,10 +22,10 @@
       <div class="row">
         <div class="col-md-4 col-6" *ngFor="let country of selectedCountries">
           <!-- versión descktop -->
-          <div class="box py-2 px-2 box-desktop">
-            <img class="image-flag" [src]="country.flag">
+          <div class="box py-2 px-2 box-desktop mb-2">
+            <img class="image-flag mb-2" [src]="country.flag">
             <div class="box-text">
-              <h5 class="text-center mb-4">{{('COUNTRIES.' + country.code) | translate}}</h5>
+              <h5 class="text-center mb-3">{{('COUNTRIES.' + country.code) | translate}}</h5>
               <!-- <div class="row">
                 <div class="col-md-3 col-4 px-0">
                   <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
@@ -50,36 +50,50 @@
               </div> -->
 
               <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td style="width: 21%;">
+                      <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
+                    </td>
+                    <td>
+                      {{(country.leader1Title? (country.leader1Title + ': ' + country.leader1Name) : 'No disponible') | titlecase}}
+                    </td>
                   </tr>
+
+                  <tr *ngIf="country.leader2Title">
+                    <td style="width: 21%;">
+                      <fa-icon [icon]="['fas', 'user']"></fa-icon>
+                    </td>
+                    <td>
+                      {{(country.leader2Title? (country.leader2Title + ': ' + country.leader2Name) : 'No disponible') |titlecase}}
+                    </td>
+                  </tr>
+
                   <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <td style="width: 21%;">
+                      <fa-icon [icon]="['fas', 'landmark']"></fa-icon>
+                    </td>
+                    <td>{{(country.goverment? country.goverment : 'No disponible')|titlecase}}</td>
                   </tr>
+
                   <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
+                    <td style="width: 21%;">
+                      <fa-icon [icon]="['fas', 'language']"></fa-icon>
+                    </td>
+                    <td>{{(country.languages? country.languages : 'No disponible') |titlecase}}</td>
                   </tr>
+
+                  <tr>
+                    <td style="width: 21%;">
+                      <fa-icon [icon]="['fas', 'money-bill']"></fa-icon>
+                    </td>
+                    <td>{{(country.currencies? country.currencies : 'No disponible') |titlecase}}</td>
+                  </tr>
+
                 </tbody>
               </table>
             </div>
-            <a class="btn btn-sm size" [routerLink]="['/mapa/pais', country.code]"><i class="fa fa-plus"></i></a>
+            <!-- <a class="btn btn-sm size" [routerLink]="['/mapa/pais', country.code]"><i class="fa fa-plus"></i></a> -->
           </div>
 
           <!-- versión movil -->

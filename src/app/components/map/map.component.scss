@@ -30,10 +30,10 @@
 .box {
   border-radius: 5px;
   transition: all 0.5s ease-out;
-  height: 400px;
+  height: 350px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content:;
 
   .box-text {
     font-size: 1rem;
@@ -58,8 +58,17 @@ a i {
   color: $quaternaryTextColor;
 }
 
+table{
+  font-size: 0.8rem;
+}
+
+.table td {
+  padding: 0.55rem 0.75rem;
+}
+
 .image-flag {
-  width: 30%;
+  width: 20%;
+  max-height: 40px;
   margin: 0 auto;
 }
 

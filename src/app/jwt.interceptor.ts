@@ -9,7 +9,7 @@ export class JwtInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    if (currentUser) {
+    if (currentUser && !request.url.includes('restcountries')) {
       request = request.clone({
         setHeaders: {
           Authorization: 'Bearer ' + currentUser.token

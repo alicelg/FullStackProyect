@@ -44,16 +44,18 @@ export class MapComponent implements OnInit {
             countryMap.flag = res.flag;
             // countryMap.president = res.name;
             // countryMap.languages = res.languages.map(language => language.nativeName).join(', ');
-            // countryMap.currencies = res.currencies.map(currency => currency.name).join(', ');
+            countryMap.currencies = res.currencies.map(currency => currency.name).join(', ');
 
             this.countriesService.getCountriesDataByCode([code]).then(data => {
               countryMap.code = code;
               countryMap.name = data[0].official_name;
               countryMap.leader1Title = data[0].title_leader_1;
               countryMap.leader1Name = data[0].name_leader_1;
+              countryMap.leader2Title = data[0].title_leader_2;
+              countryMap.leader2Name = data[0].name_leader_2;
               countryMap.goverment = data[0].goverment;
               countryMap.languages = data[0].languages;
-              countryMap.currencies = data[0].currencies;
+              // countryMap.currencies = data[0].currencies;
 
               // countryMap.languages = res.languages.map(language => language.nativeName).join(', ');
               // countryMap.currencies = res.currencies.map(currency => currency.name).join(', ');
