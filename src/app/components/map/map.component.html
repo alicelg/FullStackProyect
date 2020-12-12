@@ -26,16 +26,16 @@
             <img class="image-flag" [src]="country.flag">
             <div class="box-text">
               <h5 class="text-center mb-4">{{('COUNTRIES.' + country.code) | translate}}</h5>
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col-md-3 col-4 px-0">
                   <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
                 </div>
-                <div class="col-md-9 col-8 mb-3 px-0"> Pedro Sanchez
+                <div class="col-md-9 col-8 mb-3 px-0"> {{country.leader1Title}}: {{country.leader1Name}}
                 </div>
                 <div class="col-md-3 col-4 px-0">
                   <fa-icon [icon]="['fas', 'landmark']"></fa-icon>
                 </div>
-                <div class="col-md-9 col-8 mb-3 px-0"> Democracia Parlamentaria
+                <div class="col-md-9 col-8 mb-3 px-0"> {{country.goverment}}
                 </div>
                 <div class="col-md-3 col-4 px-0">
                   <fa-icon [icon]="['fas', 'language']"></fa-icon>
@@ -47,7 +47,37 @@
                 </div>
                 <div class="col-md-9 col-8 mb-3 px-0"> {{country.currencies}}
                 </div>
-              </div>
+              </div> -->
+
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             <a class="btn btn-sm size" [routerLink]="['/mapa/pais', country.code]"><i class="fa fa-plus"></i></a>
           </div>
