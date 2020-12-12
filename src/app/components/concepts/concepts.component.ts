@@ -33,7 +33,7 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
     // si hay un termino de búsqueda (cuando viene preseleccionado desde la home) ñanza la búsqueda por ese valor
     if (this.searchTerm) {
       this.conceptsSearchInput.value = this.searchTerm;
-      this.searchService.search(this.searchTerm, 'none', 'all').then((res) => {
+      this.searchService.search(this.searchTerm, null, 'all').then((res) => {
         this.concepts = res.concepts;
       }, (err) => {
         console.log('error', err);

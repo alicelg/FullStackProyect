@@ -50,7 +50,7 @@ export class UserComponent implements OnInit {
     });
 
     // seleccionamos la barra de carga de la story
-    const progressBar = document.getElementById('theBar');
+    const progressBar = document.getElementById('progressbar');
 
     // limpiamos el intervalo de barra de carga antes de lanzar uno nuevo para que no se acumulen
     clearInterval(this.progressBarInterval);
