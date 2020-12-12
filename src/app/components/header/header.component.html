@@ -38,16 +38,16 @@
         <div class="collapse navbar-collapse" id="main-nav">
             <div class="navbar-nav w-100">
 
-                <div class="nav-item active">
+                <div class="nav-item">
                     <button class="nav-link btn mx-auto" routerLink="mapa">{{'HEADER.MAP' | translate}}</button>
                 </div>
 
-                <div class="nav-item active">
+                <div class="nav-item">
                     <button class="nav-link btn mx-auto"
                         routerLink="conceptos">{{'HEADER.CONCEPTS' | translate}}</button>
                 </div>
 
-                <div class="nav-item dropdown active">
+                <div class="nav-item dropdown">
                     <button class="nav-link dropdown-toggle btn mx-auto" id="blog" data-toggle="dropdown">
                         {{'HEADER.BLOG' | translate}}
                     </button>
@@ -62,26 +62,30 @@
                     </div>
                 </div>
 
-                <div class="nav-item dropdown active">
-                    <button class=" btn nav-link dropdown-toggle mx-auto" routerLink="tests" id="test"
-                        data-toggle="dropdown">
-                        {{'HEADER.TEST' | translate}}
-                    </button>
-                    <div class="dropdown-menu text-center text-md-left">
-                        <button class="btn dropdown-item"
-                            routerLink="test/1">{{'HEADER.POLITICAL-TEST' | translate}}</button>
-                        <button class="btn dropdown-item"
-                            routerLink="test/2">{{'HEADER.WORLD-TEST' | translate}}</button>
-                    </div>
+                <div class="nav-item dropdown"  *ngIf="!userLogged">
+                  <button class="nav-link btn mx-auto" routerLink="tests">{{'HEADER.TEST' | translate}}</button>
                 </div>
 
-                <div class="nav-item active ml-md-auto" *ngIf="!userLogged">
+                <div class="nav-item dropdown"  *ngIf="userLogged">
+                  <button class=" btn nav-link dropdown-toggle mx-auto" id="test"
+                      data-toggle="dropdown">
+                      {{'HEADER.TEST' | translate}}
+                  </button>
+                  <div class="dropdown-menu text-center text-md-left">
+                      <button class="btn dropdown-item"
+                          routerLink="test/1">{{'HEADER.POLITICAL-TEST' | translate}}</button>
+                      <button class="btn dropdown-item"
+                          routerLink="test/2">{{'HEADER.WORLD-TEST' | translate}}</button>
+                  </div>
+              </div>
+
+                <div class="nav-item ml-md-auto" *ngIf="!userLogged">
                     <button class="btn nav-link" routerLink="login">{{'HEADER.LOGIN' | translate}}</button>
                 </div>
-                <div class="nav-item active" *ngIf="!userLogged">
+                <div class="nav-item" *ngIf="!userLogged">
                     <button class="btn nav-link" routerLink="signup">{{'HEADER.SIGNUP' | translate}}</button>
                 </div>
-                <div class="nav-item active ml-md-auto desktop" *ngIf="userLogged">
+                <div class="nav-item ml-md-auto desktop" *ngIf="userLogged">
                     <button class="btn nav-link"  [routerLink]="['/usuario', userLogged.id]">{{userLogged.name}}</button>
                 </div>
                 <!-- selector de idiomas desktop -->

@@ -65,7 +65,6 @@ export class LoginComponent implements OnInit {
         currentUser.token = res.token;
         this.usersService.isLogged = currentUser;
         this.router.navigate(['usuario', currentUser.id]);
-
       });
     } else {
       // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
