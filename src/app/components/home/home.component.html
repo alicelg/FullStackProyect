@@ -1,89 +1,75 @@
 <!-- hero y buscador -->
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-12 hero">
-      <div class="overlay"></div>
-      <video class="desktop" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-        <!-- <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">-->
-      </video>
-      <video class="mobile" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-        <!-- <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4"> -->
-      </video>
-      <!-- buscador -->
-      <div class="container h-100">
-        <div class="d-flex text-center h-100">
-          <div class="my-auto w-100 text-white">
-            <div class="d-flex justify-content-center h-100">
-              <!-- al hacer hover en el buscador se amplia (viene de css) y se mantiene desplegado cuando hay resultados  -->
-              <!-- al hacer click fuera se borran los resultados de busqueda y el imput -->
-              <div class="searchbar" [ngClass]="{'searchbar_dirty': searchResult}"
-                (clickOutside)="searchResult = null; searchInput.value = null">
-                <input class="search_input" type="text" #searchInput
-                  [placeholder]="translateService.instant('COMMON.SEARCH')">
-                <a class="search_icon">
-                  <fa-icon class="size-icon" [icon]="['fas', 'search']"></fa-icon>
-                </a>
-                <div class="search-results" *ngIf="searchResult">
-                  <ul class="result-group">
-                    <!-- resultados de búsqueda en blog general -->
-                    <li class="result-item" *ngFor="let post of searchResult.generalPosts"
-                      [routerLink]="['blog/general/', post.id]">
-                      <div class="result-type col-4 text-center">Blog General</div>
-                      <div class="col-8 font-weight-bold">{{post.title |titlecase}}</div>
-                    </li>
-                    <!-- resultados de búsqueda en blog habalndo -->
-                    <li class="result-item" *ngFor="let post of searchResult.hablandoPosts"
-                      [routerLink]="['blog/hablando-de-política/', post.id]">
-                      <div class="result-type col-4 text-center">Blog Hablando</div>
-                      <div class="col-8 font-weight-bold">{{post.title |titlecase}}</div>
-                    </li>
-                    <!-- resultados de búsqueda en conceptos -->
-                    <li class="result-item" *ngFor="let concept of searchResult.concepts" [routerLink]="['conceptos']"
-                      [queryParams]="{searchTerm: translateService.instant(concept.title)}">
-                      <div class="result-type col-4 text-center">Concepto</div>
-                      <div class="col-8 font-weight-bold"> {{translateService.instant(concept.title) |titlecase}}</div>
-                    </li>
-                    <!-- resultados de búsqueda en paises -->
-                    <li class="result-item" *ngFor="let country of searchResult.countries"
-                      [routerLink]="['mapa/pais/', country.code]">
-                      <div class="result-type col-4 text-center">País</div>
-                      <div class="col-8 font-weight-bold"> {{country.official_name |titlecase}}</div>
-                    </li>
-                    <!-- si no hay resultados de busqueda muestra este mensaje -->
-                    <li class="result-item"
-                      *ngIf="!searchResult.generalPosts && !searchResult.hablandoPosts && !searchResult.concepts && !searchResult.countries">No se
-                      han encontrado resultados para tu búsqueda</li>
-                  </ul>
+    <div class="row">
+        <div class="col-12 hero">
+            <div class="overlay"></div>
+            <video class="desktop" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                <!-- <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">-->
+            </video>
+            <video class="mobile" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                <!-- <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4"> -->
+            </video>
+            <!-- buscador -->
+            <div class="container h-100">
+                <div class="d-flex text-center h-100">
+                    <div class="my-auto w-100 text-white">
+                        <div class="d-flex justify-content-center h-100">
+                            <!-- al hacer hover en el buscador se amplia (viene de css) y se mantiene desplegado cuando hay resultados  -->
+                            <!-- al hacer click fuera se borran los resultados de busqueda y el imput -->
+                            <div class="searchbar" [ngClass]="{'searchbar_dirty': searchResult}"
+                                (clickOutside)="searchResult = null; searchInput.value = null">
+                                <input class="search_input" type="text" #searchInput
+                                    [placeholder]="translateService.instant('COMMON.SEARCH')">
+                                <a class="search_icon">
+                                    <fa-icon class="size-icon" [icon]="['fas', 'search']"></fa-icon>
+                                </a>
+                                <div class="search-results" *ngIf="searchResult">
+                                    <ul class="result-group">
+                                        <!-- resultados de búsqueda en blog general -->
+                                        <li class="result-item" *ngFor="let post of searchResult.generalPosts"
+                                            [routerLink]="['blog/general/', post.id]">
+                                            <div class="result-type col-4 text-center">Blog General</div>
+                                            <div class="col-8 font-weight-bold">{{post.title |titlecase}}</div>
+                                        </li>
+                                        <!-- resultados de búsqueda en blog habalndo -->
+                                        <li class="result-item" *ngFor="let post of searchResult.hablandoPosts"
+                                            [routerLink]="['blog/hablando-de-política/', post.id]">
+                                            <div class="result-type col-4 text-center">Blog Hablando</div>
+                                            <div class="col-8 font-weight-bold">{{post.title |titlecase}}</div>
+                                        </li>
+                                        <!-- resultados de búsqueda en conceptos -->
+                                        <li class="result-item" *ngFor="let concept of searchResult.concepts"
+                                            [routerLink]="['conceptos']"
+                                            [queryParams]="{searchTerm: translateService.instant(concept.title)}">
+                                            <div class="result-type col-4 text-center">Concepto</div>
+                                            <div class="col-8 font-weight-bold">
+                                                {{translateService.instant(concept.title) |titlecase}}</div>
+                                        </li>
+                                        <!-- resultados de búsqueda en paises -->
+                                        <li class="result-item" *ngFor="let country of searchResult.countries"
+                                            [routerLink]="['mapa/pais/', country.code]">
+                                            <div class="result-type col-4 text-center">País</div>
+                                            <div class="col-8 font-weight-bold"> {{country.official_name |titlecase}}
+                                            </div>
+                                        </li>
+                                        <!-- si no hay resultados de busqueda muestra este mensaje -->
+                                        <li class="result-item"
+                                            *ngIf="!searchResult.generalPosts && !searchResult.hablandoPosts && !searchResult.concepts && !searchResult.countries">
+                                            No se
+                                            han encontrado resultados para tu búsqueda</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
 <!-- informacion aplicacion -->
 <div class="text-center container-color pt-6 pb-6">
-<<<<<<< HEAD
-  <div class="container">
-    <h3 class="mb-1"> {{'HOME.WHAT-IS-IT' | translate}} </h3>
-    <hr class="mb-5">
-    <div class=" row">
-      <div class="col-md-5 desktop">
-        <p>{{'HOME.PURPOSE-A' | translate}}</p>
-      </div>
-      <div class="col-md-2">
-        <img class="w-100" src="../../../assets/images/logo2.png" alt="">
-      </div>
-      <div class="col-md-5 desktop">
-        <p>{{'HOME.PURPOSE-B' | translate}}</p>
-      </div>
-      <div class="col-12 mobile mt-3">
-        <p> {{'HOME.PURPOSE-A' | translate}} {{'HOME.PURPOSE-B' | translate}} </p>
-      </div>
-=======
     <div class="container">
         <h3 class="mb-1"> {{'HOME.WHAT-IS-IT' | translate}} </h3>
         <hr class="mb-5">
@@ -104,22 +90,11 @@
                 <p> {{'HOME.PURPOSE-A' | translate}} {{'HOME.PURPOSE-B' | translate}} </p>
             </div>
         </div>
->>>>>>> ea550f2aba6a3bab7fccce0a096a7baf4489a846
     </div>
-  </div>
 </div>
+
 <!-- mapa -->
 <div class="container pt-6 pb-6">
-<<<<<<< HEAD
-  <h3 class="mb-1 text-center">{{'HOME.MAP-DISCOVER' | translate}}</h3>
-  <hr class="mb-5">
-  <div class="row position-relative mb-5">
-    <div class="col-md-6 text-center">
-      <img class="w-100" src="../../../assets/images/mapamundi.jpg" alt="">
-    </div>
-    <div class="col-md-6 vertical-center position-right text-center desktop">
-      {{'HOME.MAP-TEXT' | translate}}
-=======
     <h3 class="mb-1 text-center">{{'HOME.MAP-DISCOVER' | translate}}</h3>
     <hr class="mb-5">
     <div class="row position-relative mb-5">
@@ -129,212 +104,208 @@
         <div class="col-md-6 vertical-center position-right text-center desktop">
             {{'HOME.MAP-TEXT' | translate}}
         </div>
->>>>>>> ea550f2aba6a3bab7fccce0a096a7baf4489a846
     </div>
-  </div>
 </div>
+
 
 <!-- test -->
 <div class="container-color pt-6 pb-6">
-  <div class="container text-center">
-    <h3 class="mb-1"> {{'HOME.TEST-KNOWLEDGE' | translate}}</h3>
-    <hr class="mb-5">
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="card mx-auto" style="width: 18rem">
-          <img src="../../../assets/images/map.png" class="imagen-globo card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{'HEADER.WORLD-TEST' | translate}}</h5>
-            <p class="card-text">{{'HOME.TEST-WORLD-TEXT' | translate}} </p>
-          </div>
-        </div>
+    <div class="container text-center">
+        <h3 class="mb-1"> {{'HOME.TEST-KNOWLEDGE' | translate}}</h3>
+        <hr class="mb-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card mx-auto" style="width: 18rem">
+                    <img src="../../../assets/images/map.png" class="imagen-globo card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{'HEADER.WORLD-TEST' | translate}}</h5>
+                        <p class="card-text">{{'HOME.TEST-WORLD-TEXT' | translate}} </p>
+                    </div>
+                </div>
 
-<<<<<<< HEAD
-      </div>
-      <div class="col-md-4">
-=======
             </div>
             <div class="col-md-4 mb-4">
->>>>>>> ea550f2aba6a3bab7fccce0a096a7baf4489a846
 
-        <div class="card mx-auto" style="width: 18rem">
-          <img src="../../../assets/images/test.png" class="card-img-top imagen-globo" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{'HEADER.POLITICAL-TEST' | translate}}</h5>
-            <p class="card-text">{{'HOME.TEST-POLITICAL-TEXT' | translate}} </p>
-          </div>
+                <div class="card mx-auto" style="width: 18rem">
+                    <img src="../../../assets/images/test.png" class="card-img-top imagen-globo" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{'HEADER.POLITICAL-TEST' | translate}}</h5>
+                        <p class="card-text">{{'HOME.TEST-POLITICAL-TEXT' | translate}} </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card mx-auto" style="width: 18rem">
+                    <img src="../../../assets/images/ranking.png" class="card-img-top imagen-globo" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{'HOME.RANKING' | translate}}</h5>
+                        <p class="card-text">{{'HOME.RANKING-TEXT' | translate}} </p>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-
-      </div>
-
-      <div class="col-md-4">
-
-        <div class="card mx-auto" style="width: 18rem">
-          <img src="../../../assets/images/ranking.png" class="card-img-top imagen-globo" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{'HOME.RANKING' | translate}}</h5>
-            <p class="card-text">{{'HOME.RANKING-TEXT' | translate}} </p>
-          </div>
-        </div>
-
-      </div>
-
     </div>
-  </div>
 </div>
 <!-- opiniones -->
 <div class="container pt-6 pb-6">
-  <h3 class="mb-1 text-center">{{'HOME.ABOUT-US' | translate}}</h3>
-  <hr class="mb-3">
-  <div class="row">
-    <div class=" col-12">
+    <h3 class="mb-1 text-center">{{'HOME.ABOUT-US' | translate}}</h3>
+    <hr class="mb-3">
+    <div class="row">
+        <div class=" col-12">
 
-      <div id="carouselExampleSlidesOnly" class="carousel slide mt-3" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="d-flex ml-5 mr-5 text-center">
+            <div id="carouselExampleSlidesOnly" class="carousel slide mt-3" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex ml-5 mr-5 text-center">
 
-              <img src="../../../assets/images/persona3.png" width="150px" class="desktop rounded-circle m-4">
+                            <img src="../../../assets/images/persona3.png" width="150px"
+                                class="desktop rounded-circle m-4">
 
-              <div class="mt-5">
-                <h5 class="font-weight-bold mb-4">{{'HOME.PERSON1' | translate}}</h5>
-                <p>{{'HOME.TEXT-PERSON1' | translate}}</p>
-              </div>
+                            <div class="mt-5">
+                                <h5 class="font-weight-bold mb-4">{{'HOME.PERSON1' | translate}}</h5>
+                                <p>{{'HOME.TEXT-PERSON1' | translate}}</p>
+                            </div>
+                        </div>
+                        <div class="color-opinion mr-5 ml-5 text-right mt-2 rounded-bottom">
+                            <p class="mr-5 text-light">{{'HOME.SAY' | translate}} 🥳 👏🏼 🕵🏻‍♂️ 🧑🏻‍💻
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item">
+                        <div class="d-flex ml-5 mr-5 text-center">
+
+                            <img src="../../../assets/images/persona2.png" width="150px"
+                                class="desktop rounded-circle m-4">
+
+                            <div class="mt-5">
+                                <h5 class="font-weight-bold mb-4">{{'HOME.PERSON2' | translate}}</h5>
+                                <p>{{'HOME.TEXT-PERSON2' | translate}}</p>
+                            </div>
+                        </div>
+                        <div class="color-opinion mr-5 ml-5 text-right mt-2 rounded-bottom">
+                            <p class="mr-5 text-light">{{'HOME.SAY' | translate}} 📝 📲 🏛 👍🏻</p>
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="d-flex ml-5 mr-5 text-center">
+
+                            <img src="../../../assets/images/persona1.png" width="150px"
+                                class="desktop rounded-circle m-4">
+
+                            <div class="mt-5">
+                                <h5 class="font-weight-bold mb-4">{{'HOME.PERSON3' | translate}}</h5>
+                                <p>{{'HOME.TEXT-PERSON3' | translate}}</p>
+                            </div>
+                        </div>
+                        <div class="color-opinion mr-5 ml-5 text-right mt-2 rounded-bottom">
+                            <p class="mr-5 text-light">{{'HOME.SAY' | translate}} 😎 🤩 😍 📚</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="color-opinion mr-5 ml-5 text-right mt-2 rounded-bottom">
-              <p class="mr-5 text-light">{{'HOME.SAY' | translate}} 🥳 👏🏼 🕵🏻‍♂️ 🧑🏻‍💻
-              </p>
-            </div>
-          </div>
 
 
-          <div class="carousel-item">
-            <div class="d-flex ml-5 mr-5 text-center">
-
-              <img src="../../../assets/images/persona2.png" width="150px" class="desktop rounded-circle m-4">
-
-              <div class="mt-5">
-                <h5 class="font-weight-bold mb-4">{{'HOME.PERSON2' | translate}}</h5>
-                <p>{{'HOME.TEXT-PERSON2' | translate}}</p>
-              </div>
-            </div>
-            <div class="color-opinion mr-5 ml-5 text-right mt-2 rounded-bottom">
-              <p class="mr-5 text-light">{{'HOME.SAY' | translate}} 📝 📲 🏛 👍🏻</p>
-            </div>
-
-          </div>
-
-          <div class="carousel-item">
-            <div class="d-flex ml-5 mr-5 text-center">
-
-              <img src="../../../assets/images/persona1.png" width="150px" class="desktop rounded-circle m-4">
-
-              <div class="mt-5">
-                <h5 class="font-weight-bold mb-4">{{'HOME.PERSON3' | translate}}</h5>
-                <p>{{'HOME.TEXT-PERSON3' | translate}}</p>
-              </div>
-            </div>
-            <div class="color-opinion mr-5 ml-5 text-right mt-2 rounded-bottom">
-              <p class="mr-5 text-light">{{'HOME.SAY' | translate}} 😎 🤩 😍 📚</p>
-            </div>
-          </div>
         </div>
-      </div>
-
-
     </div>
-  </div>
 </div>
 
 <!-- blog -->
 
 <div id="blog" class="pt-6 pb-6">
-  <div class="container">
-    <h3 class="mb-1 text-center">{{'HOME.READ-US' | translate}}</h3>
-    <hr class="mb-5">
-    <div class="row">
-      <!-- Blog General-->
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="image-flip">
-          <div class="mainflip flip-0">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center centrar">
-                  <p><img class=" img-fluid" src="../../../assets/images/blog.png" alt="card image">
-                  </p>
-                  <h5 class="card-title">{{'HOME.GENERAL-BLOG' | translate}}</h5>
-                  <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
+    <div class="container">
+        <h3 class="mb-1 text-center">{{'HOME.READ-US' | translate}}</h3>
+        <hr class="mb-5">
+        <div class="row">
+            <!-- Blog General-->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip">
+                    <div class="mainflip flip-0">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center centrar">
+                                    <p><img class=" img-fluid" src="../../../assets/images/blog.png" alt="card image">
+                                    </p>
+                                    <h5 class="card-title">{{'HOME.GENERAL-BLOG' | translate}}</h5>
+                                    <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-5">
+                                    <h5 class="card-title">{{'HOME.GENERAL-BLOG' | translate}}</h5>
+                                    <p class="card-text">{{'HOME.GENERAL-BLOG-TEXT' | translate}}</p>
+                                    <button routerLink="blog/general"
+                                        class="btn">{{'HOME.READ-MORE' | translate}}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-5">
-                  <h5 class="card-title">{{'HOME.GENERAL-BLOG' | translate}}</h5>
-                  <p class="card-text">{{'HOME.GENERAL-BLOG-TEXT' | translate}}</p>
-                  <button routerLink="blog/general" class="btn">{{'HOME.READ-MORE' | translate}}</button>
+            <!-- Hablando de política -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center centrar">
+                                    <p><img class=" img-fluid" src="../../../assets/images/hablando.png"></p>
+                                    <h5 class="card-title">{{'HOME.HABLANDO-POLITICA' | translate}}</h5>
+                                    <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-5">
+                                    <h5 class="card-title">{{'HOME.HABLANDO-POLITICA' | translate}}</h5>
+                                    <p class="card-text">{{'HOME.HABLANDO-POLITICA-TEXT' | translate}}</p>
+                                    <button routerLink="blog/hablando-de-politica"
+                                        class="btn">{{'HOME.READ-MORE' | translate}}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <!-- Hablando de política -->
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center centrar">
-                  <p><img class=" img-fluid" src="../../../assets/images/hablando.png"></p>
-                  <h5 class="card-title">{{'HOME.HABLANDO-POLITICA' | translate}}</h5>
-                  <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-5">
-                  <h5 class="card-title">{{'HOME.HABLANDO-POLITICA' | translate}}</h5>
-                  <p class="card-text">{{'HOME.HABLANDO-POLITICA-TEXT' | translate}}</p>
-                  <button routerLink="blog/hablando-de-politica" class="btn">{{'HOME.READ-MORE' | translate}}</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Esto tambien es Política -->
-      <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-          <div class="mainflip">
-            <div class="frontside">
-              <div class="card">
-                <div class="card-body text-center centrar">
-                  <p><img class=" img-fluid" src="../../../assets/images/EstoTmbPoli.png" alt="card image"></p>
-                  <h5 class="card-title">{{'HOME.ESTO-TAMBIEN' | translate}}</h5>
+            <!-- Esto tambien es Política -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center centrar">
+                                    <p><img class=" img-fluid" src="../../../assets/images/EstoTmbPoli.png"
+                                            alt="card image"></p>
+                                    <h5 class="card-title">{{'HOME.ESTO-TAMBIEN' | translate}}</h5>
 
-                  <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
+                                    <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-3">
+                                    <h5 class="card-title">{{'HOME.ESTO-TAMBIEN' | translate}}</h5>
+                                    <p class="card-text">{{'HOME.ESTO-TAMBIEN-TEXT' | translate}}</p>
+                                    <a href="https://estotambienespolitica.com/" target="_blank"
+                                        class="btn">{{'HOME.READ-MORE' | translate}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="backside">
-              <div class="card">
-                <div class="card-body text-center mt-3">
-                  <h5 class="card-title">{{'HOME.ESTO-TAMBIEN' | translate}}</h5>
-                  <p class="card-text">{{'HOME.ESTO-TAMBIEN-TEXT' | translate}}</p>
-                  <a href="https://estotambienespolitica.com/" target="_blank"
-                    class="btn">{{'HOME.READ-MORE' | translate}}</a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-<<<<<<< HEAD
-  </div>
 </div>
-=======
-</div>
->>>>>>> ea550f2aba6a3bab7fccce0a096a7baf4489a846
