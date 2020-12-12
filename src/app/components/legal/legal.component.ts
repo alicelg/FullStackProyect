@@ -15,7 +15,6 @@ export class LegalComponent implements OnInit {
   ) {
 
     this.action = this.activatedRoute.snapshot.url[0].path;
-    console.log(this.activatedRoute.snapshot, this.action);
 
   }
 

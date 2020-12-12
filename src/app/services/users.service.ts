@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { User } from '../models/user.model';
 
 
@@ -11,6 +12,17 @@ import { User } from '../models/user.model';
 export class UsersService {
 
   private baseUrl: string;
+
+  currentUser = new BehaviorSubject(this.isLogged);
+
+  set isLogged(value) {
+    this.currentUser.next(value);
+    value === null ? localStorage.removeItem('currentUser') : localStorage.setItem('currentUser', JSON.stringify(value));
+  }
+
+  get isLogged(): User {
+    return JSON.parse(localStorage.getItem('currentUser'));
+  }
 
   constructor(private httpClient: HttpClient) {
     this.baseUrl = 'http://localhost:3000/users';

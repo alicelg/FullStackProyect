@@ -82,7 +82,7 @@
                     <button class="btn nav-link" routerLink="signup">{{'HEADER.SIGNUP' | translate}}</button>
                 </div>
                 <div class="nav-item active ml-md-auto desktop" *ngIf="userLogged">
-                    <button class="btn nav-link" routerLink="usuario">Nombre Usuario</button>
+                    <button class="btn nav-link"  [routerLink]="['/usuario', userLogged.id]">{{userLogged.name}}</button>
                 </div>
                 <!-- selector de idiomas desktop -->
                 <div class="nav-item dropdown desktop">

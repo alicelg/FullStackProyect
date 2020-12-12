@@ -2,213 +2,245 @@
 
 /* Estilos de hero */
 .hero {
+  position: relative;
+  background-color: $primaryBgColor;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .container {
     position: relative;
-    background-color: $primaryBgColor;
-    height: 75vh;
-    min-height: 25rem;
+    z-index: 2;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    overflow: hidden;
-
-    video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: 0;
-        -ms-transform: translateX(-50%) translateY(-50%);
-        -moz-transform: translateX(-50%) translateY(-50%);
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-    }
-
-    .container {
-        position: relative;
-        z-index: 2;
-    }
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        /* background-color: $primaryBgColor;
+    /* background-color: $primaryBgColor;
         opacity: 0.5; */
-        z-index: 1;
-    }
+    z-index: 1;
+  }
 }
 
 .searchbar {
-    margin-bottom: auto;
-    margin-top: auto;
-    height: 60px;
-    background-color: transparent;
-    border-radius: 30px;
-    border: 1px solid $tertiaryBgColor;
-    padding: 10px;
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 1px solid $tertiaryBgColor;
+  padding: 10px;
 }
 
 .search_input {
-    color: $tertiaryTextColor;
-    border: 0;
-    outline: 0;
-    background: none;
-    width: 0;
-    caret-color: transparent;
-    line-height: 40px;
-    transition: width 0.4s linear;
-    padding: 0;
+  color: $tertiaryTextColor;
+  border: 0;
+  outline: 0;
+  background: none;
+  width: 0;
+  caret-color: transparent;
+  line-height: 40px;
+  transition: width 0.4s linear;
+  padding: 0;
 }
 
-.searchbar:hover {
-    background-color: $secondaryBgColor;
+.searchbar:hover,
+.searchbar_dirty {
+  background-color: $sextenaryBgColor;
 
-    .search_input {
-        padding: 0 10px;
-        width: 450px;
-        transition: width 0.4s linear;
-    }
+  .search_input {
+    padding: 0 25px;
+    width: 450px;
+    transition: width 0.4s linear;
+  }
 
-    .search_icon {
-        background: $primaryBgColor;
+  .search_icon {
+    background: $primaryBgColor;
+  }
+
+  .search-results {
+    margin-top: 10px;
+    padding: 10px 25px;
+    width: 100%;
+    transition: width 0.4s linear;
+    border-radius: 5px;
+    // border: 1px solid $tertiaryBgColor;
+    background-color: $sextenaryBgColor;
+  }
+  .result-group {
+    padding: 0;
+    margin: 0;
+
+    .result-item {
+      list-style: none;
+      text-align: left;
+      padding: 10px 0;
+      cursor: pointer;
+      display: flex;
+
+      .result-type {
+        display: inline-block;
+        border: 1px solid;
+        border-radius: 5px;
+        background-color: transparent;
+        opacity: 0.9;
+        padding: 3px 5px;
+      }
     }
+  }
 }
 
 .search_icon {
-    height: 40px;
-    width: 40px;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    text-decoration: none;
-    svg {
-        fill: $tertiaryBgColor;
-    }
+  height: 40px;
+  width: 40px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  svg {
+    fill: $tertiaryBgColor;
+  }
 }
 
 @media (max-width: 575px) {
-    .searchbar:hover > .search_input {
-        width: 250px;
-    }
+  .searchbar:hover > .search_input {
+    width: 250px;
+  }
 }
 
 /* Estilos de blog */
 /* FontAwesome for working BootSnippet :> */
 
 #blog {
+  background: $secondaryBgColor;
+
+  .btn-primary {
+    background-color: $tertiaryBgColor;
+    border: none;
+  }
+
+  .btn-primary i {
+    color: $primaryBgColor;
+  }
+
+  .section-title {
+    text-align: center;
+    color: $tertiaryBgColor;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+
+  .card {
+    border: none;
+    background: $primaryBgColor;
+  }
+
+  .image-flip:hover .backside,
+  .image-flip.hover .backside {
+    transform: rotateY(0deg);
+    border-radius: 0.25rem;
+  }
+
+  .image-flip:hover .frontside,
+  .image-flip.hover .frontside {
+    transform: rotateY(180deg);
+  }
+
+  .mainflip {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .frontside {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+  }
+
+  .backside {
+    position: absolute;
+    top: 0;
+    left: 0;
     background: $secondaryBgColor;
+    transform: rotateY(-180deg);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  }
 
-    .btn-primary {
-        background-color: $tertiaryBgColor;
-        border: none;
-    }
+  .frontside,
+  .backside {
+    backface-visibility: hidden;
+    transition: 1s;
+    transform-style: preserve-3d;
+  }
 
-    .btn-primary i {
-        color: $primaryBgColor;
-    }
+  .frontside .card,
+  .backside .card {
+    min-height: 312px;
+  }
 
-    .section-title {
-        text-align: center;
-        color: $tertiaryBgColor;
-        margin-bottom: 50px;
-        text-transform: uppercase;
-    }
-
-    .card {
-        border: none;
-        background: $primaryBgColor;
-    }
-
-    .image-flip:hover .backside,
-    .image-flip.hover .backside {
-        transform: rotateY(0deg);
-        border-radius: 0.25rem;
-    }
-
-    .image-flip:hover .frontside,
-    .image-flip.hover .frontside {
-        transform: rotateY(180deg);
-    }
-
-    .mainflip {
-        transition: 1s;
-        transform-style: preserve-3d;
-        position: relative;
-    }
-
-    .frontside {
-        position: relative;
-        z-index: 2;
-        margin-bottom: 30px;
-    }
-
-    .backside {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: $secondaryBgColor;
-        transform: rotateY(-180deg);
-        box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
-    }
-
-    .frontside,
-    .backside {
-        backface-visibility: hidden;
-        transition: 1s;
-        transform-style: preserve-3d;
-    }
-
-    .frontside .card,
-    .backside .card {
-        min-height: 312px;
-    }
-
-    .frontside .card .card-body img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-    }
+  .frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
 }
 
 .imagen-globo {
-    padding-top: 10px;
-    margin: 0 auto;
-    width: 80%;
+  padding-top: 10px;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .btn {
-    background-color: $tertiaryBgColor;
-    color: $quaternaryTextColor;
+  background-color: $tertiaryBgColor;
+  color: $quaternaryTextColor;
 }
 
 .centrar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .size {
-    width: 30px;
-    margin: 0 auto;
+  width: 30px;
+  margin: 0 auto;
 }
 
-a i{
+a i {
   color: $quaternaryTextColor;
 }
 
 .color-opinion {
-    background-color: $tertiaryBgColor;
-    padding-top: 10px;
-    padding-bottom: 5px;
+  background-color: $tertiaryBgColor;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 hr {
-    width: 500px;
-    border-top: 0.5px solid $tertiaryBgColor;
-    opacity: 0.5;
+  width: 500px;
+  border-top: 0.5px solid $tertiaryBgColor;
+  opacity: 0.5;
 }
