@@ -22,34 +22,56 @@
       <div class="row">
         <div class="col-md-4 col-6" *ngFor="let country of selectedCountries">
           <!-- versión descktop -->
-          <div class="box py-2 px-2 box-desktop">
-            <img class="image-flag" [src]="country.flag">
+          <div class="box py-2 px-2 box-desktop mb-2" [routerLink]="['/mapa/pais', country.code]">
+            <img class="image-flag mb-2" [src]="country.flag">
             <div class="box-text">
-              <h5 class="text-center mb-4">{{('COUNTRIES.' + country.code) | translate}}</h5>
-              <div class="row">
-                <div class="col-md-3 col-4 px-0">
-                  <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
-                </div>
-                <div class="col-md-9 col-8 mb-3 px-0"> Pedro Sanchez
-                </div>
-                <div class="col-md-3 col-4 px-0">
-                  <fa-icon [icon]="['fas', 'landmark']"></fa-icon>
-                </div>
-                <div class="col-md-9 col-8 mb-3 px-0"> Democracia Parlamentaria
-                </div>
-                <div class="col-md-3 col-4 px-0">
-                  <fa-icon [icon]="['fas', 'language']"></fa-icon>
-                </div>
-                <div class="col-md-9 col-8 mb-3 px-0"> {{country.languages}}
-                </div>
-                <div class="col-md-3 col-4 px-0">
-                  <fa-icon [icon]="['fas', 'money-bill']"></fa-icon>
-                </div>
-                <div class="col-md-9 col-8 mb-3 px-0"> {{country.currencies}}
-                </div>
-              </div>
+              <h5 class="text-center mb-3">{{('COUNTRIES.' + country.code) | translate}}</h5>
+
+              <table class="table table-hover">
+                <tbody>
+                  <tr>
+                    <td style="width: 21%;">
+                      <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
+                    </td>
+                    <td>
+                      {{(country.leader1Title? (country.leader1Title + ': ' + country.leader1Name) : 'No disponible') | titlecase}}
+                    </td>
+                  </tr>
+
+                  <tr *ngIf="country.leader2Title">
+                    <td style="width: 21%;">
+                      <fa-icon [icon]="['fas', 'user']"></fa-icon>
+                    </td>
+                    <td>
+                      {{(country.leader2Title? (country.leader2Title + ': ' + country.leader2Name) : 'No disponible') |titlecase}}
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style="width: 21%;">
+                      <fa-icon [icon]="['fas', 'landmark']"></fa-icon>
+                    </td>
+                    <td>{{(country.goverment? country.goverment : 'No disponible')|titlecase}}</td>
+                  </tr>
+
+                  <tr>
+                    <td style="width: 21%;">
+                      <fa-icon [icon]="['fas', 'language']"></fa-icon>
+                    </td>
+                    <td>{{(country.languages? country.languages : 'No disponible') |titlecase}}</td>
+                  </tr>
+
+                  <tr>
+                    <td style="width: 21%;">
+                      <fa-icon [icon]="['fas', 'money-bill']"></fa-icon>
+                    </td>
+                    <td>{{(country.currencies? country.currencies : 'No disponible') |titlecase}}</td>
+                  </tr>
+
+                </tbody>
+              </table>
             </div>
-            <a class="btn btn-sm size" [routerLink]="['/mapa/pais', country.code]"><i class="fa fa-plus"></i></a>
+            <!-- <a class="btn btn-sm size" [routerLink]="['/mapa/pais', country.code]"><i class="fa fa-plus"></i></a> -->
           </div>
 
           <!-- versión movil -->
