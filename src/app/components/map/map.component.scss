@@ -33,8 +33,7 @@
   height: 350px;
   display: flex;
   flex-direction: column;
-  // justify-content:;
-
+  cursor: pointer;
   .box-text {
     font-size: 1rem;
   }
@@ -58,7 +57,7 @@ a i {
   color: $quaternaryTextColor;
 }
 
-table{
+table {
   font-size: 0.8rem;
 }
 
