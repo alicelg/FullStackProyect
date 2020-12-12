@@ -8,3 +8,11 @@
     background: $primaryTextColor;
     color: $quaternaryTextColor;
 }
+
+.condition {
+    cursor: pointer;
+}
+
+strong {
+    color: $secondaryTextColor;
+}

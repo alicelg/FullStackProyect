@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-form',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('content') content;
+  modalRef: NgbModalRef;
+
+  constructor(
+    private modal: NgbModal,
+  ) { }
 
   ngOnInit(): void {
   }
@@ -15,4 +21,11 @@ export class FormComponent implements OnInit {
   onSubmit() {
 
   }
+
+  condition(): void {
+    if (!this.modal.hasOpenModals()) {
+      this.modalRef = this.modal.open(this.content, { ariaLabelledBy: 'password-forgotten', size: 'l', centered: true });
+    }
+  }
+
 }
