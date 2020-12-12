@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
     // añadimos un "listener" al elemento traido por viewchild para obtener un observable que podamos modificar con operadores rxjs (debounce y demas)
     fromEvent(this.searchInput.nativeElement, 'keyup').pipe(
       map((event: any) => event.target.value), filter(res => res.length > 2), debounceTime(500)).subscribe((text) => {
-      this.searchService.search(text, [1, 2], 'all').then((res) => {
+      this.searchService.search(text, [1, 2], true, true).then((res) => {
         this.searchResult = res;
       }, (err) => {
         console.log('error', err);

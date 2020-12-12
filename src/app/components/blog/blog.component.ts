@@ -51,7 +51,7 @@ export class BlogComponent implements OnInit, AfterViewInit {
     // escucha al input y le pone unos modificadores para evitar que se lance constantemente (debounce) y para que solo se lance con 2 caracteres
     fromEvent(this.blogSearchInput.nativeElement, 'keyup').pipe(
       map((event: any) => event.target.value), filter(res => res.length > 2), debounceTime(500)).subscribe((text) => {
-        this.searchService.search(text, [1, 2], null).then((res) => {
+        this.searchService.search(text, [1, 2], false, false).then((res) => {
           this.generalPosts = res.generalPosts;
           this.hablandoPosts = res.hablandoPosts;
         }, (err) => {

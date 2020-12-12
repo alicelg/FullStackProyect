@@ -13,7 +13,7 @@ export class SearchService {
     this.baseUrl = 'http://localhost:3000/search';
   }
 
-  search(searchTerm, blogs, concepts): Promise<any> {
-    return this.httpClient.get<any>(this.baseUrl, { params: { searchTerm, blogs, concepts } }).toPromise();
+  search(searchTerm, blogs, concepts, countries): Promise<any> {
+    return this.httpClient.get<any>(this.baseUrl, { params: { searchTerm, blogs, concepts, countries } }).toPromise();
   }
 }
