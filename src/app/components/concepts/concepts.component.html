@@ -1,17 +1,27 @@
-<h3 class="mb-1 text-center mt-5"> {{'HEADER.CONCEPTS' | translate}} </h3>
-<hr class="mb-3">
+<div class="container-fluid container-color pb-3">
+    <h3 class="mb-1 text-center pt-5"> {{'HEADER.CONCEPTS' | translate}} </h3>
+    <hr class="mb-3">
 
-<div class="container mb-7 mt-3">
-
+    <!-- buscador de los conceptos -->
     <div class="row">
-        <div class="offset-4 col-md-4 mt-5 mb-5 offset-4 desktop">
-            <input type="text" class="form-control" [(ngModel)]="this.searchTerm" #conceptsSearchInput>
+        <div class="offset-md-4 col-md-4 mt-md-5 mb-md-5 col-12 mt-4 mb-4 offset-md-4 ">
+            <div class="input-group">
+                <input class="form-control border-right-0" [(ngModel)]="this.searchTerm" #conceptsSearchInput>
+                <div class="input-group-append border-left-0 pb-2">
+                    <div class="input-group-text px-3">
+                        <fa-icon class="search" [icon]="['fas', 'search']"></fa-icon>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="col-12 mt-4 mb-4 mobile">
-            <input type="text" class="form-control">
-        </div>
     </div>
+
+</div>
+
+
+<div class="container mb-7 pt-5">
+
 
     <div class="row">
 
@@ -43,26 +53,26 @@
             <div class="row">
 
                 <ng-container *ngIf="concepts; else elseTemplate">
-                  <div *ngFor="let concept of concepts">
+                    <div *ngFor="let concept of concepts">
 
-                    <div class="card m-2" style="max-width: 50rem;">
-                        <div class="card-body">
+                        <div class="card m-2" style="max-width: 50rem;">
+                            <div class="card-body">
 
-                            <div class="d-flex justify-content-between">
-                                <h5 class="card-title">{{concept.title | translate}}</h5>
-                                <fa-icon class="size-icon" [icon]="['far', 'heart']"></fa-icon>
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="card-title">{{concept.title | translate}}</h5>
+                                    <fa-icon class="size-icon" [icon]="['far', 'heart']"></fa-icon>
+                                </div>
+                                <p class="card-text">{{concept.text | translate}}</p>
                             </div>
-                            <p class="card-text">{{concept.text | translate}}</p>
                         </div>
                     </div>
-                </div>
                 </ng-container>
                 <ng-template #elseTemplate>
-                  <div class="card m-2 w-100 text-center" style="max-width: 50rem;">
-                    <div class="card-body">
-                        <p class="card-text">Lo sentimos, aún no tenemos definición para ese concepto</p>
+                    <div class="card m-2 w-100 text-center" style="max-width: 50rem;">
+                        <div class="card-body">
+                            <p class="card-text">Lo sentimos, aún no tenemos definición para ese concepto</p>
+                        </div>
                     </div>
-                </div>
                 </ng-template>
 
             </div>
