@@ -62,22 +62,22 @@
                     </div>
                 </div>
 
-                <div class="nav-item dropdown"  *ngIf="!userLogged">
-                  <button class="nav-link btn mx-auto" routerLink="tests">{{'HEADER.TEST' | translate}}</button>
+                <div class="nav-item dropdown" *ngIf="!userLogged">
+                    <button class="nav-link btn mx-auto" routerLink="tests">{{'HEADER.TEST' | translate}}</button>
                 </div>
 
-                <div class="nav-item dropdown"  *ngIf="userLogged">
-                  <button class=" btn nav-link dropdown-toggle mx-auto" id="test"
-                      data-toggle="dropdown">
-                      {{'HEADER.TEST' | translate}}
-                  </button>
-                  <div class="dropdown-menu text-center text-md-left">
-                      <button class="btn dropdown-item"
-                          routerLink="test/1">{{'HEADER.POLITICAL-TEST' | translate}}</button>
-                      <button class="btn dropdown-item"
-                          routerLink="test/2">{{'HEADER.WORLD-TEST' | translate}}</button>
-                  </div>
-              </div>
+                <div class="nav-item dropdown" *ngIf="userLogged">
+                    <button class=" btn nav-link dropdown-toggle mx-auto" id="test" data-toggle="dropdown">
+                        {{'HEADER.TEST' | translate}}
+                    </button>
+                    <div class="dropdown-menu text-center text-md-left">
+                        <button class="btn dropdown-item"
+                            routerLink="test/1">{{'HEADER.WORLD-TEST' | translate}}</button>
+                        <button class="btn dropdown-item"
+                            routerLink="test/2">{{'HEADER.POLITICAL-TEST' | translate}}</button>
+
+                    </div>
+                </div>
 
                 <div class="nav-item ml-md-auto" *ngIf="!userLogged">
                     <button class="btn nav-link" routerLink="login">{{'HEADER.LOGIN' | translate}}</button>
@@ -86,7 +86,8 @@
                     <button class="btn nav-link" routerLink="signup">{{'HEADER.SIGNUP' | translate}}</button>
                 </div>
                 <div class="nav-item ml-md-auto" *ngIf="userLogged">
-                    <button class="btn nav-link mx-auto"  [routerLink]="['/usuario', userLogged.id]">{{userLogged.name}}</button>
+                    <button class="btn nav-link mx-auto"
+                        [routerLink]="['/usuario', userLogged.id]">{{userLogged.name}}</button>
                 </div>
                 <!-- selector de idiomas desktop -->
                 <div class="nav-item dropdown desktop">
