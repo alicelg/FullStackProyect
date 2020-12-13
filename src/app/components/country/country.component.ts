@@ -9,7 +9,7 @@ import { CountriesService } from 'src/app/services/countries.service';
 })
 export class CountryComponent implements OnInit {
 
-  country: Country
+  country: Country;
   constructor(
     private countriesService: CountriesService,
   ) { }
@@ -17,7 +17,7 @@ export class CountryComponent implements OnInit {
   ngOnInit(): void {
     this.countriesService.selectedCountry.subscribe(res => {
       this.country = res;
-    })
-    }
+    });
+  }
 
 }

@@ -48,7 +48,7 @@ export class MapComponent implements OnInit {
               country.currencies = res.currencies.map(currency => currency.name).join(', ');
               this.selectedCountries.push(country);
             });
-          })
+          });
 
         } else {
           // si se esta des-seleccionando lo eliminamos del array
@@ -104,7 +104,7 @@ export class MapComponent implements OnInit {
 
   selectCountry(country: Country): void {
     this.countriesService.isSelected = country;
-    this.router.navigate(['/mapa/pais', country.code])
+    this.router.navigate(['/mapa/pais', country.code]);
   }
 
 }

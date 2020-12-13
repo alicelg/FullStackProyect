@@ -11,13 +11,13 @@
                 src="../../../assets/images/logo.png" alt=""></button>
         <!-- traductor para mobile -->
         <div class="mobile">
-            <button class="btn d-inline text-light p-0" *ngIf="userLogged">
+            <!-- <button class="btn d-inline text-light p-0" *ngIf="userLogged">
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd"
                         d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                 </svg>
-            </button>
+            </button> -->
             <div class=" nav-item dropdown d-inline">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
                     <img class="icon-flag"
@@ -85,8 +85,8 @@
                 <div class="nav-item" *ngIf="!userLogged">
                     <button class="btn nav-link" routerLink="signup">{{'HEADER.SIGNUP' | translate}}</button>
                 </div>
-                <div class="nav-item ml-md-auto desktop" *ngIf="userLogged">
-                    <button class="btn nav-link"  [routerLink]="['/usuario', userLogged.id]">{{userLogged.name}}</button>
+                <div class="nav-item ml-md-auto" *ngIf="userLogged">
+                    <button class="btn nav-link mx-auto"  [routerLink]="['/usuario', userLogged.id]">{{userLogged.name}}</button>
                 </div>
                 <!-- selector de idiomas desktop -->
                 <div class="nav-item dropdown desktop">
