@@ -1,22 +1,55 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h3 class="mb-1 mt-5"> Formulario </h3>
-            <hr class="mb-4">
-            <p> En este espacio podras compartir tus ideas. Llena cada uno de los espacios
-                requeridos y al finalizar da click en Publica post.
+<div class="container-fluid container-color">
 
-                Podrás ver tu publicación en Blog General.
-                Compartelo con tus amigos en las redes sociales.
-
-                Recuerda hacer el uso correcto de los terminos y la citación. Esperamos leerte pronto.
-            </p>
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-md-12 text-center pb-4">
+                <h3 class="mb-1 pt-5"> {{'FORM-PUBLISH.TITLE-FORM'|translate}}</h3>
+                <hr>
+            </div>
         </div>
+
+
+        <div class="row text-center">
+            <div class="col-md-2">
+                <h5 class="border rounded-circle mb-2">1</h5>
+                <p> {{'FORM-PUBLISH.INSTRUCTION-ONE'|translate}}</p>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="border rounded-circle mb-2">2</h5>
+                <p> {{'FORM-PUBLISH.INSTRUCTION-TWO'|translate}}</p>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="border rounded-circle mb-2">3</h5>
+                <p> {{'FORM-PUBLISH.INSTRUCTION-THREE'|translate}}</p>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="border rounded-circle mb-2">4</h5>
+                <p>{{'FORM-PUBLISH.INSTRUCTION-FOUR'|translate}}</p>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="border rounded-circle mb-2">5</h5>
+                <p> {{'FORM-PUBLISH.INSTRUCTION-FIVE'|translate}}</p>
+            </div>
+
+            <div class="col-md-2">
+                <h5 class="border rounded-circle mb-2">6</h5>
+                <p> {{'FORM-PUBLISH.INSTRUCTION-SIX'|translate}}</p>
+            </div>
+        </div>
+
     </div>
 
+</div>
+
+<div class="container">
+
     <div class="row">
 
-        <div class="col-md-12 mt-4">
+        <div class="col-md-12 mt-5">
 
             <form #formNew="ngForm" class="mb-5">
                 <!-- (ngSubmit)="onSubmit(formNew.value)" -->
@@ -24,31 +57,31 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label> Título </label>
+                            <label>{{'FORM-PUBLISH.TITLE'|translate}}</label>
                             <input type="text" name="title" class="form-control" ngModel>
                         </div>
 
                         <div class="form-group">
-                            <label> Imagen principal </label>
+                            <label> {{'FORM-PUBLISH.IMAGE'|translate}}</label>
                             <input type="text" name="main_image" class="form-control" ngModel>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label> Categoría </label>
+                            <label> {{'FORM-PUBLISH.CATEGORY'|translate}} </label>
 
                             <select id="" name="category" class="form-control" ngModel>
-                                <option value="política">Política</option>
-                                <option value="economía">Economía</option>
-                                <option value="cultura">Cultura</option>
-                                <option value="historia">Historia</option>
+                                <option value="política">{{'FORM-PUBLISH.POLITIC'|translate}}</option>
+                                <option value="economía">{{'FORM-PUBLISH.ECONOMIC'|translate}}</option>
+                                <option value="cultura">{{'FORM-PUBLISH.CULTURE'|translate}}</option>
+                                <option value="historia">{{'FORM-PUBLISH.HISTORY'|translate}}</option>
                             </select>
 
                         </div>
 
                         <div class="form-group">
-                            <label> Palabras claves </label>
+                            <label> {{'FORM-PUBLISH.KEYWORDS'|translate}}</label>
                             <input type="text" name="keywords" class="form-control" ngModel>
                         </div>
                     </div>
@@ -58,24 +91,27 @@
                     <div class="col-md-12">
 
                         <div class="mt-4">
-                            <label> Text </label>
+                            <label> {{'FORM-PUBLISH.TEXT'|translate}}</label>
                             <quill-editor [styles]="{height: '200px'}"></quill-editor>
                         </div>
 
                         <div class="form-group mt-3">
                             <input type="checkbox" class="mr-2">
-                            <label>He leído los <strong (click)="condition()" class="condition">términos y
-                                    condiciones</strong> de
-                                publicar
-                                en el blog general de
-                                WatchYourPolitics.
+
+
+                            <label> {{'FORM-PUBLISH.READ'|translate}} <strong (click)="condition()" class="condition">
+                                    {{'FORM-PUBLISH.TERMS-CONDITIONS'|translate}} </strong>
+                                {{'FORM-PUBLISH.READ-TWO'|translate}}
 
 
                             </label>
                         </div>
 
+
+
                         <div class="form-group mt-4 mx-auto">
-                            <input type="submit" value="Publicar post" class="btn form-control">
+                            <input type="submit" value="{{'FORM-PUBLISH.PUBLISH-POST'|translate}}"
+                                class="btn form-control">
                         </div>
                     </div>
                 </div>
@@ -95,7 +131,7 @@
 
 <ng-template #content let-modal>
     <div class="modal-header border-bottom-0 px-4 pt-3">
-        <h5 class="modal-title">Términos y condiciones de publicación</h5>
+        <h5 class="modal-title"> {{'FORM-PUBLISH.TERMS-CONDITIONS-PUBLISH'|translate}}</h5>
         <div id="closeModal">
             <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
                 <span aria-hidden="true">&times;</span>&nbsp;
@@ -104,23 +140,22 @@
     </div>
 
     <div class="modal-body px-4 text-justify">
-        <p>Las publicaciones en WatchYourPolitics son de <strong>uso público</strong> . Se le solicita a los interesados
-            que siempre deben
-            citar a los autores para su debido uso en investigación o consulta.</p>
-        <p>Por consiguiente, WatchYourPolitics es <strong>propietaria</strong> de toda la información contenida en este
-            portal, posts
-            publicados en el blog, su diseño gráfico, imágenes, bases de datos, índices, códigos fuentes, marcas y
-            logotipos, estando protegidos conforme a lo dispuesto en la Ley de Propiedad Intelectual, y en las normas
-            sobre Propiedad Industrial.
+        <p> {{'FORM-PUBLISH.TERMS-CONDITIONS-ONE'|translate}}
+            <strong>{{'FORM-PUBLISH.TERMS-CONDITIONS-TWO'|translate}} </strong>
+            {{'FORM-PUBLISH.TERMS-CONDITIONS-THREE'|translate}} </p>
+        <p> {{'FORM-PUBLISH.TERMS-CONDITIONS-FOUR'|translate}}<strong>
+                {{'FORM-PUBLISH.TERMS-CONDITIONS-FIVE'|translate}}</strong>
+            {{'FORM-PUBLISH.TERMS-CONDITIONS-SIX'|translate}}
         </p>
-        <p>Así, al dar su consentimiento a estas medidas, limita su publicación a está web,
-            <strong>restringiendo</strong> la doble
-            publicación o su publicación con otra lengua.</p>
+        <p> {{'FORM-PUBLISH.TERMS-CONDITIONS-SEVEN'|translate}}
+            <strong>{{'FORM-PUBLISH.TERMS-CONDITIONS-EIGHT'|translate}}</strong>
+            {{'FORM-PUBLISH.TEMS-CONDITIONS-NINE'|translate}}</p>
 
     </div>
 
     <div class="modal-footer justify-content-center px-4 border-top-0 pb-3">
-        <button type="button" class="btn btn-secondary" (click)="modal.dismiss('cancel click')"> Continuar </button>
+        <button type="button" class="btn btn-secondary"
+            (click)="modal.dismiss('cancel click')">{{'FORM-PUBLISH.CONTINUE'|translate}}</button>
 
     </div>
 
