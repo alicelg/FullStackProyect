@@ -158,7 +158,7 @@
 
     </div>
 
-    <div class="col-md-4">
+    <div class="offset-md-1 col-md-3">
 
       <h5 class="text-center">Test</h5>
       <p class="text-center">Disfruta, aprende y reta a tus amigos en nuestros tests.</p>
@@ -178,21 +178,30 @@
       <div class="row">
         <div class="col-md-6">
           <a>La política exterior de Colombia en 2019</a>
-
         </div>
+      </div>
+
+      <div class="row">
+
+        <div class="offset-md-8 col-md-4">
+          <button class="btn btn-block" [routerLink]="['/nuevo/post']">Publicar en el Blog</button>
+        </div>
+
       </div>
 
     </div>
 
-    <div class="col-md-4 text-center">
-      <h5>Recuerda</h5>
-      <p> Ahora que eres usuario de WatchYourPolitics puedes elegir tus <strong routerLink="conceptos">conceptos
-        </strong> favoritos. Buscar en nuestro <strong routerLink="mapa">mapa </strong> interactivo el país más
+    <div class="offset-md-1 col-md-3">
+      <h5 class="text-center">Recuerda</h5>
+      <p> Ahora que eres usuario de WatchYourPolitics puedes elegir tus <strong [routerLink]="['/conceptos']">conceptos
+        </strong> favoritos. Buscar en nuestro <strong [routerLink]="['/mapa']">mapa </strong> interactivo el país más
         grande o el más pequeño y aprender sobre su situación política. </p>
 
-      <p> Comparte tus ideas de <strong routerLink="blog/general"> política </strong>, <strong
-          routerLink="blog/general"> cultura</strong>, <strong routerLink="blog/general"> economía </strong> o
-        <strong routerLink="blog/general"> historia </strong> en nuestro <strong routerLink="blog/general"> blog
+      <p> Comparte tus ideas de <strong [routerLink]="['/blog/general']">política </strong>, <strong
+          [routerLink]="['/blog/general']"> cultura</strong>, <strong [routerLink]="['/blog/general']"> economía
+        </strong> o
+        <strong [routerLink]="['/blog/general']"> historia </strong> en nuestro <strong
+          [routerLink]="['/blog/general']"> blog
         </strong>. Si lo que te apetece es pasar un rato leyendo y disfrutando de
         las ideas de otros usuarios, puedes leerlos y comentarlos. </p>
 
