@@ -1,7 +1,7 @@
 <div class="container-fluid container-color">
 
   <!-- Primera pantalla para empezar el test  -->
-  <div class="container pt-5" *ngIf="step === 'instructions'">
+  <div class="container pt-5" *ngIf="action === 'instructions'">
 
     <div class="row text-center">
       <div class="col-md-12">
@@ -13,9 +13,11 @@
     <div class="row pb-md-5 mt-3 text-center text-md-left">
 
       <div class="col-md-3 mt-md-5 greeting">
-        <p> {{'TEST.GREETING'|translate}} <strong> {{currentUser.name}} </strong>, <br>{{'TEST.GREETING-CONTINUED'|translate}}</p>
+        <p> {{'TEST.GREETING'|translate}} <strong> {{currentUser.name}} </strong>,
+          <br>{{'TEST.GREETING-CONTINUED'|translate}}</p>
         <p>{{'TEST.START-RECOMMENDATIONS'|translate}}</p>
-        <button class="btn btn-block mt-4 btncolor mb-5 desktop" (click)="step = 'questions'">{{'TEST.START'|translate}}</button>
+        <button class="btn btn-block mt-4 btncolor mb-5 desktop"
+          (click)="action = 'questions'">{{'TEST.START'|translate}}</button>
       </div>
 
       <div class="col-md-8 offset-md-1">
@@ -79,13 +81,14 @@
 
     <div class="row">
       <div class="col-12">
-        <button class="btn btn-block mt-4 btncolor mb-5 mobile" (click)="step = 'questions'">{{'TEST.START'|translate}}</button>
+        <button class="btn btn-block mt-4 btncolor mb-5 mobile"
+          (click)="action = 'questions'">{{'TEST.START'|translate}}</button>
       </div>
     </div>
   </div>
 
   <!-- Test ya empezado -->
-  <div class="container-fluid container-color pt-md-5 pt-4 pb-6" *ngIf="step === 'questions'">
+  <div class="container-fluid container-color pt-md-5 pt-4 pb-6" *ngIf="action === 'questions'">
 
     <div class="container">
 
@@ -103,33 +106,23 @@
             </div>
         </div> -->
 
+      <h6 class="text-center">{{actualQuestion.question}}</h6>
       <div class="row mt-3">
         <div class="col-md-5 text-center">
-          <h5>¿ A qué país corresponde esta bandera?</h5>
-          <img src="../../../assets/icons/espana.png" alt="" class="w-50">
+          <div class="svg" [innerHTML]="svg"></div>
         </div>
 
-        <div class="col-md-7 mt-3 mb-5 mobile">
-          <button class="btn btncolorform-control mt-2 mb-2"> México </button>
-          <button class="btn btncolor mt-2 mb-2 form-control"> España </button>
-          <button class="btn btncolormt-2 mb-2 form-control"> Egipto </button>
-          <button class="btn btncolor mt-2 mb-2 form-control"> Noruega </button>
+        <div class="col-md-4 offset-md-1">
+          <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 1)">
+            {{actualQuestion.answer1}} </button>
+          <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 2)">
+            {{actualQuestion.answer2}} </button>
+          <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 3)">
+            {{actualQuestion.answer3}} </button>
+          <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 4)">
+            {{actualQuestion.answer4}} </button>
         </div>
-
-        <div class="offset-1 col-md-4 mt-5 desktop">
-          <button class="btn btncolor mt-2 mb-2 form-control "> México </button>
-          <button class="btn btncolor mt-2 mb-2 form-control"> España </button>
-          <button class="btn btncolor mt-2 mb-2 form-control"> Egipto </button>
-          <button class="btn btncolor mt-2 mb-2 form-control"> Noruega </button>
-        </div>
-
-
-
       </div>
-
     </div>
-
-
   </div>
-
 </div>
