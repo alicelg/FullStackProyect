@@ -56,12 +56,12 @@ const routes: Routes = [
     component: TestsComponent
   },
   {
-    path: 'test/:id',
+    path: 'test/:testId',
     component: TestComponent,
     canActivate: [InternalGuard]
   },
   {
-    path: 'test/:id/resultado',
+    path: 'test/:testId/resultado',
     component: ResultComponent,
     canActivate: [InternalGuard]
   },

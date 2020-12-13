@@ -1,16 +1,46 @@
 @import "../../../styles.scss";
 
+.greeting {
+  p:nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 200px;
+  }
+  p:nth-child(2) {
+    font-size: 1.2rem;
+  }
+  strong {
+    font-weight: 900;
+  }
+}
+
 .btncolor {
-    background: $tertiaryBgColor;
-    color: $quaternaryTextColor;
-    border: none;
+  background: $tertiaryBgColor;
+  color: $quaternaryTextColor;
+  border: none;
 }
 
 .btncolor:hover {
-    background: $primaryTextColor;
-    color: $quaternaryTextColor;
+  background: $primaryTextColor;
+  color: $quaternaryTextColor;
 }
 
 .size-icon {
-    font-size: 40px;
+  font-size: 40px;
+}
+
+@media (max-width: 575px) {
+  .greeting {
+    p:nth-child(1) {
+      font-size: 1.1rem;
+      font-weight: 700;
+      width: 100%;
+    }
+    p:nth-child(2) {
+      font-size: 1rem;
+    }
+    strong {
+      font-weight: 900;
+    }
+  }
 }
