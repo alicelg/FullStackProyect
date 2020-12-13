@@ -1,7 +1,13 @@
+@import "../../../styles.scss";
+
 li {
     list-style: none;
 }
 
 .size-icon {
     font-size: 25px;
+}
+
+.search {
+    cursor: pointer;
 }
