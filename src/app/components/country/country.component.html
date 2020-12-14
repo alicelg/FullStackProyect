@@ -31,35 +31,35 @@
         <div class="col-md-2 col-6 box">
             <fa-icon class="size-icon" [icon]="['fas', 'landmark']"></fa-icon>
             <h5>{{'COUNTRY-DETAIL.GOVERMENT' |translate}}</h5>
-            <p>{{(country.goverment? country.goverment:'No disponible')|titlecase}}</p>
+            <p>{{(country?.goverment? country?.goverment:'No disponible')|titlecase}}</p>
 
         </div>
 
         <div class="col-md-2 col-6 box">
 
             <fa-icon class="size-icon" [icon]="['fas', 'user-tie']"></fa-icon>
-            <h5>{{(country.title_leader_1? country.title_leader_1:'No disponible')|titlecase}}</h5>
-            <p>{{(country.name_leader_1? country.name_leader_1:'No disponible')|titlecase }}</p>
+            <h5>{{(country?.title_leader_1? country?.title_leader_1:'No disponible')|titlecase}}</h5>
+            <p>{{(country?.name_leader_1? country?.name_leader_1:'No disponible')|titlecase }}</p>
 
         </div>
 
         <div class="col-md-2 col-6 box">
             <fa-icon class="size-icon" [icon]="['fas', 'user']"></fa-icon>
-            <h5>{{(country.title_leader_2? country.title_leader_2:'No disponible')|titlecase }}</h5>
-            <p>{{(country.name_leader_2 ? country.title_leader_2:'No disponible')|titlecase}}</p>
+            <h5>{{(country?.title_leader_2? country?.title_leader_2:'No disponible')|titlecase }}</h5>
+            <p>{{(country?.name_leader_2 ? country?.title_leader_2:'No disponible')|titlecase}}</p>
         </div>
 
         <div class="col-md-2 col-6 box">
             <fa-icon class="size-icon" [icon]="['fas', 'balance-scale']"></fa-icon>
             <h5>{{'COUNTRY-DETAIL.LEGISLATIVE-BODY' |translate}}</h5>
-            <p>{{(country.legislative_body? country.legislative_body: 'No disponible')|titlecase}}</p>
+            <p>{{(country?.legislative_body? country?.legislative_body: 'No disponible')|titlecase}}</p>
         </div>
 
         <div class="col-md-2 col-6 box">
             <fa-icon class="size-icon" [icon]="['fas', 'book']"></fa-icon>
             <h5>{{'COUNTRY-DETAIL.HISTORICAL' |translate}}</h5>
-            <p>{{(country.foundation_event ? country.foundation_event :'No disponible')|titlecase}} <br>
-                {{(country.foundation_year ? country.foundation_year :'No disponible')|titlecase}}
+            <p>{{(country?.foundation_event ? country?.foundation_event :'No disponible')|titlecase}} <br>
+                {{(country?.foundation_year ? country?.foundation_year :'No disponible')|titlecase}}
             </p>
 
         </div>
