@@ -17,4 +17,8 @@ export class TestsService {
   getQuestionsByTest(testId): Promise<Question[]> {
     return this.httpClient.get<Question[]>(`${this.baseUrl}/${testId}/questions`).toPromise();
   }
+
+  setAnswers(testId, answersArray): Promise<Question[]> {
+    return this.httpClient.post<Question[]>(`${this.baseUrl}/${testId}/answers`, {answersArray}).toPromise();
+  }
 }

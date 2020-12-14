@@ -8,3 +8,9 @@ export class Question {
   answer4: string;
   image: string;
 }
+
+export class Answer {
+  questionId: number;
+  answerId: number;
+}
+
