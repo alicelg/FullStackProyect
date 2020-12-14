@@ -18,11 +18,13 @@ sup {
 
 .box:hover {
     /* background-color: rgb(218, 218, 218); */
-    border: 1px solid rgb(218, 218, 218);
+    border: 1px solid $quaternaryBgColor;
 }
 
-p {
+p,
+span {
     font-weight: bold;
+    color: $tertiaryTextColor;
 }
 
 .image-flag {
@@ -43,7 +45,7 @@ p {
     }
 
     .space-color {
-        background: rgb(218, 218, 218);
+        background: $quaternaryBgColor;
         padding-bottom: 30px;
     }
 }

@@ -11,7 +11,7 @@ export class Country {
   gentilic: string;
   goverment: string;
   id: string;
-  languages: string;
+  languages: any;
   legislative_body: string;
   main_religin: string;
   motto: string;

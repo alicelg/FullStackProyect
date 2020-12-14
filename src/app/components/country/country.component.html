@@ -31,35 +31,35 @@
         <div class="col-md-2 col-6 box">
             <fa-icon class="size-icon" [icon]="['fas', 'landmark']"></fa-icon>
             <h5>{{'COUNTRY-DETAIL.GOVERMENT' |translate}}</h5>
-            <p>{{country.goverment? country.goverment:'No disponible'|titlecase}}</p>
+            <p>{{(country.goverment? country.goverment:'No disponible')|titlecase}}</p>
 
         </div>
 
         <div class="col-md-2 col-6 box">
 
             <fa-icon class="size-icon" [icon]="['fas', 'user-tie']"></fa-icon>
-            <h5>{{country.title_leader_1? country.title_leader_1:'No disponible'|titlecase}}</h5>
-            <p>{{country.name_leader_1? country.name_leader_1:'No disponible'|titlecase }}</p>
+            <h5>{{(country.title_leader_1? country.title_leader_1:'No disponible')|titlecase}}</h5>
+            <p>{{(country.name_leader_1? country.name_leader_1:'No disponible')|titlecase }}</p>
 
         </div>
 
         <div class="col-md-2 col-6 box">
             <fa-icon class="size-icon" [icon]="['fas', 'user']"></fa-icon>
-            <h5>{{country.title_leader_2? country.title_leader_2:'No disponible'|titlecase }}</h5>
-            <p>{{country.name_leader_2}}</p>
+            <h5>{{(country.title_leader_2? country.title_leader_2:'No disponible')|titlecase }}</h5>
+            <p>{{(country.name_leader_2 ? country.title_leader_2:'No disponible')|titlecase}}</p>
         </div>
 
         <div class="col-md-2 col-6 box">
             <fa-icon class="size-icon" [icon]="['fas', 'balance-scale']"></fa-icon>
             <h5>{{'COUNTRY-DETAIL.LEGISLATIVE-BODY' |translate}}</h5>
-            <p>{{country.legislative_body? country.legislative_body: 'No disponible'|titlecase}}</p>
+            <p>{{(country.legislative_body? country.legislative_body: 'No disponible')|titlecase}}</p>
         </div>
 
         <div class="col-md-2 col-6 box">
             <fa-icon class="size-icon" [icon]="['fas', 'book']"></fa-icon>
             <h5>{{'COUNTRY-DETAIL.HISTORICAL' |translate}}</h5>
-            <p>{{country.foundation_event ? country.foundation_event :'No disponible'|titlecase}} <br>
-                {{country.foundation_year ? country.foundation_year :'No disponible'|titlecase}}
+            <p>{{(country.foundation_event ? country.foundation_event :'No disponible')|titlecase}} <br>
+                {{(country.foundation_year ? country.foundation_year :'No disponible')|titlecase}}
             </p>
 
         </div>
@@ -83,7 +83,7 @@
             <div class="col-md-2 col-6 box">
                 <fa-icon class="size-icon" [icon]="['fas', 'money-bill']"></fa-icon>
                 <h5> {{'COUNTRY-DETAIL.MONEY' |translate}}</h5>
-                <p>{{country.currencies ? country.currencies :'No disponible'|titlecase}}
+                <p>{{(country.currencies ? country.currencies :'No disponible')|titlecase}}
                 </p>
 
             </div>
@@ -92,14 +92,14 @@
 
                 <fa-icon class="size-icon" [icon]="['fas', 'file-invoice-dollar']"></fa-icon>
                 <h5> {{'COUNTRY-DETAIL.PIB' |translate}}</h5>
-                <p> $ {{country.gdp_total? country.gdp_total:'No disponible'|titlecase}} </p>
+                <p> $ {{(country.gdp_total? country.gdp_total:'No disponible')|titlecase}} </p>
 
             </div>
 
             <div class="col-md-2 col-6 box">
                 <fa-icon class="size-icon" [icon]="['fas', 'hand-holding-usd']"></fa-icon>
                 <h5>{{'COUNTRY-DETAIL.PERCAPITA' |translate}}</h5>
-                <p>$ {{country.gdp_per_capita? country.gdp_per_capita:'No disponible'|titlecase }}</p>
+                <p>$ {{(country.gdp_per_capita? country.gdp_per_capita:'No disponible')|titlecase }}</p>
 
             </div>
 
@@ -126,21 +126,21 @@
         <div class="col-md-2 col-6 box">
             <fa-icon class="size-icon" [icon]="['fas', 'map-pin']"></fa-icon>
             <h5>{{'COUNTRY-DETAIL.AREA' |translate}}</h5>
-            <p>{{country.area? country.area: 'No disponible'|titlecase}} km <sup>2</sup> </p>
+            <p>{{(country.area? country.area: 'No disponible')|titlecase}} km <sup>2</sup> </p>
         </div>
 
         <div class="col-md-2 col-6 box">
 
             <fa-icon class="size-icon" [icon]="['fas', 'map-marked-alt']"></fa-icon>
             <h5> {{'COUNTRY-DETAIL.CAPITAL' |translate}}</h5>
-            <p>{{country.capital? country.capital:'No disponible'|titlecase}}</p>
+            <p>{{(country.capital? country.capital:'No disponible')|titlecase}}</p>
 
         </div>
 
         <div class="col-md-2 col-6 box">
             <fa-icon class="size-icon" [icon]="['fas', 'user-friends']"></fa-icon>
             <h5> {{'COUNTRY-DETAIL.POPULATION' |translate}}</h5>
-            <p>{{country.population ? country.population :'No disponible'|titlecase}}
+            <p>{{(country.population ? country.population :'No disponible')|titlecase}}
             </p>
 
         </div>
@@ -149,7 +149,7 @@
 
             <fa-icon class="size-icon" [icon]="['fas', 'street-view']"></fa-icon>
             <h5> {{'COUNTRY-DETAIL.DENSITY' |translate}}</h5>
-            <p>{{country.density? country.density:'No disponible'|titlecase}} m/km<sup>2</sup> </p>
+            <p>{{(country.density? country.density:'No disponible')|titlecase}} m/km<sup>2</sup> </p>
 
         </div>
 
@@ -174,14 +174,14 @@
             <div class="col-md-2 col-6 box">
                 <fa-icon class="size-icon" [icon]="['fas', 'language']"></fa-icon>
                 <h5> {{'COUNTRY-DETAIL.LANGUAGE' |translate}}</h5>
-                <p>{{country.languages? country.languages: 'No disponible'|titlecase}}</p>
+                <p> <span *ngFor="let language of country.languages">{{language}}, </span></p>
             </div>
 
 
             <div class="col-md-2 col-6 box">
                 <fa-icon class="size-icon" [icon]="['fas', 'users']"></fa-icon>
                 <h5> {{'COUNTRY-DETAIL.GENTILIC' |translate}}</h5>
-                <p>{{country.gentilic? country.gentilic:'No disponible'|titlecase }}/a</p>
+                <p>{{(country.gentilic? country.gentilic:'No disponible')|titlecase }}/a</p>
 
             </div>
 
@@ -189,14 +189,14 @@
             <div class="col-md-2 col-6 box">
                 <fa-icon class="size-icon" [icon]="['fas', 'praying-hands']"></fa-icon>
                 <h5> {{'COUNTRY-DETAIL.RELIGION' |translate}}</h5>
-                <p>{{country.main_religin? country.main_religin:'No disponible'|titlecase }}</p>
+                <p>{{(country.main_religin? country.main_religin:'No disponible')|titlecase }}</p>
 
             </div>
 
             <div class="col-md-2 col-6 box">
                 <fa-icon class="size-icon" [icon]="['fas', 'scroll']"></fa-icon>
                 <h5>{{'COUNTRY-DETAIL.MOTTO' |translate}}</h5>
-                <p>{{country.motto? country.motto: 'No disponible'|titlecase}}</p>
+                <p>{{(country.motto? country.motto: 'No disponible')|titlecase}}</p>
             </div>
         </div>
 
