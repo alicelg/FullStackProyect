@@ -1,108 +1,205 @@
+<div class="container-fluid container-color">
+
+
+    <div class="container">
+
+        <div class="row pt-5 pb-5">
+            <div class="col-md-8">
+
+                <h3 class="text-center mt-4">{{country.official_name}}</h3>
+                <hr>
+                <h5 class="text-center">{{country.name_es}} - {{country.name_en}}</h5>
+
+            </div>
+
+            <div class="col-md-4 col-12 text-md-left text-center mt-3">
+                <img class="image-flag mb-2" [src]="country.flag">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+
+    <!-- primera fila -->
+    <div class="row mb-md-5 mb-5 text-center">
+        <div class="col-md-2 col-12">
+            <h4 class="mt-md-5">{{'COUNTRY-DETAIL.FORMATION' |translate}}</h4>
+            <hr class="line_title mb-5">
+        </div>
+
+        <div class="col-md-2 col-6 box">
+            <fa-icon class="size-icon" [icon]="['fas', 'landmark']"></fa-icon>
+            <h5>{{'COUNTRY-DETAIL.GOVERMENT' |translate}}</h5>
+            <p>{{country.goverment? country.goverment:'No disponible'|titlecase}}</p>
+
+        </div>
+
+        <div class="col-md-2 col-6 box">
+
+            <fa-icon class="size-icon" [icon]="['fas', 'user-tie']"></fa-icon>
+            <h5>{{country.title_leader_1? country.title_leader_1:'No disponible'|titlecase}}</h5>
+            <p>{{country.name_leader_1? country.name_leader_1:'No disponible'|titlecase }}</p>
+
+        </div>
+
+        <div class="col-md-2 col-6 box">
+            <fa-icon class="size-icon" [icon]="['fas', 'user']"></fa-icon>
+            <h5>{{country.title_leader_2? country.title_leader_2:'No disponible'|titlecase }}</h5>
+            <p>{{country.name_leader_2}}</p>
+        </div>
+
+        <div class="col-md-2 col-6 box">
+            <fa-icon class="size-icon" [icon]="['fas', 'balance-scale']"></fa-icon>
+            <h5>{{'COUNTRY-DETAIL.LEGISLATIVE-BODY' |translate}}</h5>
+            <p>{{country.legislative_body? country.legislative_body: 'No disponible'|titlecase}}</p>
+        </div>
+
+        <div class="col-md-2 col-6 box">
+            <fa-icon class="size-icon" [icon]="['fas', 'book']"></fa-icon>
+            <h5>{{'COUNTRY-DETAIL.HISTORICAL' |translate}}</h5>
+            <p>{{country.foundation_event ? country.foundation_event :'No disponible'|titlecase}} <br>
+                {{country.foundation_year ? country.foundation_year :'No disponible'|titlecase}}
+            </p>
+
+        </div>
+    </div>
+
+    <hr class="line">
+</div>
+<!-- segunda fila -->
+
+<div class="container-fluid space-color">
+
+    <div class="container">
+
+        <div class="row mb-md-5 mt-md-5 text-center">
+
+            <div class="col-md-2 col-12">
+                <h4 class="mt-md-4 mt-5">{{'COUNTRY-DETAIL.ECONOMIC' |translate}}</h4>
+                <hr class="line_title mb-5">
+            </div>
+
+            <div class="col-md-2 col-6 box">
+                <fa-icon class="size-icon" [icon]="['fas', 'money-bill']"></fa-icon>
+                <h5> {{'COUNTRY-DETAIL.MONEY' |translate}}</h5>
+                <p>{{country.currencies ? country.currencies :'No disponible'|titlecase}}
+                </p>
+
+            </div>
+
+            <div class="col-md-2 col-6 box">
+
+                <fa-icon class="size-icon" [icon]="['fas', 'file-invoice-dollar']"></fa-icon>
+                <h5> {{'COUNTRY-DETAIL.PIB' |translate}}</h5>
+                <p> $ {{country.gdp_total? country.gdp_total:'No disponible'|titlecase}} </p>
+
+            </div>
+
+            <div class="col-md-2 col-6 box">
+                <fa-icon class="size-icon" [icon]="['fas', 'hand-holding-usd']"></fa-icon>
+                <h5>{{'COUNTRY-DETAIL.PERCAPITA' |translate}}</h5>
+                <p>$ {{country.gdp_per_capita? country.gdp_per_capita:'No disponible'|titlecase }}</p>
+
+            </div>
+
+
+        </div>
+        <hr class="line">
+    </div>
+
+
+
+</div>
+
+<!-- tercera fila -->
+
 <div class="container">
 
-    <div class="row mt-6">
-        <div class="col-md-12">
-            <h3 class="text-center">Colombia</h3>
+    <div class="row mb-md-5 mt-md-5 mb-5 text-center">
+
+        <div class="col-md-2 col-12 ">
+            <h4 class="mt-md-4 mt-5"> {{'COUNTRY-DETAIL.GEOGRAPHY' |translate}}</h4>
+            <hr class="line_title mb-5">
         </div>
+
+        <div class="col-md-2 col-6 box">
+            <fa-icon class="size-icon" [icon]="['fas', 'map-pin']"></fa-icon>
+            <h5>{{'COUNTRY-DETAIL.AREA' |translate}}</h5>
+            <p>{{country.area? country.area: 'No disponible'|titlecase}} km <sup>2</sup> </p>
+        </div>
+
+        <div class="col-md-2 col-6 box">
+
+            <fa-icon class="size-icon" [icon]="['fas', 'map-marked-alt']"></fa-icon>
+            <h5> {{'COUNTRY-DETAIL.CAPITAL' |translate}}</h5>
+            <p>{{country.capital? country.capital:'No disponible'|titlecase}}</p>
+
+        </div>
+
+        <div class="col-md-2 col-6 box">
+            <fa-icon class="size-icon" [icon]="['fas', 'user-friends']"></fa-icon>
+            <h5> {{'COUNTRY-DETAIL.POPULATION' |translate}}</h5>
+            <p>{{country.population ? country.population :'No disponible'|titlecase}}
+            </p>
+
+        </div>
+
+        <div class="col-md-2 col-6 box">
+
+            <fa-icon class="size-icon" [icon]="['fas', 'street-view']"></fa-icon>
+            <h5> {{'COUNTRY-DETAIL.DENSITY' |translate}}</h5>
+            <p>{{country.density? country.density:'No disponible'|titlecase}} m/km<sup>2</sup> </p>
+
+        </div>
+
+
     </div>
+    <hr class="line">
 
-    <div class="row text-center mt-4">
+</div>
+<!-- cuarta fila -->
 
-        <div class="col-md-3 col-3">
-            <img src="../../../assets/icons/espana.png" alt="" width="30px">
-            <h6>Simbolo</h6>
+<div class="container-fluid space-color">
+    <div class="container">
 
-        </div>
-        <div class="col-md-3 col-3">
-            <img src="../../../assets/icons/espana.png" alt="" width="30px">
-            <h6>Bandera</h6>
-        </div>
-        <div class="col-md-3 col-3">
-            <img src="../../../assets/icons/espana.png" alt="" width="30px">
-            <h6>Mapa</h6>
 
-        </div>
-        <div class="col-md-3 col-3">
-            <img src="../../../assets/icons/espana.png" alt="" width="30px">
-            <h6>ONU</h6>
+        <div class="row mb-md-5 mt-md-5 space-color text-center">
 
-        </div>
-    </div>
+            <div class="col-md-2 col-12">
+                <h4 class="mt-md-4 mt-5">{{'COUNTRY-DETAIL.INFO' |translate}}</h4>
+                <hr class="line_title mb-5">
+            </div>
 
-    <div class="row text-center mt-4">
+            <div class="col-md-2 col-6 box">
+                <fa-icon class="size-icon" [icon]="['fas', 'language']"></fa-icon>
+                <h5> {{'COUNTRY-DETAIL.LANGUAGE' |translate}}</h5>
+                <p>{{country.languages? country.languages: 'No disponible'|titlecase}}</p>
+            </div>
 
-        <div class="col-md-3 col-3">
-            <img src="../../../assets/icons/espana.png" alt="" width="30px">
-            <h6>Gobierno</h6>
 
-        </div>
-        <div class="col-md-3 col-3">
-            <img src="../../../assets/icons/espana.png" alt="" width="30px">
-            <h6>Presidente</h6>
-        </div>
-        <div class="col-md-3 col-3">
-            <img src="../../../assets/icons/espana.png" alt="" width="30px">
-            <h6>Moneda</h6>
+            <div class="col-md-2 col-6 box">
+                <fa-icon class="size-icon" [icon]="['fas', 'users']"></fa-icon>
+                <h5> {{'COUNTRY-DETAIL.GENTILIC' |translate}}</h5>
+                <p>{{country.gentilic? country.gentilic:'No disponible'|titlecase }}/a</p>
 
-        </div>
-        <div class="col-md-3 col-3">
-            <img src="../../../assets/icons/espana.png" alt="" width="30px">
-            <h6>Religión</h6>
+            </div>
 
-        </div>
-    </div>
 
-    <div class="row mt-4 text-center">
+            <div class="col-md-2 col-6 box">
+                <fa-icon class="size-icon" [icon]="['fas', 'praying-hands']"></fa-icon>
+                <h5> {{'COUNTRY-DETAIL.RELIGION' |translate}}</h5>
+                <p>{{country.main_religin? country.main_religin:'No disponible'|titlecase }}</p>
 
-        <div class="col-md-12">
-            <h4> Gobierno y política</h4>
-            <hr>
+            </div>
+
+            <div class="col-md-2 col-6 box">
+                <fa-icon class="size-icon" [icon]="['fas', 'scroll']"></fa-icon>
+                <h5>{{'COUNTRY-DETAIL.MOTTO' |translate}}</h5>
+                <p>{{country.motto? country.motto: 'No disponible'|titlecase}}</p>
+            </div>
         </div>
 
-        <div class="col-md-6">
-            <h4> Ramas del poder público</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consectetur id vitae, corporis, saepe
-                iusto fuga culpa quisquam, harum amet deleniti at laudantium ullam cum. Error, nostrum? Eos, modi
-                repellat?</p>
-
-        </div>
-        <div class="col-md-6">
-            <h4>Relaciones exteriores</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione consectetur id vitae, corporis, saepe
-                iusto fuga culpa quisquam, harum amet deleniti at laudantium ullam cum. Error, nostrum? Eos, modi
-                repellat?</p>
-
-        </div>
-    </div>
-
-
-    <div class="row text-center">
-
-        <div class="col-md-12">
-            <h4> Partidos Políticos</h4>
-            <hr>
-        </div>
-
-        <div class="col-md-3 col-3">
-            <img src="../../../assets/icons/espana.png" alt="" width="30px">
-            <h6>Conservador</h6>
-
-        </div>
-        <div class="col-md-3 col-3">
-            <img src="../../../assets/icons/espana.png" alt="" width="30px">
-            <h6>Socialista</h6>
-
-        </div>
-        <div class="col-md-3 col-3">
-            <img src="../../../assets/icons/espana.png" alt="" width="30px">
-            <h6>Centro democratico</h6>
-
-        </div>
-        <div class="col-md-3 col-3">
-            <img src="../../../assets/icons/espana.png" alt="" width="30px">
-            <h6>Polo</h6>
-
-        </div>
     </div>
 
 </div>

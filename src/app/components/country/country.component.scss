@@ -1,0 +1,49 @@
+@import "../../../styles.scss";
+
+.size-icon {
+    font-size: 40px;
+}
+
+sup {
+    color: black;
+}
+
+.line {
+    width: 100%;
+}
+
+.box {
+    cursor: pointer;
+}
+
+.box:hover {
+    /* background-color: rgb(218, 218, 218); */
+    border: 1px solid rgb(218, 218, 218);
+}
+
+p {
+    font-weight: bold;
+}
+
+.image-flag {
+    width: 40%;
+    max-height: 150px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1500px) {
+    .line_title {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .line {
+        display: none;
+    }
+
+    .space-color {
+        background: rgb(218, 218, 218);
+        padding-bottom: 30px;
+    }
+}

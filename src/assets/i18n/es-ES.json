@@ -517,5 +517,25 @@
         "TEMS-CONDITIONS-NINE": "la doble publicación o su publicación con otra lengua.",
         "CONTINUE": "Continuar",
         "PUBLISH-POST": "Publicar post"
+    },
+    "COUNTRY-DETAIL": {
+        "FORMATION": "Formación de gobierno",
+        "GOVERMENT": "Gobierno",
+        "LEGISLATIVE-BODY": "Organismo legislativo",
+        "HISTORICAL": "Hecho histórico",
+        "ECONOMIC": "Situación economíca",
+        "MONEY": "Moneda",
+        "PIB": "PIB",
+        "PERCAPITA": "PIB per cápita",
+        "GEOGRAPHY": "Geográfia y demografía",
+        "AREA": "Superficie",
+        "CAPITAL": "Capital",
+        "POPULATION": "Población",
+        "DENSITY": "Densidad",
+        "INFO": "Información general",
+        "LANGUAGE": "Idioma oficial",
+        "GENTILIC": "Gentilicio",
+        "RELIGION": "Religión mayoritaria",
+        "MOTTO": "Lema"
     }
 }

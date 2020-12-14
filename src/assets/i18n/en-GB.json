@@ -133,7 +133,7 @@
         "CONSTITUTION-TEXT": "Constitution is the set of principles, norms and rules that seek to establish the form of a State of Law, as well as to organize that same State, delimiting it, through its own Public Administration institutions and establishing procedures and sanctions so that the State itself does not breach the rules established in said Constitution."
     },
     "FOOTER": {
-        "PRINCIPALTEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, nostrum! Nulla consectetur ipsum ipsa et voluptate quaerat animi dignissimos dicta impedit in aspernatur quidem odit quo recusandae vel, nemo fugit?",
+        "PRINCIPALTEXT": "Know the political position of the countries and political concepts.",
         "OUR": "About us",
         "LEGAL": "Legal",
         "TEXTLEGAL1": "Notice of Privacy",
@@ -517,5 +517,25 @@
         "TEMS-CONDITIONS-NINE": "double publication or publication in another language.",
         "CONTINUE": "Continue",
         "PUBLISH-POST": "Publish post"
+    },
+    "COUNTRY-DETAIL": {
+        "FORMATION": "Government formation",
+        "GOVERMENT": "Government",
+        "LEGISLATIVE-BODY": "Legislative body",
+        "HISTORICAL": "Historical fact",
+        "ECONOMIC": "Economic situation",
+        "MONEY": "Currency",
+        "PIB": "PIB",
+        "PERCAPITA": "PIB per cápita",
+        "GEOGRAPHY": "Geography and demography",
+        "AREA": "Area",
+        "CAPITAL": "Capital",
+        "POPULATION": "Population",
+        "DENSITY": "Density",
+        "INFO": "General information",
+        "LANGUAGE": "Official language",
+        "GENTILIC": "Demonym",
+        "RELIGION": "Majority religion",
+        "MOTTO": "Motto"
     }
 }
