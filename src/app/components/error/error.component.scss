@@ -1,0 +1,28 @@
+@import "../../../styles.scss";
+
+.color-error {
+    background-color: black;
+}
+
+.color {
+    background-color: $quaternaryTextColor;
+    height: 200px;
+}
+
+.box {
+    background-color: $tertiaryBgColor;
+}
+
+.btn {
+    background: $primaryTextColor;
+    color: $quaternaryTextColor;
+}
+
+.btn:hover {
+    background: $secondaryBgColor;
+    color: $quaternaryTextColor;
+}
+
+img {
+    width: 40%;
+}
