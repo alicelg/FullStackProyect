@@ -67,15 +67,29 @@
                         </div>
                     </div>
                 </ng-container>
+
+
+                <!-- Botones para paginación -->
+
+                <div class="col-md-12 text-center" style="max-width: 50rem;">
+                    <button class="btn mr-4">←</button>
+                    <button class="btn">→</button>
+                </div>
+
+
+
+
                 <ng-template #elseTemplate>
                     <div class="card m-2 w-100 text-center" style="max-width: 50rem;">
                         <div class="card-body">
-                            <p class="card-text">Lo sentimos, aún no tenemos definición para ese concepto</p>
+                            <p class="card-text">{{'CONCEPT.MESSAGE' |translate}}</p>
                         </div>
                     </div>
                 </ng-template>
 
             </div>
+
+
         </div>
     </div>
 </div>

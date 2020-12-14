@@ -6,8 +6,19 @@ li {
 
 .size-icon {
     font-size: 25px;
+    cursor: pointer;
 }
 
 .search {
     cursor: pointer;
+}
+
+.btn {
+    background: $tertiaryBgColor;
+    color: $quaternaryTextColor;
+}
+
+.btn:hover {
+    background: $primaryTextColor;
+    color: $quaternaryTextColor;
 }
