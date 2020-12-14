@@ -11,3 +11,13 @@ li {
 .search {
     cursor: pointer;
 }
+
+.btn {
+    background: $tertiaryBgColor;
+    color: $quaternaryTextColor;
+}
+
+.btn:hover {
+    background: $primaryTextColor;
+    color: $quaternaryTextColor;
+}
