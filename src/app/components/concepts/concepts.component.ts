@@ -94,4 +94,8 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
 
   }
 
+  makeFavorite(pId) {
+    this.conceptsService.insertFavorite(pId);
+  }
+
 }

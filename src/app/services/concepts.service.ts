@@ -29,6 +29,19 @@ export class ConceptsService {
 
   }
 
+  insertFavorite(pId): Promise<any> {
+    const httpOptions = {
+      "headers": new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    }
+    console.log(pId);
+    const favorito = { "idconcepto": pId }
+
+
+    return this.httpClient.post<any>(`${this.baseUrl}/favorite`, favorito, httpOptions).toPromise();
+  }
+
 }
 
 

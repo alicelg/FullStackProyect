@@ -60,7 +60,8 @@
 
                                 <div class="d-flex justify-content-between">
                                     <h5 class="card-title">{{concept.title | translate}}</h5>
-                                    <fa-icon class="size-icon" [icon]="['far', 'heart']"></fa-icon>
+                                    <fa-icon class="size-icon" [icon]="['far', 'heart']"
+                                        (click)="makeFavorite(concept.id)"></fa-icon>
                                 </div>
                                 <p class="card-text">{{concept.text | translate}}</p>
                             </div>
