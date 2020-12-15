@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { User } from 'src/app/models/user.model';
@@ -22,6 +23,8 @@ export class UserComponent implements OnInit {
   currentUser: User;
   action: string;
 
+  editForm: FormGroup;
+
   constructor(
     private modal: NgbModal,
     private userService: UsersService,
@@ -29,6 +32,18 @@ export class UserComponent implements OnInit {
     private activatedRoute: ActivatedRoute
   ) {
     this.action = this.activatedRoute.snapshot.url[0].path;
+
+
+    this.editForm = new FormGroup({
+      name: new FormControl(),
+      surname: new FormControl(),
+      nickname: new FormControl(),
+      country: new FormControl(),
+      studies: new FormControl(),
+      linkedin: new FormControl(),
+      currentWord: new FormControl()
+
+    })
   }
 
   ngOnInit(): void {
@@ -97,6 +112,12 @@ export class UserComponent implements OnInit {
   }
 
 
-
+  edit(): void {
+    this.userService.update(this.editForm.value)
+      .then(response => {
+        console.log(response);
+      })
+      .catch(error => console.log(error));
+  }
 
 }

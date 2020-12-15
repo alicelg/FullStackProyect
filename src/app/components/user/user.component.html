@@ -89,67 +89,74 @@
         </div>
 
         <!-- cabecera a editar por el usuario -->
+        <!-- form -  -->
 
-        <div class="row">
-          <div class="col-md-12 text-right mt-2">
-
-            <fa-icon class="edit mr-5" [icon]="['fas', 'cloud-upload-alt']" [routerLink]="['/usuario/:id']"
-              *ngIf="action === 'editar'"></fa-icon>
-
-          </div>
-
-        </div>
-
-        <div class="cabecera-edición" *ngIf="action === 'editar'">
+        <form [formGroup]="editForm" (ngSubmit)="edit()" class="cabecera-edición mt-md-4 mb-3"
+          *ngIf="action === 'editar'">
 
           <div class="row">
-            <div class="col-md-4">
+
+            <div class="form-group col-md-4">
               <label>Nombre</label>
-              <input type="text" value="{{currentUser.name}}" class="mr-2">
+              <input type="text" value="{{currentUser.name}}" class="mr-2 form-control" formControl="name">
             </div>
-            <div class="col-md-4">
 
+
+
+
+            <div class="form-group col-md-4">
               <label>Apellidos</label>
-              <input type="text" value="{{currentUser.surname}}" class="mr-2">
+              <input type="text" value="{{currentUser.surname}}" class="mr-2 form-control" formControl="surname">
             </div>
 
-            <div class="col-md-4">
+
+            <div class="form-group col-md-4">
               <label> Nickname</label>
-              <input type="text" value="{{currentUser.nickname}}">
+              <input type="text" value="{{currentUser.nickname}}" class="form-control" formControl="nickname">
             </div>
-          </div>
 
-          <div class="row mt-4">
-            <div class="col-md-4 col-6">
+
+
+            <div class="form-group col-md-4">
               <label>País </label>
-              <i class="fa fa-map-pin mr-2 ml-2 text-center mt-1"></i>
-              <input type="text" value="{{currentUser.country}}" class="mb-2">
+              <i class="fa fa-map-pin ml-2 text-center mt-1"></i>
+              <input type="text" value="{{currentUser.country}}" class="mb-2 form-control" formControl="country">
             </div>
 
-            <div class="col-md-4 col-6">
+
+
+            <div class="form-group col-md-4">
               <label> Estudios</label>
-              <i class="fa fa-graduation-cap text-center mt-1"></i>
-              <input type="text" value="{{currentUser.studies}}">
+              <i class="fa fa-graduation-cap text-center mt-1 ml-2"></i>
+              <input type="text" value="{{currentUser.studies}}" class="form-control" formControl="studies">
             </div>
 
-            <div class="col-md-4 col-6">
+
+
+            <div class="form-group col-md-4">
               <label> Linkedin</label>
-              <i class="fa fa-linkedin-square mr-1 mr-2 text-center mt-1"></i>
-              <input type="text" value="{{currentUser.linkedin}}" class="mb-2">
+              <i class="fa fa-linkedin-square ml-2 text-center mt-1"></i>
+              <input type="text" value="{{currentUser.linkedin}}" class="mb-2 form-control" formControl="linkedin">
             </div>
 
-            <div class="col-md-4 col-6 pb-5 mt-2">
+
+
+            <div class="form-group col-md-4">
               <label> Trabajo</label>
-              <i class="fa fa-briefcase mr-2 text-center mt-1"></i>
-              <input type="text" value="{{currentUser.currentWork}}">
+              <i class="fa fa-briefcase ml-2 text-center mt-1"></i>
+              <input type="text" value="{{currentUser.currentWork}}" class="form-control" formControl="currentWork">
+            </div>
+
+
+            <div class="col-md-8 col-6 mt-4 text-right">
+              <input type="submit" class="btn mr-5 mt-2 form-control" value="Guardar">
             </div>
 
           </div>
 
           <!-- fin de la cabeza a editar por el usuario -->
+        </form>
 
-
-        </div>
       </div>
 
     </div>
@@ -157,7 +164,7 @@
   </div>
 
   <!-- stories -->
-  <div class="row color">
+  <div class=" row color">
 
     <div class="container">
 
@@ -271,11 +278,13 @@
     <div class="offset-md-1 col-md-3">
       <h5 class="text-center">Recuerda</h5>
       <p> Ahora que eres usuario de WatchYourPolitics puedes elegir tus <strong [routerLink]="['/conceptos']">conceptos
-        </strong> favoritos. Buscar en nuestro <strong [routerLink]="['/mapa']">mapa </strong> interactivo el país más
+        </strong> favoritos. Buscar en nuestro <strong [routerLink]="['/mapa']">mapa </strong> interactivo el
+        país más
         grande o el más pequeño y aprender sobre su situación política. </p>
 
       <p> Comparte tus ideas de <strong [routerLink]="['/blog/general']">política </strong>, <strong
-          [routerLink]="['/blog/general']"> cultura</strong>, <strong [routerLink]="['/blog/general']"> economía
+          [routerLink]="['/blog/general']"> cultura</strong>, <strong [routerLink]="['/blog/general']">
+          economía
         </strong> o
         <strong [routerLink]="['/blog/general']"> historia </strong> en nuestro <strong
           [routerLink]="['/blog/general']"> blog
