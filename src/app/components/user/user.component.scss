@@ -86,6 +86,11 @@ h4 {
   height: 5px;
 }
 
+.span {
+  font-weight: lighter;
+  font-style: italic;
+}
+
 @media (max-width: 575px) {
   .storys {
     width: 100%;
@@ -129,4 +134,13 @@ h4 {
 
 strong {
   cursor: pointer;
+}
+
+/* boton editar */
+
+.edit {
+  font-size: 25px;
+  cursor: pointer;
+  outline: none !important;
+  box-shadow: none !important;
 }

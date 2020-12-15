@@ -9,72 +9,150 @@
 
         <div class="preview text-center">
           <img class="preview-img" src="../../../assets/images/newuser.png" alt="Preview Image" width="200"
-            height="200" />
+            height="200">
 
           <div class="browse-button">
             <input class="browse-input" type="file" required name="UploadedFile" id="UploadedFile" width="200"
-              height="200" />
+              height="200">
           </div>
 
         </div>
-
-
 
       </div>
 
       <div class="col-md-8">
 
         <div class="row">
-          <div class="col-md-12 mt-md-5 mt-2 mr-md-2">
-            <h3 class="text-center text-md-left">{{currentUser.name}} {{currentUser.surname}}</h3>
+          <div class="col-md-12 text-right mt-2">
+
+            <fa-icon class="edit mr-5" [icon]="['far', 'edit']" [routerLink]="['/editar']" *ngIf="action === 'usuario'">
+            </fa-icon>
+
           </div>
+
         </div>
 
-        <div class="row mt-4">
+        <!-- cabecera del usuario -->
 
-          <div class="col-md-4 col-6">
+        <div class="cabecera-normal" *ngIf="action === 'usuario'">
+          <div class="row">
+            <div class="col-md-12 mt-md-3 mt-2 mr-md-2">
+              <h3 class="text-center text-md-left">{{currentUser.name}} {{currentUser.surname}} -
+                <span class="span">{{currentUser.nickname}}</span>
+              </h3>
+            </div>
+          </div>
 
-            <div class="d-flex" *ngIf='currentUser.country'>
+          <div class="row mt-4">
+
+            <div class="col-md-4 col-6">
+
+              <div class="d-flex" *ngIf='currentUser.country'>
+                <i class="fa fa-map-pin mr-2 ml-2 text-center mt-1"></i>
+                <p class="text-header">{{currentUser.country}}</p>
+              </div>
+
+              <div class="d-flex">
+                <i class="fa fa-graduation-cap mr-1 mr-2 text-center mt-1"></i>
+                <p class="text-header">{{currentUser.studies}}</p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-6 ">
+
+              <div class="d-flex">
+                <i class="fa fa-linkedin-square mr-1 mr-2 text-center mt-1"></i>
+                <p class="text-header">{{currentUser.linkedin}}</p>
+              </div>
+
+              <div class="d-flex">
+                <i class="fa fa-briefcase mr-2 text-center mt-1"></i>
+                <p class="text-header"> {{currentUser.currentWork}} </p>
+              </div>
+            </div>
+
+            <div class="col-md-4 desktop">
+
+              <div class="d-flex">
+                <i class="fa fa-book mr-2 text-center mt-1"></i>
+                <p class="text-header">9</p>
+              </div>
+
+
+              <div class="d-flex">
+                <i class="fa fa-heart mr-2 mt-1 text-center"></i>
+                <p class="text-header">10</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- cabecera a editar por el usuario -->
+
+        <div class="row">
+          <div class="col-md-12 text-right mt-2">
+
+            <fa-icon class="edit mr-5" [icon]="['fas', 'cloud-upload-alt']" [routerLink]="['/usuario/:id']"
+              *ngIf="action === 'editar'"></fa-icon>
+
+          </div>
+
+        </div>
+
+        <div class="cabecera-edición" *ngIf="action === 'editar'">
+
+          <div class="row">
+            <div class="col-md-4">
+              <label>Nombre</label>
+              <input type="text" value="{{currentUser.name}}" class="mr-2">
+            </div>
+            <div class="col-md-4">
+
+              <label>Apellidos</label>
+              <input type="text" value="{{currentUser.surname}}" class="mr-2">
+            </div>
+
+            <div class="col-md-4">
+              <label> Nickname</label>
+              <input type="text" value="{{currentUser.nickname}}">
+            </div>
+          </div>
+
+          <div class="row mt-4">
+            <div class="col-md-4 col-6">
+              <label>País </label>
               <i class="fa fa-map-pin mr-2 ml-2 text-center mt-1"></i>
-              <p class="text-header">{{currentUser.country}}</p>
+              <input type="text" value="{{currentUser.country}}" class="mb-2">
             </div>
 
-            <div class="d-flex">
-              <i class="fa fa-graduation-cap mr-1 mr-2 text-center mt-1"></i>
-              <p class="text-header">{{currentUser.studies}}</p>
+            <div class="col-md-4 col-6">
+              <label> Estudios</label>
+              <i class="fa fa-graduation-cap text-center mt-1"></i>
+              <input type="text" value="{{currentUser.studies}}">
             </div>
-          </div>
 
-          <div class="col-md-4 col-6 ">
-
-            <div class="d-flex">
+            <div class="col-md-4 col-6">
+              <label> Linkedin</label>
               <i class="fa fa-linkedin-square mr-1 mr-2 text-center mt-1"></i>
-              <p class="text-header">{{currentUser.linkedin}}</p>
+              <input type="text" value="{{currentUser.linkedin}}" class="mb-2">
             </div>
 
-
-            <div class="d-flex">
+            <div class="col-md-4 col-6 pb-5 mt-2">
+              <label> Trabajo</label>
               <i class="fa fa-briefcase mr-2 text-center mt-1"></i>
-              <p class="text-header"> {{currentUser.currentWork}} </p>
+              <input type="text" value="{{currentUser.currentWork}}">
             </div>
+
           </div>
 
-          <div class="col-md-4 desktop">
+          <!-- fin de la cabeza a editar por el usuario -->
 
-            <div class="d-flex">
-              <i class="fa fa-book mr-2 text-center mt-1"></i>
-              <p class="text-header">9</p>
-            </div>
-
-
-            <div class="d-flex">
-              <i class="fa fa-heart mr-2 mt-1 text-center"></i>
-              <p class="text-header">10</p>
-            </div>
-          </div>
 
         </div>
       </div>
+
     </div>
 
   </div>
@@ -203,7 +281,8 @@
         <strong [routerLink]="['/blog/general']"> historia </strong> en nuestro <strong
           [routerLink]="['/blog/general']"> blog
         </strong>. Si lo que te apetece es pasar un rato leyendo y disfrutando de
-        las ideas de otros usuarios, puedes leerlos y comentarlos. </p>
+        las ideas de otros usuarios, puedes leerlos y comentarlos.
+      </p>
 
 
       <button class="btn btn-block mt-3" (click)="logOut()">Cerrar Sesión</button>
