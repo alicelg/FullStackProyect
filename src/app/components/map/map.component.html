@@ -34,7 +34,8 @@
                       <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
                     </td>
                     <td>
-                      {{(country.title_leader_1? (country.title_leader_1 + ': ' + country. name_leader_1) : 'No disponible') | titlecase}}
+                      {{(country.title_leader_1? (country.title_leader_1 + ': ' + country. name_leader_1) : 'No
+                      disponible') | titlecase}}
                     </td>
                   </tr>
 
@@ -43,7 +44,8 @@
                       <fa-icon [icon]="['fas', 'user']"></fa-icon>
                     </td>
                     <td>
-                      {{(country.title_leader_2? (country.title_leader_2 + ': ' + country.name_leader_2) : 'No disponible') |titlecase}}
+                      {{(country.title_leader_2? (country.title_leader_2 + ': ' + country.name_leader_2) : 'No
+                      disponible') |titlecase}}
                     </td>
                   </tr>
 
@@ -87,22 +89,34 @@
                 <div class="col-4 px-0">
                   <fa-icon [icon]="['fas', 'user-tie']"></fa-icon>
                 </div>
-                <div class="col-8 mb-2 px-0"> Pedro Sanchez
+                <div class="col-8 mb-2 px-0">
+
+                  {{(country.title_leader_1? (country.title_leader_1 + ': ' + country. name_leader_1) : 'No disponible')
+                  | titlecase}}
+
                 </div>
                 <div class="col-4 px-0">
                   <fa-icon [icon]="['fas', 'landmark']"></fa-icon>
                 </div>
-                <div class="col-8 mb-2 px-0"> Democracia Parlamentaria
+                <div class="col-8 mb-2 px-0">
+
+                  {{(country.goverment? country.goverment : 'No disponible')|titlecase}}
+
                 </div>
                 <div class="col-4 px-0">
                   <fa-icon [icon]="['fas', 'language']"></fa-icon>
                 </div>
-                <div class="col-8 mb-2 px-0"> {{country.languages}}
+                <div class="col-8 mb-2 px-0">
+
+                  {{(country.languages? country.languages : 'No disponible') |titlecase}}
+
                 </div>
                 <div class="col-4 px-0">
                   <fa-icon [icon]="['fas', 'money-bill']"></fa-icon>
                 </div>
-                <div class="col-8 mb-2 px-0"> {{country.currencies}}
+                <div class="col-8 mb-2 px-0">
+
+                  {{(country.currencies? country.currencies : 'No disponible') |titlecase}}
                 </div>
               </div>
             </div>
