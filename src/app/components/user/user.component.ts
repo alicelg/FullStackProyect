@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { User } from 'src/app/models/user.model';
 import { UsersService } from 'src/app/services/users.service';
@@ -20,12 +20,16 @@ export class UserComponent implements OnInit {
   storiesInterval;
   progressBarInterval;
   currentUser: User;
+  action: string;
 
   constructor(
     private modal: NgbModal,
     private userService: UsersService,
     private router: Router,
-  ) { }
+    private activatedRoute: ActivatedRoute
+  ) {
+    this.action = this.activatedRoute.snapshot.url[0].path;
+  }
 
   ngOnInit(): void {
     this.userService.currentUser.subscribe(res => {
@@ -91,6 +95,8 @@ export class UserComponent implements OnInit {
     clearInterval(this.storiesInterval);
     clearInterval(this.progressBarInterval);
   }
+
+
 
 
 }

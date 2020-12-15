@@ -82,6 +82,10 @@ const routes: Routes = [
     canActivate: [InternalGuard]
   },
   {
+    path: 'editar',
+    component: UserComponent,
+  },
+  {
     path: 'nosotros',
     component: CreatorComponent
   },
