@@ -1,3 +1,5 @@
+@import "../../../styles.scss";
+
 img {
     width: 90%;
 }
@@ -12,4 +14,21 @@ img {
 
 .logo-us {
     width: 50%;
+}
+
+.box {
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.box:hover {
+    border: 1px solid $secondaryBgColor;
+}
+
+.space-color {
+    background: $quaternaryBgColor;
+}
+
+.line {
+    width: 100% !important;
 }

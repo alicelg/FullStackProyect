@@ -16,14 +16,17 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
 
   concepts: Concept[];
   searchTerm: string;
+  paginaActual: number;
 
   constructor(
     private conceptsService: ConceptsService,
     private searchService: SearchService,
     private activatedRoute: ActivatedRoute,
     private router: Router
+
   ) {
     this.searchTerm = this.activatedRoute.snapshot.queryParamMap.get('searchTerm');
+    this.paginaActual = 0;
   }
 
   ngOnInit(): void { }
@@ -40,7 +43,7 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
       });
       // si no hay termino preseleccionado lanza la busqueda de todos los conceptos
     } else {
-      this.conceptsService.getAll()
+      this.conceptsService.getConceptsByPage(this.paginaActual)
         .then(response => {
           this.concepts = response;
         })
@@ -57,6 +60,38 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
         });
 
       });
+  }
+
+  /* botones para paginación */
+
+  prevPage() {
+    if (this.paginaActual > 0) {
+      this.paginaActual--;
+    } else {
+      this.paginaActual = 0
+    }
+    this.conceptsService.getConceptsByPage(this.paginaActual)
+      .then(response => {
+        this.concepts = response;
+      })
+      .catch(error => console.log(error));
+
+  }
+
+  /* consultar el limite a la base de datos  */
+
+  nextPage() {
+    if (this.paginaActual < 10) {
+      this.paginaActual++;
+    } else {
+      this.paginaActual = 10
+    }
+    this.conceptsService.getConceptsByPage(this.paginaActual)
+      .then(response => {
+        this.concepts = response;
+      })
+      .catch(error => console.log(error));
+
   }
 
 }
