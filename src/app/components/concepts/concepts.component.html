@@ -72,12 +72,9 @@
                 <!-- Botones para paginación -->
 
                 <div class="col-md-12 text-center" style="max-width: 50rem;">
-                    <button class="btn mr-4">←</button>
-                    <button class="btn">→</button>
+                    <button class="btn mr-4" (click)="prevPage()">←</button>
+                    <button class="btn" (click)="nextPage()">→</button>
                 </div>
-
-
-
 
                 <ng-template #elseTemplate>
                     <div class="card m-2 w-100 text-center" style="max-width: 50rem;">

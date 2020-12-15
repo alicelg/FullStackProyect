@@ -23,6 +23,12 @@ export class ConceptsService {
     return this.httpClient.get<Concept[]>(this.baseUrl).toPromise();
   }
 
+  getConceptsByPage(pPagina): Promise<Concept[]> {
+    return this.httpClient.get<Concept[]>(`${this.baseUrl}/page/${pPagina}`).toPromise();
+
+
+  }
+
 }
 
 
