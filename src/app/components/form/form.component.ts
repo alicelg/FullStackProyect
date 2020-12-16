@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { PostsService } from 'src/app/services/posts.service';
 import { Post } from 'src/app/models/post.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -18,7 +19,8 @@ export class FormComponent implements OnInit {
 
   constructor(
     private modal: NgbModal,
-    private postsService: PostsService
+    private postsService: PostsService,
+    private router: Router
   ) {
     this.formNew = new FormGroup({
       title: new FormControl('', [Validators.required]),
@@ -34,9 +36,6 @@ export class FormComponent implements OnInit {
 
   }
 
-  onSubmit() {
-
-  }
 
   condition(): void {
     if (!this.modal.hasOpenModals()) {
@@ -44,4 +43,23 @@ export class FormComponent implements OnInit {
     }
   }
 
+  createPost(): void {
+    if (this.formNew.valid) {
+      const newPost = { ...this.formNew.value }
+      this.postsService.createPost(newPost).then(res => {
+        this.router.navigate(['/blog/general']);
+      }).catch(res => {
+        alert('Su post no ha podido ser publicado');
+      });
+    } else {
+      // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
+      Object.keys(this.formNew.controls).forEach(field => {
+        const control = this.formNew.get(field);
+        control.markAsTouched({ onlySelf: true });
+      });
+
+    }
+
+  }
 }
+

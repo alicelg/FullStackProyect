@@ -38,8 +38,8 @@ export class PostsService {
     return this.httpClient.get<Post>(`${this.baseUrl}/category/${type}/${category}`).toPromise();
   }
 
-  createPost(): Promise<Post[]> {
-    return this.httpClient.get<Post[]>(`${this.baseUrl}/new`).toPromise();
+  createPost(newPost): Promise<any> {
+    return this.httpClient.post<any>(`${this.baseUrl}/new`, newPost).toPromise();
   }
 
 }

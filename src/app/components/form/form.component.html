@@ -51,13 +51,14 @@
 
         <div class="col-md-12 mt-5">
 
-            <form [formGroup]="formNew" class="mb-5" (ngSubmit)="onSubmit()">
+            <form [formGroup]="formNew" class="mb-5" (ngSubmit)="createPost()">
 
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>{{'FORM-PUBLISH.TITLE'|translate}}</label>
-                            <input type="text" name="title" class="form-control" formControlName="title">
+                            <input type="text" name="title" class="form-control" formControlName="title"
+                                [ngClass]="{ 'not-valid': formNew.get('title').touched && !formNew.get('title').valid}">
                             <span
                                 *ngIf="formNew.get('title').errors.required && formNew.get('title').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
                                 |translate}}</span>
@@ -65,7 +66,8 @@
 
                         <div class="form-group">
                             <label> {{'FORM-PUBLISH.IMAGE'|translate}}</label>
-                            <input type="text" name="main_image" class="form-control" formControlName="main_image">
+                            <input type="text" name="main_image" class="form-control" formControlName="main_image"
+                                [ngClass]="{ 'not-valid': formNew.get('main_image').touched && !formNew.get('main_image').valid}">
                             <span
                                 *ngIf="formNew.get('main_image').errors.required && formNew.get('main_image').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
                                 |translate}}</span>
@@ -76,7 +78,8 @@
                         <div class="form-group">
                             <label> {{'FORM-PUBLISH.CATEGORY'|translate}} </label>
 
-                            <select id="" name="category" class="form-control" formControlName="category">
+                            <select id="" name="category" class="form-control" formControlName="category"
+                                [ngClass]="{ 'not-valid': formNew.get('category').touched && !formNew.get('category').valid}">
                                 <option value="política">{{'FORM-PUBLISH.CATEGORY-POLITIC'|translate}}</option>
                                 <option value="economía">{{'FORM-PUBLISH.CATEGORY-ECONOMIC'|translate}}</option>
                                 <option value="cultura">{{'FORM-PUBLISH.CATEGORY-CULTURE'|translate}}</option>
@@ -90,7 +93,8 @@
 
                         <div class="form-group">
                             <label> {{'FORM-PUBLISH.KEYWORDS'|translate}}</label>
-                            <input type="text" name="keywords" class="form-control" formControlName="keywords">
+                            <input type="text" name="keywords" class="form-control" formControlName="keywords"
+                                [ngClass]="{ 'not-valid': formNew.get('keywords').touched && !formNew.get('keywords').valid}">
                             <span
                                 *ngIf="formNew.get('keywords').errors.required && formNew.get('keywords').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
                                 |translate}}</span>
@@ -103,8 +107,8 @@
 
                         <div class="mt-1">
                             <label> Resumen</label>
-                            <textarea type="text" name="summary" class="form-control"
-                                formControlName="summary"></textarea>
+                            <textarea type="text" name="summary" class="form-control" formControlName="summary"
+                                [ngClass]="{ 'not-valid': formNew.get('summary').touched && !formNew.get('summary').valid}"></textarea>
                             <span
                                 *ngIf="formNew.get('summary').errors.required && formNew.get('summary').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
                                 |translate}}</span>
@@ -112,7 +116,8 @@
 
                         <div class="mt-3">
                             <label> {{'FORM-PUBLISH.TEXT'|translate}}</label>
-                            <quill-editor [styles]="{height: '200px'}" formControlName="text">
+                            <quill-editor [styles]="{height: '200px'}" formControlName="text"
+                                [ngClass]="{ 'not-valid': formNew.get('text').touched && !formNew.get('text').valid}">
                             </quill-editor>
                             <span
                                 *ngIf="formNew.get('text').errors.required && formNew.get('text').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
