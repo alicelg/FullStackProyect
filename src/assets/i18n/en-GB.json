@@ -519,7 +519,11 @@
         "TEMS-CONDITIONS-NINE": "double publication or publication in another language.",
         "CONTINUE": "Continue",
         "PUBLISH-POST": "Publish post",
-        "REQUIRED-FIELD": "The field is required for the publication of your post."
+        "REQUIRED-FIELD": "The field is required for the publication of your post.",
+        "SORRY": "We're sorry",
+        "SORRY-TEXT": "No one has published a post about this topic yet, go ahead and be him first.",
+        "CREATE-POST": "Create a post",
+        "ALL": "All"
     },
     "COUNTRY-DETAIL": {
         "FORMATION": "Government formation",

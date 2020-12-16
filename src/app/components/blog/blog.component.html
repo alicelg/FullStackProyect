@@ -36,18 +36,23 @@
       <div class="row">
 
         <div class="col-md-3 text-center mb-4">
-          <h4>Categorías </h4>
+          <h4>{{'FORM-PUBLISH.CATEGORY'|translate}} </h4>
           <hr class="mb-5 line-hr">
 
-          <button value="todos" class="d-block btn mb-3 w-100 filter" (click)="filterPosts($event)"> Todos
+          <button value="todos" class="d-block btn mb-3 w-100 filter" (click)="filterPosts($event)">
+            {{'FORM-PUBLISH.CATEGORY-ALL'|translate}}
           </button>
-          <button value="cultura" class="d-block btn mb-3 w-100 filter" (click)="filterPosts($event)"> Cultura
+          <button value="cultura" class="d-block btn mb-3 w-100 filter" (click)="filterPosts($event)">
+            {{'FORM-PUBLISH.CATEGORY-CULTURA'|translate}}
           </button>
-          <button value="politica" class="d-block btn mb-3 w-100 filter" (click)="filterPosts($event)"> Política
+          <button value="politica" class="d-block btn mb-3 w-100 filter" (click)="filterPosts($event)">
+            {{'FORM-PUBLISH.CATEGORY-POLITIC'|translate}}
           </button>
-          <button value="economia" class="d-block btn mb-3 w-100 filter" (click)="filterPosts($event)"> Economía
+          <button value="economia" class="d-block btn mb-3 w-100 filter" (click)="filterPosts($event)">
+            {{'FORM-PUBLISH.CATEGORY-ECONOMIC'|translate}}
           </button>
-          <button value="historia" class="d-block btn mb-3 w-100 filter" (click)="filterPosts($event)"> Historia
+          <button value="historia" class="d-block btn mb-3 w-100 filter" (click)="filterPosts($event)">
+            {{'FORM-PUBLISH.CATEGORY-HISTORY'|translate}}
           </button>
 
 
@@ -79,24 +84,25 @@
               </div>
             </div>
 
-            <div class="col-md-4 mb-4" *ngIf="!generalPosts">
-              <div class="card card-inverse">
+            <div class="col-md-5 mb-4" *ngIf="!generalPosts">
+              <div class="card card-inverse border">
                 <img class="card-img-top" src="../../../assets/images/logo2.png">
                 <div class="meta text-right mr-4">
-                  <p class="mb-0">Alice</p>
+                  <p class="mb-0">WatchYourPolitics</p>
                 </div>
                 <div class="card-block">
                   <figure class="profile text-right">
                     <img src="../../../assets/images/hablando.png" class="profile-avatar" alt="">
                   </figure>
-                  <h4 class="card-title mt-1 mb-0">Lo sentimos
+                  <h4 class="card-title mt-1 mb-0">{{'FORM-PUBLISH.SORRY' |translate}}
                   </h4>
                   <div class="card-text">
-                    <p>Aún nadie ha publicado un post acerca de ese tema, anímate y se el primero</p>
+                    <p>{{'FORM-PUBLISH.SORRY-TEXT' |translate}}</p>
                   </div>
                 </div>
                 <div class="card-footer">
-                  <button class="btn float-right btn-sm" [routerLink]="['/nuevo/post']">Crear nuevo post</button>
+                  <button class="btn float-right btn-sm" [routerLink]="['/nuevo/post']">{{'FORM-PUBLISH.CREATE-POST'
+                    |translate}}</button>
                 </div>
               </div>
             </div>

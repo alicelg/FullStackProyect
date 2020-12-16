@@ -519,7 +519,11 @@
         "TEMS-CONDITIONS-NINE": "la doble publicación o su publicación con otra lengua.",
         "CONTINUE": "Continuar",
         "PUBLISH-POST": "Publicar post",
-        "REQUIRED-FIELD": "El campo es requerido para la publicación de su post."
+        "REQUIRED-FIELD": "El campo es requerido para la publicación de su post.",
+        "SORRY": "Lo sentimos",
+        "SORRY-TEXT": "Aún nadie ha publicado un post acerca de este tema, anímate y se él primero.",
+        "CREATE-POST": "Crear un post",
+        "ALL": "Todos"
     },
     "COUNTRY-DETAIL": {
         "FORMATION": "Formación de gobierno",
