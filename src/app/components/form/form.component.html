@@ -51,19 +51,24 @@
 
         <div class="col-md-12 mt-5">
 
-            <form #formNew="ngForm" class="mb-5">
-                <!-- (ngSubmit)="onSubmit(formNew.value)" -->
+            <form [formGroup]="formNew" class="mb-5" (ngSubmit)="onSubmit()">
 
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>{{'FORM-PUBLISH.TITLE'|translate}}</label>
-                            <input type="text" name="title" class="form-control" ngModel>
+                            <input type="text" name="title" class="form-control" formControlName="title">
+                            <span
+                                *ngIf="formNew.get('title').errors.required && formNew.get('title').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                |translate}}</span>
                         </div>
 
                         <div class="form-group">
                             <label> {{'FORM-PUBLISH.IMAGE'|translate}}</label>
-                            <input type="text" name="main_image" class="form-control" ngModel>
+                            <input type="text" name="main_image" class="form-control" formControlName="main_image">
+                            <span
+                                *ngIf="formNew.get('main_image').errors.required && formNew.get('main_image').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                |translate}}</span>
                         </div>
                     </div>
 
@@ -71,18 +76,24 @@
                         <div class="form-group">
                             <label> {{'FORM-PUBLISH.CATEGORY'|translate}} </label>
 
-                            <select id="" name="category" class="form-control" ngModel>
-                                <option value="política">{{'FORM-PUBLISH.POLITIC'|translate}}</option>
-                                <option value="economía">{{'FORM-PUBLISH.ECONOMIC'|translate}}</option>
-                                <option value="cultura">{{'FORM-PUBLISH.CULTURE'|translate}}</option>
-                                <option value="historia">{{'FORM-PUBLISH.HISTORY'|translate}}</option>
+                            <select id="" name="category" class="form-control" formControlName="category">
+                                <option value="política">{{'FORM-PUBLISH.CATEGORY-POLITIC'|translate}}</option>
+                                <option value="economía">{{'FORM-PUBLISH.CATEGORY-ECONOMIC'|translate}}</option>
+                                <option value="cultura">{{'FORM-PUBLISH.CATEGORY-CULTURE'|translate}}</option>
+                                <option value="historia">{{'FORM-PUBLISH.CATEGORY-HISTORY'|translate}}</option>
                             </select>
+                            <span
+                                *ngIf="formNew.get('category').errors.required && formNew.get('category').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                |translate}}</span>
 
                         </div>
 
                         <div class="form-group">
                             <label> {{'FORM-PUBLISH.KEYWORDS'|translate}}</label>
-                            <input type="text" name="keywords" class="form-control" ngModel>
+                            <input type="text" name="keywords" class="form-control" formControlName="keywords">
+                            <span
+                                *ngIf="formNew.get('keywords').errors.required && formNew.get('keywords').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                |translate}}</span>
                         </div>
                     </div>
                 </div>
@@ -90,13 +101,27 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <div class="mt-4">
+                        <div class="mt-1">
+                            <label> Resumen</label>
+                            <textarea type="text" name="summary" class="form-control"
+                                formControlName="summary"></textarea>
+                            <span
+                                *ngIf="formNew.get('summary').errors.required && formNew.get('summary').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                |translate}}</span>
+                        </div>
+
+                        <div class="mt-3">
                             <label> {{'FORM-PUBLISH.TEXT'|translate}}</label>
-                            <quill-editor [styles]="{height: '200px'}"></quill-editor>
+                            <quill-editor [styles]="{height: '200px'}" formControlName="text">
+                            </quill-editor>
+                            <span
+                                *ngIf="formNew.get('text').errors.required && formNew.get('text').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                |translate}}</span>
                         </div>
 
                         <div class="form-group mt-3">
-                            <input type="checkbox" class="mr-2">
+                            <input type="checkbox" class="mr-2" formControlName="check">
+
 
 
                             <label> {{'FORM-PUBLISH.READ'|translate}} <strong (click)="condition()" class="condition">
@@ -142,14 +167,16 @@
     <div class="modal-body px-4 text-justify">
         <p> {{'FORM-PUBLISH.TERMS-CONDITIONS-ONE'|translate}}
             <strong>{{'FORM-PUBLISH.TERMS-CONDITIONS-TWO'|translate}} </strong>
-            {{'FORM-PUBLISH.TERMS-CONDITIONS-THREE'|translate}} </p>
+            {{'FORM-PUBLISH.TERMS-CONDITIONS-THREE'|translate}}
+        </p>
         <p> {{'FORM-PUBLISH.TERMS-CONDITIONS-FOUR'|translate}}<strong>
                 {{'FORM-PUBLISH.TERMS-CONDITIONS-FIVE'|translate}}</strong>
             {{'FORM-PUBLISH.TERMS-CONDITIONS-SIX'|translate}}
         </p>
         <p> {{'FORM-PUBLISH.TERMS-CONDITIONS-SEVEN'|translate}}
             <strong>{{'FORM-PUBLISH.TERMS-CONDITIONS-EIGHT'|translate}}</strong>
-            {{'FORM-PUBLISH.TEMS-CONDITIONS-NINE'|translate}}</p>
+            {{'FORM-PUBLISH.TEMS-CONDITIONS-NINE'|translate}}
+        </p>
 
     </div>
 

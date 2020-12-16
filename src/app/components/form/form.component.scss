@@ -24,3 +24,13 @@ strong {
     padding-top: 12px;
     border: 1.5px solid $tertiaryBgColor !important;
 }
+
+input:hover {
+    border: 1px solid $tertiaryBgColor;
+}
+
+input,
+textarea {
+    outline-color: $tertiaryBgColor;
+    box-shadow: none !important;
+}

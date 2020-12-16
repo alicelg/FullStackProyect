@@ -518,7 +518,8 @@
         "TERMS-CONDITIONS-EIGHT": "restricting",
         "TEMS-CONDITIONS-NINE": "double publication or publication in another language.",
         "CONTINUE": "Continue",
-        "PUBLISH-POST": "Publish post"
+        "PUBLISH-POST": "Publish post",
+        "REQUIRED-FIELD": "The field is required for the publication of your post."
     },
     "COUNTRY-DETAIL": {
         "FORMATION": "Government formation",
