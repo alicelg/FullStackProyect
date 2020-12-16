@@ -25,21 +25,19 @@ export class ConceptsService {
 
   getConceptsByPage(pPagina): Promise<Concept[]> {
     return this.httpClient.get<Concept[]>(`${this.baseUrl}/page/${pPagina}`).toPromise();
-
-
   }
 
   insertFavorite(pId): Promise<any> {
-    const httpOptions = {
-      "headers": new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
-    }
+    /*   const httpOptions = {
+        "headers": new HttpHeaders({
+          'Content-Type': 'application/json'
+        })
+      } */
     console.log(pId);
-    const favorito = { "idconcepto": pId }
+    const favoriteConcept = { "conceptId": pId }
 
 
-    return this.httpClient.post<any>(`${this.baseUrl}/favorite`, favorito, httpOptions).toPromise();
+    return this.httpClient.post<any>(`${this.baseUrl}/favorite`, favoriteConcept).toPromise();
   }
 
 }

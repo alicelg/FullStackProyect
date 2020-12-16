@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateService } from '@ngx-translate/core';
 import { User } from 'src/app/models/user.model';
 import { UsersService } from 'src/app/services/users.service';
 // import { setInterval } from 'timers';
@@ -23,13 +24,16 @@ export class UserComponent implements OnInit {
   currentUser: User;
   action: string;
 
+  favouriteConcepts: any[];
+
   editForm: FormGroup;
 
   constructor(
     private modal: NgbModal,
     private userService: UsersService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    public translateService: TranslateService
   ) {
     this.action = this.activatedRoute.snapshot.url[0].path;
 
@@ -50,6 +54,14 @@ export class UserComponent implements OnInit {
     this.userService.currentUser.subscribe(res => {
       this.currentUser = res;
     });
+
+    this.userService.getConcepts().then(res => {
+      console.log(res);
+
+      this.favouriteConcepts = res.concepts;
+
+
+    })
   }
 
   showStories(storyStep): void {

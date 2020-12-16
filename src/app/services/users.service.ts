@@ -4,8 +4,6 @@ import { BehaviorSubject } from 'rxjs';
 import { User } from '../models/user.model';
 
 
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -38,6 +36,10 @@ export class UsersService {
 
   update(formValue): Promise<any> {
     return this.httpClient.post<any>(`${this.baseUrl}/update`, formValue).toPromise();
+  }
+
+  getConcepts(): Promise<any> {
+    return this.httpClient.get<any>(`${this.baseUrl}/concepts`).toPromise();
   }
 
 }

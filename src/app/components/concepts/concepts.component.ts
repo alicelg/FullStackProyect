@@ -52,13 +52,22 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
 
     // escucha al input y le pone unos modificadores para evitar que se lance constantemente (debounce) y para que solo se lance con 2 caracteres
     fromEvent(this.conceptsSearchInput.nativeElement, 'keyup').pipe(
-      map((event: any) => event.target.value), filter(res => res.length > 2), debounceTime(500)).subscribe((text) => {
-        this.searchService.search(text, false, true, false).then((res) => {
-          this.concepts = res.concepts;
-        }, (err) => {
-          console.log('error', err);
-        });
-
+      map((event: any) => event.target.value),
+      /* filter(res => res.length > 2), */
+      debounceTime(500)).subscribe((text) => {
+        if (text === '') {
+          this.conceptsService.getConceptsByPage(0)
+            .then(response => {
+              this.concepts = response;
+            })
+            .catch(error => console.log(error));
+        } else {
+          this.searchService.search(text, false, true, false).then((res) => {
+            this.concepts = res.concepts;
+          }, (err) => {
+            console.log('error', err);
+          });
+        }
       });
   }
 

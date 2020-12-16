@@ -207,37 +207,12 @@
 
       <div class="row text-center pb-3">
 
-        <div class="col-md-3 mt-2">
-          <a href="">Política</a>
+        <div class="col-md-3 mt-2" *ngFor="let concept of favouriteConcepts" [routerLink]="['/conceptos']"
+          [queryParams]="{searchTerm: translateService.instant(concept.title)}">
+          <p>{{concept.title |translate}}</p>
         </div>
 
-        <div class="col-md-3 mt-2">
-          <a href="">Política</a>
-        </div>
 
-        <div class="col-md-3 mt-2">
-          <a href="">Política</a>
-        </div>
-
-        <div class="col-md-3 mt-2">
-          <a href="">Política</a>
-        </div>
-
-        <div class="col-md-3 mt-2">
-          <a href="">Política</a>
-        </div>
-
-        <div class="col-md-3 mt-2">
-          <a href="">Política</a>
-        </div>
-
-        <div class="col-md-3 mt-2">
-          <a href="">Política</a>
-        </div>
-
-        <div class="col-md-3 mt-2">
-          <a href="">Política</a>
-        </div>
       </div>
 
     </div>
