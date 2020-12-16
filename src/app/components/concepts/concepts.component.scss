@@ -6,7 +6,17 @@ li {
 
 .size-icon {
     font-size: 25px;
+}
+
+.button-heart {
     cursor: pointer;
+    background-color: transparent !important;
+    border: 1px solid $tertiaryBgColor !important;
+}
+
+.button-heart:hover {
+    background-color: $tertiaryBgColor !important;
+    border: 1px solid $tertiaryBgColor;
 }
 
 .search {
