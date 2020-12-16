@@ -6,4 +6,13 @@
 
 .borde:hover {
     background-color: $tertiaryBgColor;
+    color: $quaternaryTextColor;
+}
+
+.line {
+    width: 100% !important;
+}
+
+.space-color {
+    background: $quaternaryBgColor;
 }
