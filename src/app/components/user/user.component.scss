@@ -26,7 +26,7 @@
 
 h3,
 .text-header {
-  color: white;
+  color: $quaternaryTextColor;
 }
 
 .story {
@@ -65,7 +65,7 @@ h4 {
 .modal-header,
 .modal-body,
 .modal-footer {
-  background-color: black;
+  background-color: $quinaryBgColor;
 }
 
 .btn {
@@ -143,4 +143,21 @@ strong {
   cursor: pointer;
   outline: none !important;
   box-shadow: none !important;
+}
+
+/* conceptos */
+
+.concept-favorite {
+  cursor: pointer;
+  font-weight: bolder;
+  border: 1px solid transparent;
+}
+
+.concept-favorite:hover {
+  border: 1px solid $tertiaryBgColor;
+}
+
+.space-color {
+  background: $quaternaryBgColor;
+  padding-bottom: 30px;
 }
