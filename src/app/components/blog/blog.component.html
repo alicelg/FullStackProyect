@@ -43,7 +43,7 @@
             {{'FORM-PUBLISH.ALL'|translate}}
           </button>
           <button value="cultura" class="d-block btn mb-3 w-100 filter" (click)="filterPosts($event)">
-            {{'FORM-PUBLISH.CATEGORY-CULTURe'|translate}}
+            {{'FORM-PUBLISH.CATEGORY-CULTURE'|translate}}
           </button>
           <button value="politica" class="d-block btn mb-3 w-100 filter" (click)="filterPosts($event)">
             {{'FORM-PUBLISH.CATEGORY-POLITIC'|translate}}
@@ -124,30 +124,25 @@
 
         <div class="col-md-2 text-center d-inline">
           <button value="política" class="d-block btn mb-3 w-100 d-inline filter" (click)="filterPosts($event)">
-            Política
+            {{'FORM-PUBLISH.CATEGORY-POLITIC'|translate}}
           </button>
         </div>
 
         <div class="col-md-2 text-center d-inline">
-          <button value="cultura" class="d-block btn mb-3 w-100 d-inline filter" (click)="filterPosts($event)"> Cultura
+          <button value="cultura" class="d-block btn mb-3 w-100 d-inline filter" (click)="filterPosts($event)">
+            {{'FORM-PUBLISH.CATEGORY-CULTURE'|translate}}
           </button>
         </div>
 
         <div class="col-md-2 text-center d-inline">
-          <button value="historia" class="d-block btn mb-3 w-100 d-inline filter" (click)="filterPosts($event)"> Hechos
-            historicos
-          </button>
-        </div>
-
-        <div class="col-md-2 text-center d-inline">
-          <button value="importante" class="d-block btn mb-3 w-100 d-inline filter" (click)="filterPosts($event)">
-            Debes saberlo
+          <button value="historia" class="d-block btn mb-3 w-100 d-inline filter" (click)="filterPosts($event)">
+            {{'FORM-PUBLISH.CATEGORY-HISTORY'|translate}}
           </button>
         </div>
 
         <div class="col-md-2 text-center d-inline">
           <button value="todos" class="d-block btn mb-3 w-100 d-inline filter" (click)="filterPosts($event)">
-            Todos
+            {{'FORM-PUBLISH.ALL'|translate}}
           </button>
         </div>
 
