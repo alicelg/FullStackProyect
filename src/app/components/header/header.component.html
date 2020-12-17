@@ -43,8 +43,8 @@
                 </div>
 
                 <div class="nav-item">
-                    <button class="nav-link btn mx-auto"
-                        routerLink="conceptos">{{'HEADER.CONCEPTS' | translate}}</button>
+                    <button class="nav-link btn mx-auto" routerLink="conceptos">{{'HEADER.CONCEPTS' |
+                        translate}}</button>
                 </div>
 
                 <div class="nav-item dropdown">
@@ -52,10 +52,10 @@
                         {{'HEADER.BLOG' | translate}}
                     </button>
                     <div class="dropdown-menu text-center text-md-left">
-                        <button class="btn dropdown-item"
-                            routerLink="blog/general">{{'HEADER.GENERAL' | translate}}</button>
-                        <button class="btn dropdown-item"
-                            routerLink="blog/hablando-de-politica">{{'HEADER.HABLANDO' | translate}}</button>
+                        <button class="btn dropdown-item" routerLink="blog/general">{{'HEADER.GENERAL' |
+                            translate}}</button>
+                        <button class="btn dropdown-item" routerLink="blog/hablando-de-politica">{{'HEADER.HABLANDO' |
+                            translate}}</button>
                         <a class="btn dropdown-item bold" href="https://estotambienespolitica.com/"
                             target="_blank">{{'HEADER.ESTOTAMBIEN' | translate}}</a>
 
@@ -71,10 +71,10 @@
                         {{'HEADER.TEST' | translate}}
                     </button>
                     <div class="dropdown-menu text-center text-md-left">
-                        <button class="btn dropdown-item"
-                            routerLink="test/1">{{'HEADER.WORLD-TEST' | translate}}</button>
-                        <button class="btn dropdown-item"
-                            routerLink="test/2">{{'HEADER.POLITICAL-TEST' | translate}}</button>
+                        <button class="btn dropdown-item" routerLink="test/1">{{'HEADER.WORLD-TEST' |
+                            translate}}</button>
+                        <button class="btn dropdown-item" routerLink="test/2">{{'HEADER.POLITICAL-TEST' |
+                            translate}}</button>
 
                     </div>
                 </div>
@@ -86,8 +86,19 @@
                     <button class="btn nav-link" routerLink="signup">{{'HEADER.SIGNUP' | translate}}</button>
                 </div>
                 <div class="nav-item ml-md-auto" *ngIf="userLogged">
-                    <button class="btn nav-link mx-auto"
-                        [routerLink]="['/usuario', userLogged.id]">{{userLogged.name}}</button>
+                    <!-- button class="btn nav-link mx-auto" [routerLink]="['/usuario', userLogged.id]">
+                        {{userLogged.nickname}}</button> -->
+
+                    <div ngbDropdown class="btn nav-link mx-auto"
+                        (mouseenter)="$event.stopPropagation(); myDrop.open();"
+                        (mouseleave)="$event.stopPropagation(); myDrop.close();" #myDrop="ngbDropdown">
+                        <button class="btn btn-outline-primary" id="dropdownBasic"
+                            ngbDropdownToggle>{{userLogged.nickname}}</button>
+                        <div ngbDropdownMenu aria-labelledby="dropdownBasic">
+                            <button ngbDropdownItem (click)="userService.logOut()">Me las piro Vampiro</button>
+                        </div>
+                    </div>
+
                 </div>
                 <!-- selector de idiomas desktop -->
                 <div class="nav-item dropdown desktop">
