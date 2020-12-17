@@ -53,7 +53,16 @@
         "PASSWORD": "Contraseña",
         "PASSWORDFORGOTTEN": "¿Has olvidado tu contraseña?",
         "SIGNUP": "¿No tienes cuenta? Regístrate",
-        "LOGIN": "Iniciar Sesión"
+        "LOGIN": "Iniciar Sesión",
+        "USER-NAME": "Nombre de Usuario",
+        "EMAIL": "Correo",
+        "PASSWORD-MESSAGE": "La contraseña debe contener al menos 8 caracteres, una letra mayúscula y una minúscula.",
+        "PASSWORD-REPEAT": "Confirma la contraseña",
+        "PASSWORD-REPEAT-MESSAGE": "Las contraseñas no coinciden",
+        "CREATE-ACCOUNT": "Crear cuenta",
+        "CANCEL": "Cancelar",
+        "RESET-PASSWORD": "Resetear contraseña",
+        "USER-MESSAGE": "Que pena con usted pero mala vaina mano. La cagó, aún no enviamos emails."
     },
     "FORM": {
         "VALIDATION": {
