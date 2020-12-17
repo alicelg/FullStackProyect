@@ -24,10 +24,10 @@
         "PURPOSE-A": "WatchYourPolitics es un espacio destinado a la investigación y consulta en el ambito político. Podrás encontrar los datos del cualquier país que quieras elegir. Asimismo, consultar conceptos políticos y elegirlos como favoritos en tu zona de usuario. ",
         "PURPOSE-B": "Puedes compartir tus ideas con nuestros usuarios, publicando en el Blog General, en cualquiera de nuestras categorías. También puedes leer los posts de Hablando de Política y Esto también es política.",
         "MAP-DISCOVER": "Descubre la política mundial",
-        "MAP-TEXT": " ",
+        "MAP-TEXT": "Alguna vez te has preguntado ¿cuál es el Estado más pequeño o el más grande? Ahora lo puedes buscar en nuestro mapa interactivo, a tan solo un click de descubrir la situación política, el idioma oficial o su moneda, entre muchos más datos del país que selecciones. ",
         "TEST-KNOWLEDGE": "Pon a prueba tus conocimientos",
         "TEST-WORLD-TEXT": "Diviertete probando cuantas banderas del mundo conoces o puedes adivinar. Entre más veces lo hagas mejor ranking y más países descubres.",
-        "TEST-POLITICAL-TEXT": "Un test para medir tus decisiones. Responde y dependiendo de tus respuestas podras descubrir la tendencia política más afin a tu perfil. ",
+        "TEST-POLITICAL-TEXT": "Un test para medir tus decisiones. Responde y dependiendo de tus respuestas podrás descubrir tu tendencia política o ideológica más afin a tu perfil.",
         "RANKING": "Ranking",
         "RANKING-TEXT": "Todos nuestros usuarios compiten por el primer puesto de nuestro Test Mundo, te atreves a ser parte de nuestro ranking. Participa, aprende y diviertete.",
         "ABOUT-US": "¿Qué dicen de nosotros?",
@@ -45,7 +45,8 @@
         "HABLANDO-POLITICA-TEXT": "Los Estados se encuentran en constante cambio y yo te lo cuento en tan solo cinco puntos claves. Si quieres saber mucho más continúa con nuestra lectura rápida.",
         "ESTO-TAMBIEN": "Esto también es política",
         "ESTO-TAMBIEN-TEXT": "Lee y escucha. El podcast que habla sobre política en tu mismo idioma. Analizando los asuntos de más actualidad desde la objetividad e intentando comprender el por qué de las cosas, alejándose de los tecnicismos.",
-        "READ-MORE": "Leer más"
+        "READ-MORE": "Leer más",
+        "NO-RESULT": "No se han encontrado resultados para tu búsqueda."
     },
     "LOGIN": {
         "USERNAME": "Usuario",

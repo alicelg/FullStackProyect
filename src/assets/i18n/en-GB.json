@@ -24,12 +24,12 @@
         "PURPOSE-A": "WatchYourPolitics is a space for research and consultation in the political arena. You can find the data of any country you want to choose. Also, consult political concepts and choose them as favorites in your user area.",
         "PURPOSE-B": "You can share your ideas with our users, publishing in the General Blog, in any of our categories. You can also read the posts of Hablando de Política and Esto también es política.",
         "MAP-DISCOVER": "Discover world politics",
-        "MAP-TEXT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
+        "MAP-TEXT": "Have you ever wondered which is the smallest or the largest state? Now you can search for it on our interactive map, just one click away from discovering the political situation, the official language or its currency, among many more data of the country that you select.",
         "TEST-KNOWLEDGE": "Test your knowledge",
         "TEST-WORLD-TEXT": "Have fun trying how many flags of the world you know or can guess. The more times you do it, the better ranking and the more countries you discover.",
         "TEST-POLITICAL-TEXT": "A test to measure your decisions. Answer and depending on your answers you will be able to discover the political tendency most akin to your profile. ",
         "RANKING": "Ranking",
-        "RANKING-TEXT": "All our users compete for the first place in our World Test, you dare to be part of our ranking. Participate, learn and have fun.",
+        "RANKING-TEXT": "All our users compete for the first place in our World Test, you dare to be part of our ranking. Participate, learn and have fun with your friends.",
         "ABOUT-US": "What do they say about us?",
         "PERSON1": "Carlos Hernandez",
         "TEXT-PERSON1": "Practice finding concepts. The tests are interesting. It is a different and new project. What I like the most are blogs, because they are an opportunity to publish without so many filters.",
@@ -45,7 +45,8 @@
         "HABLANDO-POLITICA-TEXT": "States are constantly changing and I'll talk about it in just five key points. If you want to know much more, continue with our quick reading.",
         "ESTO-TAMBIEN": "Esto también es política",
         "ESTO-TAMBIEN-TEXT": "Read and listen. The podcast that talks about politics in your own language (spanish). Analyzing the most current issues from objectivity and trying to understand the why of things, moving away from technicalities.",
-        "READ-MORE": "Read more"
+        "READ-MORE": "Read more",
+        "NO-RESULT": "No results found for your search."
     },
     "LOGIN": {
         "USERNAME": "Username",
