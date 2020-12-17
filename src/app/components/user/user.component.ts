@@ -25,6 +25,7 @@ export class UserComponent implements OnInit {
   action: string;
 
   favouriteConcepts: any[];
+  favouritePost: any[];
 
   editForm: FormGroup;
 
@@ -57,10 +58,12 @@ export class UserComponent implements OnInit {
 
     this.userService.getConcepts().then(res => {
       console.log(res);
-
       this.favouriteConcepts = res.concepts;
+    })
 
-
+    this.userService.getPost().then(res => {
+      console.log(res);
+      this.favouritePost = res.posts;
     })
   }
 

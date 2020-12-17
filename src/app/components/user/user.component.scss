@@ -147,13 +147,13 @@ strong {
 
 /* conceptos */
 
-.concept-favorite {
+.favorite {
   cursor: pointer;
   font-weight: bolder;
   border: 1px solid transparent;
 }
 
-.concept-favorite:hover {
+.favorite:hover {
   border: 1px solid $tertiaryBgColor;
 }
 

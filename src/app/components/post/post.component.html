@@ -1,115 +1,117 @@
-<div class="container-fluid container-color">
+<ng-container *ngIf="post">
+    <div class="container-fluid container-color">
 
-    <div class="container pb-5">
+        <div class="container pb-5">
 
-        <!-- POST -->
+            <!-- POST -->
 
-        <div class="row pt-3 mb-2">
-            <div class="col-md-12 text-right">
-                <p>Categoría: {{post.category}} </p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>{{post.title}}</h3>
-                <hr>
-            </div>
-        </div>
-
-
-
-    </div>
-
-</div>
-
-<div class="container mb-5">
-
-    <!-- palabras claves /nombre del escritor -->
-    <div class="row mt-4">
-        <div class="col-md-9">
-            <p>Palabras claves: {{post.keywords}}</p>
-        </div>
-
-        <div class="col-md-3 d-flex">
-            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-fill mr-2" fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd"
-                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-            </svg>
-            <h5 class="text-right">Autor del texto</h5>
-        </div>
-    </div>
-
-    <div class="row mt-3">
-        <div class="col-md-12" [innerHTML]="post.text">
-        </div>
-    </div>
-
-</div>
-
-
-
-<!-- SECCIÓN DE LIKE  -->
-
-<!-- SECCION COMENTARIOS -->
-
-<div class="container-fluid space-color">
-
-
-    <div class="container">
-
-        <div class="row mt-4">
-            <div class="col-md-12 text-right">
-
-                <button class="btn borde mr-2"> ♥️ </button>
-                <button class="btn borde"> 👍</button>
-
-            </div>
-        </div>
-
-
-        <div class="row mt-4">
-            <div class="col-md-12">
-                <h4>Comentarios</h4>
-
-            </div>
-        </div>
-
-        <!-- cards de comentarios -->
-
-        <div class="row mb-2">
-            <div class="col-md-8 d-flex borde pt-3 pb-1 mt-3 rounded">
-
-                <div>
-                    <img src="../../../assets/images/hablando.png" alt="" width="100px">
-                </div>
-
-                <div class="ml-4">
-                    <h6>Antonio Vallejo </h6>
-                    <p>La política de España se ha visto transformada por razones distantes a las que se plantean en
-                        este
-                        post. Más sin embargo estoy deacuerdo en que los movimientos sociales han sido de gran apoyo
-                        para
-                        esta transformación.</p>
+            <div class="row pt-3 mb-2">
+                <div class="col-md-12 text-right">
+                    <p>Categoría: {{post.category}} </p>
                 </div>
             </div>
-        </div>
 
-        <form class="pt-5 pb-5">
-
-            <div class="col-md-8">
-                <h5>Escribe un comentario</h5>
-                <label> Comentario </label>
-                <textarea name="comments" id="" cols="30" rows="3" class="form-control"></textarea>
-
-                <input type="submit" value="Comentar" class="btn borde mt-2">
-
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3>{{post.title}}</h3>
+                    <hr>
+                </div>
             </div>
 
 
-        </form>
+
+        </div>
+
+    </div>
+
+    <div class="container mb-5">
+
+        <!-- palabras claves /nombre del escritor -->
+        <div class="row mt-4">
+            <div class="col-md-9">
+                <p>Palabras claves: {{post.keywords}}</p>
+            </div>
+
+            <div class="col-md-3 d-flex">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-fill mr-2" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+                <h5 class="text-right">Autor del texto</h5>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-12" [innerHTML]="post.text">
+            </div>
+        </div>
+
     </div>
 
 
-</div>
+
+    <!-- SECCIÓN DE LIKE  -->
+
+    <!-- SECCION COMENTARIOS -->
+
+    <div class="container-fluid space-color">
+
+
+        <div class="container">
+
+            <div class="row mt-4">
+                <div class="col-md-12 text-right">
+
+                    <fa-icon class="size-icon" [icon]="['far', 'heart']" (click)="makeFavoritePost(post.id)"></fa-icon>
+
+                </div>
+            </div>
+
+
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h4>Comentarios</h4>
+
+                </div>
+            </div>
+
+            <!-- cards de comentarios -->
+
+            <div class="row mb-2">
+                <div class="col-md-8 d-flex borde pt-3 pb-1 mt-3 rounded">
+
+                    <div>
+                        <img src="../../../assets/images/hablando.png" alt="" width="100px">
+                    </div>
+
+                    <div class="ml-4">
+                        <h6>Antonio Vallejo </h6>
+                        <p>La política de España se ha visto transformada por razones distantes a las que se plantean en
+                            este
+                            post. Más sin embargo estoy deacuerdo en que los movimientos sociales han sido de gran apoyo
+                            para
+                            esta transformación.</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="pt-5 pb-5">
+
+                <div class="col-md-8">
+                    <h5>Escribe un comentario</h5>
+                    <label> Comentario </label>
+                    <textarea name="comments" id="" cols="30" rows="3" class="form-control"></textarea>
+
+                    <input type="submit" value="Comentar" class="btn borde mt-2">
+
+                </div>
+
+
+            </form>
+        </div>
+
+
+    </div>
+
+</ng-container>
