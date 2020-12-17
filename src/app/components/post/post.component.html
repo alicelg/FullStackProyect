@@ -6,9 +6,18 @@
             <!-- POST -->
 
             <div class="row pt-3 mb-2">
-                <div class="col-md-12 text-right">
-                    <p>Categoría: {{post.category}} </p>
+
+                <div class="col-md-3 col-6">
+                    <p class="borde text-center pb-2 rounded pt-2">{{post.category}} </p>
                 </div>
+
+                <div class="col-md-8 col-6 text-right mr-md-5">
+
+                    <fa-icon class="size-icon" [icon]="['far', 'heart']" (click)="makeFavoritePost(post.id)"></fa-icon>
+
+                </div>
+
+
             </div>
 
             <div class="row">
@@ -27,7 +36,7 @@
     <div class="container mb-5">
 
         <!-- palabras claves /nombre del escritor -->
-        <div class="row mt-4">
+        <div class="row mt-5">
             <div class="col-md-9">
                 <p>Palabras claves: {{post.keywords}}</p>
             </div>
@@ -58,18 +67,9 @@
     <div class="container-fluid space-color">
 
 
-        <div class="container">
+        <div class="container pt-5">
 
-            <div class="row mt-4">
-                <div class="col-md-12 text-right">
-
-                    <fa-icon class="size-icon" [icon]="['far', 'heart']" (click)="makeFavoritePost(post.id)"></fa-icon>
-
-                </div>
-            </div>
-
-
-            <div class="row mt-4">
+            <div class="row">
                 <div class="col-md-12">
                     <h4>Comentarios</h4>
 
@@ -79,7 +79,7 @@
             <!-- cards de comentarios -->
 
             <div class="row mb-2">
-                <div class="col-md-8 d-flex borde pt-3 pb-1 mt-3 rounded">
+                <div class="col-md-8 d-flex pt-3 pb-1 mt-3 rounded border-bottom border-top">
 
                     <div>
                         <img src="../../../assets/images/hablando.png" alt="" width="100px">
@@ -92,6 +92,7 @@
                             post. Más sin embargo estoy deacuerdo en que los movimientos sociales han sido de gran apoyo
                             para
                             esta transformación.</p>
+
                     </div>
                 </div>
             </div>
