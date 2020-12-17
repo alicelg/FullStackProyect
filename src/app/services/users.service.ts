@@ -42,4 +42,8 @@ export class UsersService {
     return this.httpClient.get<any>(`${this.baseUrl}/concepts`).toPromise();
   }
 
+  getPost(): Promise<any> {
+    return this.httpClient.get<any>(`${this.baseUrl}/posts`).toPromise();
+  }
+
 }
