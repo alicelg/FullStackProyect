@@ -554,5 +554,27 @@
         "GENTILIC": "Gentilicio",
         "RELIGION": "Religión mayoritaria",
         "MOTTO": "Lema"
+    },
+    "USER": {
+        "NAME": "Nombre",
+        "LASTNAME": "Apellidos",
+        "NICKNAME-USER": "Nombre de usuario",
+        "COUNTRY-USER": "País",
+        "STUDIES": "Estudios",
+        "LINKEDIN": "Linkedin",
+        "WORD": "Trabajo",
+        "FAVORITE-CONCEPT": "Conceptos favoritos",
+        "FUN": "Disfruta, aprende y reta a tus amigos en nuestros tests.",
+        "MY-PUBLISH": "Mis publicaciones",
+        "MY-POST-FAVORITE": "Mis posts favoritos",
+        "REMEMBER": "Recuerda",
+        "REMEMBER-TEXT-ONE": "Ahora que eres usuario de WatchYourPolitics puedes elegir tus",
+        "SEARCH-MAP": "Buscar en nuestro",
+        "SEARCH-MAP-TEXT": "interactivo el país más grande o el más pequeño y aprender sobre su situación política.",
+        "SHARE-IDEAS": "Comparte tus ideas de",
+        "OUR": "en nuestro",
+        "LOG-OUT": "Cerrar sesión",
+        "PUBLISH-BLOG": "Publicar en el Blog",
+        "LAST-TEXT-USER": "Si lo que te apetece es pasar un rato leyendo y disfrutando de las ideas de otros usuarios, puedes leerlos y comentarlos."
     }
 }

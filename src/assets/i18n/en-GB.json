@@ -554,5 +554,27 @@
         "GENTILIC": "Demonym",
         "RELIGION": "Majority religion",
         "MOTTO": "Motto"
+    },
+    "USER": {
+        "NAME": "Name",
+        "LASTNAME": "Lastnmae",
+        "NICKNAME-USER": "Nickname",
+        "COUNTRY-USER": "Country",
+        "STUDIES": "Studies",
+        "LINKEDIN": "Linkedin",
+        "WORD": "Current word",
+        "FAVORITE-CONCEPT": "Favorite concepts",
+        "FUN": "Enjoy, learn and challenge your friends in our tests.",
+        "MY-PUBLISH": "My posts",
+        "MY-POST-FAVORITE": "My favorite posts",
+        "REMEMBER": "Remember",
+        "REMEMBER-TEXT-ONE": "Now that you are a WatchYourPolitics user, you can choose your",
+        "SEARCH-MAP": "Search our",
+        "SEARCH-MAP-TEXT": "interact the largest or smallest country and learn about its political situation.",
+        "SHARE-IDEAS": "Share your ideas of",
+        "OUR": "in our",
+        "LOG-OUT": "Log out",
+        "PUBLISH-BLOG": "Post to Blog",
+        "LAST-TEXT-USER": "If what you want is to spend some time reading and enjoying the ideas of other users, you can read and comment on them."
     }
 }
