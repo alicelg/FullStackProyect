@@ -62,7 +62,8 @@ export class UserComponent implements OnInit {
     })
 
     this.userService.getPost().then(res => {
-      this.favouritePost = res.post;
+      console.log(res);
+      this.favouritePost = res.posts;
     })
   }
 
