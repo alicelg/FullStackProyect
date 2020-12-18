@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 import { User } from 'src/app/models/user.model';
-import { Post, PostsService } from 'src/app/services/posts.service';
+import { PostsService } from 'src/app/services/posts.service';
 import { UsersService } from 'src/app/services/users.service';
+import { Post, Comment } from 'src/app/models/post.model';
+
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
@@ -14,7 +17,11 @@ export class PostComponent implements OnInit {
   post: Post;
   postId;
 
+  comment: Comment;
+
   currentUser: User;
+
+  formComment;
 
 
   constructor(
@@ -27,6 +34,9 @@ export class PostComponent implements OnInit {
 
     this.currentUser = this.userService.isLogged;
 
+    this.formComment = new FormGroup({
+      text: new FormControl('', [Validators.required])
+    })
   }
 
   ngOnInit(): void {
@@ -35,10 +45,8 @@ export class PostComponent implements OnInit {
       .then(response => {
         this.post = response
         console.log(this.post);
-
       })
       .catch(error => console.log(error));
-
   }
 
 
@@ -55,9 +63,26 @@ export class PostComponent implements OnInit {
       element.classList.add('heart-empty')
       this.postsService.deleteFavorite(postId);
     }
-
   }
 
+  deletePost(postId) {
+    this.postsService.deletePost(postId);
+  }
 
+  createComment(): void {
+    if (this.formComment.valid) {
+      const newComment = { ...this.formComment.value }
+      newComment.postId = this.postId;
+      this.postsService.createComment(newComment);
+    } else {
+      // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
+      Object.keys(this.formComment.controls).forEach(field => {
+        const control = this.formComment.get(field);
+        control.markAsTouched({ onlySelf: true });
+      });
+    }
+  }
+
+  editPost() { }
 
 }

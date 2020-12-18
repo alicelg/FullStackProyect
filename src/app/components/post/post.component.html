@@ -8,20 +8,15 @@
             <div class="row pt-3 mb-2">
 
                 <div class="col-md-3 col-6">
-                    <p class="borde text-center pb-2 rounded pt-2">{{post.category}} </p>
+                    <p class="borde text-center pb-2 rounded pt-2">
+                        {{post.category}} </p>
                 </div>
 
-                <div class="col-md-8 col-6 text-right mr-md-5">
-
-                    <div class="heart-empty" (click)="toggleFavorite($event.target, post.id)" *ngIf="currentUser"></div>
-
+                <div class="col-md-8 col-6 text-right mr-md-5" *ngIf="currentUser">
+                    <div class="heart-empty" (click)="toggleFavorite($event.target, post.id)"></div>
                     <fa-icon class="size-icon" [icon]="['far', 'trash-alt']" (click)="deletePost(post.id)"></fa-icon>
-
                     <fa-icon class="size-icon" [icon]="['fas', 'tools']" (click)="editPost(post.id)"></fa-icon>
-
                 </div>
-
-
             </div>
 
             <div class="row">
@@ -30,15 +25,10 @@
                     <hr>
                 </div>
             </div>
-
-
-
         </div>
-
     </div>
 
     <div class="container mb-5">
-
         <!-- palabras claves /nombre del escritor -->
         <div class="row mt-5">
             <div class="col-md-9">
@@ -59,7 +49,6 @@
             <div class="col-md-12" [innerHTML]="post.text">
             </div>
         </div>
-
     </div>
 
 
@@ -69,54 +58,43 @@
     <!-- SECCION COMENTARIOS -->
 
     <div class="container-fluid space-color">
-
-
         <div class="container pt-5">
-
             <div class="row">
                 <div class="col-md-12">
                     <h4>Comentarios</h4>
-
                 </div>
             </div>
 
             <!-- cards de comentarios -->
-
             <div class="row mb-2">
                 <div class="col-md-8 d-flex pt-3 pb-1 mt-3 rounded border-bottom border-top">
-
                     <div>
                         <img src="../../../assets/images/hablando.png" alt="" width="100px">
                     </div>
-
                     <div class="ml-4">
                         <h6>Antonio Vallejo </h6>
-                        <p>La política de España se ha visto transformada por razones distantes a las que se plantean en
-                            este
-                            post. Más sin embargo estoy deacuerdo en que los movimientos sociales han sido de gran apoyo
-                            para
-                            esta transformación.</p>
-
+                        <p> </p>
                     </div>
                 </div>
             </div>
 
-            <form class="pt-5 pb-5">
-
+            <form class="pt-5 pb-5" [formGroup]="formComment" class="mb-5" (ngSubmit)="createComment()">
                 <div class="col-md-8">
                     <h5>Escribe un comentario</h5>
                     <label> Comentario </label>
-                    <textarea name="comments" id="" cols="30" rows="3" class="form-control"></textarea>
+                    <textarea name="comment" id="" cols="30" rows="3" class="form-control" formControlName="text"
+                        [ngClass]="{ 'not-valid': formComment.get('text').touched && !formComment.get('text').valid}"
+                        required></textarea>
 
+                    <div *ngIf="formComment.get('text').touched && !formComment.get('text').valid"
+                        class="alert alert-danger">
+                        <span
+                            *ngIf="formComment.get('text').errors.required && formComment.get('text').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                            |translate}}</span>
+                    </div>
                     <input type="submit" value="Comentar" class="btn borde mt-2">
-
                 </div>
-
-
             </form>
         </div>
-
-
     </div>
-
 </ng-container>
