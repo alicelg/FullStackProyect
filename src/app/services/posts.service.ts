@@ -42,9 +42,13 @@ export class PostsService {
     return this.httpClient.post<any>(`${this.baseUrl}/new`, newPost).toPromise();
   }
 
-  insertFavorite(pId): Promise<any> {
-    const favoritePost = { "postId": pId }
+  insertFavorite(postId): Promise<any> {
+    const favoritePost = { "postId": postId }
     return this.httpClient.post<any>(`${this.baseUrl}/favorite`, favoritePost).toPromise();
+  }
+
+  deleteFavorite(postId): Promise<any> {
+    return this.httpClient.delete<any>(`${this.baseUrl}/nofav`, { params: { postId } }).toPromise();
   }
 
 }

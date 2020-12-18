@@ -17,3 +17,23 @@
     font-size: 25px;
     cursor: pointer;
 }
+
+.heart-empty {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-image: url(../../../assets/icons/heart-empty.png);
+    background-size: contain;
+    cursor: pointer;
+}
+
+.heart-full {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-image: url(../../../assets/icons/heart-full.png);
+    background-size: contain;
+    cursor: pointer;
+}

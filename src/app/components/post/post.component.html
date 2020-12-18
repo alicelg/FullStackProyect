@@ -13,7 +13,11 @@
 
                 <div class="col-md-8 col-6 text-right mr-md-5">
 
-                    <fa-icon class="size-icon" [icon]="['far', 'heart']" (click)="makeFavoritePost(post.id)"></fa-icon>
+                    <div class="heart-empty" (click)="toggleFavorite($event.target, post.id)" *ngIf="currentUser"></div>
+
+                    <fa-icon class="size-icon" [icon]="['far', 'trash-alt']" (click)="deletePost(post.id)"></fa-icon>
+
+                    <fa-icon class="size-icon" [icon]="['fas', 'tools']" (click)="editPost(post.id)"></fa-icon>
 
                 </div>
 

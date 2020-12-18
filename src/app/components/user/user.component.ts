@@ -5,6 +5,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
 import { User } from 'src/app/models/user.model';
 import { UsersService } from 'src/app/services/users.service';
+
 // import { setInterval } from 'timers';
 
 @Component({
@@ -34,7 +35,7 @@ export class UserComponent implements OnInit {
     public userService: UsersService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    public translateService: TranslateService
+    public translateService: TranslateService,
   ) {
     this.action = this.activatedRoute.snapshot.url[0].path;
 
