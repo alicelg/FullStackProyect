@@ -27,9 +27,12 @@ export class ConceptsService {
     return this.httpClient.get<Concept[]>(`${this.baseUrl}/page/${pPagina}`).toPromise();
   }
 
-  insertFavorite(pId): Promise<any> {
-    const favoriteConcept = { "conceptId": pId }
-    return this.httpClient.post<any>(`${this.baseUrl}/favorite`, favoriteConcept).toPromise();
+  insertFavorite(conceptId): Promise<any> {
+    return this.httpClient.post<any>(`${this.baseUrl}/favorite`, { conceptId }).toPromise();
+  }
+
+  deleteFavorite(conceptId): Promise<any> {
+    return this.httpClient.delete<any>(`${this.baseUrl}/favorite`, { params: { conceptId } }).toPromise();
   }
 
 }

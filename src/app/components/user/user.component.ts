@@ -31,7 +31,7 @@ export class UserComponent implements OnInit {
 
   constructor(
     private modal: NgbModal,
-    private userService: UsersService,
+    public userService: UsersService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     public translateService: TranslateService
@@ -116,10 +116,7 @@ export class UserComponent implements OnInit {
     }
   }
 
-  logOut(): void {
-    this.userService.isLogged = null;
-    this.router.navigate(['/']);
-  }
+
 
   stopStories(): void {
     clearInterval(this.storiesInterval);

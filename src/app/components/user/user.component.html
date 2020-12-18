@@ -308,7 +308,7 @@
       <div class="offset-md-1 col-md-2 mt-md-5">
 
         <button class="btn btn-block" [routerLink]="['/nuevo/post']">{{'USER.PUBLISH-BLOG'| translate}}</button>
-        <button class="btn btn-block mt-5" (click)="logOut()">{{'USER.LOG-OUT'| translate}}</button>
+        <button class="btn btn-block mt-5" (click)="userService.logOut()">{{'USER.LOG-OUT'| translate}}</button>
 
       </div>
 
