@@ -575,6 +575,7 @@
         "OUR": "in our",
         "LOG-OUT": "Log out",
         "PUBLISH-BLOG": "Post to Blog",
-        "LAST-TEXT-USER": "If what you want is to spend some time reading and enjoying the ideas of other users, you can read and comment on them."
+        "LAST-TEXT-USER": "If what you want is to spend some time reading and enjoying the ideas of other users, you can read and comment on them.",
+        "VIEW-PROFILE": "View profile"
     }
 }

@@ -85,21 +85,32 @@
                 <div class="nav-item" *ngIf="!userLogged">
                     <button class="btn nav-link" routerLink="signup">{{'HEADER.SIGNUP' | translate}}</button>
                 </div>
-                <div class="nav-item ml-md-auto" *ngIf="userLogged">
-                    <!-- button class="btn nav-link mx-auto" [routerLink]="['/usuario', userLogged.id]">
+                <!-- <div class="nav-item ml-md-auto m-0" *ngIf="userLogged"> -->
+                <!-- button class="btn nav-link mx-auto" [routerLink]="['/usuario', userLogged.id]">
                         {{userLogged.nickname}}</button> -->
 
-                    <div ngbDropdown class="btn nav-link mx-auto"
-                        (mouseenter)="$event.stopPropagation(); myDrop.open();"
-                        (mouseleave)="$event.stopPropagation(); myDrop.close();" #myDrop="ngbDropdown">
-                        <button class="btn btn-outline-primary" id="dropdownBasic"
-                            ngbDropdownToggle>{{userLogged.nickname}}</button>
-                        <div ngbDropdownMenu aria-labelledby="dropdownBasic">
-                            <button ngbDropdownItem (click)="userService.logOut()">Me las piro Vampiro</button>
-                        </div>
+                <div ngbDropdown class="btn nav-item user-btn ml-md-auto" *ngIf="userLogged"
+                    (mouseenter)="$event.stopPropagation(); myDrop.open();"
+                    (mouseleave)="$event.stopPropagation(); myDrop.close();" #myDrop="ngbDropdown">
+                    <button class="btn mx-auto nav-link" id="dropdownBasic"
+                        ngbDropdownToggle>{{userLogged.nickname}}</button>
+
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic">
+                        <button ngbDropdownItem [routerLink]="['/usuario', userLogged.id]">
+                            {{'USER.VIEW-PROFILE'| translate}}
+                        </button>
+
+
+                        <button ngbDropdownItem [routerLink]="['/nuevo/post']">
+                            {{'USER.PUBLISH-BLOG'| translate}}
+                        </button>
+
+                        <button ngbDropdownItem (click)="userService.logOut()">{{'USER.LOG-OUT'|translate}}</button>
                     </div>
 
                 </div>
+
+                <!-- </div> -->
                 <!-- selector de idiomas desktop -->
                 <div class="nav-item dropdown desktop">
                     <button class="btn nav-link dropdown-toggle" id="test" data-toggle="dropdown">

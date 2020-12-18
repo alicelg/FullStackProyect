@@ -575,6 +575,7 @@
         "OUR": "en nuestro",
         "LOG-OUT": "Cerrar sesión",
         "PUBLISH-BLOG": "Publicar en el Blog",
-        "LAST-TEXT-USER": "Si lo que te apetece es pasar un rato leyendo y disfrutando de las ideas de otros usuarios, puedes leerlos y comentarlos."
+        "LAST-TEXT-USER": "Si lo que te apetece es pasar un rato leyendo y disfrutando de las ideas de otros usuarios, puedes leerlos y comentarlos.",
+        "VIEW-PROFILE": "Ver perfil"
     }
 }
