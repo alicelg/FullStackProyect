@@ -28,7 +28,8 @@ export class FormComponent implements OnInit {
       keywords: new FormControl('', [Validators.required]),
       category: new FormControl('', [Validators.required]),
       summary: new FormControl('', [Validators.required]),
-      text: new FormControl('', [Validators.required])
+      text: new FormControl('', [Validators.required]),
+      check: new FormControl('', [Validators.required]),
     })
   }
 

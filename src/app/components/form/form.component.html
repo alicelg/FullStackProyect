@@ -58,19 +58,29 @@
                         <div class="form-group">
                             <label>{{'FORM-PUBLISH.TITLE'|translate}}</label>
                             <input type="text" name="title" class="form-control" formControlName="title"
-                                [ngClass]="{ 'not-valid': formNew.get('title').touched && !formNew.get('title').valid}">
-                            <span
-                                *ngIf="formNew.get('title').errors.required && formNew.get('title').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
-                                |translate}}</span>
+                                [ngClass]="{ 'not-valid': formNew.get('title').touched && !formNew.get('title').valid}"
+                                required>
+
+                            <div *ngIf="formNew.get('title').touched && !formNew.get('title').valid"
+                                class="alert alert-danger">
+                                <span
+                                    *ngIf="formNew.get('title').errors.required && formNew.get('title').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                    |translate}}</span>
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <label> {{'FORM-PUBLISH.IMAGE'|translate}}</label>
                             <input type="text" name="main_image" class="form-control" formControlName="main_image"
-                                [ngClass]="{ 'not-valid': formNew.get('main_image').touched && !formNew.get('main_image').valid}">
-                            <span
-                                *ngIf="formNew.get('main_image').errors.required && formNew.get('main_image').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
-                                |translate}}</span>
+                                [ngClass]="{ 'not-valid': formNew.get('main_image').touched && !formNew.get('main_image').valid}"
+                                required>
+
+                            <div *ngIf="formNew.get('main_image').touched && !formNew.get('main_image').valid"
+                                class="alert alert-danger">
+                                <span
+                                    *ngIf="formNew.get('main_image').errors.required && formNew.get('main_image').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                    |translate}}</span>
+                            </div>
                         </div>
                     </div>
 
@@ -79,25 +89,35 @@
                             <label> {{'FORM-PUBLISH.CATEGORY'|translate}} </label>
 
                             <select id="" name="category" class="form-control" formControlName="category"
-                                [ngClass]="{ 'not-valid': formNew.get('category').touched && !formNew.get('category').valid}">
+                                [ngClass]="{ 'not-valid': formNew.get('category').touched && !formNew.get('category').valid}"
+                                required>
                                 <option value="política">{{'FORM-PUBLISH.CATEGORY-POLITIC'|translate}}</option>
                                 <option value="economía">{{'FORM-PUBLISH.CATEGORY-ECONOMIC'|translate}}</option>
                                 <option value="cultura">{{'FORM-PUBLISH.CATEGORY-CULTURE'|translate}}</option>
                                 <option value="historia">{{'FORM-PUBLISH.CATEGORY-HISTORY'|translate}}</option>
                             </select>
-                            <span
-                                *ngIf="formNew.get('category').errors.required && formNew.get('category').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
-                                |translate}}</span>
 
+                            <div *ngIf="formNew.get('category').touched && !formNew.get('category').valid"
+                                class="alert alert-danger">
+                                <span
+                                    *ngIf="formNew.get('category').errors.required && formNew.get('category').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                    |translate}}</span>
+                            </div>
                         </div>
 
                         <div class="form-group">
                             <label> {{'FORM-PUBLISH.KEYWORDS'|translate}}</label>
                             <input type="text" name="keywords" class="form-control" formControlName="keywords"
-                                [ngClass]="{ 'not-valid': formNew.get('keywords').touched && !formNew.get('keywords').valid}">
-                            <span
-                                *ngIf="formNew.get('keywords').errors.required && formNew.get('keywords').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
-                                |translate}}</span>
+                                [ngClass]="{ 'not-valid': formNew.get('keywords').touched && !formNew.get('keywords').valid}"
+                                required>
+
+                            <div *ngIf="formNew.get('keywords').touched && !formNew.get('keywords').valid"
+                                class="alert alert-danger">
+                                <span
+                                    *ngIf="formNew.get('keywords').errors.required && formNew.get('keywords').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                    |translate}}</span>
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -108,33 +128,50 @@
                         <div class="mt-1">
                             <label> Resumen</label>
                             <textarea type="text" name="summary" class="form-control" formControlName="summary"
-                                [ngClass]="{ 'not-valid': formNew.get('summary').touched && !formNew.get('summary').valid}"></textarea>
-                            <span
-                                *ngIf="formNew.get('summary').errors.required && formNew.get('summary').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
-                                |translate}}</span>
+                                [ngClass]="{ 'not-valid': formNew.get('summary').touched && !formNew.get('summary').valid}"
+                                required></textarea>
+                            <div *ngIf="formNew.get('summary').touched && !formNew.get('summary').valid"
+                                class="alert alert-danger">
+                                <span
+                                    *ngIf="formNew.get('summary').errors.required && formNew.get('summary').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                    |translate}}</span>
+
+                            </div>
                         </div>
 
                         <div class="mt-3">
                             <label> {{'FORM-PUBLISH.TEXT'|translate}}</label>
                             <quill-editor [styles]="{height: '200px'}" formControlName="text"
-                                [ngClass]="{ 'not-valid': formNew.get('text').touched && !formNew.get('text').valid}">
+                                [ngClass]="{ 'not-valid': formNew.get('text').touched && !formNew.get('text').valid}"
+                                required>
                             </quill-editor>
-                            <span
-                                *ngIf="formNew.get('text').errors.required && formNew.get('text').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
-                                |translate}}</span>
+
+                            <div *ngIf="formNew.get('text').touched && !formNew.get('text').valid"
+                                class="alert alert-danger">
+                                <span
+                                    *ngIf="formNew.get('text').errors.required && formNew.get('text').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                    |translate}}</span>
+
+                            </div>
                         </div>
 
                         <div class="form-group mt-3">
-                            <input type="checkbox" class="mr-2">
-
-
+                            <input type="checkbox" class="mr-2" formControlName="check"
+                                [ngClass]="{ 'not-valid': formNew.get('check').touched && !formNew.get('check').valid}"
+                                required>
 
                             <label> {{'FORM-PUBLISH.READ'|translate}} <strong (click)="condition()" class="condition">
                                     {{'FORM-PUBLISH.TERMS-CONDITIONS'|translate}} </strong>
                                 {{'FORM-PUBLISH.READ-TWO'|translate}}
-
-
                             </label>
+
+                            <div *ngIf="formNew.get('check').touched && !formNew.get('check').valid"
+                                class="alert alert-danger">
+                                <span
+                                    *ngIf="formNew.get('check').errors.required && formNew.get('check').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
+                                    |translate}}</span>
+
+                            </div>
                         </div>
 
 
