@@ -92,7 +92,7 @@
                 <div ngbDropdown class="btn nav-item user-btn ml-md-auto" *ngIf="userLogged"
                     (mouseenter)="$event.stopPropagation(); myDrop.open();"
                     (mouseleave)="$event.stopPropagation(); myDrop.close();" #myDrop="ngbDropdown">
-                    <button class="btn mx-auto nav-link" id="dropdownBasic"
+                    <button class="btn mx-auto nav-link pt-0" id="dropdownBasic"
                         ngbDropdownToggle>{{userLogged.nickname}}</button>
 
                     <div ngbDropdownMenu aria-labelledby="dropdownBasic">
@@ -113,7 +113,7 @@
                 <!-- </div> -->
                 <!-- selector de idiomas desktop -->
                 <div class="nav-item dropdown desktop">
-                    <button class="btn nav-link dropdown-toggle" id="test" data-toggle="dropdown">
+                    <button class="btn nav-link dropdown-toggle padding" id="test" data-toggle="dropdown">
                         <img class="icon-flag"
                             [src]="translateService.currentLang == 'es-ES' ? '../../../assets/icons/espana.png': '../../../assets/icons/reino-unido.png'">
                     </button>
