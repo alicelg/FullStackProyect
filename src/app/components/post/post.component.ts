@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { User } from 'src/app/models/user.model';
 import { PostsService } from 'src/app/services/posts.service';
 import { UsersService } from 'src/app/services/users.service';
 import { Post, Comment } from 'src/app/models/post.model';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-post',
@@ -13,6 +14,10 @@ import { Post, Comment } from 'src/app/models/post.model';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
+
+
+  @ViewChild('content') content;
+  modalRef: NgbModalRef;
 
   post: Post;
   postId;
@@ -27,7 +32,9 @@ export class PostComponent implements OnInit {
   constructor(
     private postsService: PostsService,
     private activatedRoute: ActivatedRoute,
-    private userService: UsersService
+    private userService: UsersService,
+    private router: Router,
+    private modal: NgbModal
   ) {
 
     this.postId = this.activatedRoute.snapshot.paramMap.get('id');
@@ -45,7 +52,7 @@ export class PostComponent implements OnInit {
       .then(response => {
         this.post = response
       })
-      .catch(error => console.log(error));
+      .catch(error => this.router.navigate(['/blog/general']));
   }
 
 
@@ -64,8 +71,16 @@ export class PostComponent implements OnInit {
     }
   }
 
-  deletePost(postId) {
-    this.postsService.deletePost(postId);
+  showDeleteModal(): void {
+    if (!this.modal.hasOpenModals()) {
+      this.modalRef = this.modal.open(this.content, { ariaLabelledBy: 'delete-post', size: 'l', centered: true });
+    }
+  }
+
+  deletePost() {
+    this.postsService.deletePost(this.postId).then(res => {
+      this.router.navigate(['/blog/general']);
+    });
   }
 
   createComment(): void {
@@ -73,6 +88,8 @@ export class PostComponent implements OnInit {
       const newComment = { ...this.formComment.value }
       newComment.postId = this.postId;
       this.postsService.createComment(newComment);
+      this.ngOnInit();
+
     } else {
       // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
       Object.keys(this.formComment.controls).forEach(field => {

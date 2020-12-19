@@ -40,12 +40,12 @@ export class PostsService {
     return this.httpClient.delete<any>(`${this.baseUrl}/nofav`, { params: { postId } }).toPromise();
   }
 
-  deletePost(postId): Promise<any> {
-    return this.httpClient.delete<any>(`${this.baseUrl}/${postId}`).toPromise();
-  }
-
   createComment(newComment): Promise<any> {
     return this.httpClient.post<any>(`${this.baseUrl}/comment`, newComment).toPromise();
+  }
+
+  deletePost(postId): Promise<any> {
+    return this.httpClient.delete<any>(`${this.baseUrl}/${postId}`).toPromise();
   }
 
   editPost(postId): Promise<any> {
