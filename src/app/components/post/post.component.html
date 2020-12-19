@@ -12,10 +12,10 @@
                         {{post.category}} </p>
                 </div>
 
-                <div class="col-md-8 col-6 text-right mr-md-5" *ngIf="currentUser">
+                <div class="col-md-8 col-6 text-right mr-md-5" *ngIf="currentUser.id === post.user_id">
                     <div class="heart-empty" (click)="toggleFavorite($event.target, post.id)"></div>
                     <fa-icon class="size-icon" [icon]="['far', 'trash-alt']" (click)="showDeleteModal()"></fa-icon>
-                    <fa-icon class="size-icon" [icon]="['fas', 'tools']" (click)="editPost(post.id)"></fa-icon>
+                    <fa-icon class="size-icon" [icon]="['fas', 'pencil-alt']" (click)="editPost(post.id)"></fa-icon>
                 </div>
             </div>
 
