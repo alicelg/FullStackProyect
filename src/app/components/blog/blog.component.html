@@ -168,7 +168,7 @@
 
               <div class="col-7 mt-3">
                 <div [innerHTML]="post.summary"></div>
-                <button class="btn btn-sm mt-2 mx-auto">{{'HOME.READ-MORE'|translate}}</button>
+                <button class="btn btn-sm mt-2 mx-auto" [routerLink]="[post.id]">{{'HOME.READ-MORE'|translate}}</button>
               </div>
             </div>
           </div>
