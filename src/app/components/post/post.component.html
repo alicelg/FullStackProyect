@@ -13,9 +13,12 @@
                 </div>
 
                 <div class="col-md-8 col-6 text-right mr-md-5" *ngIf="currentUser.id === post.user_id">
-                    <div class="heart-empty" (click)="toggleFavorite($event.target, post.id)"></div>
+                    <div class="heart-empty mr-3" (click)="toggleFavorite($event.target, post.id)"></div>
+
+                    <fa-icon class="size-icon mr-3" [icon]="['fas', 'pencil-alt']" (click)="editPost(post.id)">
+                    </fa-icon>
+
                     <fa-icon class="size-icon" [icon]="['far', 'trash-alt']" (click)="showDeleteModal()"></fa-icon>
-                    <fa-icon class="size-icon" [icon]="['fas', 'pencil-alt']" (click)="editPost(post.id)"></fa-icon>
                 </div>
             </div>
 
@@ -32,7 +35,7 @@
         <!-- palabras claves /nombre del escritor -->
         <div class="row mt-5">
             <div class="col-md-9">
-                <p>Palabras claves: {{post.keywords}}</p>
+                <p>{{'FORM-PUBLISH.KEYWORDS'| translate}}: {{post.keywords}}</p>
             </div>
 
             <div class="col-md-3 d-flex">
@@ -58,7 +61,7 @@
     <!-- SECCION COMENTARIOS -->
 
     <div class="container-fluid space-color">
-        <div class="container pt-5">
+        <div class="container pt-5 pb-5">
             <div class="row">
                 <div class="col-md-12">
                     <h4>Comentarios</h4>
@@ -67,9 +70,9 @@
 
             <!-- cards de comentarios -->
             <div class="row mb-2" *ngFor="let comment of post.comments">
-                <div class="col-md-8 d-flex pt-3 pb-1 mt-3 rounded border-bottom border-top">
+                <div class="col-md-8 d-flex pt-3 pb-3 mt-3 rounded border-bottom border-top">
                     <div>
-                        <img [src]="comment.user.photo" alt="" width="100px">
+                        <img [src]="comment.user.photo" alt="" class="img-rounded">
                     </div>
                     <div class="ml-4">
                         <h6>{{comment.user.nickname}} </h6>
@@ -78,9 +81,9 @@
                 </div>
             </div>
 
-            <form class="pt-5 pb-5" [formGroup]="formComment" class="mb-5" (ngSubmit)="createComment()">
+            <form class="pb-5" [formGroup]="formComment" class="mb-5" (ngSubmit)="createComment()">
                 <div class="col-md-8">
-                    <h5>Escribe un comentario</h5>
+                    <h5 class="pt-5">Escribe un comentario</h5>
                     <label> Comentario </label>
                     <textarea name="comment" id="" cols="30" rows="3" class="form-control" formControlName="text"
                         [ngClass]="{ 'not-valid': formComment.get('text').touched && !formComment.get('text').valid}"

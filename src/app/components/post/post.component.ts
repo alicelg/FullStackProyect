@@ -101,6 +101,7 @@ export class PostComponent implements OnInit {
 
 
   editPost(postId) {
-    this.postsService.editPost(postId);
+    localStorage.setItem('post', JSON.stringify(this.post))
+    this.router.navigate(['/blog/edicion/', this.postId])
   }
 }

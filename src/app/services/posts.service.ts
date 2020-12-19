@@ -48,8 +48,7 @@ export class PostsService {
     return this.httpClient.delete<any>(`${this.baseUrl}/${postId}`).toPromise();
   }
 
-  editPost(postId): Promise<any> {
-    const post = { postId }
-    return this.httpClient.put<any>(`${this.baseUrl}/edit`, { params: { postId } }).toPromise();
+  editPost(post): Promise<any> {
+    return this.httpClient.put<any>(`${this.baseUrl}/edit`, post).toPromise();
   }
 }

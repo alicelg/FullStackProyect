@@ -38,10 +38,7 @@ const routes: Routes = [
     path: 'blog/:type',
     component: BlogComponent
   },
-  {
-    path: 'blog/:type/:id',
-    component: PostComponent
-  },
+
   /* { path: 'blog/hablando-de-politica',
   component: BlogComponent }, */
   /* { path: 'blog/hablando-de-politica/:id',
@@ -50,6 +47,15 @@ const routes: Routes = [
     path: 'nuevo/post',
     component: FormComponent,
     canActivate: [InternalGuard]
+  },
+  {
+    path: 'blog/edicion/:postId',
+    component: FormComponent,
+    canActivate: [InternalGuard]
+  },
+  {
+    path: 'blog/:type/:id',
+    component: PostComponent
   },
   {
     path: 'tests',
