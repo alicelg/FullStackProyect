@@ -1,206 +1,134 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark" (clickOutside)="collapseNav()">
-  <div class="container justify-content-between">
-
-    <button class="btn navbar-brand desktop" routerLink="">
-      <img class='logo' src="../../../assets/images/logo.png" alt="">
-    </button>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" id="navbar-toggler">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- logo centrado para mobile -->
-    <button class="btn navbar-brand mobile" routerLink=""><img class='logomobile' src="../../../assets/images/logo.png"
-        alt=""></button>
-
-    <!-- traductor para mobile -->
-    <div class="mobile">
-      <div class=" nav-item dropdown d-inline">
-        <button class="btn dropdown-toggle" data-toggle="dropdown">
-          <img class="icon-flag"
-            [src]="translateService.currentLang == 'es-ES' ? '../../../assets/icons/espana.png': '../../../assets/icons/reino-unido.png'">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container justify-content-between">
+        <button class="btn navbar-brand desktop" routerLink="">
+            <img class='logo' src="../../../assets/images/logo.png" alt="">
         </button>
-        <div class="dropdown-menu" style="min-width: unset">
-          <button class="btn dropdown-item" (click)="changeLanguage('es-ES')">
-            <img class="icon-flag" src="../../../assets/icons/espana.png" alt="español">
-          </button>
-          <button class="btn dropdown-item" (click)="changeLanguage('en-GB')">
-            <img class="icon-flag" src="../../../assets/icons/reino-unido.png" alt="inglés">
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- navegador principal -->
-    <div class="collapse navbar-collapse" id="main-nav">
-      <div class="navbar-nav w-100">
-
-        <div class="nav-item">
-          <button class="nav-link btn mx-auto" routerLink="mapa" (click)="collapseNav()">{{'HEADER.MAP' |
-            translate}}</button>
-        </div>
-
-        <div class="nav-item">
-          <button class="nav-link btn mx-auto" routerLink="conceptos" (click)="collapseNav()">{{'HEADER.CONCEPTS' |
-            translate}}</button>
-        </div>
-
-        <div class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle btn mx-auto" id="blog" data-toggle="dropdown">
-            {{'HEADER.BLOG' | translate}}
-          </button>
-          <div class="dropdown-menu text-center text-md-left">
-            <button class="btn dropdown-item" routerLink="blog/general" (click)="collapseNav()">{{'HEADER.GENERAL' |
-              translate}}</button>
-            <button class="btn dropdown-item" routerLink="blog/hablando-de-politica"
-              (click)="collapseNav()">{{'HEADER.HABLANDO' |
-              translate}}</button>
-            <a class="btn dropdown-item bold" href="https://estotambienespolitica.com/" target="_blank"
-              (click)="collapseNav()">{{'HEADER.ESTOTAMBIEN' | translate}}</a>
-          </div>
-        </div>
-
-        <div class="nav-item dropdown" *ngIf="!userLogged">
-          <button class="nav-link btn mx-auto" routerLink="tests" (click)="collapseNav()">{{'HEADER.TEST' |
-            translate}}</button>
-        </div>
-
-        <div class="nav-item dropdown" *ngIf="userLogged">
-          <button class=" btn nav-link dropdown-toggle mx-auto" id="test" data-toggle="dropdown">
-            {{'HEADER.TEST' | translate}}
-          </button>
-          <div class="dropdown-menu text-center text-md-left">
-            <button class="btn dropdown-item" routerLink="test/1" (click)="collapseNav()">{{'HEADER.WORLD-TEST' |
-              translate}}</button>
-            <button class="btn dropdown-item" routerLink="test/2" (click)="collapseNav()">{{'HEADER.POLITICAL-TEST' |
-              translate}}</button>
-
-          </div>
-        </div>
-
-        <div class="nav-item ml-md-auto" *ngIf="!userLogged">
-          <button class="btn nav-link" routerLink="login" (click)="collapseNav()">{{'HEADER.LOGIN' |
-            translate}}</button>
-        </div>
-        <div class="nav-item" *ngIf="!userLogged">
-          <button class="btn nav-link" routerLink="signup" (click)="collapseNav()">{{'HEADER.SIGNUP' |
-            translate}}</button>
-        </div>
-
-        <div ngbDropdown class="btn nav-item user-btn ml-md-auto" *ngIf="userLogged"
-          (mouseenter)="$event.stopPropagation(); myDrop.open();"
-          (mouseleave)="$event.stopPropagation(); myDrop.close();" #myDrop="ngbDropdown">
-          <button class="btn mx-auto nav-link" id="dropdownBasic" ngbDropdownToggle>{{userLogged.nickname}}</button>
-
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic" (click)="collapseNav()">
-            <button ngbDropdownItem [routerLink]="['/usuario', userLogged.id]">
-              {{'USER.VIEW-PROFILE'| translate}}</button>
-
-            <button ngbDropdownItem [routerLink]="['/nuevo/post']" (click)="collapseNav()">
-              {{'USER.PUBLISH-BLOG'| translate}}</button>
-
-            <button ngbDropdownItem (click)="userService.logOut(); collapseNav()">{{'USER.LOG-OUT'|translate}}</button>
-          </div>
-
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- logo centrado para mobile -->
+        <button class="btn navbar-brand mobile" routerLink=""><img class='logomobile'
+                src="../../../assets/images/logo.png" alt=""></button>
+        <!-- traductor para mobile -->
+        <div class="mobile">
+            <!-- <button class="btn d-inline text-light p-0" *ngIf="userLogged">
+                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-person-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+            </button> -->
+            <div class=" nav-item dropdown d-inline">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                    <img class="icon-flag"
+                        [src]="translateService.currentLang == 'es-ES' ? '../../../assets/icons/espana.png': '../../../assets/icons/reino-unido.png'">
+                </button>
+                <div class="dropdown-menu" style="min-width: unset">
+                    <button class="btn dropdown-item" (click)="changeLanguage('es-ES')">
+                        <img class="icon-flag" src="../../../assets/icons/espana.png" alt="español">
+                    </button>
+                    <button class="btn dropdown-item" (click)="changeLanguage('en-GB')">
+                        <img class="icon-flag" src="../../../assets/icons/reino-unido.png" alt="inglés">
+                    </button>
+                </div>
+            </div>
         </div>
 
         <!-- navegador principal -->
         <div class="collapse navbar-collapse" id="main-nav">
-          <div class="navbar-nav w-100">
+            <div class="navbar-nav w-100">
 
-            <div class="nav-item">
-              <button class="nav-link btn mx-auto" routerLink="mapa">{{'HEADER.MAP' | translate}}</button>
-            </div>
+                <div class="nav-item">
+                    <button class="nav-link btn mx-auto" routerLink="mapa">{{'HEADER.MAP' | translate}}</button>
+                </div>
 
-            <div class="nav-item">
-              <button class="nav-link btn mx-auto" routerLink="conceptos">{{'HEADER.CONCEPTS' |
-                translate}}</button>
-            </div>
+                <div class="nav-item">
+                    <button class="nav-link btn mx-auto" routerLink="conceptos">{{'HEADER.CONCEPTS' |
+                        translate}}</button>
+                </div>
 
-            <div class="nav-item dropdown">
-              <button class="nav-link dropdown-toggle btn mx-auto" id="blog" data-toggle="dropdown">
-                {{'HEADER.BLOG' | translate}}
-              </button>
-              <div class="dropdown-menu text-center text-md-left">
-                <button class="btn dropdown-item" routerLink="blog/general">{{'HEADER.GENERAL' |
-                  translate}}</button>
-                <button class="btn dropdown-item" routerLink="blog/hablando-de-politica">{{'HEADER.HABLANDO' |
-                  translate}}</button>
-                <a class="btn dropdown-item bold" href="https://estotambienespolitica.com/"
-                  target="_blank">{{'HEADER.ESTOTAMBIEN' | translate}}</a>
+                <div class="nav-item dropdown">
+                    <button class="nav-link dropdown-toggle btn mx-auto" id="blog" data-toggle="dropdown">
+                        {{'HEADER.BLOG' | translate}}
+                    </button>
+                    <div class="dropdown-menu text-center text-md-left">
+                        <button class="btn dropdown-item" routerLink="blog/general">{{'HEADER.GENERAL' |
+                            translate}}</button>
+                        <button class="btn dropdown-item" routerLink="blog/hablando-de-politica">{{'HEADER.HABLANDO' |
+                            translate}}</button>
+                        <a class="btn dropdown-item bold" href="https://estotambienespolitica.com/"
+                            target="_blank">{{'HEADER.ESTOTAMBIEN' | translate}}</a>
 
-              </div>
-            </div>
+                    </div>
+                </div>
 
-            <div class="nav-item dropdown" *ngIf="!userLogged">
-              <button class="nav-link btn mx-auto" routerLink="tests">{{'HEADER.TEST' | translate}}</button>
-            </div>
+                <div class="nav-item dropdown" *ngIf="!userLogged">
+                    <button class="nav-link btn mx-auto" routerLink="tests">{{'HEADER.TEST' | translate}}</button>
+                </div>
 
-            <div class="nav-item dropdown" *ngIf="userLogged">
-              <button class=" btn nav-link dropdown-toggle mx-auto" id="test" data-toggle="dropdown">
-                {{'HEADER.TEST' | translate}}
-              </button>
-              <div class="dropdown-menu text-center text-md-left">
-                <button class="btn dropdown-item" routerLink="test/1">{{'HEADER.WORLD-TEST' |
-                  translate}}</button>
-                <button class="btn dropdown-item" routerLink="test/2">{{'HEADER.POLITICAL-TEST' |
-                  translate}}</button>
+                <div class="nav-item dropdown" *ngIf="userLogged">
+                    <button class=" btn nav-link dropdown-toggle mx-auto" id="test" data-toggle="dropdown">
+                        {{'HEADER.TEST' | translate}}
+                    </button>
+                    <div class="dropdown-menu text-center text-md-left">
+                        <button class="btn dropdown-item" routerLink="test/1">{{'HEADER.WORLD-TEST' |
+                            translate}}</button>
+                        <button class="btn dropdown-item" routerLink="test/2">{{'HEADER.POLITICAL-TEST' |
+                            translate}}</button>
 
-              </div>
-            </div>
+                    </div>
+                </div>
 
-            <div class="nav-item ml-md-auto" *ngIf="!userLogged">
-              <button class="btn nav-link" routerLink="login">{{'HEADER.LOGIN' | translate}}</button>
-            </div>
-            <div class="nav-item" *ngIf="!userLogged">
-              <button class="btn nav-link" routerLink="signup">{{'HEADER.SIGNUP' | translate}}</button>
-            </div>
-            <!-- <div class="nav-item ml-md-auto m-0" *ngIf="userLogged"> -->
-            <!-- button class="btn nav-link mx-auto" [routerLink]="['/usuario', userLogged.id]">
+                <div class="nav-item ml-md-auto" *ngIf="!userLogged">
+                    <button class="btn nav-link" routerLink="login">{{'HEADER.LOGIN' | translate}}</button>
+                </div>
+                <div class="nav-item" *ngIf="!userLogged">
+                    <button class="btn nav-link" routerLink="signup">{{'HEADER.SIGNUP' | translate}}</button>
+                </div>
+                <!-- <div class="nav-item ml-md-auto m-0" *ngIf="userLogged"> -->
+                <!-- button class="btn nav-link mx-auto" [routerLink]="['/usuario', userLogged.id]">
                         {{userLogged.nickname}}</button> -->
 
-            <div ngbDropdown class="btn nav-item user-btn ml-md-auto" *ngIf="userLogged"
-              (mouseenter)="$event.stopPropagation(); myDrop.open();"
-              (mouseleave)="$event.stopPropagation(); myDrop.close();" #myDrop="ngbDropdown">
-              <button class="btn mx-auto nav-link pt-0" id="dropdownBasic"
-                ngbDropdownToggle>{{userLogged.nickname}}</button>
+                <div ngbDropdown class="btn nav-item user-btn ml-md-auto" *ngIf="userLogged"
+                    (mouseenter)="$event.stopPropagation(); myDrop.open();"
+                    (mouseleave)="$event.stopPropagation(); myDrop.close();" #myDrop="ngbDropdown">
+                    <button class="btn mx-auto nav-link pt-0" id="dropdownBasic"
+                        ngbDropdownToggle>{{userLogged.nickname}}</button>
 
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic">
-                <button ngbDropdownItem [routerLink]="['/usuario', userLogged.id]">
-                  {{'USER.VIEW-PROFILE'| translate}}
-                </button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic">
+                        <button ngbDropdownItem [routerLink]="['/usuario', userLogged.id]">
+                            {{'USER.VIEW-PROFILE'| translate}}
+                        </button>
 
 
-                <button ngbDropdownItem [routerLink]="['/nuevo/post']">
-                  {{'USER.PUBLISH-BLOG'| translate}}
-                </button>
+                        <button ngbDropdownItem [routerLink]="['/nuevo/post']">
+                            {{'USER.PUBLISH-BLOG'| translate}}
+                        </button>
 
-                <button ngbDropdownItem (click)="userService.logOut()">{{'USER.LOG-OUT'|translate}}</button>
-              </div>
+                        <button ngbDropdownItem (click)="userService.logOut()">{{'USER.LOG-OUT'|translate}}</button>
+                    </div>
 
+                </div>
+
+                <!-- </div> -->
+                <!-- selector de idiomas desktop -->
+                <div class="nav-item dropdown desktop">
+                    <button class="btn nav-link dropdown-toggle padding" id="test" data-toggle="dropdown">
+                        <img class="icon-flag"
+                            [src]="translateService.currentLang == 'es-ES' ? '../../../assets/icons/espana.png': '../../../assets/icons/reino-unido.png'">
+                    </button>
+                    <div class="dropdown-menu">
+                        <button class="btn dropdown-item" (click)="changeLanguage('es-ES')">
+                            <img class="icon-flag" src="../../../assets/icons/espana.png" alt="español">
+                            {{'HEADER.COUNTRIES.SPANISH' | translate}}</button>
+                        <button class="btn dropdown-item" (click)="changeLanguage('en-GB')">
+                            <img class="icon-flag" src="../../../assets/icons/reino-unido.png" alt="inglés">
+                            {{'HEADER.COUNTRIES.ENGLISH' |translate}}
+                        </button>
+                    </div>
+                </div>
             </div>
-
-            <!-- </div> -->
-            <!-- selector de idiomas desktop -->
-            <div class="nav-item dropdown desktop">
-              <button class="btn nav-link dropdown-toggle padding" id="test" data-toggle="dropdown">
-                <img class="icon-flag"
-                  [src]="translateService.currentLang == 'es-ES' ? '../../../assets/icons/espana.png': '../../../assets/icons/reino-unido.png'">
-              </button>
-              <div class="dropdown-menu">
-                <button class="btn dropdown-item" (click)="changeLanguage('es-ES')">
-                  <img class="icon-flag" src="../../../assets/icons/espana.png" alt="español">
-                  {{'HEADER.COUNTRIES.SPANISH' | translate}}</button>
-                <button class="btn dropdown-item" (click)="changeLanguage('en-GB')">
-                  <img class="icon-flag" src="../../../assets/icons/reino-unido.png" alt="inglés">
-                  {{'HEADER.COUNTRIES.ENGLISH' |translate}}
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </nav>
 <hr class="w-100 m-0">
