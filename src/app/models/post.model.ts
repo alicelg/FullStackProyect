@@ -12,6 +12,7 @@ export class Post {
     type: number;
     user_id: number;
     comments: Comment[];
+    user: User;
 }
 
 export class Comment {
