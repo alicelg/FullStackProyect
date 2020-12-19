@@ -18,7 +18,7 @@ export class TestsService {
     return this.httpClient.get<Question[]>(`${this.baseUrl}/${testId}/questions`).toPromise();
   }
 
-  setAnswers(testId, answersArray): Promise<Question[]> {
-    return this.httpClient.post<Question[]>(`${this.baseUrl}/${testId}/answers`, {answersArray}).toPromise();
+  setAnswers(testId, answersArray, initDate): Promise<Question[]> {
+    return this.httpClient.post<Question[]>(`${this.baseUrl}/answers`, {testId, answersArray, initDate}).toPromise();
   }
 }

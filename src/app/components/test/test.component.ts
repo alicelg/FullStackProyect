@@ -23,7 +23,8 @@ export class TestComponent implements OnInit {
 
   svg: SafeHtml;
 
-  answersArray: Answer[];
+  answersArray: any[];
+  initDate: Date;
 
 
   constructor(
@@ -45,31 +46,45 @@ export class TestComponent implements OnInit {
     this.questionNumber = 0;
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
+
+  startTest(): void {
+
     this.testService.getQuestionsByTest(this.testId).then(res => {
-      console.log(res);
+      // definimos el array de preguntas completo
       this.allQuestions = res;
+
+      // marcamos como primera pregunta la 0 del array
       this.actualQuestion = this.allQuestions[this.questionNumber];
+
+      // mostramos la imagen de la bandera que corresponda
       this.svg = this.sanitizer.bypassSecurityTrustHtml(this.actualQuestion.image);
+
+      // obtenemos la fecha de inicio del test
+      this.initDate = new Date();
+
+      // mostramos las preguntas
+      this.action = 'questions';
     });
 
   }
 
   questionAnswered(questionId, answerId): void {
-    const answer = new Answer();
-    answer.questionId = questionId;
-    answer.answerId = answerId;
+    // preparamos los datos a insertar en la bbdd
+    const dateFormat = this.initDate.toISOString().split('T')[0] + ' ' + this.initDate.toTimeString().split(' ')[0];
+    const answer = [this.testId, questionId, answerId];
 
+    // añadimos la respuesta a un array
     this.answersArray.push(answer);
 
+    // si no estamos en la ultima pregunta seguimos montrando la siguiente
     if (this.questionNumber < this.allQuestions.length - 1) {
       this.nextQuestion();
+      // si estamos en la última pregunta enviamos el array de respuestas
     } else {
-      console.log(this.answersArray);
-      this.testService.setAnswers(this.testId, this.answersArray).then(res => {
+      this.testService.setAnswers(this.testId, this.answersArray, dateFormat).then(res => {
         console.log(res);
-
-      })
+      });
     }
 
   }
