@@ -4,8 +4,9 @@ import { SearchService } from 'src/app/services/search.service';
 import { debounceTime, map, filter } from 'rxjs/operators';
 import { fromEvent } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UsersService } from 'src/app/services/users.service';
 import { User } from 'src/app/models/user.model';
+import { UsersService } from 'src/app/services/users.service';
+
 
 @Component({
   selector: 'app-concepts',

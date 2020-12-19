@@ -1,13 +1,21 @@
-export class Post {
+import { User } from "./user.model";
 
+export class Post {
+    id: number;
     title: string;
     main_image: string;
     keywords: string;
     summary: string;
     category: string;
-    test: string;
-    id: number;
+    text: string;
     date: Date;
     type: number;
+    user_id: number;
+    comments: Comment[];
+    user: User;
+}
 
+export class Comment {
+    text: string;
+    user: User
 }

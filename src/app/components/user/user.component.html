@@ -203,6 +203,7 @@
 
 <div class="container">
 
+  <!-- conceptos favoritos -->
   <div class="row pt-6">
     <div class="col-md-8 border rounded pt-2 pb-2">
       <h5 class="text-center pt-3">{{'USER.FAVORITE-CONCEPT'| translate}}</h5>
@@ -232,25 +233,32 @@
 
 
   <div class="row mt-5 mb-5">
-
+    <!-- posts publicados -->
     <div class="col-md-6 border rounded pt-2 pb-2">
       <h5 class="text-center pt-3">{{'USER.MY-PUBLISH'| translate}}</h5>
 
 
       <div class="row">
-        <div class="col-md-12">
-          <p>KNAJKSBDKAHJSB</p>
+        <div class="col-11 d-flex justify-content-between favorite" *ngFor="let post of postCreated"
+          [routerLink]="['/blog/general/', post.id]">
+          <p class="pt-3 pb-2">{{post.title}}</p>
+          <div class="col-1 d-flex">
+            <fa-icon class="icon mr-2 pt-3 pb-2" [icon]="['fas', 'pencil-alt']"></fa-icon>
+            <fa-icon class="icon pt-3 pb-2 pr-5" [icon]="['fas', 'trash-alt']"></fa-icon>
+          </div>
+
         </div>
+
       </div>
     </div>
 
-
+    <!-- posts favoritos -->
     <div class="col-md-5 border rounded pt-2 pb-2 mt-5 mt-md-0 ml-md-5">
       <h5 class="text-center pt-3">{{'USER.MY-POST-FAVORITE'| translate}} </h5>
 
       <div class="row">
         <div class="col-md-6 mt-3 favorite pt-2" *ngFor="let post of favouritePost"
-          [routerLink]="['/blog/general/', post.id]" [queryParams]="{searchTerm: translateService.instant(post.title)}">
+          [routerLink]="['/blog/general/', post.id]">
           <p> <i class="fa fa-book mr-2 text-center mt-1"></i>
             {{post.title}}
           </p>
@@ -298,13 +306,13 @@
         </div>
 
       </div>
-
+      <!-- 
       <div class="offset-md-1 col-md-2 mt-md-5">
 
         <button class="btn btn-block" [routerLink]="['/nuevo/post']">{{'USER.PUBLISH-BLOG'| translate}}</button>
         <button class="btn btn-block mt-5" (click)="userService.logOut()">{{'USER.LOG-OUT'| translate}}</button>
 
-      </div>
+      </div> -->
 
     </div>
 

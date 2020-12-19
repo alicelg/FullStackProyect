@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Post, PostsService } from 'src/app/services/posts.service';
+import { PostsService } from 'src/app/services/posts.service';
 import { SearchService } from 'src/app/services/search.service';
 import { debounceTime, map, filter } from 'rxjs/operators';
 import { fromEvent } from 'rxjs';
+import { Post } from 'src/app/models/post.model';
 
 @Component({
   selector: 'app-blog',

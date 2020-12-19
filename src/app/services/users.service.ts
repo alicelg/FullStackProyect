@@ -55,4 +55,8 @@ export class UsersService {
     this.router.navigate(['/']);
   }
 
+  getPostCreated(): Promise<any> {
+    return this.httpClient.get<any>(`${this.baseUrl}/created/posts`).toPromise();
+  }
+
 }

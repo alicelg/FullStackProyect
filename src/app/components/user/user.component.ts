@@ -5,6 +5,7 @@ import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
 import { User } from 'src/app/models/user.model';
 import { UsersService } from 'src/app/services/users.service';
+
 // import { setInterval } from 'timers';
 
 @Component({
@@ -27,6 +28,8 @@ export class UserComponent implements OnInit {
   favouriteConcepts: any[];
   favouritePost: any[];
 
+  postCreated: any[];
+
   editForm: FormGroup;
 
   constructor(
@@ -34,7 +37,7 @@ export class UserComponent implements OnInit {
     public userService: UsersService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    public translateService: TranslateService
+    public translateService: TranslateService,
   ) {
     this.action = this.activatedRoute.snapshot.url[0].path;
 
@@ -57,14 +60,18 @@ export class UserComponent implements OnInit {
     });
 
     this.userService.getConcepts().then(res => {
-      console.log(res);
       this.favouriteConcepts = res.concepts;
     })
 
     this.userService.getPost().then(res => {
-      console.log(res);
       this.favouritePost = res.posts;
     })
+
+    this.userService.getPostCreated().then(res => {
+      this.postCreated = res.posts;
+    })
+
+
   }
 
   showStories(storyStep): void {

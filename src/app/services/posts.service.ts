@@ -1,17 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
-export interface Post {
-  id: number;
-  title: string;
-  main_image: string;
-  category: string;
-  keywords: string;
-  date: string;
-  text: string;
-  user_id: number;
-  summary: string;
-}
+import { Post } from 'src/app/models/post.model';
 
 @Injectable({
   providedIn: 'root'
@@ -42,9 +31,24 @@ export class PostsService {
     return this.httpClient.post<any>(`${this.baseUrl}/new`, newPost).toPromise();
   }
 
-  insertFavorite(pId): Promise<any> {
-    const favoritePost = { "postId": pId }
+  insertFavorite(postId): Promise<any> {
+    const favoritePost = { "postId": postId }
     return this.httpClient.post<any>(`${this.baseUrl}/favorite`, favoritePost).toPromise();
   }
 
+  deleteFavorite(postId): Promise<any> {
+    return this.httpClient.delete<any>(`${this.baseUrl}/nofav`, { params: { postId } }).toPromise();
+  }
+
+  createComment(newComment): Promise<any> {
+    return this.httpClient.post<any>(`${this.baseUrl}/comment`, newComment).toPromise();
+  }
+
+  deletePost(postId): Promise<any> {
+    return this.httpClient.delete<any>(`${this.baseUrl}/${postId}`).toPromise();
+  }
+
+  editPost(post): Promise<any> {
+    return this.httpClient.put<any>(`${this.baseUrl}/edit`, post).toPromise();
+  }
 }
