@@ -28,4 +28,13 @@ export class HeaderComponent implements OnInit {
     this.translateService.use(lang);
     localStorage.setItem('language', lang);
   }
+
+  collapseNav(): void {
+    const collapseButton = document.getElementById('navbar-toggler');
+    const mainNav = document.getElementById('main-nav');
+
+    if (mainNav.classList.contains('show')) {
+      collapseButton.click();
+    }
+  }
 }
