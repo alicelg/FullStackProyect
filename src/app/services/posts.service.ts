@@ -48,4 +48,8 @@ export class PostsService {
     return this.httpClient.post<any>(`${this.baseUrl}/comment`, newComment).toPromise();
   }
 
+  editPost(postId): Promise<any> {
+    const post = { postId }
+    return this.httpClient.put<any>(`${this.baseUrl}/edit`, { params: { postId } }).toPromise();
+  }
 }

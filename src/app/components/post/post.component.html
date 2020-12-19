@@ -66,14 +66,14 @@
             </div>
 
             <!-- cards de comentarios -->
-            <div class="row mb-2">
+            <div class="row mb-2" *ngFor="let comment of post.comments">
                 <div class="col-md-8 d-flex pt-3 pb-1 mt-3 rounded border-bottom border-top">
                     <div>
-                        <img src="../../../assets/images/hablando.png" alt="" width="100px">
+                        <img [src]="comment.user.photo" alt="" width="100px">
                     </div>
                     <div class="ml-4">
-                        <h6>Antonio Vallejo </h6>
-                        <p> </p>
+                        <h6>{{comment.user.nickname}} </h6>
+                        <p> {{comment.text}} </p>
                     </div>
                 </div>
             </div>

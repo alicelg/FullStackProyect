@@ -1,3 +1,5 @@
+import { User } from "./user.model";
+
 export class Post {
     id: number;
     title: string;
@@ -9,8 +11,10 @@ export class Post {
     date: Date;
     type: number;
     user_id: number;
+    comments: Comment[];
 }
 
 export class Comment {
     text: string;
+    user: User
 }

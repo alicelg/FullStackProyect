@@ -44,7 +44,6 @@ export class PostComponent implements OnInit {
     this.postsService.getPostById(this.postId)
       .then(response => {
         this.post = response
-        console.log(this.post);
       })
       .catch(error => console.log(error));
   }
@@ -83,6 +82,8 @@ export class PostComponent implements OnInit {
     }
   }
 
-  editPost() { }
 
+  editPost(postId) {
+    this.postsService.editPost(postId);
+  }
 }
