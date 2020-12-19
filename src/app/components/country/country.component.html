@@ -174,7 +174,7 @@
             <div class="col-md-2 col-6 box">
                 <fa-icon class="size-icon" [icon]="['fas', 'language']"></fa-icon>
                 <h5> {{'COUNTRY-DETAIL.LANGUAGE' |translate}}</h5>
-                <p> <span *ngFor="let language of country.languages">{{language}}, </span></p>
+                <p> <span>{{(country.languages? country.languages : 'No disponible') |titlecase}} </span></p>
             </div>
 
 

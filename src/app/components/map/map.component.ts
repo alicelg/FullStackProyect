@@ -42,6 +42,7 @@ export class MapComponent implements OnInit {
 
           this.countriesService.getCountriesDataByCode([code]).then(data => {
             country = data[0];
+            country.languages = country.languages.split(',').join(', ');
             // country.currencies = data[0].currencies;
             this.countriesService.getCountryFlagByCode(code).then(res => {
               country.flag = res.flag;
