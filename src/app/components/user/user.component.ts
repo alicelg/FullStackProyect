@@ -28,6 +28,8 @@ export class UserComponent implements OnInit {
   favouriteConcepts: any[];
   favouritePost: any[];
 
+  postCreated: any[];
+
   editForm: FormGroup;
 
   constructor(
@@ -58,14 +60,18 @@ export class UserComponent implements OnInit {
     });
 
     this.userService.getConcepts().then(res => {
-      console.log(res);
       this.favouriteConcepts = res.concepts;
     })
 
     this.userService.getPost().then(res => {
-      console.log(res);
       this.favouritePost = res.posts;
     })
+
+    this.userService.getPostCreated().then(res => {
+      this.postCreated = res.posts;
+    })
+
+
   }
 
   showStories(storyStep): void {
