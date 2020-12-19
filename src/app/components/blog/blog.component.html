@@ -176,28 +176,40 @@
         </div>
 
         <!-- si no vienen posts mostramos el mensaje por defecto -->
-        <div class="col-md-5 mb-4" *ngIf="!hablandoPosts.length">
-          <div class="card card-inverse border">
-            <img class="card-img-top" src="../../../assets/images/logo2.png">
-            <div class="meta text-right mr-4">
-              <p class="mb-0">WatchYourPolitics</p>
-            </div>
-            <div class="card-block">
-              <figure class="profile text-right">
-                <img src="../../../assets/images/hablando.png" class="profile-avatar" alt="">
-              </figure>
-              <h4 class="card-title mt-1 mb-0">{{'FORM-PUBLISH.SORRY' |translate}}
-              </h4>
-              <div class="card-text">
-                <p>{{'FORM-PUBLISH.SORRY-TEXT' |translate}}</p>
+        <div class="row">
+          <div class="col-md-4" *ngIf="!hablandoPosts.length">
+
+            <div class="card mb-3 border">
+              <div class="row">
+                <div class="col-md-12">
+                  <h4 class="text-center mt-3">{{'FORM-PUBLISH.SORRY' |translate}}</h4>
+                </div>
               </div>
-            </div>
-            <div class="card-footer">
-              <button class="btn float-right btn-sm" [routerLink]="['/nuevo/post']">{{'FORM-PUBLISH.CREATE-POST'
-                |translate}}</button>
+
+              <div class="row mb-1">
+                <div class="col-5">
+                  <img src="../../../assets/images/hablando1.png" alt="" class="imagen-blog ml-2">
+                </div>
+
+                <div class="col-7 mt-3">
+                  <div>
+                    <p>Aún no se me ha ocurrido hablar de ese tema.
+                    </p>
+                    <p>
+                      Sería interesante que fueras el primero en escribir
+                      sobre este tema en nuestro Blog General.
+                    </p>
+
+                  </div>
+                  <button class="btn btn-sm mt-2 mx-auto" [routerLink]="['/nuevo/post']">{{'FORM-PUBLISH.CREATE-POST'
+                    |translate}}</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </ng-container>
+</div>
