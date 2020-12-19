@@ -68,7 +68,7 @@ export class FormComponent implements OnInit {
   }
 
   createPost(): void {
-    alert('create');
+    // alert('create');
     if (this.formNew.valid) {
       this.postsService.createPost(this.formNew.value).then(res => {
         this.router.navigate(['/blog/general']);
@@ -87,7 +87,7 @@ export class FormComponent implements OnInit {
   }
 
   editPost(): void {
-    alert('edito');
+    // alert('edito');
     // hacemos una copia del valor del formulario despues de editar para añadir el id del post
     const postEdited: Post = { ...this.formNew.value };
     postEdited.id = Number(this.activatedRoute.snapshot.paramMap.get('postId'))
