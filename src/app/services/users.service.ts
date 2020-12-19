@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 import { User } from '../models/user.model';
 
@@ -22,7 +23,10 @@ export class UsersService {
     return JSON.parse(localStorage.getItem('currentUser'));
   }
 
-  constructor(private httpClient: HttpClient) {
+  constructor(
+    private httpClient: HttpClient,
+    private router: Router,
+  ) {
     this.baseUrl = 'http://localhost:3000/users';
   }
 
@@ -40,6 +44,15 @@ export class UsersService {
 
   getConcepts(): Promise<any> {
     return this.httpClient.get<any>(`${this.baseUrl}/concepts`).toPromise();
+  }
+
+  getPost(): Promise<any> {
+    return this.httpClient.get<any>(`${this.baseUrl}/posts`).toPromise();
+  }
+
+  logOut(): void {
+    this.isLogged = null;
+    this.router.navigate(['/']);
   }
 
 }

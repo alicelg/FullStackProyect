@@ -244,3 +244,26 @@ hr {
   border-top: 0.5px solid $tertiaryBgColor;
   opacity: 0.5;
 }
+
+.logo,
+.map,
+.cursor {
+  cursor: pointer;
+}
+
+.card-title-test {
+  background-color: $quaternaryBgColor;
+}
+
+.fondo {
+  background-image: url(../../../assets/images/opinion.png);
+  background-repeat: no-repeat;
+  width: 90%;
+  left: 100px;
+}
+
+@media (max-width: 575px) {
+  .fondo {
+    background-image: none;
+  }
+}

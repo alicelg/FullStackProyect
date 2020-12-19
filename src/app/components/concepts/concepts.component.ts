@@ -4,6 +4,8 @@ import { SearchService } from 'src/app/services/search.service';
 import { debounceTime, map, filter } from 'rxjs/operators';
 import { fromEvent } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
+import { UsersService } from 'src/app/services/users.service';
+import { User } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-concepts',
@@ -17,16 +19,20 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
   concepts: Concept[];
   searchTerm: string;
   paginaActual: number;
+  currentUser: User;
 
   constructor(
     private conceptsService: ConceptsService,
     private searchService: SearchService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private userService: UsersService,
 
   ) {
     this.searchTerm = this.activatedRoute.snapshot.queryParamMap.get('searchTerm');
     this.paginaActual = 0;
+
+    this.currentUser = this.userService.isLogged;
+
   }
 
   ngOnInit(): void { }
@@ -103,8 +109,20 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
 
   }
 
-  makeFavorite(pId) {
-    this.conceptsService.insertFavorite(pId);
+  toggleFavorite(element, conceptId) {
+    console.log(element.classList);
+
+    if (element.classList.contains('heart-empty')) {
+      element.classList.remove('heart-empty')
+      element.classList.add('heart-full')
+
+      this.conceptsService.insertFavorite(conceptId);
+    } else {
+      element.classList.remove('heart-full')
+      element.classList.add('heart-empty')
+      this.conceptsService.deleteFavorite(conceptId);
+    }
+
   }
 
 }

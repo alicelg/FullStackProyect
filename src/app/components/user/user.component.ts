@@ -25,12 +25,13 @@ export class UserComponent implements OnInit {
   action: string;
 
   favouriteConcepts: any[];
+  favouritePost: any[];
 
   editForm: FormGroup;
 
   constructor(
     private modal: NgbModal,
-    private userService: UsersService,
+    public userService: UsersService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     public translateService: TranslateService
@@ -57,10 +58,12 @@ export class UserComponent implements OnInit {
 
     this.userService.getConcepts().then(res => {
       console.log(res);
-
       this.favouriteConcepts = res.concepts;
+    })
 
-
+    this.userService.getPost().then(res => {
+      console.log(res);
+      this.favouritePost = res.posts;
     })
   }
 
@@ -113,10 +116,7 @@ export class UserComponent implements OnInit {
     }
   }
 
-  logOut(): void {
-    this.userService.isLogged = null;
-    this.router.navigate(['/']);
-  }
+
 
   stopStories(): void {
     clearInterval(this.storiesInterval);

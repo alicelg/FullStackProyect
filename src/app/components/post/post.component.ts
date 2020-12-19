@@ -26,11 +26,16 @@ export class PostComponent implements OnInit {
     this.postsService.getPostById(this.postId)
       .then(response => {
         this.post = response
+        console.log(this.post);
+
       })
       .catch(error => console.log(error));
 
   }
 
+  makeFavoritePost(pId) {
+    this.postsService.insertFavorite(pId);
+  }
 
 
 }

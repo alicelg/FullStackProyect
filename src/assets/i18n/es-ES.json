@@ -21,13 +21,13 @@
     },
     "HOME": {
         "WHAT-IS-IT": "¿Qué es WatchYourPolitics?",
-        "PURPOSE-A": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
-        "PURPOSE-B": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque obcaecati nobis deserunt, sint mollitia veniam minima Earum iste aperiam tempora necessitatibus atque voluptatibus enim sit esse, quibusdam quasi. Molestias",
+        "PURPOSE-A": "WatchYourPolitics es un espacio destinado a la investigación y consulta en el ambito político. Podrás encontrar los datos del cualquier país que quieras elegir. Asimismo, consultar conceptos políticos y elegirlos como favoritos en tu zona de usuario. ",
+        "PURPOSE-B": "Puedes compartir tus ideas con nuestros usuarios, publicando en el Blog General, en cualquiera de nuestras categorías. También puedes leer los posts de Hablando de Política y Esto también es política.",
         "MAP-DISCOVER": "Descubre la política mundial",
-        "MAP-TEXT": "Selecciona cualquier país e informate de su política",
+        "MAP-TEXT": "Alguna vez te has preguntado ¿cuál es el Estado más pequeño o el más grande? Ahora lo puedes buscar en nuestro mapa interactivo, a tan solo un click de descubrir la situación política, el idioma oficial o su moneda, entre muchos más datos del país que selecciones. ",
         "TEST-KNOWLEDGE": "Pon a prueba tus conocimientos",
         "TEST-WORLD-TEXT": "Diviertete probando cuantas banderas del mundo conoces o puedes adivinar. Entre más veces lo hagas mejor ranking y más países descubres.",
-        "TEST-POLITICAL-TEXT": "Un test para medir tus decisiones. Responde y dependiendo de tus respuestas podras descubrir la tendencia política más afin a tu perfil. ",
+        "TEST-POLITICAL-TEXT": "Un test para medir tus decisiones. Responde y dependiendo de tus respuestas podrás descubrir tu tendencia política o ideológica más afin a tu perfil.",
         "RANKING": "Ranking",
         "RANKING-TEXT": "Todos nuestros usuarios compiten por el primer puesto de nuestro Test Mundo, te atreves a ser parte de nuestro ranking. Participa, aprende y diviertete.",
         "ABOUT-US": "¿Qué dicen de nosotros?",
@@ -45,14 +45,24 @@
         "HABLANDO-POLITICA-TEXT": "Los Estados se encuentran en constante cambio y yo te lo cuento en tan solo cinco puntos claves. Si quieres saber mucho más continúa con nuestra lectura rápida.",
         "ESTO-TAMBIEN": "Esto también es política",
         "ESTO-TAMBIEN-TEXT": "Lee y escucha. El podcast que habla sobre política en tu mismo idioma. Analizando los asuntos de más actualidad desde la objetividad e intentando comprender el por qué de las cosas, alejándose de los tecnicismos.",
-        "READ-MORE": "Leer más"
+        "READ-MORE": "Leer más",
+        "NO-RESULT": "No se han encontrado resultados para tu búsqueda."
     },
     "LOGIN": {
         "USERNAME": "Usuario",
         "PASSWORD": "Contraseña",
         "PASSWORDFORGOTTEN": "¿Has olvidado tu contraseña?",
         "SIGNUP": "¿No tienes cuenta? Regístrate",
-        "LOGIN": "Iniciar Sesión"
+        "LOGIN": "Iniciar Sesión",
+        "USER-NAME": "Nombre de Usuario",
+        "EMAIL": "Correo",
+        "PASSWORD-MESSAGE": "La contraseña debe contener al menos 8 caracteres, una letra mayúscula y una minúscula.",
+        "PASSWORD-REPEAT": "Confirma la contraseña",
+        "PASSWORD-REPEAT-MESSAGE": "Las contraseñas no coinciden",
+        "CREATE-ACCOUNT": "Crear cuenta",
+        "CANCEL": "Cancelar",
+        "RESET-PASSWORD": "Resetear contraseña",
+        "USER-MESSAGE": "Que pena con usted pero mala vaina mano. La cagó, aún no enviamos emails."
     },
     "FORM": {
         "VALIDATION": {
@@ -544,5 +554,28 @@
         "GENTILIC": "Gentilicio",
         "RELIGION": "Religión mayoritaria",
         "MOTTO": "Lema"
+    },
+    "USER": {
+        "NAME": "Nombre",
+        "LASTNAME": "Apellidos",
+        "NICKNAME-USER": "Nombre de usuario",
+        "COUNTRY-USER": "País",
+        "STUDIES": "Estudios",
+        "LINKEDIN": "Linkedin",
+        "WORD": "Trabajo",
+        "FAVORITE-CONCEPT": "Conceptos favoritos",
+        "FUN": "Disfruta, aprende y reta a tus amigos en nuestros tests.",
+        "MY-PUBLISH": "Mis publicaciones",
+        "MY-POST-FAVORITE": "Mis posts favoritos",
+        "REMEMBER": "Recuerda",
+        "REMEMBER-TEXT-ONE": "Ahora que eres usuario de WatchYourPolitics puedes elegir tus",
+        "SEARCH-MAP": "Buscar en nuestro",
+        "SEARCH-MAP-TEXT": "interactivo el país más grande o el más pequeño y aprender sobre su situación política.",
+        "SHARE-IDEAS": "Comparte tus ideas de",
+        "OUR": "en nuestro",
+        "LOG-OUT": "Cerrar sesión",
+        "PUBLISH-BLOG": "Publicar en el Blog",
+        "LAST-TEXT-USER": "Si lo que te apetece es pasar un rato leyendo y disfrutando de las ideas de otros usuarios, puedes leerlos y comentarlos.",
+        "VIEW-PROFILE": "Ver perfil"
     }
 }
