@@ -533,7 +533,9 @@
         "SORRY": "Lo sentimos",
         "SORRY-TEXT": "Aún nadie ha publicado un post acerca de este tema, anímate y se él primero.",
         "CREATE-POST": "Crear un post",
-        "ALL": "Todos"
+        "ALL": "Todos",
+        "SORRY-HABLANDO": "Aún no se me ha ocurrido hablar de ese tema.",
+        "SORRY-HABLANDO-TEXT": "Sería interesante que fueras el primero en escribir sobre el tema que estas buscando en nuestro Blog General."
     },
     "COUNTRY-DETAIL": {
         "FORMATION": "Formación de gobierno",
