@@ -29,6 +29,10 @@
   font-size: 40px;
 }
 
+.images {
+  width: 50%;
+}
+
 @media (max-width: 575px) {
   .greeting {
     p:nth-child(1) {
