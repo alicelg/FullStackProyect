@@ -202,7 +202,7 @@
 
       <div class="row text-center pb-3">
 
-        <div class="col-md-3 mt-2 favorite pt-3" *ngFor="let concept of favouriteConcepts" [routerLink]="['/conceptos']"
+        <div class="col-md-3 mt-2 change pt-3" *ngFor="let concept of favouriteConcepts" [routerLink]="['/conceptos']"
           [queryParams]="{searchTerm: translateService.instant(concept.title)}">
           <p>{{concept.title |translate}}</p>
         </div>
@@ -230,7 +230,7 @@
 
 
       <div class="row">
-        <div class="col-11 d-flex justify-content-between favorite " *ngFor="let post of postCreated"
+        <div class="col-11 d-flex justify-content-between change" *ngFor="let post of postCreated"
           [routerLink]="['/blog/general/', post.id]">
           <p class="pt-3 pb-2">{{post.title}}</p>
           <div class="col-1 d-flex">
@@ -250,7 +250,7 @@
       <h5 class="text-center pt-3">{{'USER.MY-POST-FAVORITE'| translate}} </h5>
 
       <div class="row">
-        <div class="col-md-6 mt-3 favorite pt-2" *ngFor="let post of favouritePost"
+        <div class="col-md-6 mt-3 change pt-2" *ngFor="let post of favouritePost"
           [routerLink]="['/blog/general/', post.id]">
           <p> <i class="fa fa-book mr-2 text-center mt-1"></i>
             {{post.title}}
@@ -265,7 +265,7 @@
 
 </div>
 
-<div class="container-fluid space-color desktop">
+<div class="container-fluid space-color ">
 
   <div class="container pt-5 pb-5">
 
