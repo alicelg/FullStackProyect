@@ -1,0 +1,32 @@
+@import "../../../styles.scss";
+
+.all-color {
+    background-color: black;
+}
+
+.space-color {
+    background: $quaternaryBgColor;
+    padding-bottom: 30px;
+}
+
+.change {
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}
+
+.change:hover {
+    border-bottom: 1px solid $tertiaryBgColor;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+img {
+    width: 80%;
+}
+
+.message {
+    top: 320px !important;
+    left: 400px;
+}

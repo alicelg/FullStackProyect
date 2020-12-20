@@ -76,14 +76,17 @@
               <div class="col-md-4 desktop">
 
                 <div class="d-flex">
-                  <fa-icon class="mr-2 text-center mt-1" [icon]="['fas', 'heart']"></fa-icon>
-                  <p class="text-header"> 9</p>
+                  <fa-icon class="mr-2 text-center mt-1" [icon]="['fas', 'heart']" placement="bottom"
+                    ngbTooltip="{{'USER.FAVORITE-CONCEPT'|translate}}"></fa-icon>
+                  <p class="text-header">
+                    {{favouriteConcepts.length}}</p>
                 </div>
 
 
                 <div class="d-flex">
-                  <fa-icon class="mr-2 text-center mt-1" [icon]="['fas', 'book']"></fa-icon>
-                  <p class="text-header">10</p>
+                  <fa-icon class="mr-2 text-center mt-1" [icon]="['fas', 'book']" placement="bottom"
+                    ngbTooltip="{{'USER.MY-POST-FAVORITE'|translate}}"></fa-icon>
+                  <p class="text-header">{{postCreated.length}}</p>
                 </div>
               </div>
 
@@ -304,7 +307,7 @@
     <div class="row">
 
       <div class="col-12">
-        <h4>¿Qué te gustaría hacer hoy? </h4>
+        <h4>{{'USER.WHAT-LIKE-TODAY'|translate}} </h4>
         <hr>
       </div>
     </div>
