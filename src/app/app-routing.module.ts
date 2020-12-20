@@ -67,7 +67,7 @@ const routes: Routes = [
     canActivate: [InternalGuard]
   },
   {
-    path: 'test/:testId/resultado',
+    path: 'test/:testId/resultado/:timesRepeated',
     component: ResultComponent,
     canActivate: [InternalGuard]
   },

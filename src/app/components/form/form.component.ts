@@ -68,7 +68,6 @@ export class FormComponent implements OnInit {
       this.formNew.controls.main_image.value = this.postToEdit.main_image;
       this.formNew.controls.keywords.value = this.postToEdit.keywords;
       // this.formNew.controls.category.value = this.postToEdit.category;
-      console.log(document.getElementsByTagName('option'));
       Array.from(document.getElementsByTagName('option')).forEach(option => {
 
         if (option.value == this.postToEdit.category) {

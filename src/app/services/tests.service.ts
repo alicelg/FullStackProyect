@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Question } from '../models/question.model';
+import { Question, TestResult } from '../models/question.model';
 
 
 @Injectable({
@@ -18,7 +18,11 @@ export class TestsService {
     return this.httpClient.get<Question[]>(`${this.baseUrl}/${testId}/questions`).toPromise();
   }
 
-  setAnswers(testId, answersArray, initDate): Promise<Question[]> {
-    return this.httpClient.post<Question[]>(`${this.baseUrl}/answers`, {testId, answersArray, initDate}).toPromise();
+  setAnswers(testId, answersArray, initDate): Promise<TestResult> {
+    return this.httpClient.post<TestResult>(`${this.baseUrl}/answers`, { testId, answersArray, initDate }).toPromise();
+  }
+
+  getTestResult(testId, timesRepeated): Promise<TestResult> {
+    return this.httpClient.get<TestResult>(`${this.baseUrl}/${testId}/result`, { params: { timesRepeated } }).toPromise();
   }
 }
