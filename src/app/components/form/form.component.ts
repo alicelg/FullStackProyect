@@ -5,6 +5,11 @@ import { PostsService } from 'src/app/services/posts.service';
 import { Post } from 'src/app/models/post.model';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import * as QuillNamespace from 'quill';
+let Quill: any = QuillNamespace;
+import ImageResize from 'quill-image-resize-module';
+Quill.register('modules/imageResize', ImageResize);
+
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -18,6 +23,7 @@ export class FormComponent implements OnInit {
   formNew;
   action: string;
   postToEdit: Post;
+  editor_modules;
 
   constructor(
     private modal: NgbModal,
@@ -35,6 +41,24 @@ export class FormComponent implements OnInit {
       text: new FormControl('', [Validators.required]),
       check: new FormControl('', [Validators.required]),
     })
+
+    this.editor_modules = {
+      toolbar: {
+        container: [
+          [{ font: [] }],
+          [{ size: ['small', false, 'large', 'huge'] }],
+          ['bold', 'italic', 'underline', 'strike'],
+          ['blockquote'],
+          [{ script: 'sub'}, { script: 'super' }],
+          [{ header: 1 }, { header: 2 }],
+          [{ color: [] }, { background: [] }],
+          [{ list: 'ordered' }, { list: 'bullet' }],
+          [{ align: [] }],
+          ['image']
+        ]
+      },
+      imageResize: true
+    };
 
     if (location.href.includes('edicion')) {
       this.action = 'EDIT';
