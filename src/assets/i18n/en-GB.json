@@ -593,5 +593,17 @@
         "WRITE-COMMENT": "Write a comment",
         "COMMENT": "Commentary",
         "BUTTOM-COMMENT": "Comment"
+    },
+    "QUESTIONS": {
+        "QUESTION-ONE": "You are looking for a prestigious and old university, so old that it is the first university in Europe. When you go to visit it, you see that it is decorated with this flag. Which country do you correspond to?",
+        "QUESTION-TWO": "In search of happiness, you set out on a journey to a small kingdom in Asia to discover the wealth of Buddhist temples. The main temple has this flag. What kingdom are you in?",
+        "QUESTION-THREE": "A military march passes by your house, when you look out the window you see that the soldiers carry this flag on their uniform. What country are the soldiers from?",
+        "QUESTION-FOUR": "You are in a history contest, you are in the final stretch. You are very close to getting the Grand Prize. And to win it they ask you which country does this flag correspond to?",
+        "QUESTION-FIVE": "The South American Cup is playing buy tickets to see a game. When you get to the stadium you realize that you don't know which country the players are from. Do you notice that they carry this flag on their shirt, which country are the players from?",
+        "QUESTION-SIX": "You are in a store buying souvenirs for your family, in the gift shop you find this flag curious, what country is it from?",
+        "QUESTION-SEVEN": "You have been given an adventure book and the main character describes his country. The most curious thing is the way to describe its flag; He describes it as two triangles, red and white. What country are you referring to?",
+        "QUESTION-EIGHT": "You are lining up to board your next destination. The family up front carries this flag in their passport, what country are they from?",
+        "QUESTION-NINE": "You have been invited to a meeting in the European Union, you know a group of people who say they are from a country with a white, green and red flag. What country are they referring to?",
+        "QUESTION-TEN": "A friend has brought you a shirt from his trip, the shirt is red with a yellow star in the center; What country has my friend been to?"
     }
 }

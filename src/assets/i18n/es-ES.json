@@ -593,5 +593,17 @@
         "WRITE-COMMENT": "Escribe un comentario",
         "COMMENT": "Comentario",
         "BUTTOM-COMMENT": "Comentar"
+    },
+    "QUESTIONS": {
+        "QUESTION-ONE": "Estas buscando una universidad de prestigio y antigua, tan antigua que es la primera universidad de Europa. Cuando vas a visitarla ves que en esta decorada con esta bandera. ¿A qué país corresponde?",
+        "QUESTION-TWO": "Estas en búsqueda de la felicidad, emprendes un viaje a un pequeño reino en Asia a descubrir la riqueza en templos budistas. El templo principal tiene esta bandera. ¿En qué reino te encuentras?",
+        "QUESTION-THREE": "Una marcha militar pasa por tu casa, al asomarte por la ventana observas que los soldados llevan en su uniforme esta bandera. ¿De qué país son los soldados?",
+        "QUESTION-FOUR": "Te encuentras en un concurso de historia en la televisión nacional, has llegado hasta la recta final y para ganar te piden que digas el país a la que corresponde esta bandera.",
+        "QUESTION-FIVE": "La copa suramericana se esta jugando compras entradas para ver un partido. Cuando llegas al estadio te das cuenta que no sabes de qué país son los jugadores. Observas que en su camiseta llevan esta bandera, ¿de qué país son los jugadores?",
+        "QUESTION-SIX": "Estás en una tienda comprando recuerdos para tu familia, en la tienda de regalos te parece curiosa esta bandera, ¿de qué país es?",
+        "QUESTION-SEVEN": "Te han regalado un libro de aventuras y el personaje principal describe a su país. Lo mas curioso es la manera de describir su bandera; la describe como dos triángulos, roja y blanca. A qué país se refiere?",
+        "QUESTION-EIGHT": "Estas haciendo la fila para abordar a tu siguiente destino. La familia de adelante lleva esta bandera en su pasaporte, de qué país son?",
+        "QUESTION-NINE": "Has sido invitado a una reunión en la Unión Europea conoces a un grupo de personas que dicen que son de un país con bandera de color blanco, verde y roja. A qué país se refieren?",
+        "QUESTION-TEN": "Un amigo te ha traído una camisa de su viaje, la camisa es roja con una estrella amarilla en el centro; en qué país a estado mi amigo?"
     }
 }
