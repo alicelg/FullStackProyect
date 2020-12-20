@@ -141,7 +141,8 @@
         "IMPERIALISM-TEXT": "El imperialismo es un régimen de dominación política en el cual una potencia militar extiende sus dominios sobre otros pueblos o Estados por medio de la fuerza o a través de la influencia económica, cultural o política. ",
         "CONSTITUTION": "Constitución",
         "CONSTITUTION-TEXT": "Constitución es el conjunto de principios, normas y reglas que pretenden establecer la forma de un Estado de Derecho, así como organizar ese mismo Estado, delimitándolo, a través de sus propias instituciones de la Administración Pública y estableciendo procedimientos y sanciones para que el mismo Estado no incumpla con las normas establecidas en dicha Constitución.",
-        "MESSAGE": "Lo sentimos, aún no contamos con la definición para ese concepto."
+        "MESSAGE": "Lo sentimos, aún no contamos con la definición para ese concepto.",
+        "FAVORITE": "Agregar a favoritos"
     },
     "FOOTER": {
         "PRINCIPALTEXT": "Conoce la posición política de los países y conceptos políticos.",
@@ -535,7 +536,9 @@
         "CREATE-POST": "Crear un post",
         "ALL": "Todos",
         "SORRY-HABLANDO": "Aún no se me ha ocurrido hablar de ese tema.",
-        "SORRY-HABLANDO-TEXT": "Sería interesante que fueras el primero en escribir sobre el tema que estas buscando en nuestro Blog General."
+        "SORRY-HABLANDO-TEXT": "Sería interesante que fueras el primero en escribir sobre el tema que estas buscando en nuestro Blog General.",
+        "SUMMARY": "Resumen",
+        "PUBLISH-EDIT": "Publicar edición"
     },
     "COUNTRY-DETAIL": {
         "FORMATION": "Formación de gobierno",
@@ -578,6 +581,17 @@
         "LOG-OUT": "Cerrar sesión",
         "PUBLISH-BLOG": "Publicar en el Blog",
         "LAST-TEXT-USER": "Si lo que te apetece es pasar un rato leyendo y disfrutando de las ideas de otros usuarios, puedes leerlos y comentarlos.",
-        "VIEW-PROFILE": "Ver perfil"
+        "VIEW-PROFILE": "Ver perfil",
+        "EDIT-PROFILE": "Editar perfil",
+        "EDIT-POST": "Edita publicación",
+        "DELETE-POST": "Elimina publicación",
+        "DELETE-POST-TEXT": "¿Está seguro que quieres borrar este post?",
+        "CANCEL": "Cancelar"
+    },
+    "COMMENTS": {
+        "COMMENTS": "Comentario",
+        "WRITE-COMMENT": "Escribe un comentario",
+        "COMMENT": "Comentario",
+        "BUTTOM-COMMENT": "Comentar"
     }
 }

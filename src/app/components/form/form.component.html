@@ -126,7 +126,7 @@
                     <div class="col-md-12">
 
                         <div class="mt-1">
-                            <label> Resumen</label>
+                            <label> {{'FORM-PUBLISH.SUMMARY'|translate}}</label>
                             <textarea type="text" name="summary" class="form-control" formControlName="summary"
                                 [ngClass]="{ 'not-valid': formNew.get('summary').touched && !formNew.get('summary').valid}"
                                 required></textarea>
@@ -179,8 +179,8 @@
                         <div class="form-group mt-4 mx-auto">
                             <!-- <input  type="" value="Publicar Edición"
                                 class="btn form-control"> -->
-                            <button class="btn w-100" *ngIf="action==='EDIT'" (click)="editPost()">Publicar
-                                Edición</button>
+                            <button class="btn w-100" *ngIf="action==='EDIT'"
+                                (click)="editPost()">{{'FORM-PUBLISH.PUBLISH-EDIT'|translate}}</button>
                             <input *ngIf="action==='CREATE'" (click)="createPost()"
                                 value="{{'FORM-PUBLISH.PUBLISH-POST'|translate}}" class="btn form-control">
                         </div>

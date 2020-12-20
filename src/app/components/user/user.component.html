@@ -26,7 +26,7 @@
             <div class="col-md-12 text-right mt-2">
 
               <fa-icon class="edit mr-5" [icon]="['far', 'edit']" (click)="editUser()" placement="bottom"
-                ngbTooltip="Edita tu perfil">
+                ngbTooltip="{{'USER.EDIT-PROFILE'|translate}}">
               </fa-icon>
 
             </div>
@@ -235,9 +235,9 @@
           <p class="pt-3 pb-2">{{post.title}}</p>
           <div class="col-1 d-flex">
             <fa-icon class="icon mr-2 pt-3 pb-2" [icon]="['fas', 'pencil-alt']" placement="bottom"
-              ngbTooltip="Edita tu publicación"></fa-icon>
+              ngbTooltip="{{'USER.EDIT-POST'|translate}}"></fa-icon>
             <fa-icon class="icon pt-3 pb-2 pr-5" [icon]="['fas', 'trash-alt']" placement="bottom"
-              ngbTooltip="Elimina tu post"></fa-icon>
+              ngbTooltip="{{'USER.DELETE-POST'|translate}}"></fa-icon>
           </div>
 
         </div>

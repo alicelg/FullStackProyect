@@ -13,12 +13,15 @@
                 </div>
 
                 <div class="col-md-8 col-6 text-right mr-md-5" *ngIf="currentUser.id === post.user.id">
-                    <div class="heart-empty mr-3" (click)="toggleFavorite($event.target, post.id)"></div>
+                    <div class="heart-empty mr-3" (click)="toggleFavorite($event.target, post.id)" placement="bottom"
+                        ngbTooltip="{{'CONCEPT.FAVORITE'|translate}}"></div>
 
-                    <fa-icon class="size-icon mr-3" [icon]="['fas', 'pencil-alt']" (click)="editPost(post.id)">
+                    <fa-icon class="size-icon mr-3" [icon]="['fas', 'pencil-alt']" (click)="editPost(post.id)"
+                        placement="bottom" ngbTooltip="{{'USER.EDIT-POST'|translate}}">
                     </fa-icon>
 
-                    <fa-icon class="size-icon" [icon]="['far', 'trash-alt']" (click)="showDeleteModal()"></fa-icon>
+                    <fa-icon class="size-icon" [icon]="['far', 'trash-alt']" (click)="showDeleteModal()"
+                        placement="bottom" ngbTooltip="{{'USER.DELETE-POST'|translate}}"></fa-icon>
                 </div>
             </div>
 
@@ -64,7 +67,7 @@
         <div class="container pt-5 pb-5">
             <div class="row">
                 <div class="col-md-12">
-                    <h4>Comentarios</h4>
+                    <h4>{{'COMMENTS.COMMENTS'|translate}}</h4>
                 </div>
             </div>
 
@@ -83,8 +86,8 @@
 
             <form class="pb-5" [formGroup]="formComment" class="mb-5" (ngSubmit)="createComment()">
                 <div class="col-md-8">
-                    <h5 class="pt-5">Escribe un comentario</h5>
-                    <label> Comentario </label>
+                    <h5 class="pt-5">{{'COMMENTS.WRITE-COMMENT'|translate}}</h5>
+                    <label> {{'COMMENTS.COMMENT'|translate}} </label>
                     <textarea name="comment" id="" cols="30" rows="3" class="form-control" formControlName="text"
                         [ngClass]="{ 'not-valid': formComment.get('text').touched && !formComment.get('text').valid}"
                         required></textarea>
@@ -95,7 +98,7 @@
                             *ngIf="formComment.get('text').errors.required && formComment.get('text').touched">{{'FORM-PUBLISH.REQUIRED-FIELD'
                             |translate}}</span>
                     </div>
-                    <input type="submit" value="Comentar" class="btn borde mt-2">
+                    <input type="submit" value="{{'COMMENTS.BUTTOM-COMMENT'|translate}}" class="btn borde mt-2">
                 </div>
             </form>
         </div>
@@ -105,7 +108,7 @@
 
 <ng-template #content let-modal>
     <div class="modal-header border-bottom-0 px-4 pt-3">
-        <h5 class="modal-title">Eliminar post</h5>
+        <h5 class="modal-title">{{'USER.DELETE-POST'|translate}}</h5>
         <div id="closeModal">
             <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
                 <span aria-hidden="true">&times;</span>&nbsp;
@@ -114,7 +117,7 @@
     </div>
 
     <div class="modal-body px-4">
-        <p>¿Estas seguro que quieres borrar este post?</p>
+        <p>{{'USER.DELETE-POST-TEXT'|translate}}</p>
     </div>
 
     <div class="modal-footer justify-content-center px-4 border-top-0 pb-3">
@@ -122,7 +125,6 @@
             translate
             }}</button>
         <button type="button" class="btn tertiaryBgColor quaternaryTextColor"
-            (click)="deletePost(); modal.dismiss()">Borrar
-            post</button>
+            (click)="deletePost(); modal.dismiss()">{{'USER.DELETE-POST'|translate}}</button>
     </div>
 </ng-template>

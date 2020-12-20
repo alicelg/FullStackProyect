@@ -141,7 +141,8 @@
         "IMPERIALISM-TEXT": "Imperialism is a regime of political domination in which a military power extends its dominions over other peoples or states through force or through economic, cultural or political influence.",
         "CONSTITUTION": "Constitution",
         "CONSTITUTION-TEXT": "Constitution is the set of principles, norms and rules that seek to establish the form of a State of Law, as well as to organize that same State, delimiting it, through its own Public Administration institutions and establishing procedures and sanctions so that the State itself does not breach the rules established in said Constitution.",
-        "MESSAGE": "Sorry, we don't have a definition for that concept yet."
+        "MESSAGE": "Sorry, we don't have a definition for that concept yet.",
+        "FAVORITE": "Add to favorites"
     },
     "FOOTER": {
         "PRINCIPALTEXT": "Know the political position of the countries and political concepts.",
@@ -535,7 +536,9 @@
         "CREATE-POST": "Create a post",
         "ALL": "All",
         "SORRY-HABLANDO": "It hasn't occurred to me to talk about that subject yet.",
-        "SORRY-HABLANDO-TEXT": "It would be interesting if you were the first to write about the topic you are looking for in our General Blog."
+        "SORRY-HABLANDO-TEXT": "It would be interesting if you were the first to write about the topic you are looking for in our General Blog.",
+        "SUMMARY": "Summary",
+        "PUBLISH-EDIT": "Publish edition"
     },
     "COUNTRY-DETAIL": {
         "FORMATION": "Government formation",
@@ -578,6 +581,17 @@
         "LOG-OUT": "Log out",
         "PUBLISH-BLOG": "Post to Blog",
         "LAST-TEXT-USER": "If what you want is to spend some time reading and enjoying the ideas of other users, you can read and comment on them.",
-        "VIEW-PROFILE": "View profile"
+        "VIEW-PROFILE": "View profile",
+        "EDIT-PROFILE": "Edit profile",
+        "EDIT-POST": "Edit post",
+        "DELETE-POST": "Delete post",
+        "DELETE-POST-TEXT": "Are you sure you want to delete this post?",
+        "CANCEL": "Cancel"
+    },
+    "COMMENTS": {
+        "COMMENTS": "Comments",
+        "WRITE-COMMENT": "Write a comment",
+        "COMMENT": "Commentary",
+        "BUTTOM-COMMENT": "Comment"
     }
 }
