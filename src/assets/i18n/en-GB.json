@@ -562,7 +562,7 @@
     },
     "USER": {
         "NAME": "Name",
-        "LASTNAME": "Lastnmae",
+        "LASTNAME": "Lastname",
         "NICKNAME-USER": "Nickname",
         "COUNTRY-USER": "Country",
         "STUDIES": "Studies",
@@ -586,7 +586,13 @@
         "EDIT-POST": "Edit post",
         "DELETE-POST": "Delete post",
         "DELETE-POST-TEXT": "Are you sure you want to delete this post?",
-        "CANCEL": "Cancel"
+        "CANCEL": "Cancel",
+        "WHAT-LIKE-TODAY": "What would you like to do today?",
+        "READ-POST": "Read posts",
+        "SEARCH-INFO": "Inform you of the countries",
+        "CONSULT-CONCEPTS": "Consult concepts",
+        "FUN-TESTS": "Have fun with the tests",
+        "UPDATE-PROFILE": "Update profile"
     },
     "COMMENTS": {
         "COMMENTS": "Comments",

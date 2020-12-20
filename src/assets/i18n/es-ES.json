@@ -586,7 +586,13 @@
         "EDIT-POST": "Edita publicación",
         "DELETE-POST": "Elimina publicación",
         "DELETE-POST-TEXT": "¿Está seguro que quieres borrar este post?",
-        "CANCEL": "Cancelar"
+        "CANCEL": "Cancelar",
+        "WHAT-LIKE-TODAY": "¿Qué te gustaría hacer hoy?",
+        "READ-POST": "Leer publicaciones",
+        "SEARCH-INFO": "Informarte de los países",
+        "CONSULT-CONCEPTS": "Consultar conceptos",
+        "FUN-TESTS": "Divertirte con los tests",
+        "UPDATE-PROFILE": "Actualizar perfil"
     },
     "COMMENTS": {
         "COMMENTS": "Comentario",

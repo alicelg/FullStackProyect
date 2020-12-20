@@ -168,8 +168,13 @@ strong {
 
 .change {
   border-bottom: 1px solid transparent;
+  cursor: pointer;
 }
 
 .change:hover {
   border-bottom: 1px solid $tertiaryBgColor;
+}
+
+.icon {
+  font-size: 30px;
 }

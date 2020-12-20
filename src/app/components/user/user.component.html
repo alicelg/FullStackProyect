@@ -50,12 +50,12 @@
               <div class="col-md-4 col-6">
 
                 <div class="d-flex" *ngIf='currentUser.country'>
-                  <i class="fa fa-map-pin mr-2 ml-2 text-center mt-1"></i>
+                  <fa-icon class="mr-2 text-center mt-1" [icon]="['fas', 'map-pin']"></fa-icon>
                   <p class="text-header">{{currentUser.country?currentUser.country:'-'}}</p>
                 </div>
 
                 <div class="d-flex">
-                  <i class="fa fa-graduation-cap mr-1 mr-2 text-center mt-1"></i>
+                  <fa-icon class="mr-2 text-center mt-1" [icon]="['fas', 'graduation-cap']"></fa-icon>
                   <p class="text-header">{{currentUser.studies?currentUser.studies:'-'}}</p>
                 </div>
               </div>
@@ -63,12 +63,12 @@
               <div class="col-md-4 col-6 ">
 
                 <div class="d-flex">
-                  <i class="fa fa-linkedin-square mr-1 mr-2 text-center mt-1"></i>
+                  <i class="fa fa-linkedin-square mr-2 text-center mt-1"></i>
                   <p class="text-header">{{currentUser.linkedin? currentUser.linkedin: '-'}}</p>
                 </div>
 
                 <div class="d-flex">
-                  <i class="fa fa-briefcase mr-2 text-center mt-1"></i>
+                  <fa-icon class="mr-2 text-center mt-1" [icon]="['fas', 'briefcase']"></fa-icon>
                   <p class="text-header"> {{currentUser.current_work? currentUser.current_work: '-'}} </p>
                 </div>
               </div>
@@ -76,13 +76,13 @@
               <div class="col-md-4 desktop">
 
                 <div class="d-flex">
-                  <i class="fa fa-book mr-2 text-center mt-1"></i>
+                  <fa-icon class="mr-2 text-center mt-1" [icon]="['fas', 'heart']"></fa-icon>
                   <p class="text-header"> 9</p>
                 </div>
 
 
                 <div class="d-flex">
-                  <i class="fa fa-heart mr-2 mt-1 text-center"></i>
+                  <fa-icon class="mr-2 text-center mt-1" [icon]="['fas', 'book']"></fa-icon>
                   <p class="text-header">10</p>
                 </div>
               </div>
@@ -118,13 +118,13 @@
             <div class="form-group col-md-4">
               <label>{{'USER.COUNTRY-USER'| translate}} </label>
 
-              <i class="fa fa-map-pin ml-2 text-center mt-1"></i>
+              <fa-icon class="ml-2 text-center mt-1" [icon]="['fas', 'map-pin']"></fa-icon>
               <input type="text" class="mb-2 form-control" formControlName="country">
             </div>
 
             <div class="form-group col-md-4">
               <label>{{'USER.STUDIES'| translate}}</label>
-              <i class="fa fa-graduation-cap text-center mt-1 ml-2"></i>
+              <fa-icon class="ml-2 text-center mt-1" [icon]="['fas', 'graduation-cap']"></fa-icon>
               <input type="text" class="form-control" formControlName="studies">
             </div>
 
@@ -136,7 +136,7 @@
 
             <div class="form-group col-md-4">
               <label> {{'USER.WORD'| translate}}</label>
-              <i class="fa fa-briefcase ml-2 text-center mt-1"></i>
+              <fa-icon class="ml-2 text-center mt-1" [icon]="['fas', 'briefcase']"></fa-icon>
               <input type="text" class="form-control" formControlName="currentWork">
             </div>
 
@@ -200,11 +200,13 @@
       <h5 class="text-center pt-3">{{'USER.FAVORITE-CONCEPT'| translate}}</h5>
       <hr>
 
-      <div class="row text-center pb-3">
+      <div class="row text-md-center text-left  pb-3">
 
         <div class="col-md-3 mt-2 change pt-3" *ngFor="let concept of favouriteConcepts" [routerLink]="['/conceptos']"
           [queryParams]="{searchTerm: translateService.instant(concept.title)}">
-          <p> <i class="fa fa-heart mr-2 mt-1 text-center"></i> {{concept.title |translate}}</p>
+          <p>
+            <fa-icon [icon]="['fas', 'heart']"></fa-icon> {{concept.title |translate}}
+          </p>
         </div>
 
 
@@ -226,13 +228,16 @@
   <div class="row mt-5 mb-5">
     <!-- posts publicados -->
     <div class="col-md-6 border rounded pt-2 pb-2">
-      <h5 class="text-center pt-3">{{'USER.MY-PUBLISH'| translate}}</h5>
+      <h5 class="text-md-center pt-3">{{'USER.MY-PUBLISH'| translate}}</h5>
 
 
       <div class="row">
         <div class="col-12 d-flex justify-content-between change" *ngFor="let post of postCreated"
           [routerLink]="['/blog/general/', post.id]">
-          <p class="pt-3 pb-2">{{post.title}}</p>
+          <p class="pt-3 pb-2">
+            <fa-icon [icon]="['fas', 'feather-alt']"></fa-icon>
+            {{post.title}}
+          </p>
         </div>
 
       </div>
@@ -245,7 +250,8 @@
       <div class="row">
         <div class="col-md-6 mt-3 change pt-2" *ngFor="let post of favouritePost"
           [routerLink]="['/blog/general/', post.id]">
-          <p> <i class="fa fa-book mr-2 text-center mt-1"></i>
+          <p>
+            <fa-icon [icon]="['fas', 'book']"></fa-icon>
             {{post.title}}
           </p>
         </div>
@@ -263,7 +269,7 @@
   <div class="container pt-5 pb-5">
 
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-8">
         <h5 class="text-center"> {{'USER.REMEMBER'| translate}}</h5>
         <hr class="mb-5">
@@ -293,14 +299,64 @@
 
       </div>
 
-      <!-- <div class="offset-md-1 col-md-2 mt-md-5 ">
+    </div> -->
 
-         <button class="btn btn-block" [routerLink]="['/nuevo/post']">{{'USER.PUBLISH-BLOG'| translate}}</button> 
-        <button class="btn btn-block mt-5" (click)="userService.logOut()">{{'USER.LOG-OUT'| translate}}</button>
+    <div class="row">
 
-      </div> -->
+      <div class="col-12">
+        <h4>¿Qué te gustaría hacer hoy? </h4>
+        <hr>
+      </div>
+    </div>
+
+    <div class="row text-center">
+
+      <div class="col-md-2 col-6 mt-md-5 mt-5 change" [routerLink]="['/nuevo/post']">
+
+        <fa-icon class="icon" [icon]="['fas', 'feather-alt']"></fa-icon>
+        <h6 class="mt-2">{{'USER.PUBLISH-BLOG'|translate}}</h6>
+
+      </div>
+
+      <div class="col-md-2 col-6 mt-md-5 mt-5 change" [routerLink]="['/blog/general']">
+
+        <fa-icon class="icon" [icon]="['fas', 'book-reader']"></fa-icon>
+        <h6 class="mt-2">{{'USER.PUBLISH-BLOG'|translate}}</h6>
+
+      </div>
+
+      <div class="col-md-2 col-6 mt-md-5 mt-5 change" [routerLink]="['/mapa']">
+
+        <fa-icon class="icon" [icon]="['fas', 'globe']"></fa-icon>
+        <h6 class="mt-2">{{'USER.SEARCH-INFO'|translate}}</h6>
+
+      </div>
+
+      <div class="col-md-2 col-6 mt-md-5 mt-5 change" [routerLink]="['/conceptos']">
+
+        <fa-icon class="icon" [icon]="['fas', 'search']"></fa-icon>
+        <h6 class="mt-2">{{'USER.CONSULT-CONCEPTS'|translate}}</h6>
+
+      </div>
+
+      <div class="col-md-2 col-6 mt-md-5 mt-5 change" [routerLink]="['/tests']">
+
+        <fa-icon class="icon" [icon]="['fas', 'medal']"></fa-icon>
+        <h6 class="mt-2">{{'USER.FUN-TESTS'|translate}}</h6>
+
+      </div>
+
+      <div class="col-md-2 col-6 mt-md-5 mt-5 change" (click)="editUser()">
+
+        <fa-icon class="icon" [icon]="['fas', 'user']"></fa-icon>
+        <h6 class="mt-2">{{'USER.UPDATE-PROFILE'|translate}}</h6>
+
+      </div>
+
 
     </div>
+
+
 
   </div>
 </div>
