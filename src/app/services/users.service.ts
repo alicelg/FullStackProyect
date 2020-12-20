@@ -38,8 +38,12 @@ export class UsersService {
     return this.httpClient.post<any>(`${this.baseUrl}/login`, formValue).toPromise();
   }
 
-  update(formValue): Promise<any> {
-    return this.httpClient.post<any>(`${this.baseUrl}/update`, formValue).toPromise();
+  getUserData(userId): Promise<any> {
+    return this.httpClient.get<any>(`${this.baseUrl}`, { params: { userId } }).toPromise();
+  }
+
+  update(user): Promise<any> {
+    return this.httpClient.put<any>(`${this.baseUrl}/update`, user).toPromise();
   }
 
   getConcepts(): Promise<any> {
@@ -58,5 +62,7 @@ export class UsersService {
   getPostCreated(): Promise<any> {
     return this.httpClient.get<any>(`${this.baseUrl}/created/posts`).toPromise();
   }
+
+
 
 }

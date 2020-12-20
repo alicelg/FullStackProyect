@@ -86,7 +86,7 @@
             </div>
 
             <!-- si no vienen posts mostramos el mensaje por defecto -->
-            <div class="col-md-5 mb-4" *ngIf="!generalPosts.length">
+            <div class="col-md-5 mb-4" *ngIf="!generalPosts?.length">
               <div class="card card-inverse border">
                 <img class="card-img-top" src="../../../assets/images/logo2.png">
                 <div class="meta text-right mr-4">
@@ -177,7 +177,7 @@
 
         <!-- si no vienen posts mostramos el mensaje por defecto -->
         <div class="row">
-          <div class="col-md-4" *ngIf="!hablandoPosts.length">
+          <div class="col-md-4" *ngIf="!hablandoPosts?.length">
 
             <div class="card mb-3 border">
               <div class="row">

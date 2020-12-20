@@ -83,7 +83,7 @@ const routes: Routes = [
     canActivate: [InternalGuard]
   },
   {
-    path: 'usuario/:id',
+    path: 'usuario/:userId',
     component: UserComponent,
     canActivate: [InternalGuard]
   },

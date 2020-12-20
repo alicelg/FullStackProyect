@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateService } from '@ngx-translate/core';
@@ -25,53 +25,43 @@ export class UserComponent implements OnInit {
   currentUser: User;
   action: string;
 
+
   favouriteConcepts: any[];
   favouritePost: any[];
 
   postCreated: any[];
 
-  editForm: FormGroup;
+  editForm;
+  userId;
+  userToEdit: User;
 
   constructor(
     private modal: NgbModal,
-    public userService: UsersService,
+    public usersService: UsersService,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     public translateService: TranslateService,
   ) {
-    this.action = this.activatedRoute.snapshot.url[0].path;
-
-
-    this.editForm = new FormGroup({
-      name: new FormControl(),
-      surname: new FormControl(),
-      nickname: new FormControl(),
-      country: new FormControl(),
-      studies: new FormControl(),
-      linkedin: new FormControl(),
-      currentWord: new FormControl()
-
-    })
+    this.action = this.activatedRoute.snapshot.url[0].path.includes('usuario') ? 'USER' : 'EDIT';
+    this.userId = Number(this.activatedRoute.snapshot.paramMap.get('userId'));
   }
 
   ngOnInit(): void {
-    this.userService.currentUser.subscribe(res => {
+    this.usersService.currentUser.subscribe(res => {
       this.currentUser = res;
     });
 
-    this.userService.getConcepts().then(res => {
+    this.usersService.getConcepts().then(res => {
       this.favouriteConcepts = res.concepts;
     })
 
-    this.userService.getPost().then(res => {
+    this.usersService.getPost().then(res => {
       this.favouritePost = res.posts;
     })
 
-    this.userService.getPostCreated().then(res => {
+    this.usersService.getPostCreated().then(res => {
       this.postCreated = res.posts;
     })
-
-
   }
 
   showStories(storyStep): void {
@@ -130,13 +120,49 @@ export class UserComponent implements OnInit {
     clearInterval(this.progressBarInterval);
   }
 
+  editUser(): void {
+    this.action = 'EDIT';
 
-  edit(): void {
-    this.userService.update(this.editForm.value)
-      .then(response => {
-        console.log(response);
-      })
-      .catch(error => console.log(error));
+    this.userToEdit = this.usersService.isLogged;
+
+    this.editForm = new FormGroup({
+      name: new FormControl(this.userToEdit.name),
+      surname: new FormControl(this.userToEdit.surname),
+      nickname: new FormControl(this.userToEdit.nickname, [Validators.required]),
+      country: new FormControl(this.userToEdit.country),
+      studies: new FormControl(this.userToEdit.studies),
+      linkedin: new FormControl(this.userToEdit.linkedin),
+      currentWork: new FormControl(this.userToEdit.current_work)
+    });
+  }
+
+  sendEditedUser(): void {
+    const userEdit: User = { ...this.editForm.value };
+    userEdit.id = this.userId;
+    userEdit.photo = this.currentUser.photo;
+
+    if (this.editForm.valid) {
+      this.usersService.update(userEdit).then(res => {
+        this.getUserData();
+        this.action = 'USER';
+      }).catch(res => {
+        alert('Su perfil no ha podido ser editado');
+      });
+    } else {
+      // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
+      Object.keys(this.editForm.controls).forEach(field => {
+        const control = this.editForm.get(field);
+        control.markAsTouched({ onlySelf: true });
+      });
+
+    }
+  }
+
+  getUserData() {
+    this.usersService.getUserData(this.userId).then(user => {
+      user.token = this.currentUser.token;
+      this.usersService.isLogged = user;
+    })
   }
 
 }

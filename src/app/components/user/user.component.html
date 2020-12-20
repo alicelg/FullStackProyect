@@ -21,136 +21,127 @@
 
       <div class="col-md-8">
 
-        <div class="row">
-          <div class="col-md-12 text-right mt-2">
-
-            <fa-icon class="edit mr-5" [icon]="['far', 'edit']" [routerLink]="['/editar']" *ngIf="action === 'usuario'">
-            </fa-icon>
-
-          </div>
-
-        </div>
-
-        <!-- cabecera del usuario -->
-
-        <div class="cabecera-normal" *ngIf="action === 'usuario'">
+        <ng-container *ngIf="action === 'USER'">
           <div class="row">
-            <div class="col-md-12 mt-md-3 mt-2 mr-md-2">
-              <h3 class="text-center text-md-left">{{currentUser.name}} {{currentUser.surname}} -
-                <span class="span">{{currentUser.nickname}}</span>
-              </h3>
-            </div>
-          </div>
+            <div class="col-md-12 text-right mt-2">
 
-          <div class="row mt-4">
+              <fa-icon class="edit mr-5" [icon]="['far', 'edit']" (click)="editUser()" placement="bottom"
+                ngbTooltip="Edita tu perfil">
+              </fa-icon>
 
-            <div class="col-md-4 col-6">
-
-              <div class="d-flex" *ngIf='currentUser.country'>
-                <i class="fa fa-map-pin mr-2 ml-2 text-center mt-1"></i>
-                <p class="text-header">{{currentUser.country}}</p>
-              </div>
-
-              <div class="d-flex">
-                <i class="fa fa-graduation-cap mr-1 mr-2 text-center mt-1"></i>
-                <p class="text-header">{{currentUser.studies}}</p>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-6 ">
-
-              <div class="d-flex">
-                <i class="fa fa-linkedin-square mr-1 mr-2 text-center mt-1"></i>
-                <p class="text-header">{{currentUser.linkedin}}</p>
-              </div>
-
-              <div class="d-flex">
-                <i class="fa fa-briefcase mr-2 text-center mt-1"></i>
-                <p class="text-header"> {{currentUser.currentWork}} </p>
-              </div>
-            </div>
-
-            <div class="col-md-4 desktop">
-
-              <div class="d-flex">
-                <i class="fa fa-book mr-2 text-center mt-1"></i>
-                <p class="text-header">9</p>
-              </div>
-
-
-              <div class="d-flex">
-                <i class="fa fa-heart mr-2 mt-1 text-center"></i>
-                <p class="text-header">10</p>
-              </div>
             </div>
 
           </div>
 
-        </div>
+          <!-- cabecera del usuario -->
+
+          <div class="cabecera-normal">
+            <div class="row">
+              <div class="col-md-12 mt-md-3 mt-2 mr-md-2">
+                <h3 class="text-center text-md-left">{{currentUser.name?currentUser.name:'-'}}
+                  {{currentUser.surname?currentUser.surname:'-'}}
+                  <span class="span">{{currentUser.nickname}}</span>
+                </h3>
+              </div>
+            </div>
+
+            <div class="row mt-4">
+
+              <div class="col-md-4 col-6">
+
+                <div class="d-flex" *ngIf='currentUser.country'>
+                  <i class="fa fa-map-pin mr-2 ml-2 text-center mt-1"></i>
+                  <p class="text-header">{{currentUser.country?currentUser.country:'-'}}</p>
+                </div>
+
+                <div class="d-flex">
+                  <i class="fa fa-graduation-cap mr-1 mr-2 text-center mt-1"></i>
+                  <p class="text-header">{{currentUser.studies?currentUser.studies:'-'}}</p>
+                </div>
+              </div>
+
+              <div class="col-md-4 col-6 ">
+
+                <div class="d-flex">
+                  <i class="fa fa-linkedin-square mr-1 mr-2 text-center mt-1"></i>
+                  <p class="text-header">{{currentUser.linkedin? currentUser.linkedin: '-'}}</p>
+                </div>
+
+                <div class="d-flex">
+                  <i class="fa fa-briefcase mr-2 text-center mt-1"></i>
+                  <p class="text-header"> {{currentUser.current_work? currentUser.current_work: '-'}} </p>
+                </div>
+              </div>
+
+              <div class="col-md-4 desktop">
+
+                <div class="d-flex">
+                  <i class="fa fa-book mr-2 text-center mt-1"></i>
+                  <p class="text-header">9</p>
+                </div>
+
+
+                <div class="d-flex">
+                  <i class="fa fa-heart mr-2 mt-1 text-center"></i>
+                  <p class="text-header">10</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </ng-container>
+
 
         <!-- cabecera a editar por el usuario -->
         <!-- form -  -->
 
-        <form [formGroup]="editForm" (ngSubmit)="edit()" class="cabecera-edición mt-md-4 mb-3"
-          *ngIf="action === 'editar'">
+        <form [formGroup]="editForm" class="cabecera-edición mt-md-4 mb-3" *ngIf="action === 'EDIT'">
 
           <div class="row">
 
             <div class="form-group col-md-4">
               <label>{{'USER.NAME'| translate}}</label>
-              <input type="text" value="{{currentUser.name}}" class="mr-2 form-control" formControl="name">
+              <input type class="mr-2 form-control" formControlName="name">
             </div>
-
-
-
 
             <div class="form-group col-md-4">
               <label>{{'USER.LASTNAME'| translate}}</label>
-              <input type="text" value="{{currentUser.surname}}" class="mr-2 form-control" formControl="surname">
+              <input type="text" class="mr-2 form-control" formControlName="surname">
             </div>
-
 
             <div class="form-group col-md-4">
               <label>{{'USER.NICKNAME-USER'| translate}}</label>
-              <input type="text" value="{{currentUser.nickname}}" class="form-control" formControl="nickname">
+              <input type="text" class="form-control" formControlName="nickname">
             </div>
-
-
 
             <div class="form-group col-md-4">
               <label>{{'USER.COUNTRY-USER'| translate}} </label>
 
               <i class="fa fa-map-pin ml-2 text-center mt-1"></i>
-              <input type="text" value="{{currentUser.country}}" class="mb-2 form-control" formControl="country">
+              <input type="text" class="mb-2 form-control" formControlName="country">
             </div>
-
-
 
             <div class="form-group col-md-4">
               <label>{{'USER.STUDIES'| translate}}</label>
               <i class="fa fa-graduation-cap text-center mt-1 ml-2"></i>
-              <input type="text" value="{{currentUser.studies}}" class="form-control" formControl="studies">
+              <input type="text" class="form-control" formControlName="studies">
             </div>
-
-
 
             <div class="form-group col-md-4">
               <label>{{'USER.LINKEDIN'| translate}}</label>
               <i class="fa fa-linkedin-square ml-2 text-center mt-1"></i>
-              <input type="text" value="{{currentUser.linkedin}}" class="mb-2 form-control" formControl="linkedin">
+              <input type="text" class="mb-2 form-control" formControlName="linkedin">
             </div>
-
-
 
             <div class="form-group col-md-4">
               <label> {{'USER.WORD'| translate}}</label>
               <i class="fa fa-briefcase ml-2 text-center mt-1"></i>
-              <input type="text" value="{{currentUser.currentWork}}" class="form-control" formControl="currentWork">
+              <input type="text" class="form-control" formControlName="currentWork">
             </div>
 
-
             <div class="col-md-8 col-6 mt-4 text-right">
-              <input type="submit" class="btn mr-5 mt-2 form-control" value="Guardar">
+              <input type="submit" class="btn mr-5 mt-2 form-control" value="Guardar" (click)="sendEditedUser()">
             </div>
 
           </div>
@@ -239,12 +230,14 @@
 
 
       <div class="row">
-        <div class="col-11 d-flex justify-content-between favorite" *ngFor="let post of postCreated"
+        <div class="col-11 d-flex justify-content-between favorite " *ngFor="let post of postCreated"
           [routerLink]="['/blog/general/', post.id]">
           <p class="pt-3 pb-2">{{post.title}}</p>
           <div class="col-1 d-flex">
-            <fa-icon class="icon mr-2 pt-3 pb-2" [icon]="['fas', 'pencil-alt']"></fa-icon>
-            <fa-icon class="icon pt-3 pb-2 pr-5" [icon]="['fas', 'trash-alt']"></fa-icon>
+            <fa-icon class="icon mr-2 pt-3 pb-2" [icon]="['fas', 'pencil-alt']" placement="bottom"
+              ngbTooltip="Edita tu publicación"></fa-icon>
+            <fa-icon class="icon pt-3 pb-2 pr-5" [icon]="['fas', 'trash-alt']" placement="bottom"
+              ngbTooltip="Elimina tu post"></fa-icon>
           </div>
 
         </div>
@@ -272,13 +265,13 @@
 
 </div>
 
-<div class="container-fluid space-color">
+<div class="container-fluid space-color desktop">
 
   <div class="container pt-5 pb-5">
 
 
     <div class="row">
-      <div class="col-md-8 desktop">
+      <div class="col-md-8">
         <h5 class="text-center"> {{'USER.REMEMBER'| translate}}</h5>
         <hr class="mb-5">
         <div class="row">
@@ -306,10 +299,10 @@
         </div>
 
       </div>
-      <!-- 
-      <div class="offset-md-1 col-md-2 mt-md-5">
 
-        <button class="btn btn-block" [routerLink]="['/nuevo/post']">{{'USER.PUBLISH-BLOG'| translate}}</button>
+      <!-- <div class="offset-md-1 col-md-2 mt-md-5 ">
+
+         <button class="btn btn-block" [routerLink]="['/nuevo/post']">{{'USER.PUBLISH-BLOG'| translate}}</button> 
         <button class="btn btn-block mt-5" (click)="userService.logOut()">{{'USER.LOG-OUT'| translate}}</button>
 
       </div> -->

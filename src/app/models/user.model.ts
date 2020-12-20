@@ -5,7 +5,7 @@ export class User {
   email: string;
   password: string;
   studies: string;
-  currentWork: string;
+  current_work: string;
   photo: string;
   nickname: string;
   role: string;
