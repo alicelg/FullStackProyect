@@ -12,7 +12,7 @@
                         {{post.category}} </p>
                 </div>
 
-                <div class="col-md-8 col-6 text-right mr-md-5" *ngIf="currentUser.id === post.user_id">
+                <div class="col-md-8 col-6 text-right mr-md-5" *ngIf="currentUser.id === post.user.id">
                     <div class="heart-empty mr-3" (click)="toggleFavorite($event.target, post.id)"></div>
 
                     <fa-icon class="size-icon mr-3" [icon]="['fas', 'pencil-alt']" (click)="editPost(post.id)">
