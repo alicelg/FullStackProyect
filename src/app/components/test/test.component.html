@@ -1,7 +1,7 @@
 <div class="container-fluid container-color">
 
   <!-- Primera pantalla para empezar el test  -->
-  <div class="container pt-5" *ngIf="action === 'instructions'">
+  <!-- <div class="container pt-5" *ngIf="action === 'instructions'">
 
     <div class="row text-center">
       <div class="col-md-12">
@@ -85,10 +85,10 @@
           (click)="startTest()">{{'TEST.START'|translate}}</button>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Test ya empezado -->
-  <div class="container-fluid container-color pt-md-5 pt-4 pb-6" *ngIf="action === 'questions'">
+  <!-- <div class="container-fluid container-color pt-md-5 pt-4 pb-6" *ngIf="action === 'questions'">
 
     <div class="container">
 
@@ -98,13 +98,6 @@
           <hr class="mb-5">
         </div>
       </div>
-
-      <!-- <div class="row text-right">
-            <div class="col-md-12">
-                0% <input type="range"> 100%
-
-            </div>
-        </div> -->
 
       <h6 class="text-center">{{actualQuestion.question}}</h6>
       <div class="row mt-3">
@@ -124,5 +117,92 @@
         </div>
       </div>
     </div>
+  </div> -->
+
+</div>
+
+
+<!-- Resultado del test -->
+<div class="container-fluid container-color pt-md-5 pt-4 pb-5">
+
+  <div class="container">
+
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h3>{{'RESULTS.RESULT'|translate}}</h3>
+        <hr class="mb-4">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<div class="container mt-5 mb-5">
+
+  <div class="row text-center">
+
+    <div class="col-12">
+      <img src="../../../assets/images/evolucion.png" alt="" class="images">
+    </div>
+
+    <div class="col-12 mt-5 mb-5">
+      SOY LA LINEA DE RANGO
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid space-color pt-md-5 pt-4 pb-5">
+
+  <div class="container">
+
+    <div class="row text-center">
+
+
+      <div class="col-md-3 col-6">
+
+        <fa-icon class="size-icon" [icon]="['far', 'clock']"></fa-icon>
+        <h5 class="mt-2">{{'RESULTS.TIME'|translate}}</h5>
+        <p>3 {{'RESULTS.MINUTES'|translate}}</p>
+
+
+      </div>
+
+      <div class="col-md-3 col-6">
+        <fa-icon class="size-icon" [icon]="['far', 'check-square']"></fa-icon>
+        <h5 class="mt-2">{{'RESULTS.ANSWERS'|translate}}</h5>
+        <p>7/10</p>
+      </div>
+
+      <div class="col-md-3 col-12 mt-md-0 mt-4">
+        <fa-icon class="size-icon" [icon]="['fas', 'medal']"></fa-icon>
+        <h5 class="mt-2"> {{'RESULTS.CONGRATULATIONS'|translate}} </h5>
+        <p>{{'RESULTS.CONGRATULATIONS-TEXT'|translate}}</p>
+
+      </div>
+
+      <div class="col-md-3 col-12 mt-md-0 mt-4">
+        <fa-icon class="size-icon" [icon]="['fas', 'trophy']"></fa-icon>
+        <h5 class="mt-2">{{'RESULTS.CONTINUE'|translate}}</h5>
+
+        <p>{{'RESULTS.CONTINUE-TEXT'|translate}}</p>
+
+        <button class="btn btncolor mr-2"> {{'HEADER.WORLD-TEST'|translate}}</button>
+        <button class="btn btncolor"> {{'HEADER.POLITICAL-TEST'|translate}} </button>
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+
+
   </div>
 </div>

@@ -29,6 +29,15 @@
   font-size: 40px;
 }
 
+.images {
+  width: 60%;
+}
+
+.space-color {
+  background: $quaternaryBgColor;
+  padding-bottom: 30px;
+}
+
 @media (max-width: 575px) {
   .greeting {
     p:nth-child(1) {
@@ -42,5 +51,9 @@
     strong {
       font-weight: 900;
     }
+  }
+
+  .images {
+    width: 100%;
   }
 }

@@ -604,6 +604,16 @@
         "QUESTION-SEVEN": "You have been given an adventure book and the main character describes his country. The most curious thing is the way to describe its flag; He describes it as two triangles, red and white. What country are you referring to?",
         "QUESTION-EIGHT": "You are lining up to board your next destination. The family up front carries this flag in their passport, what country are they from?",
         "QUESTION-NINE": "You have been invited to a meeting in the European Union, you know a group of people who say they are from a country with a white, green and red flag. What country are they referring to?",
-        "QUESTION-TEN": "A friend has brought you a shirt from his trip, the shirt is red with a yellow star in the center; What country has my friend been to?"
+        "QUESTION-TEN": "A friend has brought you a shirt from his trip, the shirt is red with a yellow star in the center, what country has your friend been to?"
+    },
+    "RESULTS": {
+        "RESULT": "Results",
+        "TIME": "Time",
+        "MINUTES": "minutes",
+        "ANSWERS": "Answers",
+        "CONGRATULATIONS": "Congratulations",
+        "CONGRATULATIONS-TEXT": "We know that it is not an easy challenge to take on. With each attempt you become wiser. Keep trying.",
+        "CONTINUE": "Continue",
+        "CONTINUE-TEXT": "Practicing and learning"
     }
 }
