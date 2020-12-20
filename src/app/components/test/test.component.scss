@@ -30,7 +30,12 @@
 }
 
 .images {
-  width: 50%;
+  width: 60%;
+}
+
+.space-color {
+  background: $quaternaryBgColor;
+  padding-bottom: 30px;
 }
 
 @media (max-width: 575px) {
@@ -46,5 +51,9 @@
     strong {
       font-weight: 900;
     }
+  }
+
+  .images {
+    width: 100%;
   }
 }

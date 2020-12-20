@@ -129,13 +129,16 @@
 
     <div class="row text-center">
       <div class="col-md-12">
-        <h3>Resultados</h3>
+        <h3>{{'RESULTS.RESULT'|translate}}</h3>
         <hr class="mb-4">
       </div>
     </div>
   </div>
 
 </div>
+
+
+
 
 <div class="container mt-5 mb-5">
 
@@ -150,30 +153,56 @@
     </div>
 
   </div>
+</div>
 
-  <div class="row">
+<div class="container-fluid space-color pt-md-5 pt-4 pb-5">
 
-    <div class="col-4 ">
+  <div class="container">
 
-      <img src="" alt="">
+    <div class="row text-center">
+
+
+      <div class="col-md-3 col-6">
+
+        <fa-icon class="size-icon" [icon]="['far', 'clock']"></fa-icon>
+        <h5 class="mt-2">{{'RESULTS.TIME'|translate}}</h5>
+        <p>3 {{'RESULTS.MINUTES'|translate}}</p>
+
+
+      </div>
+
+      <div class="col-md-3 col-6">
+        <fa-icon class="size-icon" [icon]="['far', 'check-square']"></fa-icon>
+        <h5 class="mt-2">{{'RESULTS.ANSWERS'|translate}}</h5>
+        <p>7/10</p>
+      </div>
+
+      <div class="col-md-3 col-12 mt-md-0 mt-4">
+        <fa-icon class="size-icon" [icon]="['fas', 'medal']"></fa-icon>
+        <h5 class="mt-2"> {{'RESULTS.CONGRATULATIONS'|translate}} </h5>
+        <p>{{'RESULTS.CONGRATULATIONS-TEXT'|translate}}</p>
+
+      </div>
+
+      <div class="col-md-3 col-12 mt-md-0 mt-4">
+        <fa-icon class="size-icon" [icon]="['fas', 'trophy']"></fa-icon>
+        <h5 class="mt-2">{{'RESULTS.CONTINUE'|translate}}</h5>
+
+        <p>{{'RESULTS.CONTINUE-TEXT'|translate}}</p>
+
+        <button class="btn btncolor mr-2"> {{'HEADER.WORLD-TEST'|translate}}</button>
+        <button class="btn btncolor"> {{'HEADER.POLITICAL-TEST'|translate}} </button>
+
+      </div>
+
+
+
+
+
+
 
     </div>
-
-    <div class="offset-3 col-5">
-
-      <h5 class="text-center">
-        ¡¡¡ Felicitaciones por tu resultado !!!
-      </h5>
-
-      <p>
-        No es un reto fácil, muchas de las banderas con las que contamos son
-      </p>
-
-    </div>
-
 
 
   </div>
-
-
 </div>
