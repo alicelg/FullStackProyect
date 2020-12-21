@@ -78,7 +78,7 @@
                   </div>
                 </div>
                 <div class="card-footer">
-                  <small>{{post.category}}</small>
+                  <small>{{post.category | uppercase}}</small>
                   <button class="btn float-right btn-sm"
                     [routerLink]="[post.id]">{{'HOME.READ-MORE'|translate}}</button>
                 </div>
