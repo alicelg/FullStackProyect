@@ -598,7 +598,14 @@
         "COMMENTS": "Comments",
         "WRITE-COMMENT": "Write a comment",
         "COMMENT": "Commentary",
-        "BUTTOM-COMMENT": "Comment"
+        "BUTTOM-COMMENT": "Comment",
+        "HOW-FAVORITE-POST": "How can you choose your favorite posts?",
+        "HOW-FAVORITE-TEXT": " 1. If you are a user, with just one click on the ♥ ️, which is located at the top right of each publication, they will be added to your profile.",
+        "HOW-FAVORITE-TEXT-TWO": "2. If you are not part of WatchYourPolitics yet go to",
+        "HOW-FAVORITE-TEXT-THREE": "and start saving your favorite posts.",
+        "HOW-PUBLISH": "How can you post on the General Blog?",
+        "HOW-PUBLISH-TEXT": "As a user you can publish all your ideas and edit them.",
+        "REGISTER": "Sign up"
     },
     "QUESTIONS": {
         "QUESTION-ONE": "You are looking for a prestigious and old university, so old that it is the first university in Europe. When you go to visit it, you see that it is decorated with this flag. Which country do you correspond to?",

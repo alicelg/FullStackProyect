@@ -598,7 +598,14 @@
         "COMMENTS": "Comentarios",
         "WRITE-COMMENT": "Escribe un comentario",
         "COMMENT": "Comentario",
-        "BUTTOM-COMMENT": "Comentar"
+        "BUTTOM-COMMENT": "Comentar",
+        "HOW-FAVORITE-POST": "¿Cómo puedes elegir tus publicaciones favoritas?",
+        "HOW-FAVORITE-TEXT": "1. Sí eres usuario solamente con un click en el ♥️ , que se encuentra a la parte superior derecha de cada publicación, se te agregarán en tu perfil.",
+        "HOW-FAVORITE-TEXT-TWO": "2. Sí aún no eres parte de WatchYourPolitics ve a",
+        "HOW-FAVORITE-TEXT-THREE": "y empieza a guardar tus publicaciones favoritos.",
+        "HOW-PUBLISH": "¿Cómo puedes publicar en el Blog General?",
+        "HOW-PUBLISH-TEXT": "Al ser usuario puedes publicar todas tus ideas y editarlas.",
+        "REGISTER": "Regístrate"
     },
     "QUESTIONS": {
         "QUESTION-ONE": "Estás buscando una universidad de prestigio y antigua, tan antigua que es la primera universidad de Europa. Cuando vas a visitarla ves que en esta decorada con esta bandera. ¿A qué país corresponde?",
