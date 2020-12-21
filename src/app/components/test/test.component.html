@@ -14,7 +14,8 @@
 
       <div class="col-md-3 mt-md-5 greeting">
         <p> {{'TEST.GREETING'|translate}} <strong> {{currentUser.name}} </strong>,
-          <br>{{'TEST.GREETING-CONTINUED'|translate}}</p>
+          <br>{{'TEST.GREETING-CONTINUED'|translate}}
+        </p>
         <p>{{'TEST.START-RECOMMENDATIONS'|translate}}</p>
         <button class="btn btn-block mt-4 btncolor mb-5 desktop"
           (click)="startTest()">{{'TEST.START'|translate}}</button>
@@ -94,31 +95,37 @@
 
       <div class="row text-center">
         <div class="col-md-12">
-          <h3>Test Mundo</h3>
+          <h3>{{'HEADER.WORLD-TEST'|translate}}</h3>
           <hr class="mb-5">
         </div>
       </div>
 
-      <h6 class="text-center">{{actualQuestion.question}}</h6>
-      <div class="row mt-3">
-        <div class="col-md-5 text-center">
-          <div class="svg" [innerHTML]="svg"></div>
+      <div class="row">
+
+        <div class="col-6 mx-auto">
+          <h6 class="text-center">{{actualQuestion.question | translate}}</h6>
+
+          <div class="svg mx-auto" [innerHTML]="svg"></div>
+
         </div>
 
-        <div class="col-md-4 offset-md-1">
+        <div class="col-5 offset-md-1 mt-6">
+
           <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 1)">
-            {{actualQuestion.answer1}} </button>
+            {{actualQuestion.answer1 | translate}} </button>
           <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 2)">
-            {{actualQuestion.answer2}} </button>
+            {{actualQuestion.answer2 | translate}} </button>
           <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 3)">
-            {{actualQuestion.answer3}} </button>
+            {{actualQuestion.answer3 | translate}} </button>
           <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 4)">
-            {{actualQuestion.answer4}} </button>
+            {{actualQuestion.answer4 | translate}} </button>
+          <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 5)">
+            {{actualQuestion.answer5 | translate}} </button>
+
         </div>
+
       </div>
+
     </div>
   </div>
 </div>
-
-
-
