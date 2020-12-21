@@ -26,7 +26,7 @@ export class PostComponent implements OnInit {
 
   currentUser: User;
 
-  formComment;
+  formComment: FormGroup;
 
 
   constructor(
@@ -50,6 +50,8 @@ export class PostComponent implements OnInit {
 
     this.postsService.getPostById(this.postId)
       .then(response => {
+        console.log(response);
+
         this.post = response
       })
       .catch(error => this.router.navigate(['/blog/general']));
@@ -88,6 +90,7 @@ export class PostComponent implements OnInit {
       const newComment = { ...this.formComment.value }
       newComment.postId = this.postId;
       this.postsService.createComment(newComment);
+      this.formComment.reset('text');
       this.ngOnInit();
 
     } else {

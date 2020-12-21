@@ -12,7 +12,7 @@
                         {{post.category | uppercase}} </p>
                 </div>
 
-                <div class="col-md-8 col-6 text-right mr-md-5" *ngIf="currentUser.id === post.user.id">
+                <div class="col-md-8 col-6 text-right mr-md-5" *ngIf="currentUser?.id === post.user.id">
                     <!-- <div class="heart-empty mr-3" (click)="toggleFavorite($event.target, post.id)" placement="bottom"
                         ngbTooltip="{{'CONCEPT.FAVORITE'|translate}}"></div> -->
 
@@ -47,9 +47,9 @@
                     <path fill-rule="evenodd"
                         d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                 </svg>
-                <h5 class="text-right">WatchYourPolitics</h5>
+                <h5 class="text-right">{{post.user.nickname}}</h5>
                 <div class="heart-empty ml-5" (click)="toggleFavorite($event.target, post.id)" placement="bottom"
-                    ngbTooltip="{{'CONCEPT.FAVORITE'|translate}}" *ngIf="currentUser.id === post.user.id"></div>
+                    ngbTooltip="{{'CONCEPT.FAVORITE'|translate}}" *ngIf="currentUser?.id"></div>
             </div>
         </div>
 
