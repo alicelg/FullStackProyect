@@ -610,7 +610,17 @@
         "QUESTION-SEVEN": "You have been given an adventure book and the main character describes his country. The most curious thing is the way to describe its flag; He describes it as two triangles, red and white. What country are you referring to?",
         "QUESTION-EIGHT": "You are lining up to board your next destination. The family up front carries this flag in their passport, what country are they from?",
         "QUESTION-NINE": "You have been invited to a meeting in the European Union, you know a group of people who say they are from a country with a white, green and red flag. What country are they referring to?",
-        "QUESTION-TEN": "A friend has brought you a shirt from his trip, the shirt is red with a yellow star in the center, what country has your friend been to?"
+        "QUESTION-TEN": "A friend has brought you a shirt from his trip, the shirt is red with a yellow star in the center, what country has your friend been to?",
+        "QUESTION-ELEVEN": "During the summer holidays you find yourself watching the sunset, while some friends talk about how the rays of the sun remind them of a flag. When searching the internet you see this flag, which country is it from?",
+        "QUESTION-TWELVE": "Visiting the United Nations in New York, you come across this flag, what makes you laugh when you see that it has a bird with a colored crest, which country does it belong to?",
+        "QUESTION-THIRTEEN": "Reading a bit of history, you come across the story of a great empire that managed to conquer the new world in 1492. Nowadays, what country is it referring to?",
+        "QUESTION-FOURTEEN": "On the first of November you go down the street of the embassies of your city and one of them has several people gathered, dressed up and with decorations. Upon entering the place you see many candles and a sign that says Happy Day of the Dead, along with this flag, in which embassy are you?",
+        "QUESTION-FIFTEEN": "Studying the flags, you realize that the vast majority are rectangular, except for this one that is square and makes you curious, what country does it belong to?",
+        "QUESTION-SIXTEEN": "A friend challenges you to guess, what is the country that has two little cows on its shield? And what does this shield also include on the national flag, what country does your friend refer to?",
+        "QUESTION-SEVENTEEN": "You invite your friends to dinner, they want to have dinner at a restaurant that has pizza. So, do you remember that restaurant with that flag that makes the best pizza, when you get to the restaurant the decoration has this flag, what country is the restaurant from?",
+        "QUESTION-EIGHTEEN": "For Christmas they give you the book One Hundred Years of Solitude. You are so passionate about history that you look for more books by the writer. The writer is of the nationality of this flag, what nationality is the writer?",
+        "QUESTION-NINETEEN": "On vacation you want to volunteer to take care of elephants, the volunteer organizer gives you brochures with different flags. The brochure that includes volunteering with elephants carries this flag, which country does it belong to?",
+        "QUESTION-TWENTY": "Your invisible friend gave you a surprise trip, you can only know your destination two days before the trip. With two days to go, you receive an email with this flag, which country are you going to travel to?"
     },
     "RESULTS": {
         "RESULT": "Results",

@@ -595,7 +595,7 @@
         "UPDATE-PROFILE": "Actualizar perfil"
     },
     "COMMENTS": {
-        "COMMENTS": "Comentario",
+        "COMMENTS": "Comentarios",
         "WRITE-COMMENT": "Escribe un comentario",
         "COMMENT": "Comentario",
         "BUTTOM-COMMENT": "Comentar"
@@ -610,7 +610,17 @@
         "QUESTION-SEVEN": "Te han regalado un libro de aventuras y el personaje principal describe a su país. Lo mas curioso es la manera en que describe su bandera; la describe como dos triángulos, roja y blanca. ¿A qué país se refiere?",
         "QUESTION-EIGHT": "Estás haciendo la fila para abordar a tu siguiente destino. La familia de adelante lleva esta bandera en su pasaporte, ¿de qué país son?",
         "QUESTION-NINE": "Has sido invitado a una reunión en la Unión Europea conoces a un grupo de personas que dicen que son de un país con bandera de color blanco, verde y roja. A qué país se refieren?",
-        "QUESTION-TEN": "Un amigo te ha traído una camisa de su viaje, la camisa es roja con una estrella amarilla en el centro, ¿en qué país a estado tu amigo?"
+        "QUESTION-TEN": "Un amigo te ha traído una camisa de su viaje, la camisa es roja con una estrella amarilla en el centro, ¿en qué país a estado tu amigo?",
+        "QUESTION-ELEVEN": "Durante las vacaciones de verano te encuentras mirando la puesta de sol, mientras unos amigos hablan de que los rayos del sol les recuerdan a una bandera. Al buscar en internet te aparece esta bandera ¿de qué país es?",
+        "QUESTION-TWELVE": "Visitando Naciones Unidas en Nueva York, te encuentras con esta bandera, qué te da risa al ver que tiene un ave con cresta de colores, ¿a qué país pertenece?",
+        "QUESTION-THIRTEEN": "Leyendo un poco de historia, te encuentras con la historia de un imperio grande que logro conquistar el nuevo mundo en 1492. Hoy en día ¿a que país se hace referencia?, una pista tiene esta bandera.",
+        "QUESTION-FOURTEEN": "El primero de noviembre vas por la calle de las embajadas de tu ciudad y una de ellas tiene varias personas reunidas, disfrazados y con decoraciones. Al entrar al lugar ves muchas velas y un cartel que dice Feliz día de los Muertos, junto con está bandera, ¿en qué embajada te encuentras?",
+        "QUESTION-FIFTEEN": "Estudiando las banderas, te das cuenta que la gran mayoría son rectangulares, menos esta que es cuadrada y te causa curiosidad, ¿a qué país pertenece?",
+        "QUESTION-SIXTEEN": "Un amigo te reta adivinar, ¿cuál es el país que tiene en su escudo dos pequeñas vacas?, y qué además incluya esté escudo en la bandera nacional, ¿a qué país se refiere tu amigo?",
+        "QUESTION-SEVENTEEN": "Invitas a tus amigos a cenar, ellos quieren cenar en un restaurante que tenga pizza. Entonces, recuerdas aquel restaurante con aquella bandera que hace la mejor pizza, al llegar al restaurante la decoración tiene esta bandera, ¿de qué país es el restaurante?",
+        "QUESTION-EIGHTEEN": "De navidad te regalan el libro de Cien años de Soledad. La historia te apasiona tanto que buscas más libros del escritor. El escritor es de la nacionalidad de esta bandera, ¿de qué nacionalidad es el escritor?",
+        "QUESTION-NINETEEN": "En vacaciones quieres irte de voluntario a cuidar elefantes, la organizadora de los voluntariados te entrega folletos con distintas banderas. El folleto que incluye voluntariado con elefantes lleva esta bandera, ¿a qué país pertenece?",
+        "QUESTION-TWENTY": "Tu amigo invisible te regalo un viaje sorpresa, solamente podrás saber tu destino  dos días antes del viaje. Faltando dos día te llega un correo con está bandera, ¿a qué país vas a viajar?"
     },
     "RESULTS": {
         "RESULT": "Resultados",
