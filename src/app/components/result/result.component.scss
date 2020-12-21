@@ -1,0 +1,50 @@
+@import "../../../styles.scss";
+
+.btncolor {
+  background: $tertiaryBgColor;
+  color: $quaternaryTextColor;
+  border: none;
+}
+
+.btncolor:hover {
+  background: $primaryTextColor;
+  color: $quaternaryTextColor;
+}
+
+.size-icon {
+  font-size: 40px;
+}
+
+.progress_image {
+  width: 100%;
+}
+
+.space-color {
+  background: $quaternaryBgColor;
+  padding-bottom: 30px;
+}
+
+.resultBar {
+  height: 40px;
+}
+
+.progress {
+  font-size: 0.75rem;
+  background-color: #cbccce;
+}
+
+::ng-deep {
+
+.progress-bar {
+  background-color: $tertiaryBgColor !important;
+  span {
+    color: #fff !important;
+  }
+}
+}
+
+// @media (max-width: 575px) {
+//   .images {
+//     width: 100%;
+//   }
+// }

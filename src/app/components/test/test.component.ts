@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
-import { Answer, Question } from 'src/app/models/question.model';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Answer, Question, TestResult } from 'src/app/models/question.model';
 import { User } from 'src/app/models/user.model';
 import { TestsService } from 'src/app/services/tests.service';
 import { UsersService } from 'src/app/services/users.service';
@@ -25,16 +25,18 @@ export class TestComponent implements OnInit {
 
   answersArray: any[];
   initDate: Date;
+  testResult: TestResult;
 
 
   constructor(
     private userService: UsersService,
     private testService: TestsService,
     private activatedRoute: ActivatedRoute,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private router: Router
   ) {
 
-    this.action = 'instructions';
+    this.action = 'INSTRUCTIONS';
 
     this.userService.currentUser.subscribe(res => {
       this.currentUser = res;
@@ -64,7 +66,7 @@ export class TestComponent implements OnInit {
       this.initDate = new Date();
 
       // mostramos las preguntas
-      this.action = 'questions';
+      this.action = 'QUESTIONS';
     });
 
   }
@@ -83,10 +85,10 @@ export class TestComponent implements OnInit {
       // si estamos en la última pregunta enviamos el array de respuestas
     } else {
       this.testService.setAnswers(this.testId, this.answersArray, dateFormat).then(res => {
-        console.log(res);
+        // navegamos al resultado
+        this.router.navigate([`test/${res.test_id}/resultado/${res.times_repeated}`]);
       });
     }
-
   }
 
   nextQuestion(): void {

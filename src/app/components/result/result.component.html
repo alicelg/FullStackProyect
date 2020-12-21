@@ -1,1 +1,54 @@
-<p>result works!</p>
+<!-- Resultado del test -->
+<ng-container *ngIf="testResult">
+  <div class="container-fluid container-color pt-md-5 pt-4 pb-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h3>{{'RESULTS.RESULT'|translate}}</h3>
+          <hr class="mb-4">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5 mb-5">
+    <div class="row text-center">
+      <div class="col-md-8 mx-auto">
+        <img src="../../../assets/images/evolucion.png" class="progress_image">
+        <ngb-progressbar [value]="testResult.percent_result" [showValue]="true" class=" mt-5 resultBar" ></ngb-progressbar>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid space-color pt-md-5 pt-4 pb-5">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-3 col-6">
+          <fa-icon class="size-icon" [icon]="['far', 'clock']"></fa-icon>
+          <h5 class="mt-2">{{'RESULTS.TIME'|translate}}</h5>
+          <p>{{testTimeMinutes}} {{'RESULTS.MINUTES'|translate}} {{testTimeSeconds}} {{'RESULTS.SECONDS'|translate}}</p>
+        </div>
+
+        <div class="col-md-3 col-6">
+          <fa-icon class="size-icon" [icon]="['far', 'check-square']"></fa-icon>
+          <h5 class="mt-2">{{'RESULTS.ANSWERS'|translate}}</h5>
+          <p>{{testResult.right_answers}} / {{testResult.total_answers}}</p>
+        </div>
+
+        <div class="col-md-3 col-12 mt-md-0 mt-4">
+          <fa-icon class="size-icon" [icon]="['fas', 'medal']"></fa-icon>
+          <h5 class="mt-2"> {{'RESULTS.CONGRATULATIONS'|translate}} </h5>
+          <p>{{'RESULTS.CONGRATULATIONS-TEXT'|translate}}</p>
+        </div>
+
+        <div class="col-md-3 col-12 mt-md-0 mt-4">
+          <fa-icon class="size-icon" [icon]="['fas', 'trophy']"></fa-icon>
+          <h5 class="mt-2">{{'RESULTS.CONTINUE'|translate}}</h5>
+          <p>{{'RESULTS.CONTINUE-TEXT'|translate}}</p>
+          <button class="btn btncolor mr-2"> {{'HEADER.WORLD-TEST'|translate}}</button>
+          <button class="btn btncolor"> {{'HEADER.POLITICAL-TEST'|translate}} </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
