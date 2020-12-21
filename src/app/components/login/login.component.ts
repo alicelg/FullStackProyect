@@ -41,10 +41,10 @@ export class LoginComponent implements OnInit {
     });
 
     this.signupForm = new FormGroup({
-      nickname: new FormControl('toni', [Validators.required]),
-      email: new FormControl('alil@gs.es', [Validators.email, Validators.required]),
-      password: new FormControl('123456Az', [Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$')]),
-      passwordConfirm: new FormControl('123456Az', [Validators.required])
+      nickname: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.email, Validators.required]),
+      password: new FormControl('', [Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{8,}$')]),
+      passwordConfirm: new FormControl('', [Validators.required])
     });
 
 
