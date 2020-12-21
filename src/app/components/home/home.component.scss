@@ -18,10 +18,10 @@
     width: auto;
     height: auto;
     z-index: 0;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 
   .container {
@@ -265,5 +265,9 @@ hr {
 @media (max-width: 575px) {
   .fondo {
     background-image: none;
+  }
+
+  .hero {
+    background-image: url("../../../assets/images/fondo.png");
   }
 }
