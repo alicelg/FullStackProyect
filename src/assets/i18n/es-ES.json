@@ -621,5 +621,12 @@
         "CONGRATULATIONS-TEXT": "Sabemos que no es un reto fácil de asumir. En cada intento te vuelves más sabio. Siguelo intentando.",
         "CONTINUE": "Continuar",
         "CONTINUE-TEXT": "Prácticando y aprendiendo"
+    },
+    "ERROR": {
+        "ERROR-TITLE": "Se ha producido un error",
+        "ERROR-TEXT-ONE": "No hemos encontrado lo que estas buscando",
+        "ERROR-TEXT-TWO": "Te ofrecemos otros espacios ya disponibles",
+        "ERROR-TITLE-TWO": "Nuestros espacios",
+        "VISIT-PRINCIPAL": "Visitar la página principal"
     }
 }
