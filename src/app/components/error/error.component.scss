@@ -1,0 +1,51 @@
+@import "../../../styles.scss";
+
+.space-color {
+    background: $quaternaryBgColor;
+    padding-bottom: 30px;
+}
+
+.change {
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}
+
+.change:hover {
+    border-bottom: 1px solid $tertiaryBgColor;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+img {
+    width: 80%;
+}
+
+.message {
+    top: 320px !important;
+    left: 400px;
+}
+
+@media (max-width: 575px) {
+    img {
+        width: 100%;
+    }
+    .icon-move {
+        font-size: 10px;
+        margin-top: 0px;
+    }
+
+    .message {
+        top: 110px !important;
+        left: 83px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+}
