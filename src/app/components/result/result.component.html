@@ -5,49 +5,125 @@
       <div class="row text-center">
         <div class="col-md-12">
           <h3>{{'RESULTS.RESULT'|translate}}</h3>
-          <hr class="mb-4">
+          <hr class="mb-md-3 mb-2">
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container mt-5 mb-5">
+  <div class="container mt-md-5 mt-3 mb-5" *ngIf="testId ==='1'">
     <div class="row text-center">
-      <div class="col-md-8 mx-auto">
-        <img src="../../../assets/images/evolucion.png" class="progress_image">
-        <ngb-progressbar [value]="testResult.percent_result" [showValue]="true" class=" mt-5 resultBar" ></ngb-progressbar>
+      <div class="col-md-6">
+        <div>
+          <img src="../../../assets/images/evolucion.png" class="progress_image">
+          <ngb-progressbar [value]="testResult.percent_result" [showValue]="true" class=" mt-md-5 mt-4 resultBar">
+          </ngb-progressbar>
+        </div>
+        <p class="mt-md-4 mt-3 text-md-left text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Ratione dicta culpa
+          libero voluptatibus. Fugiat,
+          optio </p>
+      </div>
+      <div class="col-md-5 offset-md-1">
+        <div class="row text-center">
+          <div class="col-6">
+            <fa-icon class="size-icon" [icon]="['far', 'clock']"></fa-icon>
+            <h5 class="mt-md-2 mt-0">{{'RESULTS.TIME'|translate}}</h5>
+            <p>{{testTimeMinutes}} {{'RESULTS.MINUTES'|translate}} {{testTimeSeconds}} {{'RESULTS.SECONDS'|translate}}
+            </p>
+          </div>
+
+          <div class="col-6">
+            <fa-icon class="size-icon" [icon]="['far', 'check-square']"></fa-icon>
+            <h5 class="mt-md-2 mt-0">{{'RESULTS.ANSWERS'|translate}}</h5>
+            <p>{{testResult.right_answers}} / {{testResult.total_answers}}</p>
+          </div>
+
+          <div class="col-12 mt-0">
+            <fa-icon class="size-icon" [icon]="['fas', 'medal']"></fa-icon>
+            <h5 class="mt-md-2 mt-0"> {{'RESULTS.CONGRATULATIONS'|translate}} </h5>
+            <p>{{'RESULTS.CONGRATULATIONS-TEXT'|translate}}</p>
+          </div>
+
+          <div class="col-12 mt-0">
+            <fa-icon class="size-icon" [icon]="['fas', 'trophy']"></fa-icon>
+            <h5 class="mt-md-2 mt-0">{{'RESULTS.CONTINUE'|translate}}</h5>
+            <p>{{'RESULTS.CONTINUE-TEXT'|translate}}</p>
+            <button class="btn btncolor mr-2"> {{'HEADER.WORLD-TEST'|translate}}</button>
+            <button class="btn btncolor"> {{'HEADER.POLITICAL-TEST'|translate}} </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="container-fluid space-color pt-md-5 pt-4 pb-5">
+  <div class="container" *ngIf="testId === '2'">
+
+    <div class="row"></div>
+
+  </div>
+  <div class="container-fluid container-color pt-md-5 pt-4 pb-5">
     <div class="container">
-      <div class="row text-center">
-        <div class="col-md-3 col-6">
-          <fa-icon class="size-icon" [icon]="['far', 'clock']"></fa-icon>
-          <h5 class="mt-2">{{'RESULTS.TIME'|translate}}</h5>
-          <p>{{testTimeMinutes}} {{'RESULTS.MINUTES'|translate}} {{testTimeSeconds}} {{'RESULTS.SECONDS'|translate}}</p>
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table table-hover table-bordered text-center border-light">
+            <thead>
+              <tr>
+                <th scope="col">Tendencia Política</th>
+                <th scope="col">% de Afinidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Anarquismo</td>
+                <td>{{(politicalOrientation.ANA / testResult.total_answers)*100}}%</td>
+              </tr>
+              <tr>
+                <td>Comunismo</td>
+                <td>{{(politicalOrientation.COM / testResult.total_answers)*100}}%</td>
+              </tr>
+              <tr>
+                <td>Socialismo</td>
+                <td>{{(politicalOrientation.SOC / testResult.total_answers)*100}}%</td>
+              </tr>
+              <tr>
+                <td>Neoliberalismo</td>
+                <td>{{(politicalOrientation.NEO / testResult.total_answers)*100}}%</td>
+              </tr>
+              <tr>
+                <td>Fascismo</td>
+                <td>{{(politicalOrientation.FAS / testResult.total_answers)*100}}%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6 pl-md-4 pr-md-0">
+          <div class="row text-center">
+            <div class="col-md-5">
+              <fa-icon class="size-icon" [icon]="['far', 'clock']"></fa-icon>
+              <h5 class="mt-0">{{'RESULTS.TIME'|translate}}</h5>
+              <p>{{testTimeMinutes}} {{'RESULTS.MINUTES'|translate}} {{testTimeSeconds}} {{'RESULTS.SECONDS'|translate}}
+              </p>
+            </div>
+
+            <div class="col-md-7">
+              <fa-icon class="size-icon" [icon]="['fas', 'trophy']"></fa-icon>
+              <h5 class="mt-0">{{'RESULTS.CONTINUE'|translate}}</h5>
+              <p class="mb-2">{{'RESULTS.CONTINUE-TEXT'|translate}}</p>
+              <button class="btn bg-transparent border rounded mr-2"> {{'HEADER.WORLD-TEST'|translate}}</button>
+              <button class="btn bg-transparent border rounded"> {{'HEADER.POLITICAL-TEST'|translate}} </button>
+            </div>
+
+            <div class="col-12 mt-3">
+              <fa-icon class="size-icon" [icon]="['far', 'lightbulb']"></fa-icon>
+              <h5 class="mt-0"> {{'RESULTS.CONGRATULATIONS'|translate}} </h5>
+              <p>{{'RESULTS.CONGRATULATIONS-TEXT'|translate}}</p>
+            </div>
+
+
+          </div>
         </div>
 
-        <div class="col-md-3 col-6">
-          <fa-icon class="size-icon" [icon]="['far', 'check-square']"></fa-icon>
-          <h5 class="mt-2">{{'RESULTS.ANSWERS'|translate}}</h5>
-          <p>{{testResult.right_answers}} / {{testResult.total_answers}}</p>
-        </div>
-
-        <div class="col-md-3 col-12 mt-md-0 mt-4">
-          <fa-icon class="size-icon" [icon]="['fas', 'medal']"></fa-icon>
-          <h5 class="mt-2"> {{'RESULTS.CONGRATULATIONS'|translate}} </h5>
-          <p>{{'RESULTS.CONGRATULATIONS-TEXT'|translate}}</p>
-        </div>
-
-        <div class="col-md-3 col-12 mt-md-0 mt-4">
-          <fa-icon class="size-icon" [icon]="['fas', 'trophy']"></fa-icon>
-          <h5 class="mt-2">{{'RESULTS.CONTINUE'|translate}}</h5>
-          <p>{{'RESULTS.CONTINUE-TEXT'|translate}}</p>
-          <button class="btn btncolor mr-2"> {{'HEADER.WORLD-TEST'|translate}}</button>
-          <button class="btn btncolor"> {{'HEADER.POLITICAL-TEST'|translate}} </button>
-        </div>
       </div>
     </div>
   </div>

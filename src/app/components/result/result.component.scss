@@ -34,17 +34,39 @@
 }
 
 ::ng-deep {
-
-.progress-bar {
-  background-color: $tertiaryBgColor !important;
-  span {
-    color: #fff !important;
+  .progress-bar {
+    background-color: $tertiaryBgColor !important;
+    span {
+      color: #fff !important;
+    }
   }
 }
+
+thead{
+  th{
+    font-weight: 900;
+  }
 }
 
-// @media (max-width: 575px) {
-//   .images {
-//     width: 100%;
-//   }
-// }
+tbody{
+  td{
+    font-weight: 700;
+  }
+}
+
+.border{
+  border: 1px solid  $tertiaryBgColor !important;
+}
+
+
+@media (max-width: 575px) {
+  p {
+    font-size: 0.9rem;
+  }
+  .resultBar {
+    height: 30px;
+  }
+  .size-icon {
+    font-size: 30px;
+  }
+}

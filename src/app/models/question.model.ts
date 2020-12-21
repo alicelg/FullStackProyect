@@ -25,5 +25,6 @@ export class TestResult {
   times_repeated: number;
   total_answers: number;
   user_id: number;
+  political_orientation: string;
 }
 

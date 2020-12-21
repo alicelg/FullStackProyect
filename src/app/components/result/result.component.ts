@@ -15,6 +15,7 @@ export class ResultComponent implements OnInit {
   testResult: TestResult;
   testTimeMinutes: number;
   testTimeSeconds: number;
+  politicalOrientation;
 
 
   constructor(
@@ -38,6 +39,8 @@ export class ResultComponent implements OnInit {
         this.testTimeMinutes = this.testTimeMinutes + 1;
         this.testTimeSeconds = 0;
       }
+
+      this.politicalOrientation = JSON.parse(this.testResult.political_orientation);
     });
   }
 
