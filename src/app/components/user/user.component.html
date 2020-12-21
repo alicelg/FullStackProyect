@@ -38,14 +38,9 @@
             <div class="row mt-4">
 
               <div class="col-md-4 col-6">
-<<<<<<< HEAD
-                <div class="d-flex">
-                  <i class="fa fa-map-pin mr-2 ml-2 text-center mt-1"></i>
-=======
 
                 <div class="d-flex" *ngIf='currentUser.country'>
                   <fa-icon class="mr-2 text-center mt-1" [icon]="['fas', 'map-pin']"></fa-icon>
->>>>>>> 3195e6be9550812285a81bea121a2a203aa87558
                   <p class="text-header">{{currentUser.country?currentUser.country:'-'}}</p>
                 </div>
                 <div class="d-flex">
@@ -181,13 +176,9 @@
     <div class="col-md-8 border rounded pt-2 pb-2">
       <h5 class="text-center pt-3">{{'USER.FAVORITE-CONCEPT'| translate}}</h5>
       <hr>
-<<<<<<< HEAD
-      <div class="row text-center pb-3">
-=======
 
       <div class="row text-md-center text-left  pb-3">
 
->>>>>>> 3195e6be9550812285a81bea121a2a203aa87558
         <div class="col-md-3 mt-2 change pt-3" *ngFor="let concept of favouriteConcepts" [routerLink]="['/conceptos']"
           [queryParams]="{searchTerm: translateService.instant(concept.title)}">
           <p>
@@ -209,13 +200,9 @@
   <div class="row mt-5 mb-5">
     <!-- posts publicados -->
     <div class="col-md-6 border rounded pt-2 pb-2">
-<<<<<<< HEAD
-      <h5 class="text-center pt-3">{{'USER.MY-PUBLISH'| translate}}</h5>
-=======
       <h5 class="text-md-center pt-3">{{'USER.MY-PUBLISH'| translate}}</h5>
 
 
->>>>>>> 3195e6be9550812285a81bea121a2a203aa87558
       <div class="row">
         <div class="col-12 d-flex justify-content-between change" *ngFor="let post of postCreated"
           [routerLink]="['/blog/general/', post.id]">
@@ -246,13 +233,9 @@
 
 <div class="container-fluid space-color ">
   <div class="container pt-5 pb-5">
-<<<<<<< HEAD
-    <div class="row">
-=======
 
 
     <!-- <div class="row">
->>>>>>> 3195e6be9550812285a81bea121a2a203aa87558
       <div class="col-md-8">
         <h5 class="text-center"> {{'USER.REMEMBER'| translate}}</h5>
         <hr class="mb-5">
@@ -280,9 +263,6 @@
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-=======
 
     </div> -->
 
@@ -343,7 +323,6 @@
 
 
 
->>>>>>> 3195e6be9550812285a81bea121a2a203aa87558
   </div>
 </div>
 
