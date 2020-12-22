@@ -111,3 +111,11 @@
 strong {
     cursor: pointer;
 }
+
+.hablando {
+    border-bottom: 1px solid transparent;
+}
+
+.hablando:hover {
+    border-bottom: 1px solid $tertiaryBgColor;
+}
