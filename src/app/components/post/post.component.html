@@ -89,7 +89,7 @@
 
 
 
-            <form class="pb-5" [formGroup]="formComment" class="mb-5" (ngSubmit)="createComment()">
+            <form class="pb-5" [formGroup]="formComment" class="mb-5" (ngSubmit)="createComment()" *ngIf="currentUser">
                 <div class="col-md-8">
                     <h5 class="pt-5">{{'COMMENTS.WRITE-COMMENT'|translate}}</h5>
                     <label> {{'COMMENTS.COMMENT'|translate}} </label>
