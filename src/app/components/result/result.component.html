@@ -60,12 +60,8 @@
   <div class="container-md container-fluid mt-4 mb-4" *ngIf="testId === '2'">
     <div class="row">
       <div class="col-md-7 px-0 px-md-3 pb-4 pb-md-0">
-        <canvas baseChart
-        [chartType]="radarChartType"
-        [datasets]="radarChartData"
-        [labels]="radarChartLabels"
-        [options]="radarChartOptions"
-        [colors]="colors">
+        <canvas baseChart [chartType]="radarChartType" [datasets]="radarChartData" [labels]="radarChartLabels"
+          [options]="radarChartOptions" [colors]="colors">
         </canvas>
       </div>
       <div class="col-md-5 d-flex flex-column justify-content-center">
@@ -103,7 +99,7 @@
     </div>
   </div>
 
-  <div class="container-fluid container-color pt-md-5 pt-4 pb-5">
+  <div class="container-fluid container-color pt-md-5 pt-4 pb-5" *ngIf="testId === '2'">
     <div class="container">
 
       <div class="row text-center">
