@@ -122,6 +122,7 @@ export class UserComponent implements OnInit {
 
   editUser(): void {
     this.action = 'EDIT';
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
 
     this.userToEdit = this.usersService.isLogged;
 

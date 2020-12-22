@@ -65,12 +65,12 @@
                   <fa-icon class="mr-2 text-center mt-1" [icon]="['fas', 'heart']" placement="bottom"
                     ngbTooltip="{{'USER.FAVORITE-CONCEPT'|translate}}"></fa-icon>
                   <p class="text-header">
-                    {{favouriteConcepts.length}}</p>
+                    {{favouriteConcepts?.length}}</p>
                 </div>
                 <div class="d-flex">
                   <fa-icon class="mr-2 text-center mt-1" [icon]="['fas', 'book']" placement="bottom"
                     ngbTooltip="{{'USER.MY-POST-FAVORITE'|translate}}"></fa-icon>
-                  <p class="text-header">{{postCreated.length}}</p>
+                  <p class="text-header">{{postCreated?.length}}</p>
                 </div>
               </div>
             </div>
@@ -173,7 +173,7 @@
 
   <!-- conceptos favoritos -->
   <div class="row pt-6">
-    <div class="col-md-8 border rounded pt-2 pb-2">
+    <div class="col-md-8 border rounded pt-2 pb-2 shadow p-3 mb-5 bg-white">
       <h5 class="text-center pt-3">{{'USER.FAVORITE-CONCEPT'| translate}}</h5>
       <hr>
 
@@ -197,9 +197,9 @@
   </div>
 
 
-  <div class="row mt-5 mb-5">
+  <div class="row mt-4 mb-5">
     <!-- posts publicados -->
-    <div class="col-md-6 border rounded pt-2 pb-2">
+    <div class="col-md-6 border rounded pt-2 pb-2 shadow p-3 mb-5 bg-white">
       <h5 class="text-md-center pt-3">{{'USER.MY-PUBLISH'| translate}}</h5>
 
 
@@ -215,7 +215,7 @@
     </div>
 
     <!-- posts favoritos -->
-    <div class="col-md-5 border rounded pt-2 pb-2 mt-5 mt-md-0 ml-md-5">
+    <div class="col-md-5 border rounded pt-2 pb-2 mt-5 mt-md-0 ml-md-5 shadow p-3 mb-5 bg-white">
       <h5 class="text-center pt-3">{{'USER.MY-POST-FAVORITE'| translate}} </h5>
 
       <div class="row">
