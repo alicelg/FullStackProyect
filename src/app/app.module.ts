@@ -60,6 +60,7 @@ import { ErrorInterceptor } from './error.interceptor';
 
 /* Editor de texto */
 import { QuillModule } from 'ngx-quill';
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -95,6 +96,7 @@ import { QuillModule } from 'ngx-quill';
     ReactiveFormsModule,
     FontAwesomeModule,
     FormsModule,
+    ChartsModule,
     QuillModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
