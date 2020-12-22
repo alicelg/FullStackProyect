@@ -111,8 +111,6 @@ export class ConceptsComponent implements OnInit, AfterViewInit {
   }
 
   toggleFavorite(element, conceptId) {
-    console.log(element.classList);
-
     if (element.classList.contains('heart-empty')) {
       element.classList.remove('heart-empty')
       element.classList.add('heart-full')

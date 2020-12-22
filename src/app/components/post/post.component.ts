@@ -50,8 +50,6 @@ export class PostComponent implements OnInit {
 
     this.postsService.getPostById(this.postId)
       .then(response => {
-        console.log(response);
-
         this.post = response
       })
       .catch(error => this.router.navigate(['/blog/general']));
@@ -59,8 +57,6 @@ export class PostComponent implements OnInit {
 
 
   toggleFavorite(element, postId) {
-    console.log(element.classList);
-
     if (element.classList.contains('heart-empty')) {
       element.classList.remove('heart-empty')
       element.classList.add('heart-full')
