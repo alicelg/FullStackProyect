@@ -61,6 +61,11 @@ import { ErrorInterceptor } from './error.interceptor';
 /* Editor de texto */
 import { QuillModule } from 'ngx-quill';
 
+// toastr
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 @NgModule({
@@ -94,6 +99,9 @@ import { QuillModule } from 'ngx-quill';
     HttpClientModule,
     ReactiveFormsModule,
     FontAwesomeModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     FormsModule,
     QuillModule.forRoot(),
     TranslateModule.forRoot({
@@ -117,3 +125,5 @@ export class AppModule {
     library.addIconPacks(fas, far);
   }
 }
+
+class MainModule { }
