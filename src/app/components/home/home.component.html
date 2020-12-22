@@ -56,7 +56,7 @@
                                         </li>
                                         <!-- resultados de búsqueda en paises -->
                                         <li class="result-item" *ngFor="let country of searchResult.countries"
-                                            [routerLink]="['mapa/pais/', country.code]">
+                                            [routerLink]="['mapa/pais/', country.code]" [queryParams]="{searchCountry: 'true'}" >
                                             <div class="result-type col-4 text-center">País</div>
                                             <div class="col-8 font-weight-bold"> {{country.official_name |titlecase}}
                                             </div>
