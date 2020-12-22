@@ -2,15 +2,21 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 hero">
-            <div class="overlay"></div>
+            <div class="row">
+                <div class="col-6 desktop">
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                        <source src="../../../assets/images/video1.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col-6 desktop">
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                        <source src="../../../assets/images/video2.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
 
-            <video class="desktop" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                <!-- <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4"> -->
 
-            </video>
-            <video class="mobile" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-                <!-- <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4"> -->
-            </video>
+
 
             <!-- buscador -->
             <div class="container h-100">
@@ -93,7 +99,7 @@
 </div>
 
 <!-- mapa -->
-<div class="container pt-6 pb-6">
+<div class="container pt-6 pb-5">
     <h3 class="mb-1 text-center">{{'HOME.MAP-DISCOVER' | translate}}</h3>
     <hr class="mb-5">
     <div class="row position-relative mb-5">
@@ -103,6 +109,10 @@
         <div class="col-md-6 vertical-center position-right text-center desktop">
             <p class=" ml-5 mr-5"> {{'HOME.MAP-TEXT' | translate}}</p>
         </div>
+    </div>
+
+    <div class="col-md-6 text-center mobile">
+        <p class=" ml-5 mr-5"> {{'HOME.MAP-TEXT' | translate}}</p>
     </div>
 </div>
 
@@ -115,7 +125,7 @@
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card mx-auto cursor hvr-wobble-to-top-right" style="width: 18rem" [routerLink]="['test/1']">
-                    <img src="../../../assets/images/globo.png" class="imagen-globo card-img-top" alt="...">
+                    <img src="../../../assets/images/testmap.png" class="imagen-globo card-img-top desktop" alt="...">
                     <h5 class="card-title-test mt-3 p-2">{{'HEADER.WORLD-TEST' | translate}}</h5>
                     <div class="card-body">
                         <p class="card-text">{{'HOME.TEST-WORLD-TEXT' | translate}} </p>
@@ -126,7 +136,8 @@
             <div class="col-md-4 mb-4">
 
                 <div class="card mx-auto cursor hvr-wobble-to-top-right" style="width: 18rem" [routerLink]="['test/2']">
-                    <img src="../../../assets/images/politico.png" class="card-img-top imagen-globo" alt="...">
+                    <img src="../../../assets/images/testpolitico.png" class="card-img-top imagen-globo desktop"
+                        alt="...">
                     <h5 class="card-title-test mt-3 p-2">{{'HEADER.POLITICAL-TEST' | translate}}</h5>
                     <div class="card-body">
                         <p class="card-text">{{'HOME.TEST-POLITICAL-TEXT' | translate}} </p>
@@ -138,7 +149,7 @@
             <div class="col-md-4">
 
                 <div class="card mx-auto cursor hvr-wobble-to-top-right" style="width: 18rem">
-                    <img src="../../../assets/images/ranking.png" class="card-img-top imagen-globo" alt="...">
+                    <img src="../../../assets/images/ranking.png" class="card-img-top imagen-globo desktop" alt="...">
                     <h5 class="card-title-test mt-3 p-2">{{'HOME.RANKING' | translate}}</h5>
                     <div class="card-body">
                         <p class="card-text">{{'HOME.RANKING-TEXT' | translate}} </p>
@@ -163,7 +174,7 @@
                     <div class="carousel-item active rounded">
 
                         <div class="d-flex text-center pt-3 pb-4 ml-md-5 mr-md-5 fondo">
-                            <img src="../../../assets/images/persona3.png" width="150px" height="150px"
+                            <img src="../../../assets/images/tony.png" width="150px" height="150px"
                                 class="desktop rounded-circle mt-5">
 
                             <div class="body-opinion">
@@ -267,7 +278,8 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center centrar">
-                                    <p><img class=" img-fluid" src="../../../assets/images/blog.png" alt="card image">
+                                    <p><img class=" img-fluid" src="../../../assets/images/bloggeneral.png"
+                                            alt="card image">
                                     </p>
                                     <h5 class="card-title">{{'HOME.GENERAL-BLOG' | translate}}</h5>
                                     <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
@@ -294,7 +306,7 @@
                         <div class="frontside">
                             <div class="card">
                                 <div class="card-body text-center centrar">
-                                    <p><img class=" img-fluid" src="../../../assets/images/hablando.png"></p>
+                                    <p><img class=" img-fluid" src="../../../assets/images/homehablando.png"></p>
                                     <h5 class="card-title">{{'HOME.HABLANDO-POLITICA' | translate}}</h5>
                                     <a class="btn btn-sm size"><i class="fa fa-plus"></i></a>
                                 </div>

@@ -56,6 +56,26 @@
           </button>
 
 
+
+          <div class="desktop">
+            <h6 class="mt-6"> {{'COMMENTS.HOW-FAVORITE-POST'|translate}}
+            </h6>
+            <p> {{'COMMENTS.HOW-FAVORITE-TEXT'|translate}}</p>
+
+            <p> {{'COMMENTS.HOW-FAVORITE-TEXT-TWO'|translate}} <strong
+                [routerLink]="['/login']">{{'COMMENTS.REGISTER'|translate}}</strong>
+              {{'COMMENTS.HOW-FAVORITE-TEXT-THREE'|translate}}</p>
+
+          </div>
+
+          <div class=" desktop">
+            <h6 class="mt-5"> {{'COMMENTS.HOW-PUBLISH'|translate}}
+            </h6>
+            <p>{{'COMMENTS.HOW-PUBLISH-TEXT'|translate}} </p>
+
+          </div>
+
+
         </div>
 
         <!-- los posts -->
@@ -154,7 +174,7 @@
       <!-- los posts -->
       <div class="row">
 
-        <div class="col-md-4" *ngFor="let post of hablandoPosts">
+        <div class="col-md-4 hablando" *ngFor="let post of hablandoPosts">
           <div class="card mb-3">
             <div class="row">
               <div class="col-md-12">

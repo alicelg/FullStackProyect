@@ -14,7 +14,7 @@
         <form [formGroup]="loginForm" (ngSubmit)="login()" class="p-4 login-form" *ngIf="action === 'login'">
 
           <div class="form-group">
-            <label for="username">{{'LOGIN.USERNAME' | translate }}</label>
+            <label for="email">{{'LOGIN.EMAIL' | translate }}</label>
             <input id="username" type="email" formControlName="email" class="form-control"
               [ngClass]="{ 'not-valid': loginForm.get('email').touched && !loginForm.get('email').valid }" />
             <div *ngIf="loginForm.get('email').touched && !loginForm.get('email').valid" class="alert alert-danger">
