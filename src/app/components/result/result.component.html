@@ -57,73 +57,74 @@
     </div>
   </div>
 
-  <div class="container" *ngIf="testId === '2'">
-
-    <div class="row"></div>
-
+  <div class="container-md container-fluid mt-4 mb-4" *ngIf="testId === '2'">
+    <div class="row">
+      <div class="col-md-7 px-0 px-md-3 pb-4 pb-md-0">
+        <canvas baseChart
+        [chartType]="radarChartType"
+        [datasets]="radarChartData"
+        [labels]="radarChartLabels"
+        [options]="radarChartOptions"
+        [colors]="colors">
+        </canvas>
+      </div>
+      <div class="col-md-5 d-flex flex-column justify-content-center">
+        <table class="table table-hover table-bordered text-center border-light">
+          <thead>
+            <tr>
+              <th scope="col">Tendencia Política</th>
+              <th scope="col">% de Afinidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Anarquismo</td>
+              <td>{{(politicalOrientation.ANA / testResult.total_answers)*100}}%</td>
+            </tr>
+            <tr>
+              <td>Comunismo</td>
+              <td>{{(politicalOrientation.COM / testResult.total_answers)*100}}%</td>
+            </tr>
+            <tr>
+              <td>Socialismo</td>
+              <td>{{(politicalOrientation.SOC / testResult.total_answers)*100}}%</td>
+            </tr>
+            <tr>
+              <td>Neoliberalismo</td>
+              <td>{{(politicalOrientation.NEO / testResult.total_answers)*100}}%</td>
+            </tr>
+            <tr>
+              <td>Fascismo</td>
+              <td>{{(politicalOrientation.FAS / testResult.total_answers)*100}}%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
+
   <div class="container-fluid container-color pt-md-5 pt-4 pb-5">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <table class="table table-hover table-bordered text-center border-light">
-            <thead>
-              <tr>
-                <th scope="col">Tendencia Política</th>
-                <th scope="col">% de Afinidad</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Anarquismo</td>
-                <td>{{(politicalOrientation.ANA / testResult.total_answers)*100}}%</td>
-              </tr>
-              <tr>
-                <td>Comunismo</td>
-                <td>{{(politicalOrientation.COM / testResult.total_answers)*100}}%</td>
-              </tr>
-              <tr>
-                <td>Socialismo</td>
-                <td>{{(politicalOrientation.SOC / testResult.total_answers)*100}}%</td>
-              </tr>
-              <tr>
-                <td>Neoliberalismo</td>
-                <td>{{(politicalOrientation.NEO / testResult.total_answers)*100}}%</td>
-              </tr>
-              <tr>
-                <td>Fascismo</td>
-                <td>{{(politicalOrientation.FAS / testResult.total_answers)*100}}%</td>
-              </tr>
-            </tbody>
-          </table>
+
+      <div class="row text-center">
+        <div class="col-md-4 mt-3">
+          <fa-icon class="size-icon" [icon]="['far', 'lightbulb']"></fa-icon>
+          <h5 class="mt-0"> {{'RESULTS.CONGRATULATIONS'|translate}} </h5>
+          <p>{{'RESULTS.CONGRATULATIONS-TEXT'|translate}}</p>
         </div>
-        <div class="col-md-6 pl-md-4 pr-md-0">
-          <div class="row text-center">
-            <div class="col-md-5">
-              <fa-icon class="size-icon" [icon]="['far', 'clock']"></fa-icon>
-              <h5 class="mt-0">{{'RESULTS.TIME'|translate}}</h5>
-              <p>{{testTimeMinutes}} {{'RESULTS.MINUTES'|translate}} {{testTimeSeconds}} {{'RESULTS.SECONDS'|translate}}
-              </p>
-            </div>
-
-            <div class="col-md-7">
-              <fa-icon class="size-icon" [icon]="['fas', 'trophy']"></fa-icon>
-              <h5 class="mt-0">{{'RESULTS.CONTINUE'|translate}}</h5>
-              <p class="mb-2">{{'RESULTS.CONTINUE-TEXT'|translate}}</p>
-              <button class="btn bg-transparent border rounded mr-2"> {{'HEADER.WORLD-TEST'|translate}}</button>
-              <button class="btn bg-transparent border rounded"> {{'HEADER.POLITICAL-TEST'|translate}} </button>
-            </div>
-
-            <div class="col-12 mt-3">
-              <fa-icon class="size-icon" [icon]="['far', 'lightbulb']"></fa-icon>
-              <h5 class="mt-0"> {{'RESULTS.CONGRATULATIONS'|translate}} </h5>
-              <p>{{'RESULTS.CONGRATULATIONS-TEXT'|translate}}</p>
-            </div>
-
-
-          </div>
+        <div class="col-md-4">
+          <fa-icon class="size-icon" [icon]="['far', 'clock']"></fa-icon>
+          <h5 class="mt-0">{{'RESULTS.TIME'|translate}}</h5>
+          <p>{{testTimeMinutes}} {{'RESULTS.MINUTES'|translate}} {{testTimeSeconds}} {{'RESULTS.SECONDS'|translate}}
+          </p>
         </div>
-
+        <div class="col-md-4">
+          <fa-icon class="size-icon" [icon]="['fas', 'trophy']"></fa-icon>
+          <h5 class="mt-0">{{'RESULTS.CONTINUE'|translate}}</h5>
+          <p class="mb-2">{{'RESULTS.CONTINUE-TEXT'|translate}}</p>
+          <button class="btn bg-transparent border rounded mr-2"> {{'HEADER.WORLD-TEST'|translate}}</button>
+          <button class="btn bg-transparent border rounded"> {{'HEADER.POLITICAL-TEST'|translate}} </button>
+        </div>
       </div>
     </div>
   </div>

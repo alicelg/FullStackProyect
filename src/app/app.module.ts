@@ -60,6 +60,7 @@ import { ErrorInterceptor } from './error.interceptor';
 
 /* Editor de texto */
 import { QuillModule } from 'ngx-quill';
+import { ChartsModule } from 'ng2-charts';
 
 // toastr
 import { CommonModule } from '@angular/common';
@@ -103,6 +104,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     FormsModule,
+    ChartsModule,
     QuillModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
