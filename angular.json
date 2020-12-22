@@ -29,7 +29,8 @@
             ],
             "styles": [
               "node_modules/jsvectormap/dist/css/jsvectormap.css",
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "node_modules/wowjs/dist/wow.js",
