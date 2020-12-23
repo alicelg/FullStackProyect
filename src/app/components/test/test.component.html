@@ -102,24 +102,26 @@
 
       <div class="row">
 
-        <div class="col-6 mx-auto">
-          <h6 class="text-center">{{actualQuestion.question | translate}}</h6>
+        <div class="col-md-6 col-12 mx-auto">
+          <h5 class="text-center h-auto">{{actualQuestion.question | translate}}</h5>
 
-          <div class="svg mx-auto" [innerHTML]="svg"></div>
+          <div class="svg mx-auto" [innerHTML]="svg">
+            <img [src]="actualQuestion?.image" alt="">
+          </div>
 
         </div>
 
-        <div class="col-5 offset-md-1 mt-6">
+        <div class="col-md-5 col-12 offset-md-1 mt-6">
 
-          <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 1)">
+          <button class="btn btncolor mt-2 mb-2 form-control h-auto" (click)="questionAnswered(actualQuestion.id, 1)">
             {{actualQuestion.answer1 | translate}} </button>
-          <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 2)">
+          <button class="btn btncolor mt-2 mb-2 form-control h-auto" (click)="questionAnswered(actualQuestion.id, 2)">
             {{actualQuestion.answer2 | translate}} </button>
-          <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 3)">
+          <button class="btn btncolor mt-2 mb-2 form-control h-auto" (click)="questionAnswered(actualQuestion.id, 3)">
             {{actualQuestion.answer3 | translate}} </button>
-          <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 4)">
+          <button class="btn btncolor mt-2 mb-2 form-control h-auto" (click)="questionAnswered(actualQuestion.id, 4)">
             {{actualQuestion.answer4 | translate}} </button>
-          <button class="btn btncolor mt-2 mb-2 form-control" (click)="questionAnswered(actualQuestion.id, 5)">
+          <button class="btn btncolor mt-2 mb-2 form-control h-auto" (click)="questionAnswered(actualQuestion.id, 5)">
             {{actualQuestion.answer5 | translate}} </button>
 
         </div>
