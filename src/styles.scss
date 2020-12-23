@@ -158,6 +158,10 @@ p {
   color: $tertiaryTextColor;
 }
 
+.error-text {
+  color: white;
+}
+
 @media (min-width: 1500px) {
   .container {
     max-width: 1400px;

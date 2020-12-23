@@ -1,9 +1,10 @@
-
 @import "../../../styles.scss";
+@import "~ngx-toastr/toastr";
+@import "~ngx-toastr/toastr-bs4-alert";
 
-.login-form{
-  background-color: $primaryBgColor;
-  border-radius: 5px;
+.login-form {
+	background-color: $primaryBgColor;
+	border-radius: 5px;
 }
 
 .avatar {
@@ -11,8 +12,8 @@
 	width: 211px;
 	height: 108px;
 	background-image: url("https://dash.readme.io/img/owl-login.png");
-  position: relative;
-  bottom: -10px;
+	position: relative;
+	bottom: -10px;
 }
 
 .avatar .hand {
@@ -71,32 +72,35 @@
 }
 
 .eye_closed {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background-repeat: no-repeat;
-  background-image: url(../../../assets/icons/eye_closed.png);
-  background-size: contain;
-  cursor: pointer;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-image: url(../../../assets/icons/eye_closed.png);
+	background-size: contain;
+	cursor: pointer;
 }
 
 .eye_open {
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url(../../../assets/icons/eye_open.png);
-  cursor: pointer;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url(../../../assets/icons/eye_open.png);
+	cursor: pointer;
 }
 
-
-.btn:hover{
-  color: $quaternaryTextColor !important;
+.btn:hover {
+	color: $quaternaryTextColor !important;
 }
 
 .size-icon {
-  font-size: 30px;
+	font-size: 30px;
 }
 
-
+@media (max-width: 575px) {
+	h4 {
+		font-size: 1.2rem;
+	}
+}

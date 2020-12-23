@@ -11,6 +11,7 @@
           </div>
         </div>
 
+        <!-- ingresar a la cuenta -->
         <form [formGroup]="loginForm" (ngSubmit)="login()" class="p-4 login-form" *ngIf="action === 'login'">
 
           <div class="form-group">
@@ -61,6 +62,7 @@
           </button>
         </form>
 
+        <!-- registro -->
         <form [formGroup]="signupForm" (ngSubmit)="signup()" class="p-4 login-form" *ngIf="action === 'signup'">
 
           <div class="form-group">
@@ -141,51 +143,51 @@
         </form>
       </div>
 
-      <div class="col-md-6 offset-md-1">
+      <div class="col-md-6 offset-md-1 mt-5 mt-md-0 mb-5">
 
         <h3 class="mb-1 text-center"> {{'BENEFITS.BENEFITS-TITLE' | translate}} </h3>
         <hr class="mb-5">
         <div class="row mb-md-4">
-          <div class="col-6 text-center">
+          <div class="col-6 text-center mt-md-0 mt-2">
             <fa-icon class="size-icon" [icon]="['far', 'heart']"></fa-icon>
             <h4>{{'BENEFITS.FAVORITECONCEPTS' | translate }}</h4>
-            <p>{{'BENEFITS.TEXT-FAVORITECONCEPTS' | translate }}
+            <p class="desktop">{{'BENEFITS.TEXT-FAVORITECONCEPTS' | translate }}
             </p>
           </div>
-          <div class="col-6 pl-5 text-center">
+          <div class="col-6  text-center mt-md-0 mt-2">
             <fa-icon class="size-icon" [icon]="['far', 'comment-dots']"></fa-icon>
             <h4>{{'BENEFITS.COMMENTS' | translate }}</h4>
-            <p> {{'BENEFITS.TEXT-COMMENTS' | translate }}
+            <p class="desktop"> {{'BENEFITS.TEXT-COMMENTS' | translate }}
             </p>
           </div>
         </div>
 
         <div class="row mb-md-4">
-          <div class="col-6 text-center">
+          <div class="col-6 text-center mt-md-0 mt-4">
             <fa-icon class="size-icon" [icon]="['far', 'newspaper']"></fa-icon>
             <h4>{{'BENEFITS.PUBLISH' | translate }}</h4>
-            <p> {{'BENEFITS.TEXT-PUBLISH' | translate }}
+            <p class="desktop"> {{'BENEFITS.TEXT-PUBLISH' | translate }}
             </p>
           </div>
-          <div class="col-6 pl-5 text-center">
+          <div class="col-6  text-center mt-md-0 mt-4">
             <fa-icon class="size-icon" [icon]="['fas', 'trophy']"></fa-icon>
             <h4> {{'BENEFITS.HAVEFUN' | translate }} </h4>
-            <p> {{'BENEFITS.TEXT-HAVEFUN' | translate }}
+            <p class="desktop"> {{'BENEFITS.TEXT-HAVEFUN' | translate }}
             </p>
           </div>
         </div>
 
         <div class="row">
-          <div class="col-6 text-center">
+          <div class="col-6 text-center mt-md-0 mt-4">
             <fa-icon class="size-icon" [icon]="['fas', 'glasses']"></fa-icon>
             <h4>{{'BENEFITS.READ' | translate }}</h4>
-            <p> {{'BENEFITS.TEXT-READ' | translate }}
+            <p class="desktop"> {{'BENEFITS.TEXT-READ' | translate }}
             </p>
           </div>
-          <div class="col-6 pl-5 text-center">
+          <div class="col-6  text-center mt-md-0 mt-4">
             <fa-icon class="size-icon" [icon]="['fas', 'pencil-alt']"></fa-icon>
             <h4> {{'BENEFITS.BUY' | translate }} </h4>
-            <p> {{'BENEFITS.TEXT-BUY' | translate }}
+            <p class="desktop"> {{'BENEFITS.TEXT-BUY' | translate }}
             </p>
           </div>
         </div>

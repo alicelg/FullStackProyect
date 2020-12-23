@@ -62,6 +62,11 @@ import { ErrorInterceptor } from './error.interceptor';
 import { QuillModule } from 'ngx-quill';
 import { ChartsModule } from 'ng2-charts';
 
+// toastr
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 
 
 @NgModule({
@@ -95,6 +100,9 @@ import { ChartsModule } from 'ng2-charts';
     HttpClientModule,
     ReactiveFormsModule,
     FontAwesomeModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     FormsModule,
     ChartsModule,
     QuillModule.forRoot(),
@@ -119,3 +127,5 @@ export class AppModule {
     library.addIconPacks(fas, far);
   }
 }
+
+class MainModule { }

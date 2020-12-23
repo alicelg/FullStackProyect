@@ -5,7 +5,8 @@ import { ModalDismissReasons, NgbModal, NgbModalRef } from '@ng-bootstrap/ng-boo
 import { User } from 'src/app/models/user.model';
 import { UsersService } from 'src/app/services/users.service';
 import { UtilsService } from 'src/app/services/utils.service';
-
+import { ToastrService } from 'ngx-toastr';
+import { resetFakeAsyncZone } from '@angular/core/testing';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -33,6 +34,7 @@ export class LoginComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private utilsService: UtilsService,
+    private toastr: ToastrService
 
   ) {
     this.loginForm = new FormGroup({
@@ -65,12 +67,17 @@ export class LoginComponent implements OnInit {
         currentUser.token = res.token;
         this.usersService.isLogged = currentUser;
         this.router.navigate(['usuario', currentUser.id]);
-      });
+      }).catch(err => {
+        this.toastr.error('Verifica el correo electronico.', null, { "messageClass": 'error-text' });
+      })
+
     } else {
       // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
       Object.keys(this.loginForm.controls).forEach(field => {
         const control = this.loginForm.get(field);
         control.markAsTouched({ onlySelf: true });
+
+
       });
     }
   }
@@ -80,11 +87,25 @@ export class LoginComponent implements OnInit {
       const newUser = { ...this.signupForm.value };
       delete newUser.passwordConfirm;
       this.usersService.signup(newUser).then(res => {
-        this.router.navigate(['/login']);
-      }).catch(res => {
-        alert('Mijito, estás mal en la vida, ya tienes cuenta.');
-      }
-      );
+        if (res.error) {
+          switch (res.error) {
+            case 'email':
+              this.toastr.error('Verifica el correo electronico.', null, { "messageClass": 'error-text' });
+              break;
+            case 'nickname':
+              this.toastr.error('El nombre de usuario debe de ser unico.', null, { "messageClass": 'error-text' });
+              break;
+            default:
+              this.toastr.error('Ha habido un error en su registro, vuelvalo a intentar.', null, { "messageClass": 'error-text' });
+              break;
+          }
+        } else {
+          this.router.navigate(['/login']);
+          this.toastr.success('Cuenta creada correctamente, inicia sesión.', null, { "messageClass": 'error-text' });
+
+        }
+      })
+
     } else {
       // Si el formulario no es válido marcamos los campos como incorrectos "tocándolos"
       Object.keys(this.signupForm.controls).forEach(field => {
